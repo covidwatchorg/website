@@ -1,7 +1,7 @@
 <template>
-    <div>
-        <h1>news rendered</h1>
-    </div>
+  <div>
+    <h1>news rendered</h1>
+  </div>
 </template>
 
 <script>
@@ -10,6 +10,6 @@ export default {
     return {
       title: "News | Covid Watch"
     };
-  },
-}
+  }
+};
 </script>
