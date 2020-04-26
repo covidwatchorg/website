@@ -124,45 +124,45 @@ export default {
       {
         title: "Privacy First",
         body: "Sam and Jane’s interaction is logged on their phones anonymously.",
-        img: "../assets/home_page/how_it_works_1.svg"
+        img: require("../assets/home_page/how_it_works_1.svg")
       },
       {
         title: "Diagnosis Reports",
         body: "Sam later tests postive for COVID-19 and he enters his results into the secure Covid Watch system.",
-        img: "../assets/home_page/how_it_works_2.svg"
+        img: "./assets/home_page/how_it_works_2.svg"
       },
       {
         title: "Contact Alerts",
         body: "Jane’s phone gets a notification that a recent contact has tested positive for COVID-19.",
-        img: "../assets/home_page/how_it_works_3.svg"
+        img: "./assets/home_page/how_it_works_3.svg"
       },
       {
         title: "Community Safety",
         body: "Jane and Sam helped keep their communities safe. They share the app so that others can, too.",
-        img: "../assets/home_page/how_it_works_4.svg"
+        img: "./assets/home_page/how_it_works_4.svg"
       },
     ],
     whyCards: [
       {
         title: "No tracking, ever",
         body: "No personal information is shared. No GPS locations are stored. Bluetooth signals anonymously log when you've been near another phone with Covid Watch installed.",
-        img: "../assets/home_page/why_covid_watch_1.svg"
+        img: "./assets/home_page/why_covid_watch_1.svg"
       },
       {
         title: "Easier than staying home",
         body: "You can leave your home and help keep your community healthy just by installing the app. You don't even need to keep the app open for it to protect you.",
-        img: "../assets/home_page/why_covid_watch_2.svg"
+        img: "./assets/home_page/why_covid_watch_2.svg"
       },
       {
         title: "Share with each other",
         body: "Trust comes when we work together. Covid Watch is a non-profit on a mission to protect your health and privacy, not big tech or government.",
-        img: "../assets/home_page/why_covid_watch_3.svg"
+        img: "./assets/home_page/why_covid_watch_3.svg"
       }
     ],
     mobileImages: [
-      "../assets/home_page/mobile_1.svg",
-      "../assets/home_page/mobile_2.svg",
-      "../assets/home_page/mobile_3.svg"
+      "./assets/home_page/mobile_1.svg",
+      "./assets/home_page/mobile_2.svg",
+      "./assets/home_page/mobile_3.svg"
     ]
   })
 }
