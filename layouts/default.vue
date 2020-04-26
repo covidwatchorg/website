@@ -1,16 +1,12 @@
 <template>
   <v-app>
-    <!--Fixed navbar-->
-    <v-app-bar
-      app
-      flat
-      clipped-left
-    >
+    <!--Fixed top navbar-->
+    <v-app-bar app flat clipped-left>
       <v-container>
-        <v-layout row>
+        <v-row>
           <v-toolbar-title v-text="title" />
           <v-spacer />
-          <!-- Desktop menu -->
+          <!--Desktop menu-->
           <v-toolbar-items class="d-none d-md-flex">
             <v-btn
               v-for="link in navLinks"
@@ -21,89 +17,140 @@
               text
             >{{ link.title }}</v-btn>
           </v-toolbar-items>
-          <!-- Mobile menu -->
+          <!--Mobile menu-->
           <v-toolbar-items class="d-flex d-md-none">
-            <v-menu offset-y >
+            <v-menu offset-y>
               <template v-slot:activator="{ on }">
                 <v-btn text v-on="on">
                   <v-icon>mdi-menu</v-icon>
                 </v-btn>
               </template>
               <v-list>
-                <v-list-item
-                  v-for="link in navLinks"
-                  :key="link.title"
-                >
-                  <nuxt-link
-                    class="link primary--text"
-                    :to="link.href"
-                  >
-                      {{ link.title }}
-                  </nuxt-link>
+                <v-list-item v-for="link in navLinks" :key="link.title">
+                  <nuxt-link class="link primary--text" :to="link.href">{{ link.title }}</nuxt-link>
                 </v-list-item>
               </v-list>
             </v-menu>
           </v-toolbar-items>
-        </v-layout>
+        </v-row>
       </v-container>
     </v-app-bar>
 
-      <v-content>
-        <v-container>
-          <nuxt />
-        </v-container>
-      </v-content>
+    <!--Main content, pulled in by nuxt. Thanks, nuxt!-->
+    <v-content>
+      <v-container>
+        <nuxt />
+      </v-container>
+    </v-content>
 
-      <v-navigation-drawer
-        v-model="rightDrawer"
-        :right="right"
-        temporary
-        fixed
-      >
-        <v-list>
-          <v-list-item @click.native="right = !right">
-            <v-list-item-action>
-              <v-icon light>
-                mdi-repeat
-              </v-icon>
-            </v-list-item-action>
-            <v-list-item-title>Switch drawer (click me)</v-list-item-title>
-          </v-list-item>
-        </v-list>
-      </v-navigation-drawer>
-      <v-footer
-        :fixed="fixed"
-        app
-      >
-        <span>&copy; {{ new Date().getFullYear() }}</span>
-      </v-footer>
+    <!--Fixed footer-->
+    <v-footer app color="primary" style="white--text">
+      <v-container>
+        <v-row>
+          <v-col v-for="section in footerSections" :key="section.title">
+            <b>{{ section.title }}</b>
+            <v-list>
+              <v-list-item v-for="link in section.links" :key="link.title">
+                <nuxt-link class="link primary--text" :to="link.href">{{ link.title }}</nuxt-link>
+              </v-list-item>
+            </v-list>
+          </v-col>
+          <v-spacer />
+          <v-col md="2">
+            <span>&copy; {{ new Date().getFullYear() }}</span>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-footer>
   </v-app>
 </template>
 
 <script>
 export default {
-  data () {
+  data() {
     return {
       navLinks: [
         {
           title: "How It Works",
-          href: "/how-it-works",
+          href: "/how-it-works"
         },
         {
           title: "FAQ",
-          href: "/faq",
+          href: "/faq"
         },
         {
           title: "About",
-          href: "/about",
+          href: "/about"
         },
         {
           title: "News",
-          href: "/news",
-        },
+          href: "/news"
+        }
       ],
-      title: 'Covid Watch'
-    }
+      footerSections: [
+        {
+          title: "Mobile App",
+          links: [
+            {
+              title: "Download",
+              href: "/download"
+            },
+            {
+              title: "How It Works",
+              href: "/how-it-works"
+            },
+            {
+              title: "FAQ",
+              href: "/faq"
+            }
+          ]
+        },
+        {
+          title: "Organization",
+          links: [
+            {
+              title: "About Us",
+              href: "/about"
+            },
+            {
+              title: "News",
+              href: "/news"
+            }
+          ]
+        },
+        {
+          title: "Resources",
+          links: [
+            {
+              title: "Privacy Policy",
+              href: "/privacy-policy"
+            },
+            {
+              title: "Terms of Use",
+              href: "/terms-of-use"
+            }
+          ]
+        },
+        {
+          title: "Get Involved",
+          links: [
+            {
+              title: "Partner with Us",
+              href: "/partner"
+            },
+            {
+              title: "Join Us",
+              href: "/volunteer"
+            },
+            {
+              title: "Contact Us",
+              href: "mailto:contact@covid-watch.org"
+            }
+          ]
+        }
+      ],
+      title: "Covid Watch"
+    };
   }
-}
+};
 </script>
