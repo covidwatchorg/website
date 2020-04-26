@@ -1,123 +1,118 @@
 <template>
-  <v-app dark>
-    <v-navigation-drawer
-      v-model="drawer"
-      :mini-variant="miniVariant"
-      :clipped="clipped"
-      fixed
-      app
-    >
-      <v-list>
-        <v-list-item
-          v-for="(item, i) in items"
-          :key="i"
-          :to="item.to"
-          router
-          exact
-        >
-          <v-list-item-action>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title v-text="item.title" />
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-    <v-app-bar
-      :clipped-left="clipped"
-      fixed
-      app
-    >
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-btn
-        icon
-        @click.stop="miniVariant = !miniVariant"
-      >
-        <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
-      </v-btn>
-      <v-btn
-        icon
-        @click.stop="clipped = !clipped"
-      >
-        <v-icon>mdi-application</v-icon>
-      </v-btn>
-      <v-btn
-        icon
-        @click.stop="fixed = !fixed"
-      >
-        <v-icon>mdi-minus</v-icon>
-      </v-btn>
-      <v-toolbar-title v-text="title" />
-      <v-spacer />
-      <v-btn
-        icon
-        @click.stop="rightDrawer = !rightDrawer"
-      >
-        <v-icon>mdi-menu</v-icon>
-      </v-btn>
-    </v-app-bar>
+  <v-app>
+    <!--Fixed top navbar-->
+    <AppBar :navLinks="navLinks" :title="title"></AppBar>
 
-
-    <!-- Jesse: I think this is an important part to keep, the <nuxt> element to allow for nuxt routing  -->
+    <!--Main content, pulled in by nuxt. Thanks, nuxt!-->
     <v-content>
       <v-container>
         <nuxt />
       </v-container>
     </v-content>
 
-
-
-    <v-navigation-drawer
-      v-model="rightDrawer"
-      :right="right"
-      temporary
-      fixed
-    >
-      <v-list>
-        <v-list-item @click.native="right = !right">
-          <v-list-item-action>
-            <v-icon light>
-              mdi-repeat
-            </v-icon>
-          </v-list-item-action>
-          <v-list-item-title>Switch drawer (click me)</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-    <v-footer
-      :fixed="fixed"
-      app
-    >
-      <span>&copy; {{ new Date().getFullYear() }}</span>
-    </v-footer>
+    <!--Fixed footer-->
+    <Footer :sections="footerSections"></Footer>
   </v-app>
 </template>
+<style lang="scss" scoped>
+.container {
+  max-width: 1240px;
+}
+</style>
 
 <script>
+import AppBar from "../components/AppBar.vue";
+import Footer from "../components/Footer.vue";
+
 export default {
-  data () {
+  components: {
+    AppBar,
+    Footer
+  },
+  data() {
     return {
-      clipped: false,
-      drawer: false,
-      fixed: false,
-      items: [
+      navLinks: [
         {
-          icon: 'mdi-apps',
-          title: 'Welcome',
-          to: '/'
+          title: "How It Works",
+          href: "/how-it-works"
         },
         {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
+          title: "FAQ",
+          href: "/faq"
+        },
+        {
+          title: "About",
+          href: "/about"
+        },
+        {
+          title: "News",
+          href: "/news"
         }
       ],
-      miniVariant: false,
-      right: true,
-      rightDrawer: false,
-      title: 'Vuetify.js'
-    }
+      footerSections: [
+        {
+          title: "Mobile App",
+          links: [
+            {
+              title: "Download",
+              href: "/download"
+            },
+            {
+              title: "How It Works",
+              href: "/how-it-works"
+            },
+            {
+              title: "FAQ",
+              href: "/faq"
+            }
+          ]
+        },
+        {
+          title: "Organization",
+          links: [
+            {
+              title: "About Us",
+              href: "/about"
+            },
+            {
+              title: "News",
+              href: "/news"
+            }
+          ]
+        },
+        {
+          title: "Resources",
+          links: [
+            {
+              title: "Privacy Policy",
+              href: "/privacy-policy"
+            },
+            {
+              title: "Terms of Use",
+              href: "/terms-of-use"
+            }
+          ]
+        },
+        {
+          title: "Get Involved",
+          links: [
+            {
+              title: "Partner with Us",
+              href: "/partner"
+            },
+            {
+              title: "Join Us",
+              href: "/volunteer"
+            },
+            {
+              title: "Contact Us",
+              href: "mailto:contact@covid-watch.org"
+            }
+          ]
+        }
+      ],
+      title: "Covid Watch"
+    };
   }
-}
+};
 </script>
