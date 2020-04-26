@@ -69,7 +69,7 @@ export default {
           lavender: '#A680B7',
           elderberry: '#2C007B',
           info: '#2C58B1',    // bluejay
-          warning: '#2C58B1', // tangerine
+          warning: '#43C4D9', // aqua
           error: '#F05452',   // tangerine
           success: '#A680B7'  // lavender     
         }
@@ -99,7 +99,7 @@ export default {
     /*
     ** You can extend webpack config here
     */
-    extend (config, ctx) {
+    extend(config, ctx) {
     }
   }
 }
