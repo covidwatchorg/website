@@ -68,6 +68,8 @@ export default {
           plum: '#4B0A70',
           lavender: '#A680B7',
           elderberry: '#2C007B',
+          thistle: '#71CDDF',
+          pewter: '#585858',
           info: '#2C58B1',    // bluejay
           warning: '#43C4D9', // aqua
           error: '#F05452',   // tangerine
