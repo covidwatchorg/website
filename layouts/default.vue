@@ -57,11 +57,17 @@
         <v-icon>mdi-menu</v-icon>
       </v-btn>
     </v-app-bar>
+
+
+    <!-- Jesse: I think this is an important part to keep, the <nuxt> element to allow for nuxt routing  -->
     <v-content>
       <v-container>
         <nuxt />
       </v-container>
     </v-content>
+
+
+
     <v-navigation-drawer
       v-model="rightDrawer"
       :right="right"
