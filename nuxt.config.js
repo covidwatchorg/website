@@ -56,7 +56,8 @@ export default {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: true,
+      dark: false,
+      light: true,
       themes: {
         dark: {
           primary: colors.blue.darken2,
@@ -66,6 +67,15 @@ export default {
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
           success: colors.green.accent3
+        },
+        // Jesse: I added these colors based on brand guide Figma.  Maybe would be helpful to rename 'title', etc.
+        light: {
+          primary_1: "#2c58b1",
+          primary_2: "#43c4d9",
+          primary_3: "#4B0A70",
+          primary_4: "#2c007b",
+          secondary_1: "#a680b7",
+          secondary_2: "#f05452",
         }
       }
     }
