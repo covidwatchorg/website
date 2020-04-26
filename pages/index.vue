@@ -1,5 +1,5 @@
 <template>
-  <v-container grid-list-xs>
+  <v-container>
     <v-row id="home">
       <v-col cols="12">
 
@@ -34,17 +34,17 @@
 
           <v-row >
 
-              <v-col cols="3" v-for="(card, i) in howItWorksCards"  :key="i">
+              <v-col cols="3" v-for="(card, i) in howItWorksCards"  :key="i" class="d-flex flex-column align-left">
 
                   <img class="card-img" :src="card.img" :alt="card.title">
-                  <h3 class="card-title">{{card.title}}</h3>
-                  <div class="card-body">{{card.body}}</div>
+                  <h3 class="card-title mt-10">{{card.title}}</h3>
+                  <div class="card-body mt-5">{{card.body}}</div>
 
               </v-col>
 
           </v-row>
 
-          <v-btn class="primary-1--text">
+          <v-btn class="white primary_1--text">
             <nuxt-link to="/how-it-works">
               Learn More
             </nuxt-link>
@@ -64,6 +64,9 @@
                   <div class="card-body">{{card.body}}</div>
               </v-col>
             </v-row>
+
+          <v-btn class="white primary_1--text">Read the Whitepaper</v-btn>
+
         </v-row>
 
 
@@ -122,16 +125,38 @@
 
     .card-img {
       // placeholder to see the img elements
-      width: 70%;
+      width: 100%;
+
+      // this max-height is necessary bc the source fourth image Community Safety is slightly larger in px than the others
+
+      // may need to update this to make images appear larger without the fourth being larger than others
+      // max-height: 230px;
+    }
+
+    #why-covid-watch .card-img {
+      max-height: 200px;
     }
 
     .hero-main-img {
       width: 100%;
     }
 
-    .card-title, .card-body, #latest-news h2, .sub-heading-copy {
-       color: #585858;
+    // not sure why this is necessary, to refactor using css grid vcols
+    // .why-background {
+    //   width: 90%;
+    // }
 
+    .card-body, #latest-news h2, .sub-heading-copy {
+       color: #585858;
+    }
+
+    .card-body {
+      font-size: 22px;
+    }
+
+    .card-title {
+      color: #4B0A70;
+      font-size: 28px;
     }
 
     #latest-news {
