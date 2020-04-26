@@ -4,9 +4,11 @@
       <v-col cols="12">
 
 
-        <v-row id="hero" class="pa-8">
+        <v-row id="hero">
           
-          <v-col cols="8">
+
+          <!-- why isn't this cols="8" seeming to have an effect? -->
+          <v-col cols="8" class="px-12">
             <div class="hero-copy">
 
               <h1 class="tangerine--text main-heading" style="margin-bottom: 40px">Together, we have the power to stop the spread of COVID-19</h1>
@@ -30,7 +32,7 @@
 
 
         <!-- How It Works section -->
-        <v-row class="d-block mb-10 pa-8" id="how-it-works">
+        <v-row class="d-block mb-10 pa-12" id="how-it-works">
           <h2 class="plum--text mb-12">How it Works</h2>
 
           <v-row >
@@ -46,7 +48,7 @@
           </v-row>
 
           <v-row class="cta-container my-8">
-            <v-btn class="white primary--text">
+            <v-btn class="white primary--text cta-button">
               <nuxt-link to="/how-it-works" style="text-decoration:none">
                 Learn More
               </nuxt-link>
@@ -60,7 +62,7 @@
           <!-- this is huge needs to be reduced to the width of screen -->
           <img class="why-background" src="../assets/home_page/lavender_slope.svg" alt="background">
 
-        <v-row id="why-covid-watch" class="d-block pa-8">
+        <v-row id="why-covid-watch" class="d-block mt-12 pa-12">
 
             
             <h2 class="plum--text mb-12">Why Covid Watch</h2>
@@ -74,7 +76,7 @@
             </v-row>
 
           <v-row class="cta-container my-8">
-            <v-btn class="white primary--text">Read the Whitepaper</v-btn>
+            <v-btn class="white primary--text cta-button">Read the Whitepaper</v-btn>
           </v-row>
 
         </v-row>
@@ -82,9 +84,9 @@
 
 
         <!-- Latest News -->
-        <v-row id="latest-news" class="pa-8"> 
+        <v-row id="latest-news"> 
 
-          <v-col>
+          <v-col class="pa-12 mt-12">
             <v-row class="d-flex align-center justify-space-between mb-12">
               <h2>Latest News</h2>
 
@@ -117,7 +119,7 @@
 
 
         <!-- Download the App -->
-        <v-row id="download-app" class="mb-10 pa-8" > 
+        <v-row id="download-app" class="mb-10 pa-12" > 
 
           <v-col cols="5">
           <h1 class="tangerine--text">Download the App</h1>
@@ -152,6 +154,11 @@
       position: absolute;
     }
 
+    .why-background  {
+      max-height: 420px;
+      max-width: 1240px;
+    }
+
     // probs replace w grid spacing
     .hero-main-img {
       width: 100%;
@@ -160,7 +167,7 @@
     .hero-copy {
       margin-top: 50px;
 
-      // maybe update later pending v-col final stuff
+      // TO UPDATE: not sure why v-col element not acting as expected for this element
       max-width: 50%;
     }
 
