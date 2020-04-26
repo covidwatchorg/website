@@ -14,9 +14,22 @@
     <Footer :sections="footerSections"></Footer>
   </v-app>
 </template>
-<style lang="scss" scoped>
+
+<style lang="scss">
 .container {
   max-width: 1240px;
+}
+
+h1 {
+  color: var(--v-tangerine-base);
+}
+
+h2 {
+  color: var(--v-bluejay-base);
+}
+
+h3 {
+  color: var(--v-plum-base);
 }
 </style>
 
