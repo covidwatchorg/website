@@ -1,6 +1,6 @@
 import colors from 'vuetify/es5/util/colors'
 
-const metaHeaders = require("./meta-headers.json");
+const metaHeaders = require('./meta-headers.json');
 
 export default {
   mode: 'spa',
@@ -22,7 +22,7 @@ export default {
         content: value
       }))
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
   /*
   ** Customize the progress-bar color
@@ -48,6 +48,7 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    'nuxt-webfontloader',
   ],
   /*
   ** vuetify module configuration
@@ -56,28 +57,41 @@ export default {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: false,
-      light: true,
       themes: {
-        dark: {
-          primary: colors.blue.darken2,
-          accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
-          info: colors.teal.lighten1,
-          warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
-          success: colors.green.accent3
-        },
-        // Jesse: I added these colors based on brand guide Figma.  Maybe would be helpful to rename 'title', etc.
         light: {
-          primary_1: "#2c58b1",
-          primary_2: "#43c4d9",
-          primary_3: "#4B0A70",
-          primary_4: "#2c007b",
-          secondary_1: "#a680b7",
-          secondary_2: "#f05452",
+          primary: '#2C58B1',
+          bluejay: '#2C58B1',
+          accent: '#F05452',
+          tangerine: '#F05452',
+          secondary: '#43C4D9',
+          aqua: '#43C4D9',
+          plum: '#4B0A70',
+          lavender: '#A680B7',
+          elderberry: '#2C007B',
+          thistle: '#71CDDF',
+          pewter: '#585858',
+          info: '#2C58B1',    // bluejay
+          warning: '#43C4D9', // aqua
+          error: '#F05452',   // tangerine
+          success: '#A680B7'  // lavender     
         }
       }
+    },
+    defaultAssets: {
+      font: {
+        family: 'Montserrat',
+        size: '18px',
+      },
+    },
+    treeShake: true, // override production-only default so defaultAssets work as expected
+  },
+  /*
+  ** nuxt-webfontloader module configuration
+  ** https://github.com/Developmint/nuxt-webfontloader
+  */
+  webfontloader: {
+    google: {
+      families: ['Montserrat:400,600,700'] // Loads Monserrat with 400, 600 and 700 weights
     }
   },
   /*
@@ -87,7 +101,7 @@ export default {
     /*
     ** You can extend webpack config here
     */
-    extend (config, ctx) {
+    extend(config, ctx) {
     }
   }
 }
