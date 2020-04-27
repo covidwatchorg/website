@@ -15,39 +15,46 @@
                     </v-col>
 
                     <v-col cols="4">
-                        <!-- Globe and people image --> 
-                        <!-- img src="../assets/blah"-->
+                        <img src="../assets/about_us/family-earth.svg">
                     </v-col>
 
 
                     <v-col cols="3">
-                        <v-btn class="primary-1--text">
-                            <!-- Where should this link to-->
-                            <nuxt-link to="/collaborate">
-                                Partner With Us
-                            </nuxt-link>
-                        </v-btn>
+                        <Button type="primary" link="collaborate" text="Partner With Us"></Button>
                     </v-col>   
 
 
                     <v-col cols="3">
-                        <v-btn class="primary-1--text">
-                            <nuxt-link to="/collaborate">
-                                <!-- Where should this link to-->
-                                Use Our Solutions
-                            </nuxt-link>
-                        </v-btn>
-
+                        <Button type="pewter--text" link="collaborate" text="Use Our Solutions"></Button>
                     </v-col>
 
                 </v-row>
             </v-col>
         </v-row>
 
-        <v-row id="we-value">
-            <!-- TODO -->
-        </v-row>
+        <v-row class="d-block mb-10 pa-12" id="we-value">
+            <h2 class="plum--text mb-12">We Value</h2>
 
+            <v-row >
+
+                <v-col cols="3" v-for="(card, i) in valueCards"  :key="i" class="d-flex flex-column align-left">
+
+                    <img class="card-img" :src="card.img" :alt="card.title">
+                    <h3 class="card-title mt-10">{{card.title}}</h3>
+                    <div class="card-body mt-5">{{card.body}}</div>
+
+                </v-col>
+
+            </v-row>
+
+            <v-row class="cta-container my-8">
+                <v-btn class="white primary--text cta-button">
+                    <nuxt-link to="/how-it-works" style="text-decoration:none">
+                        Learn More
+                    </nuxt-link>
+                </v-btn>
+            </v-row>
+        </v-row>
         <v-row id="join-us">
             <v-col cols="2">
                 <h2>Join Us</h2>
@@ -55,16 +62,12 @@
 
 
             <v-col cols="8">
-                <!--- People biking -->
+                <img src="../assets/about_us/cyclists.svg">
             </v-col> 
 
             <v-col cols="3" v-for="(cta, i) in callsToAction" :key="i">
-                <!-- should the buttons be components like this? >
-                    <!-- primary-button text=cta.button_text link="/donate"><!-- /primary-button -->
-
-                    <div>{{cta.cta_text}}</div>
-
-
+                <Button type="primary--text" :text="cta.button_text" link="/donate"></Button>
+                <div>{{cta.cta_text}}</div>
             </v-col>
         </v-row>
 
@@ -76,17 +79,51 @@
                 </div>
             </v-col>
 
-            <v-col cols="6" v-for="(founder,i) in founders" :key="i">
-                <!--TODO -->
+            <template v-for="(founder,n) in founders">
+                <v-col :key="n">
+                    <v-row>
+                        <img :src="founder.image">
+                        <v-col cols="4">
+                            <div class=founder-name>
+                                {{founder.name}}
+                            </div>
+                            <div class=founder-title>
+                                <i>{{founder.title}}</i>
+                            </div>
+                            <img src="../assets/about_us/top-accent.svg">
+                            <div class=founder-bio>
+                                <p>{{founder.bio}}</p>
+                            </div>
+                        </v-col>
+                    </v-row>
+                </v-col>
+                <v-responsive
+                    v-if="n+1 === 2"
+                    :key="`width-${n}`"
+                    width="100%"
+                    ></v-responsive>
+            </template>
+        </v-row>
+
+        <v-row id="academic-partners">
+            <v-col cols="3"><h3>Academic Partners</h3></v-col>
+
+            <v-col cols="3" v-for="(partner, i) in academic_partners" :key="i">
+                <img class=partner-img :src="partner.src"  @mouseover="partner.src = partner.color" @mouseleave="partner.src = partner.grey">
             </v-col>
         </v-row>
 
-            <v-row id="academic-partners">
+        <v-row id="collaborator-projects">
+            <v-col cols="3"><h3>Collaborator Partners</h3></v-col>
 
-            </v-row>
+            <v-col cols="2" v-for="(collab, i) in collaborator_projects" :key="i">
+                <img class=collab-img :src="collab.src"  @mouseover="collab.src = collab.color" @mouseleave="collab.src = collab.grey">
+                <div class="collab-name">
+                    {{ collab.name }}
+                </div>
+            </v-col>
 
-            <v-row id="collaborator-projects">
-            </v-row>
+        </v-row>
 
 
 
@@ -95,6 +132,7 @@
 </template>
 
 <script>
+import Button from '../components/Button.vue'
 export default {
     data: () => ({
         callsToAction: [
@@ -115,8 +153,86 @@ export default {
                 cta_text:"We are working with partners that share our commitment to health and human rights. If your organization has tools to help stop the spread or expertise, let’s work together."
             },
         ],
+        valueCards: [
+            {
+                title:"Healthy Communities",
+                body:"Technology should be a tool to keep those around us healthy. Global pandemics threaten our health and economy. We make tools that will allow us to take back control of our lives, safely and efficiently.",
+                img:require("../assets/about_us/woman-exercising.svg"),
+            },
+            {
+                title:"Privacy Preservation",
+                body:"Each person should control information about their health, even when our health impacts those around us. Covid Watch does not collect any personal information. We protect data and privacy while protecting public health.",
+                img:require("../assets/about_us/woman-medical-advice.svg"),
+            },
+            {
+                title:"Cooperation on COVID",
+                body:"We are setting precedents  in real time, giving individuals and communities the power to confront this global challenge. We work closely with public health officials and organizations that share our values.",
+                img:require("../assets/about_us/woman-social-network.svg"),
+            }
+        ],
+        founders: [
+            {
+                image:require("../assets/about_us/tina-photo.svg"),
+                name:"Tina White",
+                title:"Executive Director",
+                bio:"Tina is PhD candidate at Stanford University where she designs neural network architectures for scientific simulations. Covid Watch began with a post she made in the early days of the pandemic."
+            },
+            {
+                image:require("../assets/about_us/james-photo.svg"),
+                name:"James Petrie",
+                title:"Head of Research",
+                bio:"James is a PhD candidate in Applied Mathematics at the University of Waterloo where he focuses on numerical modelling, machine learning, and optimization."
+            },
+            {
+                image:require("../assets/about_us/rhys-photo.svg"),
+                name:"Rhys Fenwick",
+                title:"Head of Communications",
+                bio:"Rhys is a science communicator from the University of Wollongong, Australia with a background in medical biotechnology and software development."
+            },
+            {
+                image: require("../assets/about_us/zsombor-photo.svg"),
+                name:"Zsombor Szabo",
+                title:"Head of Engineering",
+                bio:"Zsombor is a mobile app developer with more than ten years of experience building next-generation networks, notably including an app called Berkanan Messenger that runs on Bluetooth mesh networks."
+            },
+        ],
+        academic_partners: [
+            {
+                grey:require("../assets/about_us/logo-stanford-black.svg"),
+                color:require("../assets/about_us/woman-medical-advice.svg"), 
+                src:require("../assets/about_us/logo-stanford-black.svg")
+            },    
+            {
+                grey:require("../assets/about_us/logo-university-of-waterloo-gray.svg"),
+                color:require("../assets/about_us/woman-exercising.svg"),
+                src:require("../assets/about_us/logo-university-of-waterloo-gray.svg")
+            },
+        ],
+        collaborator_projects: [
+            {
+                grey:require("../assets/about_us/logo-TCN-coalition-gray.svg"),
+                color:require("../assets/about_us/woman-medical-advice.svg"), 
+                src:require("../assets/about_us/logo-TCN-coalition-gray.svg"),
+                name:"TCN Coalition"
+            },    
+            {
+                grey:require("../assets/about_us/logo-coepi-gray.svg"),
+                color:require("../assets/about_us/woman-exercising.svg"),
+                src:require("../assets/about_us/logo-coepi-gray.svg"),
+                name:"Community Epidemiology in Action"
+            },
+            {
+                grey:require("../assets/about_us/logo-privacykit-gray.svg"),
+                color:require("../assets/about_us/woman-exercising.svg"),
+                src:require("../assets/about_us/logo-privacykit-gray.svg"),
+                name:"PrivateKit: SafePaths"
+            },
+        ],
         title: "About Us | Covid Watch"
 
-    })
+    }),
+    components: {
+        Button
+    }
 }
 </script>
