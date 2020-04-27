@@ -21,7 +21,6 @@ def main():
         # airtable = Airtable(os.environ['AIRTABLE_BASE_KEY'], 'Table 1', api_key=os.environ['AIRTABLE_API_KEY']) 
         
         # hardcoding base key and api key for now:
-        # REMOVED FOR GIT PUSH
     except KeyError:
         print("Couldn't find airtable base key or api key")
         exit(1)
