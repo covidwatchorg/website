@@ -22,7 +22,7 @@
         </v-row>
 
         <!-- all news cards section -->
-        <v-row id="news-cards">
+        <v-row id="news-cards" class="mt-8">
 
           <!-- modularized NewsCard version -->
           <v-col cols="4" v-for="(card,i) in cardsToRender" :key="i"> 
@@ -57,6 +57,7 @@
 
 <script>
 import NewsCard from "../components/NewsCard.vue";
+// import json from '../assets/medialist.json';
 
 export default {
   components: {
@@ -90,6 +91,7 @@ export default {
   //   }
   // },
   data: () => ({
+    airtableList: json,
     cardsToRender: undefined,
     newsCards: [
       {

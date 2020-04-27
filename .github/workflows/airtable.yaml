@@ -1,0 +1,29 @@
+# copied directly from Colby's previous work:  https://github.com/covid19risk/legacy_website/blob/12ebd1324c1c03bdab90c9522ecabbf6f9e53014/.github/workflows/airtable.yaml
+
+name: Airtable
+
+on:
+  schedule: 
+    cron: '0 0 1 1 *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Run airtable script
+        env:
+          AIRTABLE_BASE_KEY: ${{ secrets.AIRTABLE_BASE_KEY }}
+          AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }} 
+        run: |
+          pip3 install airtable-python-wrapper
+          chmod +x scripts/airtable-auto.py
+          scripts/airtable-auto.py
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v2
+        with:
+          commit-message: "auto-add new media"
+          title: "Changes by add-media github action"
+          body: "Automated changes"
