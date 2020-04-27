@@ -26,7 +26,7 @@ export default {
     disabled: Boolean,
     nuxt: Boolean,
     secondary: Boolean,
-    to: String
+    to: String,
   }
 };
 </script>

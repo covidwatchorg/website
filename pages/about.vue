@@ -3,11 +3,11 @@
         <v-row id="about">
             <v-col cols="12">
                 <!-- First row-->
-                <v-row id="header" class="first-row">
+                <v-row id="header" class="first-row mb-10 pa-12">
 
                     <v-col cols="7">
                         <div>
-                            <h2 style="margin-bottom: 46px">About Us</h2>
+                            <h1 style="margin-bottom: 46px">About Us</h1>
                             <div class="about-us-copy">
                                 <p>Covid Watch is a <b>nonprofit</b>, global effort to give you the power to reduce the spread of COVID-19 in the palm of your hand.</p>
                                 <p >We build and foster the adoption of decentralized technology that preserves your right to <b>privacy</b> while <b>protecting</b> your community.</p>
@@ -17,20 +17,19 @@
                     </v-col>
 
                     <v-col cols="4">
-                        <img src="../assets/about_us/family-earth.svg">
+                        <img class="earth-img" src="../assets/about_us/family-earth.svg">
                     </v-col>
 
                     
                     <v-col cols="3">
-    <v-btn class="cta-button, primary" :nuxt="true" :to="link">
-        {{ text }}
-    </v-btn>
-                        <Button type="primary" link="collaborate" text="Partner With Us"></Button>
+                        <!-- where should this link to? -->
+                        <Button primary hero nuxt to="/collaborate">Partner With Us</Button>
                     </v-col>   
 
 
                     <v-col cols="3">
-                        <Button link="collaborate" text="Use Our Solutions"></Button>
+                        <!-- where should this link to? -->
+                        <Button secondary nuxt to="/collaborate">Use Our Solutions</Button>
                     </v-col>
 
                 </v-row>
@@ -39,10 +38,10 @@
 
 
         <!-- We value row -->
-        <v-row class="d-block mb-10 pa-12" id="we-value">
-            <h2 class="plum--text mb-12">We Value</h2>
+        <v-row class="mb-10 pa-12" id="we-value">
+            <h2>We Value</h2>
 
-            <v-row >
+            <v-row>
 
                 <v-col cols="4" v-for="(card, i) in valueCards"  :key="i" class="d-flex flex-column align-left">
 
@@ -56,15 +55,15 @@
 
             <v-row class="cta-container my-8">
                 <!-- whitepaper link? !-->
-                <Button type="white primary--text" link="/whitepaper" text="Read the Whitepaper"></Button>
+                <Button secondary nuxt to="/whitepaper">Read the WhitePaper</Button>
             </v-row>
         </v-row>
 
 
         <!-- join us row -->
-        <v-row id="join-us" class="join-us">
+        <v-row class="mb-10 pa-12" id="join-us">
             <v-col cols="2">
-                <h2>Join Us</h2>
+                <h3>Join Us</h3>
             </v-col>
 
 
@@ -73,16 +72,17 @@
             </v-col> 
 
             <v-col cols="3" v-for="(cta, i) in callsToAction" :key="i">
-                <Button type="primary--text" :text="cta.button_text" link="/donate"></Button>
+                <!-- these should probably link to different places -->
+                <Button secondary nuxt to="/donate">{{ cta.button_text }}</Button>
                 <div>{{cta.cta_text}}</div>
             </v-col>
         </v-row>
 
         <!-- team row-->
-        <v-row id="our-team">
+        <v-row class="mb-10 pa-12" id="our-team">
             <v-col cols="12">
-                <div class="our-team-copy">
-                    <h2>Our Team</h2>
+                <div>
+                    <h2 style="margin-bottom: 50px">Our Team</h2>
                     <p>Covid Watch is a group of more than 400 volunteers from around the world. We are scientific researchers, privacy and public health experts, journalists, developers, and designers.</p>
                 </div>
             </v-col>
@@ -92,10 +92,10 @@
                     <v-row>
                         <img :src="founder.image">
                         <v-col cols="4">
-                            <div class=founder-name>
+                            <div class="title">
                                 {{founder.name}}
                             </div>
-                            <div class=founder-title>
+                            <div class="subtitle">
                                 <i>{{founder.title}}</i>
                             </div>
                             <img src="../assets/about_us/top-accent.svg">
@@ -142,25 +142,25 @@
 </template>
 
 <styles lang="scss">
-.cta-container {
-    display: flex;
-    justify-content: center;
-}
-.first-row{
-    background: linear-gradient(0deg, rgba(67, 197, 217, 0.3), rgba(255, 255, 255, 0) 20%);
-}
-.about-us-copy{
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 34px;
+    .cta-container {
+        display: flex;
+        justify-content: center;
+    }
+    .first-row{
+        background: linear-gradient(0deg, rgba(67, 197, 217, 0.2), rgba(255, 255, 255, 0) 20%);
+    }
+    .about-us-copy{
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 34px;
 
-    color: #585858;
-}
-.join-us{
-    background: rgba(245, 229, 230, 60);
-}
+        color: #585858;
+    }
+    .join-us{
+        background: rgba(245, 229, 230, 0.6);
+    }
 </styles>
 
 <script>
