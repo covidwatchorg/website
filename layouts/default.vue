@@ -15,7 +15,7 @@
   </v-app>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .container {
   max-width: 1240px;
 }
