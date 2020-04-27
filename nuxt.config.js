@@ -31,10 +31,10 @@ export default {
   /*
    ** Global CSS
    */
-  css: []
+  css: [],
   /*
    ** Plugins to load before mounting the App
-   */,
+   */
   plugins: [],
   /*
    ** Nuxt.js dev-modules
@@ -51,6 +51,9 @@ export default {
   vuetify: {
     customVariables: ["~/assets/variables.scss"],
     theme: {
+      options: {
+        customProperties: true
+      },
       themes: {
         light: {
           primary: "#2C58B1",
