@@ -1,38 +1,32 @@
 <template>
-    <v-btn class="cta-button" :class="type" :nuxt="true" :to="link">
-        {{ text }}
-    </v-btn>
+  <v-btn
+    depressed
+    color="primary"
+    :class="{ hero: hero }"
+    :disabled="disabled"
+    :nuxt="nuxt"
+    :outlined="secondary || disabled"
+    :to="to"
+  >
+    <slot></slot>
+  </v-btn>
 </template>
 
+<style lang="scss" scoped>
+.hero {
+  height: 58px;
+}
+</style>
 
 <script>
 export default {
-    name: "Button",
-    props: {
-        type: {
-            type: String,
-            required: true
-        },
-        link:{
-            type: String,
-            required: true
-        },
-        text:{
-            type: String,
-            required: true
-        }
-    }
+  name: "Button",
+  props: {
+    hero: Boolean,
+    disabled: Boolean,
+    nuxt: Boolean,
+    secondary: Boolean,
+    to: String
+  }
 };
 </script>
-
-
-<style lang="scss">
-    .cta-button {
-        width: 300px;
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: bold;
-        // this font size from figma makes text look HUGE relative to button and other elements
-        // font-size: 18px;
-    }
-</style>
