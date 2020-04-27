@@ -5,7 +5,7 @@
     :class="{ hero: hero }"
     :disabled="disabled"
     :nuxt="nuxt"
-    :outlined="secondary"
+    :outlined="secondary || disabled"
     :to="to"
   >
     <slot></slot>
