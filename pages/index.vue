@@ -2,12 +2,7 @@
   <v-container>
     <v-row id="home">
       <v-col>
-
-
         <v-row id="hero">
-          
-
-          <!-- why isn't this cols="8" seeming to have an effect? -->
           <v-col cols="8" class="px-10">
 
             <div class="hero-copy">
@@ -72,38 +67,19 @@
 
         <!-- Latest News -->
         <v-row id="latest-news" > 
-
           <v-col>
-              
               <v-row class="px-12 mt-12 mb-6 d-flex align-center justify-space-between">
-
-                <!-- to do: refactor heading  -->
                 <h2 class="pewter--text">Latest News</h2>
 
-                <!-- to do: replace ">" w real arrow icon -->
                 <nuxt-link to="/news" style="text-decoration:none;font-weight:600;font-style:normal;">More News &nbsp; <img style="height:10px;"  src="../assets/home_page/arrow_icon.svg" alt="arrow"> </nuxt-link>
-
-                <!-- news card to later be abstracted into component -->
 
                 <!-- not sure why a flex-wrap doesn't resolve responsiveness by stacking cards vertically here: style="display:flex;flex-wrap:wrap;" -->
                 <v-row class="my-8">
-                  
-                  <v-col cols="4" v-for="(card,i) in newsCards" :key="i"> 
-                    <v-card class="news-card">
-                          <img style="position:absolute;" src="../assets/home_page/news_cards_top_accent.svg" alt="stripe">
-                          <div class="d-flex py-6 px-6 justify-space-between">
-                            <img src="../assets/home_page/news_icon.svg" alt=news>
-                            <div class="news-date">{{card.date}}</div>
-                          </div>
-                          <div class="pa-6">
-                            <a :href="card.url" class="primary--text" style="text-decoration:none;font-weight:bold;">{{card.title}} <img style="height:10px;" src="../assets/home_page/arrow_icon.svg" alt="arrow"></a>
-                            <div class="primary--text float-right mt-10">
-                              - {{card.author}}, <span style="font-style:italic;"> {{card.outlet}} </span>
-                            </div>
-                        </div>
-                    </v-card>
-                  </v-col>
 
+                <v-col cols="4" v-for="(card,i) in newsCards" :key="i"> 
+                  <NewsCard :card="card"></NewsCard>
+                </v-col>
+                  
                 </v-row>
               </v-row>
           </v-col>
@@ -200,10 +176,12 @@
 
 <script>
 import Button from "../components/Button.vue";
+import NewsCard from "../components/NewsCard.vue";
 
 export default {
   components: {
-    Button
+    Button,
+    NewsCard
   },
   data: () => ({
     howItWorksCards: [
