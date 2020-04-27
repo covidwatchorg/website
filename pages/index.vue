@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row id="home">
-      <v-col cols="12">
+      <v-col>
 
 
         <v-row id="hero">
@@ -9,6 +9,7 @@
 
           <!-- why isn't this cols="8" seeming to have an effect? -->
           <v-col cols="8" class="px-12">
+
             <div class="hero-copy">
 
               <h1 class="tangerine--text main-heading" style="margin-bottom: 40px">Together, we have the power to stop the spread of COVID-19</h1>
@@ -24,8 +25,11 @@
             </div>
           </v-col>
           
-          <img class="hero-main-img" src="../assets/home_page/hero_main.svg" alt="">
+          <v-spacer></v-spacer>
 
+          <v-col cols="4">
+            <img class="hero-main-img" src="../assets/home_page/hero_main.svg" alt="">
+          </v-col>
 
 
         </v-row>
@@ -97,20 +101,20 @@
             <v-row>
               
               <v-col cols="4" v-for="(card,i) in newsCards" :key="i"> 
-              <v-card class="news-card" style="position:relative;">
-                    <img style="position:absolute;" src="../assets/home_page/news_cards_top_accent.svg" alt="stripe">
-                    <div class="d-flex py-4 px-6 justify-space-evenly">
-                      <img src="../assets/home_page/news_icon.svg" alt=news>
-                      <div class="news-date">{{card.date}}</div>
-                    </div>
-                    <div class="pa-6">
-                        <a :href="card.url" class="primary--text my-4" style="text-decoration:none;font-weight:bold;">{{card.title}} ></a>
+                <v-card class="news-card" style="position:relative;">
+                      <img style="position:absolute;" src="../assets/home_page/news_cards_top_accent.svg" alt="stripe">
+                      <div class="d-flex py-4 px-6 justify-space-between">
+                        <img src="../assets/home_page/news_icon.svg" alt=news>
+                        <div class="news-date">{{card.date}}</div>
+                      </div>
+                      <div class="pa-6">
+                        <a :href="card.url" class="primary--text" style="text-decoration:none;font-weight:bold;">{{card.title}} ></a>
                         <div class="primary--text float-right">
                           - {{card.author}}, <span style="font-style:italic;"> {{card.outlet}} </span>
+                        </div>
                     </div>
-                  </div>
-              </v-card>
-                </v-col>
+                </v-card>
+              </v-col>
 
             </v-row>
           </v-col>
