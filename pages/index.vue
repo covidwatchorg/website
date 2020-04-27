@@ -4,6 +4,7 @@
     <h2>h2: let's test</h2>
     <h3>h3: header typography</h3>
     <p class="title">title: and typography</p>
+    <p class="title-caps">title caps</p>
     <p class="subtitle">subtitle: in general</p>
     <p>default</p>
     <p class="caption">caption</p>

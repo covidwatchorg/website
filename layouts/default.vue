@@ -31,6 +31,19 @@ h2 {
 h3 {
   color: var(--v-plum-base);
 }
+
+.title {
+  font-size: 24px;
+  line-height: 34px;
+}
+
+.title-caps {
+  font-size: 28px;
+  line-height: 34px;
+  color: var(--v-pewter-base);
+  text-transform: uppercase;
+  font-weight: 600;
+}
 </style>
 
 <script>
