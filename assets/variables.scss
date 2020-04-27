@@ -2,3 +2,21 @@
 //
 // The variables you want to modify
 // $font-size-root: 20px;
+
+$headings: (
+  "h1": (
+    "size": 50px,
+    "weight": 600,
+    "line-height": 61px
+  ),
+  "h2": (
+    "size": 40px,
+    "weight": 600,
+    "line-height": 49px
+  ),
+  "h3": (
+    "size": 28px,
+    "weight": 600,
+    "line-height": 34px
+  )
+);
