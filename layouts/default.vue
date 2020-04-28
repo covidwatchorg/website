@@ -3,19 +3,24 @@
         <!--Fixed top navbar-->
         <AppBar :navLinks="navLinks" :title="title"></AppBar>
 
-        <!--Main content, pulled in by nuxt. Thanks, nuxt!-->
-        <v-content>
-            <v-container>
-                <nuxt />
-            </v-container>
-        </v-content>
 
-        <!--Fixed footer-->
-        <Footer :sections="footerSections"></Footer>
-    </v-app>
+    <!--Main content, pulled in by nuxt. Thanks, nuxt!-->
+    <v-content>
+      <v-container>
+        <!-- this transition element manages the fade in/out of each page -->
+        <transition name="slide-fade" mode="out-in">
+            <nuxt />
+        </transition>
+      </v-container>
+    </v-content>
+
+    <!-- Footer-->
+    <Footer :sections="footerSections"></Footer>
+  </v-app>
+
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .container {
     max-width: 1240px;
 }
@@ -25,11 +30,15 @@ h1 {
 }
 
 h2 {
-  color: var(--v-bluejay-base);
+  color: var(--v-plum-base);
 }
 
 h3 {
   color: var(--v-plum-base);
+}
+
+a {
+  text-decoration: none;
 }
 
 .title {
@@ -43,6 +52,24 @@ h3 {
   color: var(--v-pewter-base);
   text-transform: uppercase;
   font-weight: 600;
+
+  // this manages the transitions between pages.
+  // more info/options we can play with: https://www.vuemastery.com/courses/animating-vue/page-transitions
+
+    .slide-fade-enter {
+      transform: translateX(10px);
+      opacity: 0;
+    }
+    
+    .slide-fade-enter-active,
+    .slide-fade-leave-active {
+      transition: all 0.2s ease;
+    }
+    
+    .slide-fade-leave-to {
+      transform: translateX(-10px);
+      opacity: 0;
+    }
 }
 </style>
 
