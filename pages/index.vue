@@ -228,22 +228,22 @@ export default {
         date: "April 13, 2020",
         title: "Lorem ipsum dolor sit amet, dus consectetur adipiscing elit ut etal aliquam",
         url: "https://www.cnn.com",
-        author: "Khari Johnson",
-        outlet: "Venture Beat",
+        author_name: "Khari Johnson",
+        outlet_name: "Venture Beat",
       },
       {
         date: "April 13, 2020",
         title: "Lorem ipsum dolor sit amet, dus consectetur adipiscing elit ut etal aliquam",
         url: "https://www.cnn.com",
-        author: "Khari Johnson",
-        outlet: "Venture Beat",
+        author_name: "Khari Johnson",
+        outlet_name: "Venture Beat",
       },
       {
         date: "April 13, 2020",
         title: "Lorem ipsum dolor sit amet, dus consectetur adipiscing elit ut etal aliquam",
         url: "https://www.cnn.com",
-        author: "Khari Johnson",
-        outlet: "Venture Beat",
+        author_name: "Khari Johnson",
+        outlet_name: "Venture Beat",
       }
     ],
     mobileImages: [

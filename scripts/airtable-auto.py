@@ -18,28 +18,29 @@ def valid_entry(entry):
 def main():
     try:
         # these keys have been set up Github /websites repo secrets already
-        # airtable = Airtable(os.environ['AIRTABLE_BASE_KEY'], 'Table 1', api_key=os.environ['AIRTABLE_API_KEY']) 
+        airtable = Airtable(os.environ['AIRTABLE_BASE_KEY'], 'news', api_key=os.environ['AIRTABLE_API_KEY']) 
         
         # hardcoding base key and api key for now:
+        # airtable = Airtable(os.environ['app2gjpkAcqIzagxn'], 'news', api_key=os.environ['keyr0gMB3vBqrwhf0']) 
     except KeyError:
         print("Couldn't find airtable base key or api key")
         exit(1)
 
-    with open('assets/medialist.json', 'r') as f:
+    with open('../assets/medialist.json', 'r') as f:
         media_list = json.load(f)
 
-    for page in airtable.get_iter(view='Grid view',sort='site'):
+    for page in airtable.get_iter(view='dont_change_this_name'):
         for record in page:
-            if 'site' not in record.keys():
-                new_values = record['fields']
+            # if 'site' not in record.keys():
+            new_values = record['fields']
 
-                if not valid_entry(new_values):
-                     break
+            if not valid_entry(new_values):
+                    break
 
-                if new_values not in media_list:
-                    media_list.append(new_values)
+            if new_values not in media_list:
+                media_list.append(new_values)
 
-    with open('assets/medialist.json', 'w') as f:
+    with open('../assets/medialist.json', 'w') as f:
         json.dump(media_list, f)
 
 if __name__ == '__main__':

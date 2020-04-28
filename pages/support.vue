@@ -4,7 +4,7 @@
       <v-col>
         <v-row id="hero">
           
-          <v-col class="hero-copy" cols=7>
+          <v-col class="hero-copy" cols="7">
             <h1>Support Us</h1>
 
 
@@ -25,8 +25,8 @@
 
           <v-spacer></v-spacer>
 
-          <v-col cols=4>
-            <img src="../assets/support_page/people_globe.svg" alt="globe">
+          <v-col cols="4">
+            <img style="max-height:370px;" src="../assets/support_page/people_globe.svg" alt="globe">
           </v-col>
         </v-row>
 

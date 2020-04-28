@@ -6,11 +6,11 @@
           
           <v-col cols=7>
             <h1>News and Media</h1>
-            <div class="mt-10 d-flex justify-space-between align-center" style="max-width:500px;">
+            <div class="mt-10 d-flex justify-space-between align-center" style="max-width:600px;">
               <p class="title">Filter by:</p> 
-              <p @click="showAll" class="filter px-2">All News</p>
-              <p @click="showPressReleases" class="filter px-2">Press Releases</p>
-              <p @click="showPressMentions" class="filter px-2">Press Mentions</p>
+              <Button secondary @click="showAll = true" class="filter px-2">All News</Button>
+              <Button secondary @click="showAll = false" class="filter px-2">Press Releases</Button>
+              <Button secondary @click="showAll = false" class="filter px-2">Press Mentions</Button>
             </div>
           </v-col>
 
@@ -40,16 +40,6 @@
     #hero {
       margin-top: 50px;
     }
-
-    .filter {
-      font-weight: 500;
-      color: var(--v-primary-base);
-    }
-
-    .filter:hover {
-      color: var(--v-aqua-base);
-      cursor: pointer;
-    }
   }
 
 </style>
@@ -57,92 +47,50 @@
 
 <script>
 import NewsCard from "../components/NewsCard.vue";
-// import json from '../assets/medialist.json';
+import Button from "../components/Button.vue";
+import json from '../assets/medialist.json';
 
 export default {
   components: {
-    NewsCard
+    NewsCard,
+    Button
   },
+  // may not be necessary if lines below work out
   mounted() {
-    this.cardsToRender = this.newsCards.slice();
+    this.cardsToRender = this.airtableList.slice();
   },
-  methods: {
-    // all these methods currently generate errors "TypeError: Cannot read property 'filter' of undefined".
-    // I suspect it is related to some sort of inner working of Vue related to passing data around that I'm not aware of
-    showAll: () => {
-      this.cardsToRender = this.newsCards.slice();
-    },
-    showPressReleases: () => {
-      this.cardsToRender = this.filter(card => card.type === "press_release");
-    },
-    showPressMentions: () => {
-      this.cardsToRender = this.newsCards.filter(card => card.type === "press_mention");
+  // methods: {
+  //   // all these methods currently generate errors "TypeError: Cannot read property 'filter' of undefined".
+  //   // I suspect it is related to some sort of inner working of Vue related to passing data around that I'm not aware of
+  //   showAll: () => {
+  //     this.cardsToRender = this.newsCards.slice();
+  //   },
+  //   showPressReleases: () => {
+  //     this.cardsToRender = this.filter(card => card.type === "press_release");
+  //   },
+  //   showPressMentions: () => {
+  //     this.cardsToRender = this.newsCards.filter(card => card.type === "press_mention");
+  //   }
+  // },
+  computed: {
+    cardsToRender() {
+      if (showAll) {
+        this.cardsToRender = airtableList;
+      } else {
+        // just trying to get cards to disappear for now
+        this.cardsToRender = [];
+      }
     }
   },
+  data: () => ({
+    airtableList: json,
+    cardsToRender: [],
+    showAll: true
+  }),
   head() {
     return {
       title: "News | Covid Watch"
     };
   },
-  // this was a hacky attempt to resolve the errors w the methods above
-  // computed: {
-  //   newsCardsCopy() {
-  //     return { data:newsCards }
-  //   }
-  // },
-  data: () => ({
-    airtableList: json,
-    cardsToRender: undefined,
-    newsCards: [
-      {
-        type: "press_mention",
-        date: "April 13, 2020",
-        title: "Lorem ipsum dolor sit amet, dus consectetur adipiscing elit ut etal aliquam",
-        url: "https://www.cnn.com",
-        author: "Khari Johnson",
-        outlet: "Venture Beat",
-      },
-      {
-        type: "press_mention",
-        date: "April 13, 2020",
-        title: "Lorem ipsum dolor sit amet, dus consectetur adipiscing elit ut etal aliquam",
-        url: "https://www.cnn.com",
-        author: "Khari Johnson",
-        outlet: "Venture Beat",
-      },
-      {
-        type: "press_mention",
-        date: "April 13, 2020",
-        title: "Lorem ipsum dolor sit amet, dus consectetur adipiscing elit ut etal aliquam",
-        url: "https://www.cnn.com",
-        author: "Khari Johnson",
-        outlet: "Venture Beat",
-      },
-      {
-        type: "press_release",
-        date: "April 13, 2020",
-        title: "Lorem ipsum dolor sit amet, dus consectetur adipiscing elit ut etal aliquam",
-        url: "https://www.cnn.com",
-        author: "Rhys Fenwick",
-        outlet: "Covid Watch",
-      },
-      {
-        type: "press_release",
-        date: "April 13, 2020",
-        title: "Lorem ipsum dolor sit amet, dus consectetur adipiscing elit ut etal aliquam",
-        url: "https://www.cnn.com",
-        author: "Rhys Fenwick",
-        outlet: "Covid Watch",
-      },
-      {
-        type: "press_release",
-        date: "April 13, 2020",
-        title: "Lorem ipsum dolor sit amet, dus consectetur adipiscing elit ut etal aliquam",
-        url: "https://www.cnn.com",
-        author: "Rhys Fenwick",
-        outlet: "Covid Watch",
-      }
-    ]
-  })
 };
 </script>

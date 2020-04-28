@@ -8,7 +8,7 @@
             <div class="pa-6">
             <a :href="card.url" class="primary--text" style="text-decoration:none;font-weight:bold;">{{card.title}} <img style="height:10px;" src="../assets/home_page/arrow_icon.svg" alt="arrow"></a>
             <div class="primary--text float-right mt-10">
-                - {{card.author}}, <span style="font-style:italic;"> {{card.outlet}} </span>
+                - {{card.author_name}}, <span style="font-style:italic;"> {{card.outlet_name}} </span>
             </div>
         </div>
 
