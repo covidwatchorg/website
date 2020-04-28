@@ -25,7 +25,7 @@ h1 {
 }
 
 h2 {
-  color: var(--v-bluejay-base);
+  color: var(--v-plum-base);
 }
 
 h3 {
