@@ -1,12 +1,12 @@
-import colors from 'vuetify/es5/util/colors'
+import colors from "vuetify/es5/util/colors";
 
-const metaHeaders = require('./meta-headers.json');
+const metaHeaders = require("./meta-headers.json");
 
 export default {
-  mode: 'spa',
+  mode: "spa",
   /*
-  ** Headers of the page
-  */
+   ** Headers of the page
+   */
   head: {
     title: metaHeaders.title,
     meta: [
@@ -22,87 +22,83 @@ export default {
         content: value
       }))
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
   /*
-  ** Customize the progress-bar color
-  */
-  loading: { color: '#fff' },
+   ** Customize the progress-bar color
+   */
+  loading: { color: "#fff" },
   /*
-  ** Global CSS
-  */
-  css: [
-  ],
+   ** Global CSS
+   */
+  css: [],
   /*
-  ** Plugins to load before mounting the App
-  */
-  plugins: [
-  ],
+   ** Plugins to load before mounting the App
+   */
+  plugins: [],
   /*
-  ** Nuxt.js dev-modules
-  */
-  buildModules: [
-    '@nuxtjs/vuetify',
-  ],
+   ** Nuxt.js dev-modules
+   */
+  buildModules: ["@nuxtjs/vuetify"],
   /*
-  ** Nuxt.js modules
-  */
-  modules: [
-    'nuxt-webfontloader',
-  ],
+   ** Nuxt.js modules
+   */
+  modules: ["nuxt-webfontloader"],
   /*
-  ** vuetify module configuration
-  ** https://github.com/nuxt-community/vuetify-module
-  */
+   ** vuetify module configuration
+   ** https://github.com/nuxt-community/vuetify-module
+   */
   vuetify: {
-    customVariables: ['~/assets/variables.scss'],
+    customVariables: ["~/assets/variables.scss"],
     theme: {
+      options: {
+        customProperties: true
+      },
       themes: {
         light: {
-          primary: '#2C58B1',
-          bluejay: '#2C58B1',
-          accent: '#F05452',
-          tangerine: '#F05452',
-          secondary: '#43C4D9',
-          aqua: '#43C4D9',
-          plum: '#4B0A70',
-          lavender: '#A680B7',
-          elderberry: '#2C007B',
-          thistle: '#71CDDF',
-          pewter: '#585858',
-          silver: "#C4C4C4",  // for secondary buttons
-          info: '#2C58B1',    // bluejay
-          warning: '#43C4D9', // aqua
-          error: '#F05452',   // tangerine
-          success: '#A680B7'  // lavender     
+          primary: "#2C58B1",
+          bluejay: "#2C58B1",
+          accent: "#F05452",
+          tangerine: "#F05452",
+          secondary: "#43C4D9",
+          aqua: "#43C4D9",
+          plum: "#4B0A70",
+          lavender: "#A680B7",
+          elderberry: "#2C007B",
+          thistle: "#71CDDF",
+          pewter: "#585858",
+          silver: "#C4C4C4",
+          info: "#2C58B1", // bluejay
+          warning: "#43C4D9", // aqua
+          error: "#F05452", // tangerine
+          success: "#A680B7" // lavender
         }
       }
     },
     defaultAssets: {
       font: {
-        family: 'Montserrat',
-        size: '18px',
-      },
+        family: "Montserrat",
+        size: "18px"
+      }
     },
-    treeShake: true, // override production-only default so defaultAssets work as expected
+    treeShake: true // override production-only default so defaultAssets work as expected
   },
   /*
-  ** nuxt-webfontloader module configuration
-  ** https://github.com/Developmint/nuxt-webfontloader
-  */
+   ** nuxt-webfontloader module configuration
+   ** https://github.com/Developmint/nuxt-webfontloader
+   */
   webfontloader: {
     google: {
-      families: ['Montserrat:400,600,700'] // Loads Monserrat with 400, 600 and 700 weights
+      families: ["Montserrat:400,600,700"] // Loads Monserrat with 400, 600 and 700 weights
     }
   },
   /*
-  ** Build configuration
-  */
+   ** Build configuration
+   */
   build: {
     /*
-    ** You can extend webpack config here
-    */
-    extend(config, ctx) {
-    }
+     ** You can extend webpack config here
+     */
+    extend(config, ctx) {}
   }
-}
+};
