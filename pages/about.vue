@@ -6,13 +6,21 @@
                 <v-row id="header" class="first-row mb-10 pa-12">
 
                     <v-col cols="7">
-                        <div>
-                            <h1 style="margin-bottom: 46px">About Us</h1>
+                        <div class="mb-12">
+                            <h1 class="mb-5">About Us</h1>
                             <div class="about-us-copy">
                                 <p>Covid Watch is a <b>nonprofit</b>, global effort to give you the power to reduce the spread of COVID-19 in the palm of your hand.</p>
                                 <p >We build and foster the adoption of decentralized technology that preserves your right to <b>privacy</b> while <b>protecting</b> your community.</p>
                                 <p>We want to speed our return to a world where we can be <b>together</b> again, safely and securely.</p>
                             </div>
+                        </div>
+
+                        <div class="d-flex">
+                            <!-- where should this link to? -->
+                            <Button primary hero class="pa-5 mr-10">Partner With Us</Button>
+
+                            <!-- where should this link to? -->
+                            <Button secondary nuxt class="pa-5">Use Our Solutions</Button>
                         </div>
                     </v-col>
 
@@ -20,17 +28,7 @@
                         <img class="earth-img" src="../assets/about_us/family-earth.svg">
                     </v-col>
 
-                    
-                    <v-col cols="3">
-                        <!-- where should this link to? -->
-                        <Button primary hero nuxt to="/collaborate">Partner With Us</Button>
-                    </v-col>   
 
-
-                    <v-col cols="3">
-                        <!-- where should this link to? -->
-                        <Button secondary nuxt to="/collaborate">Use Our Solutions</Button>
-                    </v-col>
 
                 </v-row>
             </v-col>
@@ -45,7 +43,7 @@
 
                 <v-col cols="4" v-for="(card, i) in valueCards"  :key="i" class="d-flex flex-column align-left">
 
-                    <img class="card-img" :src="card.img" :alt="card.title">
+                    <img class="card-img" style="min-height: 262px" :src="card.img" :alt="card.title">
                     <h3 class="card-title mt-10">{{card.title}}</h3>
                     <div class="card-body mt-5">{{card.body}}</div>
 
@@ -62,33 +60,35 @@
 
         <!-- join us row -->
         <v-row class="join-us mb-10 pa-12" id="join-us">
+            <v-row class="mb-3">
+                <v-col cols="2">
+                    <h2>Join Us</h2>
+                </v-col>
+
+                <v-spacer></v-spacer>
+
+                <v-col cols="8">
+                    <img src="../assets/about_us/cyclists.svg">
+                </v-col> 
+            </v-row>
+
             <v-row>
-<v-col cols="2">
-                <h3>Join Us</h3>
-            </v-col>
-            
-            <v-spacer></v-spacer>
-
-            <v-col cols="8">
-                <img src="../assets/about_us/cyclists.svg">
-            </v-col> 
-        </v-row>
-
-        <v-row>
-            <v-col cols="3" v-for="(cta, i) in callsToAction" :key="i">
-                <!-- these should probably link to different places -->
-                <Button secondary nuxt to="/donate">{{ cta.button_text }}</Button>
-                <div>{{cta.cta_text}}</div>
-            </v-col>
-        </v-row>
+                <v-col cols="3" v-for="(cta, i) in callsToAction" :key="i">
+                    <!-- these should probably link to different places -->
+                    <div class="mb-4">
+                        <Button secondary nuxt to="/donate">{{ cta.button_text }}</Button>
+                    </div> 
+                    <div>{{cta.cta_text}}</div>
+                </v-col>
+            </v-row>
 
         </v-row>
 
         <!-- team row-->
-        <v-row class="mb-10 pa-12" id="our-team">
+        <v-row class="mb-5 pa-12" id="our-team">
             <v-col cols="12">
                 <div>
-                    <h2 style="margin-bottom: 50px">Our Team</h2>
+                    <div class="mb-5"><h2>Our Team</h2></div>
                     <p>Covid Watch is a group of more than 400 volunteers from around the world. We are scientific researchers, privacy and public health experts, journalists, developers, and designers.</p>
                 </div>
             </v-col>
@@ -96,10 +96,10 @@
             <template v-for="(founder,n) in founders">
                 <v-col :key="n">
                     <v-row>
-                        <v-col cols="4">
-                        <img :src="founder.image">
+                        <v-col cols="5">
+                            <img class="mr-5" :src="founder.image">
                         </v-col>
-                        <v-col cols="8">
+                        <v-col cols="7">
                             <div class="title">
                                 {{founder.name}}
                             </div>
@@ -119,11 +119,12 @@
                     width="100%"
                     ></v-responsive>
             </template>
+
         </v-row>
 
         <!-- academic partners row-->
-        <v-row id="academic-partners">
-            <v-col cols="3"><h3>Academic Partners</h3></v-col>
+        <v-row class="px-12" id="academic-partners">
+            <v-col cols="3"><h3 class="pt-5">Academic Partners</h3></v-col>
 
             <div class="d-flex justify-space-around align-center">
                 <v-col cols="3" v-for="(partner, i) in academic_partners" :key="i">
@@ -132,21 +133,21 @@
             </div> 
         </v-row>
 
-            <!-- colabs row-->
-            <v-row id="collaborator-projects">
-                <v-col cols="3"><h3>Collaborator Partners</h3></v-col>
+        <!-- colabs row-->
+        <v-row class="pa-12" id="collaborator-projects">
+            <v-col cols="3"><h3 class="pt-6">Collaborator Partners</h3></v-col>
 
-                
+
             <div class="d-flex justify-space-around align-center">
                 <v-col cols="2" v-for="(collab, i) in collaborator_projects" :key="i">
                     <img class=collab-img :src="collab.src"  @mouseover="collab.src = collab.color" @mouseleave="collab.src = collab.grey">
-                    <div class="collab-name">
+                    <div class="justify-center collab-name">
                         {{ collab.name }}
                     </div>
                 </v-col>
             </div>
 
-            </v-row>
+        </v-row>
 
 
 
