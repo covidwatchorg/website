@@ -8,6 +8,7 @@
     :nuxt="nuxt"
     :outlined="secondary || disabled"
     :to="to"
+    @click="$emit('click', $event)"
   >
     <slot></slot>
   </v-btn>

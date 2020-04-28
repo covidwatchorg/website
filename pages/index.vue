@@ -3,7 +3,6 @@
     <v-row id="home">
       <v-col>
         <v-row id="hero">
-          <!-- why isn't this cols="8" seeming to have an effect? -->
           <v-col cols="8" class="px-10">
             <div class="hero-copy">
               <h1>
@@ -50,15 +49,12 @@
             </v-col>
           </v-row>
 
-          <v-row class="cta-container mt-8">
-            <Button secondary nuxt to="/how-it-works">Learn More</Button>
-          </v-row>
+
+          <CTA to="/how-it-works" content="Learn More"></CTA>
         </v-row>
 
         <!-- Why Covid Watch -->
-        <v-row id="why-covid-watch" class="d-block mt-12 pa-12">
-          <h2 class="plum--text mb-12">Why Covid Watch</h2>
-
+        <v-row id="why-covid-watch" class="d-block pa-12">
           <h2 class="plum--text mb-12">Why Covid Watch</h2>
 
           <v-row>
@@ -69,17 +65,10 @@
             </v-col>
           </v-row>
 
-          <v-row class="cta-container my-8">
-            <Button secondary nuxt to="/how-it-works">
-              <img
-                class="mr-3"
-                style="height:20px;"
-                src="../assets/home_page/pdf_logo.svg"
-                alt="pdf"
-              />
-              Read the Whitepaper</Button
-            >
-          </v-row>
+          <a href="https://www.whitepaper.com/" alt="whitepaper">
+            <CTA pdf content="Read the Whitepaper"></CTA>
+          </a>
+ 
         </v-row>
 
         <!-- Latest News -->
@@ -88,10 +77,8 @@
             <v-row
               class="px-12 mt-12 mb-6 d-flex align-center justify-space-between"
             >
-              <!-- to do: refactor heading  -->
               <h2 class="pewter--text">Latest News</h2>
 
-              <!-- to do: replace ">" w real arrow icon -->
               <nuxt-link
                 to="/news"
                 style="text-decoration:none;font-weight:600;font-style:normal;"
@@ -103,40 +90,10 @@
                 />
               </nuxt-link>
 
-              <!-- news card to later be abstracted into component -->
-
               <!-- not sure why a flex-wrap doesn't resolve responsiveness by stacking cards vertically here: style="display:flex;flex-wrap:wrap;" -->
               <v-row class="my-8">
                 <v-col cols="4" v-for="(card, i) in newsCards" :key="i">
-                  <v-card class="news-card">
-                    <img
-                      style="position:absolute;"
-                      src="../assets/home_page/news_cards_top_accent.svg"
-                      alt="stripe"
-                    />
-                    <div class="d-flex py-6 px-6 justify-space-between">
-                      <img src="../assets/home_page/news_icon.svg" alt="news" />
-                      <div class="news-date">{{ card.date }}</div>
-                    </div>
-                    <div class="pa-6">
-                      <a
-                        :href="card.url"
-                        class="primary--text"
-                        style="text-decoration:none;font-weight:bold;"
-                        >{{ card.title }}
-                        <img
-                          style="height:10px;"
-                          src="../assets/home_page/arrow_icon.svg"
-                          alt="arrow"
-                      /></a>
-                      <div class="primary--text float-right mt-10">
-                        - {{ card.author }},
-                        <span style="font-style:italic;">
-                          {{ card.outlet }}
-                        </span>
-                      </div>
-                    </div>
-                  </v-card>
+                  <NewsCard :card="card"></NewsCard>
                 </v-col>
               </v-row>
             </v-row>
@@ -167,70 +124,87 @@
 </template>
 
 <style lang="scss">
-#hero {
-  background-image: url("../assets/home_page/hero_main.svg");
-  background-position-x: right;
-  background-size: contain;
-  height: 560px;
-}
 
-#why-covid-watch {
-  background-image: url("../assets/home_page/lavender_slope.svg");
-  background-size: contain;
-}
+  // this handles the transition effect between pages, see default.vue <transition> element
+  .slide-fade-enter {
+    opacity: 0;
+    transform: translateX(10px);
+  }
 
-// Jesse: I added this bc for some reason appears h2 elements not reading font-size from variables.scss
-h2 {
-  font-size: 36px;
-}
+  .slide-fade-enter-active {
+    transition: all 0.5s ease;
+  }
 
-.why-background {
-  max-height: 420px;
-  max-width: 1240px;
-}
 
-.hero-copy {
-  margin-top: 50px;
-}
 
-.card-img {
-  width: 100%;
-  // this max-height is necessary bc the source fourth image Community Safety is slightly larger in px than the others
-  // may need to update this to make images appear larger without the fourth being larger than others
-  max-height: 200px;
-}
+#home {
+  #hero {
+    background-image: url("../assets/home_page/hero_main.svg");
+    background-position-x: right;
+    background-size: contain;
+    height: 560px;
+  }
 
-#why-covid-watch .card-img {
-  // this keeps the why covid watch images from getting too large
-  max-height: 200px;
-}
+  #why-covid-watch {
+    background-image: url("../assets/home_page/lavender_slope.svg");
+    background-size: contain;
+  }
 
-// this could potentially be abstracted out across other pages also.  centers CTA buttons at the bottom of each section
-.cta-container {
-  display: flex;
-  justify-content: center;
-}
+  // Jesse: I added this bc for some reason appears h2 elements not reading font-size from variables.scss
+  h2 {
+    font-size: 36px;
+  }
 
-#latest-news {
-  // note: this is #71cddf with 15% opacity
-  background-color: rgba(113, 205, 223, 0.15);
+  .why-background {
+    max-height: 420px;
+    max-width: 1240px;
+  }
 
-  .news-card {
-    height: 250px;
-    min-width: 320px;
+  .hero-copy {
+    margin-top: 50px;
+  }
 
-    // might be necessary for blue stripe at top
-    // style="position:relative;"
+  .card-img {
+    width: 100%;
+    // this max-height is necessary bc the source fourth image Community Safety is slightly larger in px than the others
+    // may need to update this to make images appear larger without the fourth being larger than others
+    max-height: 200px;
+  }
+
+  #why-covid-watch .card-img {
+    // this keeps the why-covid-watch images from getting too large
+    max-height: 200px;
+  }
+
+  // this could potentially be abstracted out across other pages also.  centers CTA buttons at the bottom of each section
+  .cta-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  #latest-news {
+    // note: this is #71cddf with 15% opacity
+    background-color: rgba(113, 205, 223, 0.15);
+
+    .news-card {
+      height: 250px;
+      min-width: 320px;
+    }
+
   }
 }
 </style>
 
 <script>
 import Button from "../components/Button.vue";
+import CTA from "../components/CTA.vue";
+import NewsCard from "../components/NewsCard.vue";
 
 export default {
   components: {
-    Button
+    Button,
+    NewsCard,
+    CTA
   },
   data: () => ({
     howItWorksCards: [
@@ -285,24 +259,24 @@ export default {
         title:
           "Lorem ipsum dolor sit amet, dus consectetur adipiscing elit ut etal aliquam",
         url: "https://www.cnn.com",
-        author: "Khari Johnson",
-        outlet: "Venture Beat"
+        author_name: "Khari Johnson",
+        outlet_name: "Venture Beat"
       },
       {
         date: "April 13, 2020",
         title:
           "Lorem ipsum dolor sit amet, dus consectetur adipiscing elit ut etal aliquam",
         url: "https://www.cnn.com",
-        author: "Khari Johnson",
-        outlet: "Venture Beat"
+        author_name: "Khari Johnson",
+        outlet_name: "Venture Beat"
       },
       {
         date: "April 13, 2020",
         title:
           "Lorem ipsum dolor sit amet, dus consectetur adipiscing elit ut etal aliquam",
         url: "https://www.cnn.com",
-        author: "Khari Johnson",
-        outlet: "Venture Beat"
+        author_name: "Khari Johnson",
+        outlet_name: "Venture Beat"
       }
     ],
     mobileImages: [
