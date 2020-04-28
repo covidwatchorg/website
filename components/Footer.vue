@@ -24,7 +24,9 @@
         </v-col>
         <v-spacer />
         <v-col :md="2">
-          <span>&copy; {{ new Date().getFullYear() }}</span>
+          <Button class="primary--text" nuxt to="/support" color="white"
+            >Donate</Button
+          >
         </v-col>
         <v-col cols="12" class="text-center">
           <span class="caption">
@@ -52,8 +54,13 @@
 </style>
 
 <script>
+import Button from "./Button.vue";
+
 export default {
   name: "Footer",
+  components: {
+    Button
+  },
   props: {
     sections: Array
   }
