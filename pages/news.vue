@@ -9,14 +9,14 @@
               class="mt-10 d-flex justify-space-between align-center"
               style="max-width:600px;"
             >
-              <p class="title">Filter by:</p>
-              <Button secondary @click="showAll = true" class="filter px-2"
+              <p class="title mb-0">Filter by:</p>
+              <Button secondary @click="toShow = 'all'" class="filter px-2"
                 >All News</Button
               >
-              <Button secondary @click="showAll = false" class="filter px-2"
+              <Button secondary @click="toShow = 'releases'" class="filter px-2"
                 >Press Releases</Button
               >
-              <Button secondary @click="showAll = false" class="filter px-2"
+              <Button secondary @click="toShow = 'mentions'" class="filter px-2"
                 >Press Mentions</Button
               >
             </div>
@@ -53,20 +53,47 @@
 import NewsCard from "../components/NewsCard.vue";
 import Button from "../components/Button.vue";
 import json from "../assets/medialist.json";
+import gsap from 'gsap'; //this is a javascript animation library, more info: https://www.vuemastery.com/courses/animating-vue/intro-to-GSAP-3
 
 export default {
+  mounted() {
+        gsap.from('.news-card' , {
+        duration: 0.5,
+        opacity: 0,
+        scale: .8,
+        x: 0,
+        ease: 'power1',
+        stagger: 0.08
+      })
+  },
   components: {
     NewsCard,
     Button
   },
+  updated: function () {
+        gsap.from('.news-card' , {
+        duration: 0.5,
+        opacity: 0,
+        scale: .8,
+        x: 0,
+        ease: 'power1',
+        stagger: 0.08
+      });
+  },
   computed: {
     cardsToRender() {
-      return this.showAll ? this.airtableList : [];
+      if (this.toShow === "all") {
+        return this.airtableList;
+      } else if (this.toShow === "mentions") {
+        return this.airtableList.filter(card => card.type === "press_mention");
+      } else {
+        return this.airtableList.filter(card => card.type === "press_release") ;
+      }
     }
   },
   data: () => ({
     airtableList: json,
-    showAll: true
+    toShow: "all"
   }),
   head() {
     return {
@@ -74,4 +101,5 @@ export default {
     };
   }
 };
+
 </script>
