@@ -9,16 +9,28 @@
               class="mt-10 d-flex justify-space-between align-center"
               style="max-width:600px;"
             >
-              <p class="title mb-0">Filter by:</p>
-              <Button secondary @click="toShow = 'all'" class="filter px-2"
-                >All News</Button
-              >
-              <Button secondary @click="toShow = 'releases'" class="filter px-2"
-                >Press Releases</Button
-              >
-              <Button secondary @click="toShow = 'mentions'" class="filter px-2"
-                >Press Mentions</Button
-              >
+              <v-col>
+                <p class="title mb-0">Filter:</p>
+              </v-col>
+              
+              <v-col>
+                <Button secondary @click="toShow = 'all'" class="filter px-2">
+                  All News
+                </Button>
+              </v-col>
+
+              <v-col>
+                <Button secondary @click="toShow = 'releases'" class="filter px-2">
+                  Press Releases
+                </Button>
+              </v-col>
+
+              <v-col>
+                <Button secondary @click="toShow = 'mentions'" class="filter px-2">
+                  Press Mentions
+                </Button>
+              </v-col>
+              
             </div>
           </v-col>
 
