@@ -62,20 +62,26 @@
 
         <!-- join us row -->
         <v-row class="join-us mb-10 pa-12" id="join-us">
-            <v-col cols="2">
+            <v-row>
+<v-col cols="2">
                 <h3>Join Us</h3>
             </v-col>
-
+            
+            <v-spacer></v-spacer>
 
             <v-col cols="8">
                 <img src="../assets/about_us/cyclists.svg">
             </v-col> 
+        </v-row>
 
+        <v-row>
             <v-col cols="3" v-for="(cta, i) in callsToAction" :key="i">
                 <!-- these should probably link to different places -->
                 <Button secondary nuxt to="/donate">{{ cta.button_text }}</Button>
                 <div>{{cta.cta_text}}</div>
             </v-col>
+        </v-row>
+
         </v-row>
 
         <!-- team row-->
@@ -119,23 +125,28 @@
         <v-row id="academic-partners">
             <v-col cols="3"><h3>Academic Partners</h3></v-col>
 
-            <v-col cols="3" v-for="(partner, i) in academic_partners" :key="i">
-                <img class=partner-img :src="partner.src"  @mouseover="partner.src = partner.color" @mouseleave="partner.src = partner.grey">
-            </v-col>
+            <div class="d-flex justify-space-around align-center">
+                <v-col cols="3" v-for="(partner, i) in academic_partners" :key="i">
+                    <img class=partner-img :src="partner.src"  @mouseover="partner.src = partner.color" @mouseleave="partner.src = partner.grey">
+                </v-col>
+            </div> 
         </v-row>
 
-        <!-- colabs row-->
-        <v-row id="collaborator-projects">
-            <v-col cols="3"><h3>Collaborator Partners</h3></v-col>
+            <!-- colabs row-->
+            <v-row id="collaborator-projects">
+                <v-col cols="3"><h3>Collaborator Partners</h3></v-col>
 
-            <v-col cols="2" v-for="(collab, i) in collaborator_projects" :key="i">
-                <img class=collab-img :src="collab.src"  @mouseover="collab.src = collab.color" @mouseleave="collab.src = collab.grey">
-                <div class="collab-name">
-                    {{ collab.name }}
-                </div>
-            </v-col>
+                
+            <div class="d-flex justify-space-around align-center">
+                <v-col cols="2" v-for="(collab, i) in collaborator_projects" :key="i">
+                    <img class=collab-img :src="collab.src"  @mouseover="collab.src = collab.color" @mouseleave="collab.src = collab.grey">
+                    <div class="collab-name">
+                        {{ collab.name }}
+                    </div>
+                </v-col>
+            </div>
 
-        </v-row>
+            </v-row>
 
 
 
@@ -144,28 +155,28 @@
 </template>
 
 <styles lang="scss">
-    .cta-container {
-        display: flex;
-        justify-content: center;
-    }
-    .first-row{
-        background: linear-gradient(0deg, rgba(67, 197, 217, 0.2), rgba(255, 255, 255, 0) 20%);
-    }
-    .about-us-copy{
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 24px;
-        line-height: 34px;
+.cta-container {
+    display: flex;
+    justify-content: center;
+}
+.first-row{
+    background: linear-gradient(0deg, rgba(67, 197, 217, 0.2), rgba(255, 255, 255, 0) 20%);
+}
+.about-us-copy{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 34px;
 
-        color: #585858;
-    }
-    .join-us{
-        background: rgba(245, 229, 230, 0.6);
-    }
-    .partner-image{
-        max-height: 100%
-    }
+    color: #585858;
+}
+.join-us{
+    background: rgba(245, 229, 230, 0.6);
+}
+.partner-image{
+    max-height: 100%
+}
 </styles>
 
 <script>
