@@ -159,84 +159,62 @@
 </template>
 
 <style lang="scss">
-#home {
-  .why-background,
-  .hero-copy {
-    position: absolute;
+#hero {
+  background-image: url("../assets/home_page/hero_main.svg");
+  background-position-x: right;
+  background-size: contain;
+  height: 560px;
+}
+
+#why-covid-watch {
+  background-image: url("../assets/home_page/lavender_slope.svg");
+  background-size: contain;
+}
+
+// Jesse: I added this bc for some reason appears h2 elements not reading font-size from variables.scss
+h2 {
+  font-size: 36px;
+}
+
+.why-background {
+  max-height: 420px;
+  max-width: 1240px;
+}
+
+.hero-copy {
+  margin-top: 50px;
+}
+
+.card-img {
+  width: 100%;
+  // this max-height is necessary bc the source fourth image Community Safety is slightly larger in px than the others
+  // may need to update this to make images appear larger without the fourth being larger than others
+  max-height: 200px;
+}
+
+#why-covid-watch .card-img {
+  // this keeps the why covid watch images from getting too large
+  max-height: 200px;
+}
+
+// this could potentially be abstracted out across other pages also.  centers CTA buttons at the bottom of each section
+.cta-container {
+  display: flex;
+  justify-content: center;
+}
+
+#latest-news {
+  // note: this is #71cddf with 15% opacity
+  background-color: rgba(113, 205, 223, 0.15);
+
+  .news-card {
+    height: 250px;
+    min-width: 320px;
+
+    // might be necessary for blue stripe at top
+    // style="position:relative;"
   }
-
-  .why-background {
-    max-height: 420px;
-    max-width: 1240px;
-  }
-
-  // probs replace w grid spacing
-  .hero-main-img {
-    width: 100%;
-  }
-
-<style lang="scss">
-  #home {
-
-    #hero {
-      background-image: url("../assets/home_page/hero_main.svg");
-      background-position-x: right;
-      background-size: contain;
-      height: 560px;
-    }
-
-    #why-covid-watch {
-      background-image: url("../assets/home_page/lavender_slope.svg");
-      background-size: contain;
-    }
-
-
-    // Jesse: I added this bc for some reason appears h2 elements not reading font-size from variables.scss
-    h2 {
-      font-size: 36px;
-    }
-
-    .why-background  {
-      max-height: 420px;
-      max-width: 1240px;
-    }
-
-    .hero-copy {
-      margin-top: 50px;
-    }
-
-    .card-img {
-      width: 100%;
-      // this max-height is necessary bc the source fourth image Community Safety is slightly larger in px than the others
-      // may need to update this to make images appear larger without the fourth being larger than others
-      max-height: 200px;
-    }
-
-    #why-covid-watch .card-img {
-      // this keeps the why covid watch images from getting too large
-      max-height: 200px;
-    }
-
-    // this could potentially be abstracted out across other pages also.  centers CTA buttons at the bottom of each section
-    .cta-container {
-      display: flex;
-      justify-content: center;
-    }
-
-    #latest-news {
-      // note: this is #71cddf with 15% opacity
-      background-color: rgba(113, 205, 223, .15);
-
-      .news-card {
-        height: 250px;
-        min-width: 320px;
-
-        // might be necessary for blue stripe at top
-        // style="position:relative;"
-      }
-    }
-
-  }
+}
 </style>
 
 <script>
