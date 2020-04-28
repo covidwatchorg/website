@@ -1,40 +1,28 @@
 <template>
   <v-container>
     <v-row id="home">
-      <v-col cols="12">
+      <v-col>
         <v-row id="hero">
           <!-- why isn't this cols="8" seeming to have an effect? -->
-          <v-col cols="8" class="px-12">
+          <v-col cols="8" class="px-10">
             <div class="hero-copy">
-              <h1
-                class="tangerine--text main-heading"
-                style="margin-bottom: 40px"
-              >
+              <h1>
                 Together, we have the power to stop the spread of COVID-19
               </h1>
 
-              <v-text class="sub-heading-copy"
-                >Protect the health for your family and community while
-                preserving your privacy through mobile alerts.</v-text
-              >
+              <p class="subtitle mt-10">
+                Protect the health for your family and community while
+                preserving your privacy through mobile alerts.
+              </p>
 
-              <!-- Jesse: Vuetify adjustments not working as expected after some playing so I inline styled -->
-              <div style="margin-top: 40px; padding:0px;">
-                <v-btn class="cta-button primary mr-10"
-                  >Download Android Beta</v-btn
+              <div class="mt-10 d-flex flex-wrap">
+                <Button primary hero nuxt to="/about" class="mr-10 mb-4"
+                  >Download Android Beta</Button
                 >
-                <v-btn class="cta-button pewter--text" outlined
-                  >iOS Coming Soon</v-btn
-                >
+                <Button secondary hero nuxt to="/about">iOS Coming Soon</Button>
               </div>
             </div>
           </v-col>
-
-          <img
-            class="hero-main-img"
-            src="../assets/home_page/hero_main.svg"
-            alt=""
-          />
         </v-row>
 
         <!-- How It Works section -->
@@ -49,113 +37,118 @@
               class="d-flex flex-column align-left"
             >
               <img class="card-img" :src="card.img" :alt="card.title" />
-              <h3 class="card-title mt-10">{{ card.title }}</h3>
-              <div class="card-body mt-5">{{ card.body }}</div>
+              <h3 class="mt-10">{{ card.title }}</h3>
+              <p class="caption mt-5">{{ card.body }}</p>
             </v-col>
           </v-row>
 
-          <v-row class="cta-container my-8">
-            <v-btn class="white primary--text cta-button">
-              <nuxt-link to="/how-it-works" style="text-decoration:none">
-                Learn More
-              </nuxt-link>
-            </v-btn>
+          <v-row class="cta-container mt-8">
+            <Button secondary nuxt to="/how-it-works">Learn More</Button>
           </v-row>
         </v-row>
 
         <!-- Why Covid Watch -->
-
-        <!-- this is huge needs to be reduced to the width of screen -->
-        <img
-          class="why-background"
-          src="../assets/home_page/lavender_slope.svg"
-          alt="background"
-        />
-
         <v-row id="why-covid-watch" class="d-block mt-12 pa-12">
+          <h2 class="plum--text mb-12">Why Covid Watch</h2>
+
           <h2 class="plum--text mb-12">Why Covid Watch</h2>
 
           <v-row>
             <v-col cols="4" v-for="(card, i) in whyCards" :key="i">
               <img class="card-img" :src="card.img" :alt="card.title" />
-              <h3 class="card-title mt-10">{{ card.title }}</h3>
-              <div class="card-body mt-5">{{ card.body }}</div>
+              <h3 class="mt-10">{{ card.title }}</h3>
+              <p class="caption mt-5">{{ card.body }}</p>
             </v-col>
           </v-row>
 
           <v-row class="cta-container my-8">
-            <v-btn class="white primary--text cta-button"
-              >Read the Whitepaper</v-btn
+            <Button secondary nuxt to="/how-it-works">
+              <img
+                class="mr-3"
+                style="height:20px;"
+                src="../assets/home_page/pdf_logo.svg"
+                alt="pdf"
+              />
+              Read the Whitepaper</Button
             >
           </v-row>
         </v-row>
 
         <!-- Latest News -->
         <v-row id="latest-news">
-          <v-col class="pa-12 mt-12">
-            <v-row class="d-flex align-center justify-space-between mb-12">
-              <h2>Latest News</h2>
+          <v-col>
+            <v-row
+              class="px-12 mt-12 mb-6 d-flex align-center justify-space-between"
+            >
+              <!-- to do: refactor heading  -->
+              <h2 class="pewter--text">Latest News</h2>
 
               <!-- to do: replace ">" w real arrow icon -->
-              <nuxt-link to="/news" style="text-decoration:none;"
-                >More News ></nuxt-link
-              >
-            </v-row>
+              <nuxt-link
+                to="/news"
+                style="text-decoration:none;font-weight:600;font-style:normal;"
+                >More News &nbsp;
+                <img
+                  style="height:10px;"
+                  src="../assets/home_page/arrow_icon.svg"
+                  alt="arrow"
+                />
+              </nuxt-link>
 
-            <v-row>
-              <v-col cols="4" v-for="(card, i) in newsCards" :key="i">
-                <v-card class="news-card" style="position:relative;">
-                  <img
-                    style="position:absolute;"
-                    src="../assets/home_page/news_cards_top_accent.svg"
-                    alt="stripe"
-                  />
-                  <div class="d-flex py-4 px-6 justify-space-evenly">
-                    <img src="../assets/home_page/news_icon.svg" alt="news" />
-                    <div class="news-date">{{ card.date }}</div>
-                  </div>
-                  <div class="pa-6">
-                    <a
-                      :href="card.url"
-                      class="primary--text my-4"
-                      style="text-decoration:none;font-weight:bold;"
-                      >{{ card.title }} ></a
-                    >
-                    <div class="primary--text float-right">
-                      - {{ card.author }},
-                      <span style="font-style:italic;">
-                        {{ card.outlet }}
-                      </span>
+              <!-- news card to later be abstracted into component -->
+
+              <!-- not sure why a flex-wrap doesn't resolve responsiveness by stacking cards vertically here: style="display:flex;flex-wrap:wrap;" -->
+              <v-row class="my-8">
+                <v-col cols="4" v-for="(card, i) in newsCards" :key="i">
+                  <v-card class="news-card">
+                    <img
+                      style="position:absolute;"
+                      src="../assets/home_page/news_cards_top_accent.svg"
+                      alt="stripe"
+                    />
+                    <div class="d-flex py-6 px-6 justify-space-between">
+                      <img src="../assets/home_page/news_icon.svg" alt="news" />
+                      <div class="news-date">{{ card.date }}</div>
                     </div>
-                  </div>
-                </v-card>
-              </v-col>
+                    <div class="pa-6">
+                      <a
+                        :href="card.url"
+                        class="primary--text"
+                        style="text-decoration:none;font-weight:bold;"
+                        >{{ card.title }}
+                        <img
+                          style="height:10px;"
+                          src="../assets/home_page/arrow_icon.svg"
+                          alt="arrow"
+                      /></a>
+                      <div class="primary--text float-right mt-10">
+                        - {{ card.author }},
+                        <span style="font-style:italic;">
+                          {{ card.outlet }}
+                        </span>
+                      </div>
+                    </div>
+                  </v-card>
+                </v-col>
+              </v-row>
             </v-row>
           </v-col>
         </v-row>
 
         <!-- Download the App -->
-        <v-row id="download-app" class="mb-10 pa-12">
-          <v-col cols="5">
-            <h1 class="tangerine--text">Download the App</h1>
+        <v-row id="download-app" class="mb-10 mt-12">
+          <v-col cols="4 px-12">
+            <h1 class="tangerine--text">Get the App</h1>
             <div class="mt-12">
-              <v-btn class="cta-button primary mt-4 mb-6"
-                >Download Android Beta</v-btn
-              >
-              <v-btn class="cta-button pewter--text" outlined
-                >iOS Coming Soon</v-btn
-              >
+              <Button class="mt-4 mb-6">Download Android Beta</Button>
+              <Button secondary>iOS Coming Soon</Button>
             </div>
           </v-col>
 
-          <v-col cols="2" v-for="(img, i) in mobileImages" :key="i">
-            <img :src="img" alt="mobile_preview" />
-
-            <!-- there has to be a better way to get this image under the pones as expected-->
+          <!-- to do: make disappear on mobile? -->
+          <v-col cols="6">
             <img
-              v-if="i === 0"
-              style="width:325%"
-              src="../assets/home_page/mobile_underline.svg"
+              src="../assets/home_page/mobile_mockups_group.svg"
               alt="mobile"
             />
           </v-col>
@@ -182,84 +175,77 @@
     width: 100%;
   }
 
-  .hero-copy {
-    margin-top: 50px;
+<style lang="scss">
+  #home {
 
-    // TO UPDATE: not sure why v-col element not acting as expected for this element
-    max-width: 50%;
+    #hero {
+      background-image: url("../assets/home_page/hero_main.svg");
+      background-position-x: right;
+      background-size: contain;
+      height: 560px;
+    }
+
+    #why-covid-watch {
+      background-image: url("../assets/home_page/lavender_slope.svg");
+      background-size: contain;
+    }
+
+
+    // Jesse: I added this bc for some reason appears h2 elements not reading font-size from variables.scss
+    h2 {
+      font-size: 36px;
+    }
+
+    .why-background  {
+      max-height: 420px;
+      max-width: 1240px;
+    }
+
+    .hero-copy {
+      margin-top: 50px;
+    }
+
+    .card-img {
+      width: 100%;
+      // this max-height is necessary bc the source fourth image Community Safety is slightly larger in px than the others
+      // may need to update this to make images appear larger without the fourth being larger than others
+      max-height: 200px;
+    }
+
+    #why-covid-watch .card-img {
+      // this keeps the why covid watch images from getting too large
+      max-height: 200px;
+    }
+
+    // this could potentially be abstracted out across other pages also.  centers CTA buttons at the bottom of each section
+    .cta-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    #latest-news {
+      // note: this is #71cddf with 15% opacity
+      background-color: rgba(113, 205, 223, .15);
+
+      .news-card {
+        height: 250px;
+        min-width: 320px;
+
+        // might be necessary for blue stripe at top
+        // style="position:relative;"
+      }
+    }
+
   }
-
-  .card-img {
-    // placeholder to see the img elements
-    width: 100%;
-
-    // this max-height is necessary bc the source fourth image Community Safety is slightly larger in px than the others
-
-    // may need to update this to make images appear larger without the fourth being larger than others
-    // max-height: 230px;
-  }
-
-  #why-covid-watch .card-img {
-    max-height: 200px;
-  }
-
-  .card-body,
-  #latest-news h2,
-  .sub-heading-copy {
-    color: #585858;
-  }
-
-  h2 {
-    font-weight: 600;
-    font-size: 40px;
-    line-height: 49px;
-  }
-
-  .card-body {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 22px;
-  }
-
-  .card-title {
-    color: #4b0a70;
-    font-size: 28px;
-  }
-
-  .news-date {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 20px;
-    text-align: right;
-  }
-
-  // this could potentially be abstracted out across other pages also
-  .cta-container {
-    display: flex;
-    justify-content: center;
-  }
-
-  #latest-news {
-    // note: this is #71cddf with 15% opacity
-    background-color: rgba(113, 205, 223, 0.15);
-  }
-
-  .cta-button {
-    width: 300px;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: bold;
-
-    // this font size from figma makes text look HUGE relative to button and other elements
-    // font-size: 18px;
-  }
-}
 </style>
 
 <script>
+import Button from "../components/Button.vue";
+
 export default {
+  components: {
+    Button
+  },
   data: () => ({
     howItWorksCards: [
       {
