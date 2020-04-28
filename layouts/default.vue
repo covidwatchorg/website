@@ -13,7 +13,7 @@
       </v-container>
     </v-content>
 
-    <!--Fixed footer-->
+    <!-- Footer-->
     <Footer :sections="footerSections"></Footer>
   </v-app>
 </template>
@@ -28,7 +28,7 @@ h1 {
 }
 
 h2 {
-  color: var(--v-bluejay-base);
+  color: var(--v-plum-base);
 }
 
 h3 {

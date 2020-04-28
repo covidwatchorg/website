@@ -14,19 +14,27 @@
                 preserving your privacy through mobile alerts.
               </p>
 
-              <div class="mt-10 d-flex flex-wrap">
-                <Button primary hero nuxt to="/about" class="mr-10 mb-4"
-                  >Download Android Beta</Button
-                >
-                <Button secondary hero nuxt to="/about">iOS Coming Soon</Button>
-              </div>
+              <v-row no-gutters class="mr-10 mb-4 mt-10">
+                <v-col :sm="5">
+                  <Button primary hero nuxt to="/about">
+                    Download Android Beta
+                  </Button>
+                </v-col>
+                <v-spacer></v-spacer>
+                <v-col :sm="5">
+                  <Button secondary hero nuxt to="/about">
+                    iOS Coming Soon
+                  </Button>
+                </v-col>
+                <v-spacer></v-spacer>
+              </v-row>
             </div>
           </v-col>
         </v-row>
 
         <!-- How It Works section -->
         <v-row class="d-block mb-10 pa-12" id="how-it-works">
-          <h2 class="plum--text mb-12">How it Works</h2>
+          <h2 class="mb-12">How it Works</h2>
 
           <v-row>
             <v-col
@@ -182,6 +190,7 @@
       height: 250px;
       min-width: 320px;
     }
+
   }
 }
 </style>

@@ -1,7 +1,8 @@
 <template>
   <v-btn
     depressed
-    color="primary"
+    block
+    :color="color"
     :class="{ hero: hero }"
     :disabled="disabled"
     :nuxt="nuxt"
@@ -14,6 +15,9 @@
 </template>
 
 <style lang="scss" scoped>
+a.v-btn {
+  text-transform: none;
+}
 .hero {
   height: 58px;
 }
@@ -27,7 +31,11 @@ export default {
     disabled: Boolean,
     nuxt: Boolean,
     secondary: Boolean,
-    to: String
+    to: String,
+    color: {
+      type: String,
+      default: "primary"
+    }
   }
 };
 </script>

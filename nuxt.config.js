@@ -78,7 +78,7 @@ export default {
     defaultAssets: {
       font: {
         family: "Montserrat",
-        size: "18px"
+        size: "18"
       }
     },
     treeShake: true // override production-only default so defaultAssets work as expected
