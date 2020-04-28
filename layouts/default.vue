@@ -10,7 +10,7 @@
       </v-container>
     </v-content>
 
-    <!--Fixed footer-->
+    <!-- Footer-->
     <Footer :sections="footerSections"></Footer>
   </v-app>
 </template>

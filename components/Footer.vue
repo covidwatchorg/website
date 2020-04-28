@@ -1,8 +1,14 @@
 <template>
-  <v-footer app color="primary" style="white--text">
+  <v-footer app absolute color="primary" style="white--text">
     <v-container>
       <v-row>
-        <v-col v-for="section in sections" :key="section.title">
+        <v-col
+          cols="12"
+          sm="6"
+          md="2"
+          v-for="section in sections"
+          :key="section.title"
+        >
           <b>{{ section.title }}</b>
           <v-list>
             <v-list-item v-for="link in section.links" :key="link.title">
@@ -13,7 +19,7 @@
           </v-list>
         </v-col>
         <v-spacer />
-        <v-col md="2">
+        <v-col :md="2">
           <span>&copy; {{ new Date().getFullYear() }}</span>
         </v-col>
       </v-row>
