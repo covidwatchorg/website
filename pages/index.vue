@@ -41,13 +41,12 @@
             </v-col>
           </v-row>
 
-          <v-row class="cta-container mt-8">
-            <Button secondary nuxt to="/how-it-works">Learn More</Button>
-          </v-row>
+
+          <CTA to="/how-it-works" content="Learn More"></CTA>
         </v-row>
 
         <!-- Why Covid Watch -->
-        <v-row id="why-covid-watch" class="d-block mt-12 pa-12">
+        <v-row id="why-covid-watch" class="d-block pa-12">
           <h2 class="plum--text mb-12">Why Covid Watch</h2>
 
           <v-row>
@@ -58,17 +57,10 @@
             </v-col>
           </v-row>
 
-          <v-row class="cta-container my-8">
-            <Button secondary nuxt to="/how-it-works">
-              <img
-                class="mr-3"
-                style="height:20px;"
-                src="../assets/home_page/pdf_logo.svg"
-                alt="pdf"
-              />
-              Read the Whitepaper</Button
-            >
-          </v-row>
+          <a href="https://www.whitepaper.com/" alt="whitepaper">
+            <CTA pdf content="Read the Whitepaper"></CTA>
+          </a>
+ 
         </v-row>
 
         <!-- Latest News -->
@@ -124,6 +116,19 @@
 </template>
 
 <style lang="scss">
+
+  // this handles the transition effect between pages, see default.vue <transition> element
+  .slide-fade-enter {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+
+  .slide-fade-enter-active {
+    transition: all 0.5s ease;
+  }
+
+
+
 #home {
   #hero {
     background-image: url("../assets/home_page/hero_main.svg");
@@ -159,7 +164,7 @@
   }
 
   #why-covid-watch .card-img {
-    // this keeps the why covid watch images from getting too large
+    // this keeps the why-covid-watch images from getting too large
     max-height: 200px;
   }
 
@@ -176,9 +181,6 @@
     .news-card {
       height: 250px;
       min-width: 320px;
-
-      // might be necessary for blue stripe at top
-      // style="position:relative;"
     }
   }
 }
@@ -186,12 +188,14 @@
 
 <script>
 import Button from "../components/Button.vue";
+import CTA from "../components/CTA.vue";
 import NewsCard from "../components/NewsCard.vue";
 
 export default {
   components: {
     Button,
-    NewsCard
+    NewsCard,
+    CTA
   },
   data: () => ({
     howItWorksCards: [
@@ -246,24 +250,24 @@ export default {
         title:
           "Lorem ipsum dolor sit amet, dus consectetur adipiscing elit ut etal aliquam",
         url: "https://www.cnn.com",
-        author: "Khari Johnson",
-        outlet: "Venture Beat"
+        author_name: "Khari Johnson",
+        outlet_name: "Venture Beat"
       },
       {
         date: "April 13, 2020",
         title:
           "Lorem ipsum dolor sit amet, dus consectetur adipiscing elit ut etal aliquam",
         url: "https://www.cnn.com",
-        author: "Khari Johnson",
-        outlet: "Venture Beat"
+        author_name: "Khari Johnson",
+        outlet_name: "Venture Beat"
       },
       {
         date: "April 13, 2020",
         title:
           "Lorem ipsum dolor sit amet, dus consectetur adipiscing elit ut etal aliquam",
         url: "https://www.cnn.com",
-        author: "Khari Johnson",
-        outlet: "Venture Beat"
+        author_name: "Khari Johnson",
+        outlet_name: "Venture Beat"
       }
     ],
     mobileImages: [
