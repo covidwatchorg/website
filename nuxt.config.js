@@ -67,6 +67,7 @@ export default {
           elderberry: "#2C007B",
           thistle: "#71CDDF",
           pewter: "#585858",
+          silver: "#C4C4C4",
           info: "#2C58B1", // bluejay
           warning: "#43C4D9", // aqua
           error: "#F05452", // tangerine

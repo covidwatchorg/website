@@ -15,11 +15,9 @@
                 <Button primary hero nuxt to="/about" class="mr-10 mb-4" >Download Android Beta</Button>
                 <Button secondary hero nuxt to="/about">iOS Coming Soon</Button>
               </div>
-
             </div>
           </v-col>
         </v-row>
-
 
         <!-- How It Works section -->
         <v-row class="d-block mb-10 pa-12" id="how-it-works">
@@ -35,14 +33,12 @@
                   <p class="caption mt-5">{{card.body}}</p>
 
               </v-col>
-
           </v-row>
 
           <v-row class="cta-container mt-8">
             <Button secondary nuxt to="/how-it-works">Learn More</Button>
           </v-row>
         </v-row>
-
 
         <!-- Why Covid Watch -->
         <v-row id="why-covid-watch" class="d-block mt-12 pa-12">
@@ -95,19 +91,22 @@
            <div class="mt-12">
                 <Button class="mt-4 mb-6">Download Android Beta</Button>
                 <Button secondary>iOS Coming Soon</Button>
+
             </div>
           </v-col>
 
           <!-- to do: make disappear on mobile? -->
           <v-col cols="6">
-            <img src="../assets/home_page/mobile_mockups_group.svg" alt="mobile">
+            <img
+              src="../assets/home_page/mobile_mockups_group.svg"
+              alt="mobile"
+            />
           </v-col>
         </v-row>
       </v-col>
     </v-row>
   </v-container>
 </template>
-
 
 
 <style lang="scss">
@@ -187,63 +186,73 @@ export default {
     howItWorksCards: [
       {
         title: "Privacy First",
-        body: "Sam and Jane’s interaction is logged on their phones anonymously.",
+        body:
+          "Sam and Jane’s interaction is logged on their phones anonymously.",
         img: require("../assets/home_page/how_it_works_1.svg")
       },
       {
         title: "Diagnosis Reports",
-        body: "Sam later tests postive for COVID-19 and he enters his results into the secure Covid Watch system.",
+        body:
+          "Sam later tests postive for COVID-19 and he enters his results into the secure Covid Watch system.",
         img: require("../assets/home_page/how_it_works_2.svg")
       },
       {
         title: "Contact Alerts",
-        body: "Jane’s phone gets a notification that a recent contact has tested positive for COVID-19.",
+        body:
+          "Jane’s phone gets a notification that a recent contact has tested positive for COVID-19.",
         img: require("../assets/home_page/how_it_works_3.svg")
       },
       {
         title: "Community Safety",
-        body: "Jane and Sam helped keep their communities safe. They share the app so that others can, too.",
+        body:
+          "Jane and Sam helped keep their communities safe. They share the app so that others can, too.",
         img: require("../assets/home_page/how_it_works_4.svg")
-      },
+      }
     ],
     whyCards: [
       {
         title: "No tracking, ever",
-        body: "No personal information is shared. No GPS locations are stored. Bluetooth signals anonymously log when you've been near another phone with Covid Watch installed.",
+        body:
+          "No personal information is shared. No GPS locations are stored. Bluetooth signals anonymously log when you've been near another phone with Covid Watch installed.",
         img: require("../assets/home_page/why_covid_watch_1.svg")
       },
       {
         title: "Easier than staying home",
-        body: "You can leave your home and help keep your community healthy just by installing the app. You don't even need to keep the app open for it to protect you.",
+        body:
+          "You can leave your home and help keep your community healthy just by installing the app. You don't even need to keep the app open for it to protect you.",
         img: require("../assets/home_page/why_covid_watch_2.svg")
       },
       {
         title: "Share with each other",
-        body: "Trust comes when we work together. Covid Watch is a non-profit on a mission to protect your health and privacy, not big tech or government.",
+        body:
+          "Trust comes when we work together. Covid Watch is a non-profit on a mission to protect your health and privacy, not big tech or government.",
         img: require("../assets/home_page/why_covid_watch_3.svg")
       }
     ],
     newsCards: [
       {
         date: "April 13, 2020",
-        title: "Lorem ipsum dolor sit amet, dus consectetur adipiscing elit ut etal aliquam",
+        title:
+          "Lorem ipsum dolor sit amet, dus consectetur adipiscing elit ut etal aliquam",
         url: "https://www.cnn.com",
-        author_name: "Khari Johnson",
-        outlet_name: "Venture Beat",
+        author: "Khari Johnson",
+        outlet: "Venture Beat"
       },
       {
         date: "April 13, 2020",
-        title: "Lorem ipsum dolor sit amet, dus consectetur adipiscing elit ut etal aliquam",
+        title:
+          "Lorem ipsum dolor sit amet, dus consectetur adipiscing elit ut etal aliquam",
         url: "https://www.cnn.com",
-        author_name: "Khari Johnson",
-        outlet_name: "Venture Beat",
+        author: "Khari Johnson",
+        outlet: "Venture Beat"
       },
       {
         date: "April 13, 2020",
-        title: "Lorem ipsum dolor sit amet, dus consectetur adipiscing elit ut etal aliquam",
+        title:
+          "Lorem ipsum dolor sit amet, dus consectetur adipiscing elit ut etal aliquam",
         url: "https://www.cnn.com",
-        author_name: "Khari Johnson",
-        outlet_name: "Venture Beat",
+        author: "Khari Johnson",
+        outlet: "Venture Beat"
       }
     ],
     mobileImages: [
@@ -252,5 +261,5 @@ export default {
       require("../assets/home_page/mobile_3.svg")
     ]
   })
-}
+};
 </script>
