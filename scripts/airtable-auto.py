@@ -19,9 +19,6 @@ def main():
     try:
         # these keys have been set up Github /websites repo secrets already
         airtable = Airtable(os.environ['AIRTABLE_BASE_KEY'], 'news', api_key=os.environ['AIRTABLE_API_KEY']) 
-        
-        # hardcoding base key and api key for now:
-        # airtable = Airtable(os.environ['app2gjpkAcqIzagxn'], 'news', api_key=os.environ['keyr0gMB3vBqrwhf0']) 
     except KeyError:
         print("Couldn't find airtable base key or api key")
         exit(1)
@@ -31,7 +28,7 @@ def main():
 
     for page in airtable.get_iter(view='dont_change_this_name'):
         for record in page:
-            # if 'site' not in record.keys():
+            # if 'site' not in record.keys():  ----> line commented out from Colby's original code
             new_values = record['fields']
 
             if not valid_entry(new_values):
