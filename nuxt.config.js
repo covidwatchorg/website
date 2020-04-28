@@ -68,6 +68,7 @@ export default {
           thistle: "#71CDDF",
           pewter: "#585858",
           silver: "#C4C4C4",
+          grey: "#828282",
           info: "#2C58B1", // bluejay
           warning: "#43C4D9", // aqua
           error: "#F05452", // tangerine
