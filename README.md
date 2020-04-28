@@ -1,6 +1,7 @@
 # website
+![Build](https://github.com/covid19risk/website/workflows/Build/badge.svg)
 
-> My phenomenal Nuxt.js project
+The covid-watch website -- under construction
 
 ## Build Setup
 
