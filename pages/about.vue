@@ -61,7 +61,7 @@
 
 
         <!-- join us row -->
-        <v-row class="mb-10 pa-12" id="join-us">
+        <v-row class="join-us mb-10 pa-12" id="join-us">
             <v-col cols="2">
                 <h3>Join Us</h3>
             </v-col>
@@ -90,8 +90,10 @@
             <template v-for="(founder,n) in founders">
                 <v-col :key="n">
                     <v-row>
-                        <img :src="founder.image">
                         <v-col cols="4">
+                        <img :src="founder.image">
+                        </v-col>
+                        <v-col cols="8">
                             <div class="title">
                                 {{founder.name}}
                             </div>
@@ -160,6 +162,9 @@
     }
     .join-us{
         background: rgba(245, 229, 230, 0.6);
+    }
+    .partner-image{
+        max-height: 100%
     }
 </styles>
 
@@ -231,31 +236,31 @@ export default {
         academic_partners: [
         {
             grey:require("../assets/about_us/logo-stanford-black.svg"),
-            color:require("../assets/about_us/woman-medical-advice.svg"), 
+            color:require("../assets/about_us/logo-stanford-red.svg"), 
             src:require("../assets/about_us/logo-stanford-black.svg")
         },    
         {
             grey:require("../assets/about_us/logo-university-of-waterloo-gray.svg"),
-            color:require("../assets/about_us/woman-exercising.svg"),
+            color:require("../assets/about_us/logo-university-of-waterloo.svg"),
             src:require("../assets/about_us/logo-university-of-waterloo-gray.svg")
         },
         ],
         collaborator_projects: [
         {
             grey:require("../assets/about_us/logo-TCN-coalition-gray.svg"),
-            color:require("../assets/about_us/woman-medical-advice.svg"), 
+            color:require("../assets/about_us/logo-TCN-coalition.svg"), 
             src:require("../assets/about_us/logo-TCN-coalition-gray.svg"),
             name:"TCN Coalition"
         },    
         {
             grey:require("../assets/about_us/logo-coepi-gray.svg"),
-            color:require("../assets/about_us/woman-exercising.svg"),
+            color:require("../assets/about_us/logo-coepi.svg"),
             src:require("../assets/about_us/logo-coepi-gray.svg"),
             name:"Community Epidemiology in Action"
         },
         {
             grey:require("../assets/about_us/logo-privacykit-gray.svg"),
-            color:require("../assets/about_us/woman-exercising.svg"),
+            color:require("../assets/about_us/logo-privacykit.svg"),
             src:require("../assets/about_us/logo-privacykit-gray.svg"),
             name:"PrivateKit: SafePaths"
         },
