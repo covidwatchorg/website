@@ -1,7 +1,6 @@
 <template>
     <v-container grid-list-xs>
         <v-row id="about">
-            <v-col cols="12">
                 <!-- First row-->
                 <v-row id="header" class="first-row mb-10 pa-12">
 
@@ -27,12 +26,7 @@
                     <v-col cols="4">
                         <img class="earth-img" src="../assets/about_us/family-earth.svg">
                     </v-col>
-
-
-
                 </v-row>
-            </v-col>
-        </v-row>
 
 
         <!-- We value row -->
@@ -150,7 +144,7 @@
         </v-row>
 
 
-
+    </v-row>
 
     </v-container>
 </template>
