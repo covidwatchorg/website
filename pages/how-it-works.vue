@@ -199,8 +199,6 @@
 </style>
 
 <script>
-import Step from "../components/Step.vue"
-
 export default {
     head() {
         return {
