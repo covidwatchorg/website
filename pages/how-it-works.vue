@@ -151,12 +151,23 @@
             </div>
 
             <v-row class="d-block ma-12 pa-12" justify="center">
-                <h2 class="text-center"> Still have questions? To learn more <nuxt-link to="/faq"> visit our FAQ </nuxt-link>  </h2>
+                <h2 class="text-center"> 
+                    Still have questions? To learn more 
+                    <nuxt-link to="/faq"> 
+                        visit our FAQ  
+                        <img
+                        style="height:16px;"
+                        src="../assets/home_page/arrow_icon.svg"
+                        alt="arrow"
+                        />
+                    </nuxt-link>  
+                </h2>
+               
             </v-row>
 
-            <v-row class="pa-12 ma-12">
+            <v-row>
                 <v-spacer></v-spacer>
-                <v-col cols="3">
+                <v-col cols="4">
                     <img src="../assets/how_it_works/woman-triangle.svg">
                 </v-col>
                 <v-spacer></v-spacer>
