@@ -1,8 +1,9 @@
 <!-- for an external link, simply wrap the <CTA> element in an <a>.  Example:
 
-<a href="https://www.whitepaper.com/" alt="whitepaper">
+<a href="/covid_watch_whitepaper.pdf" alt="whitepaper" download>
     <CTA pdf content="Read the Whitepaper"></CTA>
 </a>
+
 
 -->
 
@@ -18,7 +19,17 @@
                     src="../assets/home_page/pdf_logo.svg"
                     alt="pdf"
                 />
-                {{content}}
+
+                <!-- <a> tag if it's a pdf -->
+                <a :href="href"  v-if="pdf" style="text-transform:none;">
+                    {{content}}
+                </a>
+
+                <!-- else just display name of button normally -->
+                <div v-if="!pdf">
+                    {{content}}
+                </div>
+
             </Button>
         </v-col>
     </v-row>

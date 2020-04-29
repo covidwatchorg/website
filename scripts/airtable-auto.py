@@ -6,7 +6,7 @@ import json
 import os
 
 def valid_entry(entry):
-    needed_values = ['type', 'author_name', 'outlet_name', 'title', 'date']
+    needed_values = ['type', 'author_name', 'url','outlet_name', 'title', 'date']
 
     for value in needed_values:
         if value not in entry:
