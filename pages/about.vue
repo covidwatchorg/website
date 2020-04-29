@@ -14,13 +14,30 @@
                             </div>
                         </div>
 
-                        <div class="d-flex">
-                            <!-- where should this link to? -->
-                            <Button primary hero class="pa-5 mr-10">Partner With Us</Button>
+                <v-row no-gutters class="mr-10 mb-4 mt-10">
+                    <v-col :sm="5">
+                        <Button primary hero nuxt to="/partner">
+                            Partner With Us
+                        </Button>
+                    </v-col>
+                    <v-spacer/> 
+                    <v-col :sm="5">
+                        <Button secondary hero nuxt to="/">
+                            Use Our Solution
+                        </Button>
+                    </v-col>
+                    <v-spacer/>
+                </v-row>
 
-                            <!-- where should this link to? -->
+                        <!-- <div class="d-flex">
+
+                            <!-- linking to /partner which does not yet exist 
+                            
+                            <Button primary hero class="pa-5 mr-10" nuxt to="/parter">Partner With Us</Button>
+
+                            <!-- where should this link to? 
                             <Button secondary nuxt class="pa-5">Use Our Solutions</Button>
-                        </div>
+                        </div> -->
                     </v-col>
 
                     <v-col cols="4">
@@ -149,7 +166,7 @@
     </v-container>
 </template>
 
-<styles lang="scss">
+<style lang="scss">
 .cta-container {
     display: flex;
     justify-content: center;
@@ -161,7 +178,7 @@
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 34px;
 
     color: #585858;
@@ -172,7 +189,7 @@
 .partner-image{
     max-height: 100%
 }
-</styles>
+</style>
 
 <script>
 import Button from '../components/Button.vue'
