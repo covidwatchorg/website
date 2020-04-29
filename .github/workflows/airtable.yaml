@@ -18,9 +18,10 @@ jobs:
           AIRTABLE_BASE_KEY: ${{ secrets.AIRTABLE_BASE_KEY }}
           AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }} 
         run: |
+          cd scripts
           pip3 install airtable-python-wrapper
-          chmod +x scripts/airtable-auto.py
-          scripts/airtable-auto.py
+          chmod +x airtable-auto.py
+          ./airtable-auto.py
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v2
         with:
