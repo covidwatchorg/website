@@ -1,9 +1,6 @@
-<!-- for an external link, simply wrap the <CTA> element in an <a>.  Example:
+<!-- for an external link, example:
 
-<a href="/covid_watch_whitepaper.pdf" alt="whitepaper" download>
-    <CTA pdf content="Read the Whitepaper"></CTA>
-</a>
-
+    <CTA pdf content="Read the whitepaper" href="/covid_watch_whitepaper.pdf"></CTA>
 
 -->
 
