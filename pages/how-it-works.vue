@@ -2,13 +2,13 @@
     <v-container grid-list-xs>
         <v-row id="how-it-works">
             <!-- First row-->
-            <v-row id="header" class="pa-12">
+            <v-row id="header" class="px-12 pt-12">
 
                 <v-col cols="7">
-                    <div class="mb-12">
+                    <div>
                         <p class="title-caps">HOW IT WORKS</p>
-                        <h1 class="mb-5">Our Privacy-Preserving Protocol</h1>
-                        <div>
+                        <h1 class="mt-6">Our Privacy-Preserving Protocol</h1>
+                        <div class="mt-10">
                             <p>Covid Watch uses the international open-source TCN Protocol first developed in our community to send anonymous exposure notifications via private, local Bluetooth signals. Let’s find out more about how it works for Sam and Jane, two users of the app</p>
                         </div>
                     </div>
@@ -21,7 +21,7 @@
 
             <!-- Step 1 -->
             <div class="triangle_right_1">
-            <v-row class="py-5 px-12" id="step-1">
+            <v-row class="py-5 px-12 d-flex align-end" id="step-1">
                 <v-col cols="3">
                     <img class="mb-4" src="../assets/how_it_works/num-1.svg">
                     <h3 class="mb-5"> Bluetooth signals </h3>
@@ -36,7 +36,7 @@
 
             <!-- Step 2 -->
             <div class="triangle_left_1">
-            <v-row class="py-5 px-12" justify="end" id="step-2">
+            <v-row class="py-5 px-12 d-flex align-end" justify="end" id="step-2">
                 <v-col cols="3">
                     <img class="mb-4" src="../assets/how_it_works/num-2.svg">
                     <h3 class="mb-5"> No Tracing or Tracking </h3>
@@ -52,7 +52,7 @@
             <!-- <img class="traingle_image_right pr-10" src="../assets/how_it_works/triangle-2.svg"> -->
 
             <!-- Step 3 -->
-            <v-row class="py-5 px-12" id="step-3">
+            <v-row class="py-5 px-12 d-flex align-end" id="step-3">
                 <v-col cols="3">
                     <img class="mb-4" src="../assets/how_it_works/num-3.svg">
                     <h3 class="mb-5">  A Chance Encounter </h3>
@@ -66,7 +66,7 @@
             </v-row>
 
             <!-- Step 4 -->
-            <v-row class="py-5" justify="end" id="step-2">
+            <v-row class="py-5 d-flex align-end" justify="end" id="step-2">
                 <v-col cols="3">
                     <img class="mb-4" src="../assets/how_it_works/num-4.svg">
                     <h3 class="mb-5"> An Anonymous Log </h3>
@@ -83,7 +83,7 @@
 
             <!-- Step 5 -->
             <div class="triangle_right_2">
-            <v-row class="py-5 px-12" id="step-2">
+            <v-row class="py-5 px-12 d-flex align-end" id="step-2">
                 <v-col cols="3">
                     <img class="mb-4"  src="../assets/how_it_works/num-5.svg">
                     <h3 class="mb-5"> Voluntary Reports </h3>
@@ -98,7 +98,7 @@
 
             <!-- Step 6 -->
             <div class="triangle_left_2">
-            <v-row class="py-5 px-12" justify="end" id="step-2">
+            <v-row class="py-5 px-12 d-flex align-end" justify="end" id="step-2">
                 <v-col cols="3">
                     <img class="mb-4" src="../assets/how_it_works/num-6.svg">
                     <h3 class="mb-5" > Exposure Notifications </h3>
@@ -112,7 +112,7 @@
             </v-row>
 
             <!-- Step 7 -->
-            <v-row class="py-5 px-12" id="step-2">
+            <v-row class="py-5 px-12 d-flex align-end" id="step-2">
                 <v-col cols="3">
                     <img class="mb-4"  src="../assets/how_it_works/num-7.svg">
                     <h3 class="mb-5"> A Call to Action </h3>
