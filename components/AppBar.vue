@@ -1,8 +1,12 @@
 <template>
-  <v-app-bar app flat clipped-left>
+  <v-app-bar app flat clipped-left class="white">
     <v-container>
       <v-row>
-        <v-toolbar-title v-text="title" />
+        <nuxt-link to="/">
+          <img src="../assets/logo/logo_text_blue.svg" alt="Covid Watch">
+        </nuxt-link>
+
+
         <v-spacer />
         <!--Desktop menu-->
         <v-toolbar-items class="d-none d-md-flex">
@@ -13,6 +17,8 @@
             :to="link.href"
             nuxt
             text
+            class="primary--text"
+            style="font-weight:600"
             >{{ link.title }}</v-btn
           >
         </v-toolbar-items>
