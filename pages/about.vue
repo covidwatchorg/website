@@ -14,32 +14,25 @@
                             </div>
                         </div>
 
-                <v-row no-gutters class="mr-10 mb-4 mt-10">
-                    <v-col :sm="5">
-                        <Button primary hero nuxt to="/partner">
-                            Partner With Us
-                        </Button>
+                        <v-row no-gutters class="mr-10 mb-4 mt-10">
+                            <v-col :sm="5">
+                                <!-- /partner doesnt exist yet -->
+                                <Button primary hero nuxt to="/partner">
+                                    Partner With Us
+                                </Button>
+                            </v-col>
+                            <v-spacer/> 
+                            <v-col :sm="5">
+                                <!-- where should this link to? -->
+                                <Button secondary hero nuxt to="/">
+                                    Use Our Solution
+                                </Button>
+                            </v-col>
+                            <v-spacer/>
+                        </v-row>
                     </v-col>
-                    <v-spacer/> 
-                    <v-col :sm="5">
-                        <Button secondary hero nuxt to="/">
-                            Use Our Solution
-                        </Button>
-                    </v-col>
+
                     <v-spacer/>
-                </v-row>
-
-                        <!-- <div class="d-flex">
-
-                            <!-- linking to /partner which does not yet exist 
-                            
-                            <Button primary hero class="pa-5 mr-10" nuxt to="/parter">Partner With Us</Button>
-
-                            <!-- where should this link to? 
-                            <Button secondary nuxt class="pa-5">Use Our Solutions</Button>
-                        </div> -->
-                    </v-col>
-
                     <v-col cols="4">
                         <img class="earth-img" src="../assets/about_us/family-earth.svg">
                     </v-col>
