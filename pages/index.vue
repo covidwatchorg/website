@@ -65,9 +65,8 @@
             </v-col>
           </v-row>
 
-          <a href="https://www.whitepaper.com/" alt="whitepaper">
-            <CTA pdf content="Read the Whitepaper"></CTA>
-          </a>
+          <CTA pdf content="Read the whitepaper" href="/covid_watch_whitepaper.pdf"></CTA>
+
  
         </v-row>
 

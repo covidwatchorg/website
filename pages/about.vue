@@ -45,9 +45,8 @@
 
             </v-row>
 
-            <v-row class="cta-container my-8">
-                <!-- whitepaper link? !-->
-                <Button secondary nuxt to="/whitepaper">Read the WhitePaper</Button>
+            <v-row class="cta-container mt-8">
+                <CTA pdf content="Read the whitepaper" href="/covid_watch_whitepaper.pdf"></CTA>
             </v-row>
         </v-row>
 
@@ -149,7 +148,7 @@
     </v-container>
 </template>
 
-<styles lang="scss">
+<style lang="scss">
 .cta-container {
     display: flex;
     justify-content: center;
@@ -172,10 +171,13 @@
 .partner-image{
     max-height: 100%
 }
-</styles>
+</style>
 
 <script>
 import Button from '../components/Button.vue'
+import CTA from "../components/CTA.vue";
+
+
 export default {
     data: () => ({
         callsToAction: [
@@ -275,7 +277,8 @@ export default {
 
     }),
     components: {
-        Button
+        Button,
+        CTA
     }
 }
 </script>
