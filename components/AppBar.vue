@@ -3,9 +3,8 @@
     <v-container>
       <v-row>
         <nuxt-link to="/">
-          <img src="../assets/logo/logo_text_blue.svg" alt="Covid Watch">
+          <img src="../assets/logo/logo_text_blue.svg" alt="Covid Watch" />
         </nuxt-link>
-
 
         <v-spacer />
         <!--Desktop menu-->
@@ -17,8 +16,7 @@
             :to="link.href"
             nuxt
             text
-            class="primary--text"
-            style="font-weight:600"
+            :ripple="false"
             >{{ link.title }}</v-btn
           >
         </v-toolbar-items>
@@ -43,6 +41,43 @@
     </v-container>
   </v-app-bar>
 </template>
+
+<style lang="scss">
+header.v-app-bar {
+  padding-top: 20px;
+
+  .v-btn {
+    color: var(--v-primary-base);
+    font-weight: 600;
+
+    &:before {
+      display: none;
+    }
+
+    &:hover:after {
+      content: "";
+      position: absolute;
+      border-bottom: 3px solid rgb(67, 196, 217, 0.5);
+      margin: auto;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: calc(100% - 32px);
+    }
+
+    &--active:after {
+      content: "";
+      position: absolute;
+      border-bottom: 3px solid var(--v-primary-base);
+      margin: auto;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: calc(100% - 32px);
+    }
+  }
+}
+</style>
 
 <script>
 export default {
