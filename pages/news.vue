@@ -6,28 +6,29 @@
           <v-col cols="7">
             <h1>News and Media</h1>
             <div
-              class="mt-10 d-flex justify-space-between align-center"
-              style="max-width:600px;"
+              id="filters"
+              class="mt-10"
+              style="max-width:500px;"
             >
-              <v-col>
+              <v-col :sm="8" :md="1">
                 <p class="title mb-0">Filter:</p>
               </v-col>
-              
-              <v-col>
+
+              <v-col :sm="8" :md="1">
                 <Button secondary @click="toShow = 'all'" class="filter px-2">
                   All News
                 </Button>
               </v-col>
 
-              <v-col>
+              <v-col :sm="8" :md="1">
                 <Button secondary @click="toShow = 'releases'" class="filter px-2">
-                  Press Releases
+                  Releases
                 </Button>
               </v-col>
 
-              <v-col>
+              <v-col :sm="8" :md="1">
                 <Button secondary @click="toShow = 'mentions'" class="filter px-2">
-                  Press Mentions
+                  Media
                 </Button>
               </v-col>
               
@@ -36,7 +37,7 @@
 
           <v-spacer></v-spacer>
 
-          <v-col cols="4">
+          <v-col :sm="8" :md="4">
             <img src="../assets/news_page/bench_dude.svg" alt="news" />
           </v-col>
         </v-row>
@@ -44,7 +45,7 @@
         <!-- all news cards section -->
         <v-row id="news-cards" class="mt-8">
           <!-- modularized NewsCard version -->
-          <v-col cols="4" v-for="(card, i) in cardsToRender" :key="i">
+          <v-col :md="4" :sm="6" :xs="8"  v-for="(card, i) in cardsToRender" :key="i">
             <NewsCard :card="card"></NewsCard>
           </v-col>
         </v-row>
@@ -55,6 +56,28 @@
 
 <style lang="scss">
 #news {
+  #filters {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+  }
+
+  @media (max-width:400px){
+    .news-card {
+      height: 340px;
+      min-width: 220px;
+    }
+
+    .stripe {
+      width: 220px;
+    }
+
+    #filters {
+      display: block;
+    }
+  }
+
+
   #hero {
     margin-top: 50px;
   }
