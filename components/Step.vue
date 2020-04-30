@@ -7,7 +7,7 @@
             <v-col cols="10">
                 <img :src="img_step">
             </v-col>
-            <v-col cols="8">
+            <v-col cols="8" :sm="9">
                 <img :src="img_num">
                 <h3 class="mb-4" {{ title }} </h3>
                 <p class="mb-5">

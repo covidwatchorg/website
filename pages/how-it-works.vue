@@ -52,14 +52,14 @@
 
 
             <!-- Step 8 -->
-            <v-row align="center"  justify="space-between" id="step-2">
-                <v-col cols="2">
+            <v-row align="center" class="px-12" justify="space-between" id="step-2">
+                <v-col :md="2">
                 </v-col>
-                <v-col cols="3">
+                <v-col :md="3">
                     <img class="mr-10" src="../assets/how_it_works/family-dancing-2.svg">
                 </v-col>
                 <v-spacer></v-spacer>
-                <v-col cols="3">
+                <v-col :md="3" :sm="10">
                     <img class="mb-4"  src="../assets/how_it_works/num-8.svg">
                     <h3 class="mb-5"> Community Safety</h3>
                     <p>
