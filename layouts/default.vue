@@ -107,19 +107,19 @@ export default {
             }
           ]
         },
-        {
-          title: "Resources",
-          links: [
-            {
-              title: "Privacy Policy",
-              href: "/privacy-policy"
-            },
-            {
-              title: "Terms of Use",
-              href: "/terms-of-use"
-            }
-          ]
-        },
+        // {
+        //   title: "Resources",
+        //   links: [
+        //     {
+        //       title: "Privacy Policy",
+        //       href: "/privacy-policy"
+        //     },
+        //     {
+        //       title: "Terms of Use",
+        //       href: "/terms-of-use"
+        //     }
+        //   ]
+        // },
         {
           title: "Get Involved",
           links: [
