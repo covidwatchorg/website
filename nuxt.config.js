@@ -49,7 +49,11 @@ export default {
    ** https://github.com/nuxt-community/vuetify-module
    */
   vuetify: {
-    customVariables: ["~/assets/variables.scss", "~/assets/main.scss"],
+    customVariables: [
+      "~/assets/variables.scss",
+      "~/assets/mixins.scss",
+      "~/assets/typography.scss"
+    ],
     theme: {
       options: {
         customProperties: true
