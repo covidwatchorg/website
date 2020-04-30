@@ -1,14 +1,10 @@
 <template>
-  <v-app-bar app flat clipped-left class="white" height="120px">
+  <v-app-bar app clipped-left class="white" height="120px" elevate-on-scroll>
     <v-container>
       <v-row>
         <v-col>
           <nuxt-link to="/">
-            <img
-              src="../assets/logo/logo_text_blue.svg"
-              alt="Covid Watch"
-              id="logo-desktop"
-            />
+            <img src="../assets/logo/logo_text_blue.svg" alt="Covid Watch" id="logo-desktop" />
           </nuxt-link>
         </v-col>
 
@@ -23,8 +19,7 @@
             nuxt
             text
             :ripple="false"
-            >{{ link.title }}</v-btn
-          >
+          >{{ link.title }}</v-btn>
         </v-toolbar-items>
         <!--Mobile menu-->
         <v-toolbar-items class="hidden-md-and-up">
@@ -36,9 +31,11 @@
             </template>
             <v-list class="d-md-none">
               <v-list-item v-for="link in navLinks" :key="link.title">
-                <nuxt-link class="link" :to="link.href">{{
+                <nuxt-link class="link" :to="link.href">
+                  {{
                   link.title
-                }}</nuxt-link>
+                  }}
+                </nuxt-link>
               </v-list-item>
             </v-list>
           </v-menu>
@@ -49,17 +46,6 @@
 </template>
 
 <style lang="scss" scoped>
-@mixin pseudo-background($border-width: 0px, $border-color: white) {
-  content: "";
-  position: absolute;
-  margin: auto;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-  border-bottom: $border-width solid $border-color;
-}
-
 header.v-app-bar {
   // Desktop menu links
   .v-btn {
