@@ -1,0 +1,10 @@
+@mixin pseudo-background($border-width: 0px, $border-color: white) {
+  content: "";
+  position: absolute;
+  margin: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  border-bottom: $border-width solid $border-color;
+}
