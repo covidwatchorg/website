@@ -14,15 +14,15 @@
                             </div>
                         </div>
 
-                        <v-row no-gutters class="mr-10 mb-4 mt-10">
-                            <v-col :sm="5">
+                        <v-row no-gutters class="mr-10 mt-10">
+                            <v-col cols="10" class="mt-12 mb-10 mb-md-0" :sm="8" :md="5">
                                 <!-- /partner doesnt exist yet -->
                                 <Button primary hero nuxt to="/partner">
                                     Partner With Us
                                 </Button>
                             </v-col>
                             <v-spacer/> 
-                            <v-col :sm="5">
+                            <v-col class="mt-md-12" cols="10" :sm="8" :md="5">
                                 <!-- where should this link to? -->
                                 <Button secondary hero nuxt to="/pilot">
                                     Use Our Solution
@@ -61,7 +61,7 @@
 
             </v-row>
 
-            <v-row class="cta-container mt-8">
+            <v-row class="mt-8">
                 <CTA pdf content="Read the whitepaper" href="/covid_watch_whitepaper.pdf"></CTA>
             </v-row>
         </v-row>
@@ -197,7 +197,7 @@
 
 .cta-container {
     display: flex;
-    justify-content: center;
+    justify-content: left;
 }
 
 .first-row{
