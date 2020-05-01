@@ -90,12 +90,6 @@
                         <Button v-if="cta.link" secondary nuxt :to="cta.link">{{ cta.button_text }}</Button>
                         <Button v-if="!cta.link" secondary><a style="text-transform:none;" href="mailto:contact@covid-watch.org">{{ cta.button_text }}</a></Button>
                     </div> 
-                    
-                    <div v-else class="mb-4">
-                        <Button secondary>
-                            <a href="mailto: contact@covid-watch.org">{{ cta. button_text }}</a>
-                        </Button>
-                    </div>
 
                     <div>{{cta.cta_text}}</div>
                 </v-col>
