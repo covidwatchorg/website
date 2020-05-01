@@ -236,7 +236,7 @@ export default {
         {
             button_text:"Donate",
             cta_text:"Our organization is here to make a difference, not a profit. We need your support to slow the spread. ",
-            link:"/donate",
+            link:"/support",
         },
         {
             button_text:"Start a Pilot",
