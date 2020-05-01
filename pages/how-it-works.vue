@@ -17,8 +17,9 @@
                     </div>
                 </v-col>
 
+                <v-spacer></v-spacer>
                 <v-col :md="4">
-                    <img class="connected_img" src="../assets/how_it_works/people-connected.svg">
+                    <img class="connected_img" src="../assets/how_it_works/people-connected-new.svg">
                 </v-col>
             </v-row>
 
@@ -35,7 +36,7 @@
               <Step :img_num="require('../assets/how_it_works/num-3.svg')" :img_step="require('../assets/how_it_works/num-3-img.svg')" title=" A Chance Encounter"  text="Jane has a chat with Sam, who also has the Covid Watch app installed. Their phones log these random numbers and the time."></Step>
 
             <!-- Step 4 -->
-                <Step right :img_num="require('../assets/how_it_works/num-4.svg')" :img_step="require('../assets/how_it_works/num-4-img.svg')" title="An Anonymous Log"  text="Jane’s phone keeps a log of these numbers for two to four weeks. No personal information is needed for the system to work! Just a log of random numbers along with time. "></Step>
+                <Step right :img_num="require('../assets/how_it_works/num-4.svg')" :img_step="require('../assets/how_it_works/num-4-img-new.svg')" title="An Anonymous Log"  text="Jane’s phone keeps a log of these numbers for two to four weeks. No personal information is needed for the system to work! Just a log of random numbers along with time. "></Step>
             </div>
 
 
@@ -66,7 +67,7 @@
                    Sam might not have remembered meeting Jane. Because they both used Covid Watch, Jane is able to follow local healthcare guidelines and reduce the spread of COVID-19.
                     </p>
                 </v-col>
-                <v-col cols="3">
+                <v-col :md="3" :sm="10">
                     <img src="../assets/how_it_works/family-dancing-1.svg">
                 </v-col>
             </v-row>

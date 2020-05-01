@@ -4,7 +4,7 @@
       <v-col>
         <v-row id="hero">
           
-          <v-col class="hero-copy" cols="7">
+          <v-col class="hero-copy" :md="7" :sm="10">
             <h1>Support Us</h1>
 
 
@@ -14,18 +14,18 @@
             </div>
 
             <!-- inline style to be updated once we have global widths for Button component possibly -->
-            <div class="mt-16 pt-12 donate-container">
+            <div class="mt-16 pt-12 donate-container d-flex flex-wrap">
               <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=W3U2KCLJGV9A8&source=url">
                 <Button style="width:300px;height:50px;font-weight:bold;" hero>Donate</Button>
               </a>
               
-              <img src="../assets/support_page/payment_options.svg" alt="payment">
+              <img class="py-4" src="../assets/support_page/payment_options.svg" alt="payment">
             </div>
           </v-col>
 
           <v-spacer></v-spacer>
 
-          <v-col cols="4">
+          <v-col :md="4" :sm="8">
             <img style="max-height:370px;" src="../assets/support_page/people_globe.svg" alt="globe">
           </v-col>
         </v-row>
