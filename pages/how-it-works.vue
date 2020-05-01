@@ -12,7 +12,7 @@
                         <p class="title-caps">HOW IT WORKS</p>
                         <h1 class="mt-6">Our Privacy-Preserving Protocol</h1>
                         <div class="mt-10">
-                            <p>Covid Watch uses the international open-source TCN Protocol first developed in our community to send anonymous exposure notifications via private, local Bluetooth signals. Let’s find out more about how it works for Sam and Jane, two users of the app</p>
+                            <p>Covid Watch uses the international open-source TCN Protocol first developed in our community to send anonymous exposure notifications via private, local Bluetooth signals. Let’s find out more about how it works for Sam and Jane, two users of the app.</p>
                         </div>
                     </div>
                 </v-col>

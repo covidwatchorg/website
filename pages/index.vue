@@ -271,7 +271,7 @@ export default {
   },
   methods: {
     hideBackground(e) {
-      debugger
+      // debugger
     }
   },
   data: () => ({
