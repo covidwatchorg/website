@@ -1,7 +1,6 @@
 <template>
     <v-container grid-list-xs>
         <v-row id="how-it-works">
-
             <!-- First row-->
             <v-row id="header" class="px-12 mt-12">
 
@@ -23,7 +22,7 @@
 
             <!-- Step 1 -->
             <div class="triangle_right_1">
-                    <Step :class="justify-end" :img_num="require('../assets/how_it_works/num-1.svg')" :img_step="require('../assets/how_it_works/step-1.svg')" title="Bluetooth signals" text="After Jane installs Covid Watch, her phone begins to chirp random numbers using Bluetooth. Her phone also listens for chirps sent by other phones nearby."></Step>
+                    <Step :img_num="require('../assets/how_it_works/num-1.svg')" :img_step="require('../assets/how_it_works/step-1.svg')" title="Bluetooth signals" text="After Jane installs Covid Watch, her phone begins to chirp random numbers using Bluetooth. Her phone also listens for chirps sent by other phones nearby."></Step>
 
             <!-- Step 2 -->
             <div class="triangle_left_1">
@@ -54,11 +53,11 @@
             <v-row align="center" class="px-12 step-8-row" justify="space-between" id="step-2">
                 <v-col :md="2">
                 </v-col>
-                <v-col :md="3">
-                    <img class="mr-10 dancing-img" src="../assets/how_it_works/family-dancing-2.svg">
+                <v-col :md="3" :sm="8">
+                    <img class="mr-10 step_img" src="../assets/how_it_works/family-dancing-2.svg">
                 </v-col>
                 <v-spacer></v-spacer>
-                <v-col :md="3" :sm="10">
+                <v-col cols="11" :md="3" :sm="11">
                     <img class="mb-4"  src="../assets/how_it_works/num-8.svg">
                     <h3 class="mb-5"> Community Safety</h3>
                     <p>
@@ -66,7 +65,7 @@
                     </p>
                 </v-col>
                 <v-col :md="3" :sm="10">
-                    <img class="dancing-img" src="../assets/how_it_works/family-dancing-1.svg">
+                    <img class="step_img" src="../assets/how_it_works/family-dancing-1.svg">
                 </v-col>
             </v-row>
             </div>
@@ -137,7 +136,7 @@
         background-position-y: 42%;
     }
 
-        @media (max-width:400px){
+        @media (max-width:500px){
             .triangle_right_1, .triangle_left_1, .triangle_right_2, .triangle_left_2, .step-8-row {
                 background-image: none;
                 
@@ -148,8 +147,8 @@
             }
 
 
-            img {
-                width: 260px;
+            .step_img {
+                max-width: 260px;
             }
 
             .woman-triangle {

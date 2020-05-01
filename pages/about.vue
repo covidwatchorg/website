@@ -14,17 +14,19 @@
                             </div>
                         </div>
 
-                        <v-row no-gutters class="mr-10 mb-4 mt-10">
-                            <v-col :sm="5">
+                        <v-row no-gutters class="mr-10 mt-10">
+                            <v-col cols="10" class="mt-12 mb-10 mb-md-0" :sm="8" :md="5">
                                 <!-- /partner doesnt exist yet -->
                                 <Button primary hero nuxt to="/partner">
                                     Use Our Solution
                                 </Button>
                             </v-col>
                             <v-spacer/> 
+
                             <v-col :sm="5">
                                 <Button secondary hero nuxt to="/pilot">
                                     Join Our Team
+
                                 </Button>
                             </v-col>
                             <v-spacer/>
@@ -45,9 +47,9 @@
             <v-row>
 
                 <v-col 
-                    cols="8"
+                    cols="10"
                     :md="4" 
-                    :sm="8" 
+                    :sm="10" 
                     v-for="(card, i) in valueCards"  
                     :key="i" 
                     class="d-flex flex-column align-left">
@@ -60,7 +62,7 @@
 
             </v-row>
 
-            <v-row class="cta-container mt-8">
+            <v-row class="mt-8">
                 <CTA pdf content="Read the whitepaper" href="/covid_watch_whitepaper.pdf"></CTA>
             </v-row>
         </v-row>
@@ -82,11 +84,19 @@
 
             <v-row>
                 <v-col class="align-center justify-center" cols="12" :md="3" :sm="6" v-for="(cta, i) in callsToAction" :key="i">
+
                     <!-- these should probably link to different places -->
                     <div class="mb-4">
                         <Button v-if="cta.link" secondary nuxt :to="cta.link">{{ cta.button_text }}</Button>
                         <Button v-if="!cta.link" secondary><a style="text-transform:none;" href="mailto:contact@covid-watch.org">{{ cta.button_text }}</a></Button>
                     </div> 
+                    
+                    <div v-else class="mb-4">
+                        <Button secondary>
+                            <a href="mailto: contact@covid-watch.org">{{ cta. button_text }}</a>
+                        </Button>
+                    </div>
+
                     <div>{{cta.cta_text}}</div>
                 </v-col>
             </v-row>
@@ -95,7 +105,7 @@
 
         <!-- team row-->
         <v-row class="mb-5 pa-12" id="our-team">
-            <v-col cols="12" :sm="12">
+            <v-col cols="10" :md="12" :sm="10">
                     <div class="mb-5"><h2>Our Team</h2></div>
                     <p class="subtitle">Covid Watch is a group of more than 400 volunteers from around the world. We are scientific researchers, privacy and public health experts, journalists, developers, and designers.</p>
             </v-col>
@@ -106,7 +116,7 @@
                         <v-col :md="5">
                             <img class="mr-5" :src="founder.image">
                         </v-col>
-                        <v-col :md="7" :sm="12">
+                        <v-col cols="10" :md="7" :sm="10">
                             <div class="title">
                                 {{founder.name}}
                             </div>
@@ -135,14 +145,18 @@
 
             <div class="d-md-flex justify-md-space-between align-center">
                 <v-col :md="3" :sm="6"> 
+
                     <a href="https://www.stanford.edu/">
                         <img :src="stanford.src"  @mouseover="stanford.src = stanford.color" @mouseleave="stanford.src = stanford.grey">
+
                     </a>
                 </v-col>
 
                 <v-col :md="3" :sm="6"> 
+
                     <a href="https://uwaterloo.ca/">
                         <img class=waterloo-img :src="waterloo.src"  @mouseover="waterloo.src = waterloo.color" @mouseleave="waterloo.src = waterloo.grey">
+
                     </a>
                 </v-col>
             </div> 
@@ -154,6 +168,7 @@
 
 
             <div class="d-md-flex justify-md-space-between align-center">
+
                 <v-col :md="2" :sm="6" v-for="(collab, i) in collaborator_projects" :key="i" @mouseover="collab.src = collab.color" @mouseleave="collab.src = collab.grey">
                     <a :href="collab.url">
                         <img class=collab-img :src="collab.src"  >
@@ -161,26 +176,17 @@
                             <div style="font-size:16px;">{{ collab.name }}</div>
                         </div>
                     </a>
+
                 </v-col>
             </div>
-
         </v-row>
-
-
     </v-row>
-
     </v-container>
 </template>
 
 <style lang="scss">
 @media (max-width:1000px){
     .earth_img{
-        display: none;
-    }
-}
-
-@media(max-width:360px){
-    .we_value_img{
         display: none;
     }
 }
@@ -200,7 +206,7 @@
 
 .cta-container {
     display: flex;
-    justify-content: center;
+    justify-content: left;
 }
 
 .first-row{
@@ -298,12 +304,14 @@ export default {
         stanford: {
             grey:require("../assets/about_us/logo-stanford-black.svg"),
             color:require("../assets/about_us/logo-stanford-red.svg"), 
-            src:require("../assets/about_us/logo-stanford-black.svg")
+            src:require("../assets/about_us/logo-stanford-black.svg"),
+            href: "https://www.stanford.edu/"
         },    
         waterloo: {
             grey:require("../assets/about_us/logo-university-of-waterloo-gray.svg"),
             color:require("../assets/about_us/logo-university-of-waterloo.svg"),
-            src:require("../assets/about_us/logo-university-of-waterloo-gray.svg")
+            src:require("../assets/about_us/logo-university-of-waterloo-gray.svg"),
+            href: "https://uwaterloo.ca/"
         },
         collaborator_projects: [  
         {
@@ -311,14 +319,16 @@ export default {
             grey:require("../assets/about_us/logo-coepi-gray.svg"),
             color:require("../assets/about_us/logo-coepi.svg"),
             src:require("../assets/about_us/logo-coepi-gray.svg"),
-            name:"Community Epidemiology in Action"
+            name:"Community Epidemiology in Action",
+            href: "https://www.coepi.org/"
         },
         {
             url: "http://safepaths.mit.edu/",
             grey:require("../assets/about_us/logo-privacykit-gray.svg"),
             color:require("../assets/about_us/logo-privacykit.svg"),
             src:require("../assets/about_us/logo-privacykit-gray.svg"),
-            name:"PrivateKit: SafePaths"
+            name:"PrivateKit: SafePaths",
+            href: "http://safepaths.mit.edu/"
         },
         {
             url: "https://tcn-coalition.org/",
