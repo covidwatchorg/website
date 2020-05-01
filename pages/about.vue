@@ -18,14 +18,14 @@
                             <v-col cols="10" class="mt-12 mb-10 mb-md-0" :sm="8" :md="5">
                                 <!-- /partner doesnt exist yet -->
                                 <Button primary hero nuxt to="/partner">
-                                    Partner With Us
+                                    Use Our Solution
                                 </Button>
                             </v-col>
                             <v-spacer/> 
                             <v-col class="mt-md-12" cols="10" :sm="8" :md="5">
                                 <!-- where should this link to? -->
                                 <Button secondary hero nuxt to="/pilot">
-                                    Use Our Solution
+                                    Join Our Team
                                 </Button>
                             </v-col>
                             <v-spacer/>
@@ -239,7 +239,7 @@ export default {
             link:"/donate",
         },
         {
-            button_text:"Call to Action",
+            button_text:"Start a Pilot",
             cta_text:"Covid Watch works best when a community adopts it together. Are you looking for an app to help protect your state? Your company? Your country? Let’s talk.",
             link:"/pilot",
         },
