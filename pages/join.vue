@@ -27,7 +27,7 @@
         <!-- additional copy -->
         <v-row class="mt-12 pt-6">
           <v-col>
-            <h3>Volunteer</h3>
+            <h2>Volunteer</h2>
             <p class="mt-6">If you'd like an invitation to the 400+ person Slack group that we're using to coordinate, just send a message to contact@covid-watch.org.</p>
 
             <h4 class="mt-6 mb-4">Most Wanted Volunteers</h4>
@@ -54,7 +54,7 @@
 
         <v-row class="my-12">
           <v-col>
-            <h3>Other Ways to Get Involved</h3>
+            <h2>Other Ways to Get Involved</h2>
             <p class="mt-8">You don't need to join our team to help Covid Watch! It would also help us out if you'd consider other options:</p>
 
             <ul>

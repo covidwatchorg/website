@@ -123,13 +123,14 @@ export default {
         {
           title: "Get Involved",
           links: [
-            {
-              title: "Partner with Us",
-              href: "/partner"
-            },
+            // commented out until we have a clear sense of what 'partnering' means and copy
+            // {
+            //   title: "Partner with Us",
+            //   href: "/partner"
+            // },
             {
               title: "Join Us",
-              href: "/volunteer"
+              href: "/join"
             },
             {
               title: "Contact Us",
