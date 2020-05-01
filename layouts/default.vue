@@ -127,13 +127,14 @@ export default {
               title: "Start a Pilot",
               href: "/pilot"
             },
+  // commented out until we have a clear sense of what 'partnering' means and copy
             // {
             //   title: "Partner with Us",
             //   href: "/partner"
             // },
             {
               title: "Join Us",
-              href: "/volunteer"
+              href: "/join"
             },
             {
               title: "Contact Us",
