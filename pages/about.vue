@@ -18,14 +18,15 @@
                             <v-col cols="10" class="mt-12 mb-10 mb-md-0" :sm="8" :md="5">
                                 <!-- /partner doesnt exist yet -->
                                 <Button primary hero nuxt to="/partner">
-                                    Partner With Us
+                                    Use Our Solution
                                 </Button>
                             </v-col>
                             <v-spacer/> 
-                            <v-col class="mt-md-12" cols="10" :sm="8" :md="5">
-                                <!-- where should this link to? -->
+
+                            <v-col :sm="5">
                                 <Button secondary hero nuxt to="/pilot">
-                                    Use Our Solution
+                                    Join Our Team
+
                                 </Button>
                             </v-col>
                             <v-spacer/>
@@ -83,9 +84,11 @@
 
             <v-row>
                 <v-col class="align-center justify-center" cols="12" :md="3" :sm="6" v-for="(cta, i) in callsToAction" :key="i">
-                    <!-- TODO: are these links right? -->
-                    <div v-if="cta.link !== 'email'" class="mb-4">
-                        <Button secondary nuxt :to="cta.link">{{ cta.button_text }}</Button>
+
+                    <!-- these should probably link to different places -->
+                    <div class="mb-4">
+                        <Button v-if="cta.link" secondary nuxt :to="cta.link">{{ cta.button_text }}</Button>
+                        <Button v-if="!cta.link" secondary><a style="text-transform:none;" href="mailto:contact@covid-watch.org">{{ cta.button_text }}</a></Button>
                     </div> 
                     
                     <div v-else class="mb-4">
@@ -142,14 +145,18 @@
 
             <div class="d-md-flex justify-md-space-between align-center">
                 <v-col :md="3" :sm="6"> 
-                    <a :href="stanford.href">
-                    <img :src="stanford.src"  @mouseover="stanford.src = stanford.color" @mouseleave="stanford.src = stanford.grey">
+
+                    <a href="https://www.stanford.edu/">
+                        <img :src="stanford.src"  @mouseover="stanford.src = stanford.color" @mouseleave="stanford.src = stanford.grey">
+
                     </a>
                 </v-col>
 
                 <v-col :md="3" :sm="6"> 
-                    <a :href="waterloo.href">
-                    <img class=waterloo-img :src="waterloo.src"  @mouseover="waterloo.src = waterloo.color" @mouseleave="waterloo.src = waterloo.grey">
+
+                    <a href="https://uwaterloo.ca/">
+                        <img class=waterloo-img :src="waterloo.src"  @mouseover="waterloo.src = waterloo.color" @mouseleave="waterloo.src = waterloo.grey">
+
                     </a>
                 </v-col>
             </div> 
@@ -161,13 +168,15 @@
 
 
             <div class="d-md-flex justify-md-space-between align-center">
-                <v-col :md="2" :sm="6" v-for="(collab, i) in collaborator_projects" :key="i">
-                    <a :href="collab.href">
-                        <img class=collab-img :src="collab.src"  @mouseover="collab.src = collab.color" @mouseleave="collab.src = collab.grey">
+
+                <v-col :md="2" :sm="6" v-for="(collab, i) in collaborator_projects" :key="i" @mouseover="collab.src = collab.color" @mouseleave="collab.src = collab.grey">
+                    <a :href="collab.url">
+                        <img class=collab-img :src="collab.src"  >
+                        <div class="caption d-flex justify-start collab-name">
+                            <div style="font-size:16px;">{{ collab.name }}</div>
+                        </div>
                     </a>
-                    <div class="caption justify-center collab-name">
-                        {{ collab.name }}
-                    </div>
+
                 </v-col>
             </div>
         </v-row>
@@ -231,22 +240,22 @@ export default {
         {
             button_text:"Volunteer",
             cta_text:"Covid Watch is a volunteer-led effort to fight COVID-19. Are you a developer? A public health expert? A writer? We want your help.",
-            link:"/join",
+            link: "/join"
         },
         {
             button_text:"Donate",
             cta_text:"Our organization is here to make a difference, not a profit. We need your support to slow the spread. ",
-            link:"/donate",
+            link: "/support"
         },
         {
-            button_text:"Call to Action",
+            button_text:"Start a Pilot",
             cta_text:"Covid Watch works best when a community adopts it together. Are you looking for an app to help protect your state? Your company? Your country? Let’s talk.",
-            link:"/pilot",
+            link: "/pilot"
         },
         {
             button_text:"Email Us",
             cta_text:"We are working with partners that share our commitment to health and human rights. If your organization has tools to help stop the spread or expertise, let’s work together.",
-            link:"email",
+            link: ""
         },
         ],
         valueCards: [
@@ -304,15 +313,9 @@ export default {
             src:require("../assets/about_us/logo-university-of-waterloo-gray.svg"),
             href: "https://uwaterloo.ca/"
         },
-        collaborator_projects: [
+        collaborator_projects: [  
         {
-            grey:require("../assets/about_us/logo-TCN-coalition-gray.svg"),
-            color:require("../assets/about_us/logo-TCN-coalition.svg"), 
-            src:require("../assets/about_us/logo-TCN-coalition-gray.svg"),
-            name:"TCN Coalition",
-            href: "https://tcn-coalition.org/"
-        },    
-        {
+            url: "https://www.coepi.org/",
             grey:require("../assets/about_us/logo-coepi-gray.svg"),
             color:require("../assets/about_us/logo-coepi.svg"),
             src:require("../assets/about_us/logo-coepi-gray.svg"),
@@ -320,12 +323,20 @@ export default {
             href: "https://www.coepi.org/"
         },
         {
+            url: "http://safepaths.mit.edu/",
             grey:require("../assets/about_us/logo-privacykit-gray.svg"),
             color:require("../assets/about_us/logo-privacykit.svg"),
             src:require("../assets/about_us/logo-privacykit-gray.svg"),
             name:"PrivateKit: SafePaths",
             href: "http://safepaths.mit.edu/"
         },
+        {
+            url: "https://tcn-coalition.org/",
+            grey:require("../assets/about_us/logo-TCN-coalition-gray.svg"),
+            color:require("../assets/about_us/logo-TCN-coalition.svg"), 
+            src:require("../assets/about_us/logo-TCN-coalition-gray.svg"),
+            name:"TCN Coalition"
+        },  
         ],
         title: "About Us | Covid Watch"
 
