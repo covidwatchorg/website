@@ -24,7 +24,7 @@
                             <v-spacer/> 
                             <v-col :sm="5">
                                 <!-- where should this link to? -->
-                                <Button secondary hero nuxt to="/">
+                                <Button secondary hero nuxt to="/pilot">
                                     Use Our Solution
                                 </Button>
                             </v-col>
@@ -46,9 +46,9 @@
             <v-row>
 
                 <v-col 
-                    cols="8"
+                    cols="10"
                     :md="4" 
-                    :sm="8" 
+                    :sm="10" 
                     v-for="(card, i) in valueCards"  
                     :key="i" 
                     class="d-flex flex-column align-left">
@@ -83,10 +83,17 @@
 
             <v-row>
                 <v-col class="align-center justify-center" cols="12" :md="3" :sm="6" v-for="(cta, i) in callsToAction" :key="i">
-                    <!-- these should probably link to different places -->
-                    <div class="mb-4">
-                        <Button secondary nuxt to="/donate">{{ cta.button_text }}</Button>
+                    <!-- TODO: are these links right? -->
+                    <div v-if="cta.link !== 'email'" class="mb-4">
+                        <Button secondary nuxt :to="cta.link">{{ cta.button_text }}</Button>
                     </div> 
+                    
+                    <div v-else class="mb-4">
+                        <Button secondary>
+                            <a href="mailto: contact@covid-watch.org">{{ cta. button_text }}</a>
+                        </Button>
+                    </div>
+
                     <div>{{cta.cta_text}}</div>
                 </v-col>
             </v-row>
@@ -95,7 +102,7 @@
 
         <!-- team row-->
         <v-row class="mb-5 pa-12" id="our-team">
-            <v-col cols="12" :sm="12">
+            <v-col cols="10" :md="12" :sm="10">
                     <div class="mb-5"><h2>Our Team</h2></div>
                     <p class="subtitle">Covid Watch is a group of more than 400 volunteers from around the world. We are scientific researchers, privacy and public health experts, journalists, developers, and designers.</p>
             </v-col>
@@ -106,7 +113,7 @@
                         <v-col :md="5">
                             <img class="mr-5" :src="founder.image">
                         </v-col>
-                        <v-col :md="7" :sm="12">
+                        <v-col cols="10" :md="7" :sm="10">
                             <div class="title">
                                 {{founder.name}}
                             </div>
@@ -135,11 +142,15 @@
 
             <div class="d-md-flex justify-md-space-between align-center">
                 <v-col :md="3" :sm="6"> 
+                    <a :href="stanford.href">
                     <img :src="stanford.src"  @mouseover="stanford.src = stanford.color" @mouseleave="stanford.src = stanford.grey">
+                    </a>
                 </v-col>
 
                 <v-col :md="3" :sm="6"> 
+                    <a :href="waterloo.href">
                     <img class=waterloo-img :src="waterloo.src"  @mouseover="waterloo.src = waterloo.color" @mouseleave="waterloo.src = waterloo.grey">
+                    </a>
                 </v-col>
             </div> 
         </v-row>
@@ -151,30 +162,22 @@
 
             <div class="d-md-flex justify-md-space-between align-center">
                 <v-col :md="2" :sm="6" v-for="(collab, i) in collaborator_projects" :key="i">
-                    <img class=collab-img :src="collab.src"  @mouseover="collab.src = collab.color" @mouseleave="collab.src = collab.grey">
+                    <a :href="collab.href">
+                        <img class=collab-img :src="collab.src"  @mouseover="collab.src = collab.color" @mouseleave="collab.src = collab.grey">
+                    </a>
                     <div class="caption justify-center collab-name">
                         {{ collab.name }}
                     </div>
                 </v-col>
             </div>
-
         </v-row>
-
-
     </v-row>
-
     </v-container>
 </template>
 
 <style lang="scss">
 @media (max-width:1000px){
     .earth_img{
-        display: none;
-    }
-}
-
-@media(max-width:360px){
-    .we_value_img{
         display: none;
     }
 }
@@ -227,19 +230,23 @@ export default {
         callsToAction: [
         {
             button_text:"Volunteer",
-            cta_text:"Covid Watch is a volunteer-led effort to fight COVID-19. Are you a developer? A public health expert? A writer? We want your help."
+            cta_text:"Covid Watch is a volunteer-led effort to fight COVID-19. Are you a developer? A public health expert? A writer? We want your help.",
+            link:"/join",
         },
         {
             button_text:"Donate",
             cta_text:"Our organization is here to make a difference, not a profit. We need your support to slow the spread. ",
+            link:"/donate",
         },
         {
             button_text:"Call to Action",
-            cta_text:"Covid Watch works best when a community adopts it together. Are you looking for an app to help protect your state? Your company? Your country? Let’s talk."
+            cta_text:"Covid Watch works best when a community adopts it together. Are you looking for an app to help protect your state? Your company? Your country? Let’s talk.",
+            link:"/pilot",
         },
         {
             button_text:"Email Us",
-            cta_text:"We are working with partners that share our commitment to health and human rights. If your organization has tools to help stop the spread or expertise, let’s work together."
+            cta_text:"We are working with partners that share our commitment to health and human rights. If your organization has tools to help stop the spread or expertise, let’s work together.",
+            link:"email",
         },
         ],
         valueCards: [
@@ -288,31 +295,36 @@ export default {
         stanford: {
             grey:require("../assets/about_us/logo-stanford-black.svg"),
             color:require("../assets/about_us/logo-stanford-red.svg"), 
-            src:require("../assets/about_us/logo-stanford-black.svg")
+            src:require("../assets/about_us/logo-stanford-black.svg"),
+            href: "https://www.stanford.edu/"
         },    
         waterloo: {
             grey:require("../assets/about_us/logo-university-of-waterloo-gray.svg"),
             color:require("../assets/about_us/logo-university-of-waterloo.svg"),
-            src:require("../assets/about_us/logo-university-of-waterloo-gray.svg")
+            src:require("../assets/about_us/logo-university-of-waterloo-gray.svg"),
+            href: "https://uwaterloo.ca/"
         },
         collaborator_projects: [
         {
             grey:require("../assets/about_us/logo-TCN-coalition-gray.svg"),
             color:require("../assets/about_us/logo-TCN-coalition.svg"), 
             src:require("../assets/about_us/logo-TCN-coalition-gray.svg"),
-            name:"TCN Coalition"
+            name:"TCN Coalition",
+            href: "https://tcn-coalition.org/"
         },    
         {
             grey:require("../assets/about_us/logo-coepi-gray.svg"),
             color:require("../assets/about_us/logo-coepi.svg"),
             src:require("../assets/about_us/logo-coepi-gray.svg"),
-            name:"Community Epidemiology in Action"
+            name:"Community Epidemiology in Action",
+            href: "https://www.coepi.org/"
         },
         {
             grey:require("../assets/about_us/logo-privacykit-gray.svg"),
             color:require("../assets/about_us/logo-privacykit.svg"),
             src:require("../assets/about_us/logo-privacykit-gray.svg"),
-            name:"PrivateKit: SafePaths"
+            name:"PrivateKit: SafePaths",
+            href: "http://safepaths.mit.edu/"
         },
         ],
         title: "About Us | Covid Watch"
