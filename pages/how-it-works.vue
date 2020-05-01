@@ -148,7 +148,7 @@
 
 
             .step_img {
-                max-width: 240px;
+                max-width: 260px;
             }
 
             .woman-triangle {
