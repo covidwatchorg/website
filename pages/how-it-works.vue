@@ -53,11 +53,11 @@
 
 
             <!-- Step 8 -->
-            <v-row align="center" class="px-12" justify="space-between" id="step-2">
+            <v-row align="center" class="px-12 step-8-row" justify="space-between" id="step-2">
                 <v-col :md="2">
                 </v-col>
                 <v-col :md="3">
-                    <img class="mr-10" src="../assets/how_it_works/family-dancing-2.svg">
+                    <img class="mr-10 dancing-img" src="../assets/how_it_works/family-dancing-2.svg">
                 </v-col>
                 <v-spacer></v-spacer>
                 <v-col :md="3" :sm="10">
@@ -68,7 +68,7 @@
                     </p>
                 </v-col>
                 <v-col :md="3" :sm="10">
-                    <img src="../assets/how_it_works/family-dancing-1.svg">
+                    <img class="dancing-img" src="../assets/how_it_works/family-dancing-1.svg">
                 </v-col>
             </v-row>
             </div>
@@ -92,8 +92,8 @@
 
             <v-row>
                 <v-spacer></v-spacer>
-                <v-col cols="4">
-                    <img src="../assets/how_it_works/woman-triangle.svg">
+                <v-col :md="4" :sm="8">
+                    <img class="woman-triangle" src="../assets/how_it_works/woman-triangle.svg">
                 </v-col>
                 <v-spacer></v-spacer>
             </v-row>
@@ -137,6 +137,28 @@
         background-image: url("../assets/how_it_works/triangle-left.svg");
         background-position-x: left;
         background-position-y: 42%;
+    }
+
+        @media (max-width:400px){
+            .triangle_right_1, .triangle_left_1, .triangle_right_2, .triangle_left_2, .step-8-row {
+                background-image: none;
+                
+            }
+
+            .step-container {
+                margin-bottom: 100px;
+            }
+
+
+            img {
+                width: 260px;
+            }
+
+            .woman-triangle {
+                width: 260px;
+            }
+
+ 
     }
 }
 </style>

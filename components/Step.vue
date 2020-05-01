@@ -2,7 +2,7 @@
     <div>
         <v-row 
             v-if="$vuetify.breakpoint.smAndDown"
-            class="py-5 px-12 d-flex align-end"
+            class="py-5 px-12 d-flex align-end step-container"
             > 
             <v-col cols="10">
                 <img :src="img_step">
