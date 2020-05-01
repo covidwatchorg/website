@@ -3,7 +3,7 @@
     <v-row id="home">
       <v-col>
         <v-row id="hero">
-          <v-col cols="8" class="px-10">
+          <v-col :sm="8" :xs="12" class="px-10">
             <div class="hero-copy">
               <h1>
                 Together, we have the power to stop the spread of COVID-19
@@ -14,15 +14,15 @@
                 preserving your privacy through mobile alerts.
               </p>
 
-              <v-row no-gutters class="mr-10 mb-4 mt-10">
-                <v-col :sm="5">
-                  <Button primary hero nuxt to="/about">
+              <v-row no-gutters class="mr-12 pr-12 mb-4 mt-10 d-flex flex-wrap">
+                <v-col class="mr-6" :xs="10">
+                  <Button primary hero nuxt to="/about" class="mt-4">
                     Download Android Beta
                   </Button>
                 </v-col>
-                <v-spacer></v-spacer>
-                <v-col :sm="5">
-                  <Button secondary hero nuxt to="/about">
+                <!-- <v-spacer></v-spacer> -->
+                <v-col :xs="10">
+                  <Button secondary hero nuxt to="/about" class="mt-4">
                     iOS Coming Soon
                   </Button>
                 </v-col>
@@ -38,7 +38,8 @@
 
           <v-row>
             <v-col
-              cols="3"
+              :md="3" 
+              :sm="8"
               v-for="(card, i) in howItWorksCards"
               :key="i"
               class="d-flex flex-column align-left"
@@ -54,18 +55,44 @@
         </v-row>
 
         <!-- Why Covid Watch -->
-        <v-row id="why-covid-watch" class="d-block pa-12">
+        <v-row id="why-covid-watch" class="pa-12">
           <h2 class="plum--text mb-12">Why Covid Watch</h2>
 
           <v-row>
-            <v-col cols="4" v-for="(card, i) in whyCards" :key="i">
-              <img class="card-img" :src="card.img" :alt="card.title" />
-              <h3 class="mt-10">{{ card.title }}</h3>
-              <p class="caption mt-5">{{ card.body }}</p>
+            <v-col             
+              :md="4" 
+              :sm="8"
+              v-for="(card, i) in whyCards" 
+              :key="i">
+                <div class="img-container">
+                  <img class="card-img" :src="card.img" :alt="card.title" />
+                </div>
+                <div class="content-container">
+                  <h3 class="mt-10">{{ card.title }}</h3>
+                  <p class="caption mt-5">{{ card.body }}</p>
+                </div>
             </v-col>
           </v-row>
 
-          <CTA pdf content="Read the whitepaper" href="/covid_watch_whitepaper.pdf"></CTA>
+          <!-- commented this out as spacing was getting wacky on small screens -->
+          <!-- <CTA pdf content="Read the whitepaper" href="/covid_watch_whitepaper.pdf"></CTA> -->
+
+          <v-row class="cta-whitepaper">
+            <v-col cols="4">
+                <Button class="cta-button" secondary>
+                      <img
+                          class="mr-3"
+                          style="height:20px;"
+                          src="../assets/home_page/pdf_logo.svg"
+                          alt="pdf"
+                      />
+
+                      <a href="/covid_watch_whitepaper.pdf" style="text-transform:none;">
+                          Read the Whitepaper
+                      </a>
+                </Button>
+            </v-col>
+          </v-row>
 
  
         </v-row>
@@ -89,9 +116,8 @@
                 />
               </nuxt-link>
 
-              <!-- not sure why a flex-wrap doesn't resolve responsiveness by stacking cards vertically here: style="display:flex;flex-wrap:wrap;" -->
               <v-row class="my-8">
-                <v-col cols="4" v-for="(card, i) in newsCards" :key="i">
+                <v-col :md="4" :sm="6" v-for="(card, i) in newsCards" :key="i">
                   <NewsCard :card="card"></NewsCard>
                 </v-col>
               </v-row>
@@ -100,18 +126,20 @@
         </v-row>
 
         <!-- Download the App -->
-        <v-row id="download-app" class="mb-10 mt-12">
-          <v-col cols="4 px-12">
-            <h1 class="tangerine--text">Get the App</h1>
+        <v-row id="download-app" class="mt-12">
+          <v-col  :md="4" :sm="10">
+            <h1 class="tangerine--text">Download the App</h1>
             <div class="mt-12">
               <Button class="mt-4 mb-6">Download Android Beta</Button>
               <Button secondary>iOS Coming Soon</Button>
             </div>
           </v-col>
 
-          <!-- to do: make disappear on mobile? -->
-          <v-col cols="6">
+          <v-spacer/>
+
+          <v-col :md="8" :sm="12">
             <img
+              style="width:100%;min-width:300px;"
               src="../assets/home_page/mobile_mockups_group.svg"
               alt="mobile"
             />
@@ -137,11 +165,56 @@
 
 
 #home {
-  #hero {
-    background-image: url("../assets/home_page/hero_main.svg");
-    background-position-x: right;
-    background-size: contain;
-    height: 560px;
+
+    @media (max-width:400px){
+      .news-card {
+        height: 380px;
+        min-width: 220px;
+
+        .stripe {
+          width: 220px;
+        }
+      }
+
+      // hacky way to get whitepaper button to not take up margin on right of screen
+      .cta-whitepaper {
+        display: flex;
+        justify-content: start;
+        width: 160px;
+      }
+  }
+
+    @media (min-width:400px){
+        .news-card {
+          height: 250px;
+          min-width: 320px;
+
+          .stripe {
+            width: 320px;
+          }
+        }
+
+      // hacky way to get whitepaper button to center
+      .cta-whitepaper {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+  // these @media lines below govern the svg image in the hero.
+  @media (max-width:920px){
+      #hero {
+        background-image: none;
+    }
+  }
+
+  @media (min-width:920px){
+      #hero {
+        background-image: url("../assets/home_page/hero_main.svg");
+        background-position-x: right;
+        background-size: contain;
+        height: 560px;
+    }
   }
 
   #why-covid-watch {
@@ -164,32 +237,23 @@
   }
 
   .card-img {
-    width: 100%;
-    // this max-height is necessary bc the source fourth image Community Safety is slightly larger in px than the others
-    // may need to update this to make images appear larger without the fourth being larger than others
+    // keeps the how it works svgs reasonably sized aligned w Figma
     max-height: 200px;
   }
 
-  #why-covid-watch .card-img {
-    // this keeps the why-covid-watch images from getting too large
-    max-height: 200px;
-  }
-
-  // this could potentially be abstracted out across other pages also.  centers CTA buttons at the bottom of each section
-  .cta-container {
+  #why-covid-watch .img-container {
     display: flex;
     justify-content: center;
+    height: 200px;
   }
+
+  // #why-covid-watch .content-container {
+
+  // }
 
   #latest-news {
     // note: this is #71cddf with 15% opacity
     background-color: rgba(113, 205, 223, 0.15);
-
-    .news-card {
-      height: 250px;
-      min-width: 320px;
-    }
-
   }
 }
 </style>
@@ -204,6 +268,11 @@ export default {
     Button,
     NewsCard,
     CTA
+  },
+  methods: {
+    hideBackground(e) {
+      debugger
+    }
   },
   data: () => ({
     howItWorksCards: [
@@ -254,28 +323,25 @@ export default {
     ],
     newsCards: [
       {
-        date: "April 13, 2020",
-        title:
-          "Lorem ipsum dolor sit amet, dus consectetur adipiscing elit ut etal aliquam",
-        url: "https://www.cnn.com",
-        author_name: "Khari Johnson",
-        outlet_name: "Venture Beat"
+        date: "April 8, 2020",
+        title: "Clever Cryptography Could Protect Privacy in Covid-19 Contact-Tracing Apps",
+        url: "https://www.wired.com/story/covid-19-contact-tracing-apps-cryptography/",
+        author_name: "Andy Greenberg",
+        outlet_name: "Wired"
       },
       {
-        date: "April 13, 2020",
-        title:
-          "Lorem ipsum dolor sit amet, dus consectetur adipiscing elit ut etal aliquam",
-        url: "https://www.cnn.com",
-        author_name: "Khari Johnson",
-        outlet_name: "Venture Beat"
+        date: "April 9, 2020",
+        title: "Stanford researchers help develop privacy-focused coronavirus alert app",
+        url: "https://news.stanford.edu/2020/04/09/stanford-researchers-help-develop-privacy-focused-coronavirus-alert-app/",
+        author_name: "Tom Abate",
+        outlet_name: "Stanford News"
       },
       {
-        date: "April 13, 2020",
-        title:
-          "Lorem ipsum dolor sit amet, dus consectetur adipiscing elit ut etal aliquam",
-        url: "https://www.cnn.com",
-        author_name: "Khari Johnson",
-        outlet_name: "Venture Beat"
+        date: "March 29, 2020",
+        title: "One of the victims of the COVID-19 pandemic may be citizen privacy rights",
+        url: "https://www.japantimes.co.jp/news/2020/03/29/world/coronavirus-pandemic-privacy-rights/#.XqoOAZNKgUG",
+        author_name: "Rob Lever",
+        outlet_name: "Japan Times"
       }
     ],
     mobileImages: [

@@ -4,10 +4,10 @@
                 <!-- First row-->
                 <v-row id="header" class="first-row mb-10 pa-12">
 
-                    <v-col cols="7">
+                    <v-col cols="12" :md="7" :sm="12">
                         <div class="mb-12">
                             <h1 class="mb-5">About Us</h1>
-                            <div class="about-us-copy">
+                            <div class="subtitle">
                                 <p>Covid Watch is a <b>nonprofit</b>, global effort to give you the power to reduce the spread of COVID-19 in the palm of your hand.</p>
                                 <p >We build and foster the adoption of decentralized technology that preserves your right to <b>privacy</b> while <b>protecting</b> your community.</p>
                                 <p>We want to speed our return to a world where we can be <b>together</b> again, safely and securely.</p>
@@ -34,22 +34,28 @@
 
                     <v-spacer/>
                     <v-col cols="4">
-                        <img class="earth-img" src="../assets/about_us/family-earth.svg">
+                        <img class="earth_img" src="../assets/about_us/family-earth.svg">
                     </v-col>
                 </v-row>
 
 
         <!-- We value row -->
         <v-row class="mb-10 pa-12" id="we-value">
-            <h2>We Value</h2>
+            <h2 class="mb-10">We Value</h2>
 
             <v-row>
 
-                <v-col cols="4" v-for="(card, i) in valueCards"  :key="i" class="d-flex flex-column align-left">
+                <v-col 
+                    cols="8"
+                    :md="4" 
+                    :sm="8" 
+                    v-for="(card, i) in valueCards"  
+                    :key="i" 
+                    class="d-flex flex-column align-left">
 
-                    <img class="card-img" style="min-height: 262px" :src="card.img" :alt="card.title">
-                    <h3 class="card-title mt-10">{{card.title}}</h3>
-                    <div class="card-body mt-5">{{card.body}}</div>
+                    <img class="we_value_img" :src="card.img" :alt="card.title">
+                    <h3 class="mt-10">{{card.title}}</h3>
+                    <div class="mt-5">{{card.body}}</div>
 
                 </v-col>
 
@@ -64,19 +70,19 @@
         <!-- join us row -->
         <v-row class="join-us mb-10 pa-12" id="join-us">
             <v-row class="mb-3">
-                <v-col cols="2">
+                <v-col cols="10" :md="2" :sm="10">
                     <h2>Join Us</h2>
                 </v-col>
 
                 <v-spacer></v-spacer>
 
                 <v-col cols="8">
-                    <img src="../assets/about_us/cyclists.svg">
+                    <img class="biking" src="../assets/about_us/cyclists.svg">
                 </v-col> 
             </v-row>
 
             <v-row>
-                <v-col cols="3" v-for="(cta, i) in callsToAction" :key="i">
+                <v-col class="align-center justify-center" cols="12" :md="3" :sm="6" v-for="(cta, i) in callsToAction" :key="i">
                     <!-- these should probably link to different places -->
                     <div class="mb-4">
                         <Button secondary nuxt to="/donate">{{ cta.button_text }}</Button>
@@ -89,20 +95,18 @@
 
         <!-- team row-->
         <v-row class="mb-5 pa-12" id="our-team">
-            <v-col cols="12">
-                <div>
+            <v-col cols="12" :sm="12">
                     <div class="mb-5"><h2>Our Team</h2></div>
-                    <p>Covid Watch is a group of more than 400 volunteers from around the world. We are scientific researchers, privacy and public health experts, journalists, developers, and designers.</p>
-                </div>
+                    <p class="subtitle">Covid Watch is a group of more than 400 volunteers from around the world. We are scientific researchers, privacy and public health experts, journalists, developers, and designers.</p>
             </v-col>
 
             <template v-for="(founder,n) in founders">
                 <v-col :key="n">
                     <v-row>
-                        <v-col cols="5">
+                        <v-col :md="5">
                             <img class="mr-5" :src="founder.image">
                         </v-col>
-                        <v-col cols="7">
+                        <v-col :md="7" :sm="12">
                             <div class="title">
                                 {{founder.name}}
                             </div>
@@ -126,25 +130,29 @@
         </v-row>
 
         <!-- academic partners row-->
-        <v-row class="px-12" id="academic-partners">
-            <v-col cols="3"><h3 class="pt-5">Academic Partners</h3></v-col>
+        <v-row class="pa-12" id="academic-partners">
+            <v-col class="mb-10" :md="3" :sm="8"><h3 class="pt-5">Academic Partners</h3></v-col>
 
-            <div class="d-flex justify-space-around align-center">
-                <v-col cols="3" v-for="(partner, i) in academic_partners" :key="i">
-                    <img class=partner-img :src="partner.src"  @mouseover="partner.src = partner.color" @mouseleave="partner.src = partner.grey">
+            <div class="d-md-flex justify-md-space-between align-center">
+                <v-col :md="3" :sm="6"> 
+                    <img :src="stanford.src"  @mouseover="stanford.src = stanford.color" @mouseleave="stanford.src = stanford.grey">
+                </v-col>
+
+                <v-col :md="3" :sm="6"> 
+                    <img class=waterloo-img :src="waterloo.src"  @mouseover="waterloo.src = waterloo.color" @mouseleave="waterloo.src = waterloo.grey">
                 </v-col>
             </div> 
         </v-row>
 
         <!-- colabs row-->
         <v-row class="pa-12" id="collaborator-projects">
-            <v-col cols="3"><h3 class="pt-6">Collaborator Partners</h3></v-col>
+            <v-col class="mb-10" :md="3" :sm="8"><h3 class="pt-6">Collaborator Partners</h3></v-col>
 
 
-            <div class="d-flex justify-space-around align-center">
-                <v-col cols="2" v-for="(collab, i) in collaborator_projects" :key="i">
+            <div class="d-md-flex justify-md-space-between align-center">
+                <v-col :md="2" :sm="6" v-for="(collab, i) in collaborator_projects" :key="i">
                     <img class=collab-img :src="collab.src"  @mouseover="collab.src = collab.color" @mouseleave="collab.src = collab.grey">
-                    <div class="justify-center collab-name">
+                    <div class="caption justify-center collab-name">
                         {{ collab.name }}
                     </div>
                 </v-col>
@@ -159,10 +167,36 @@
 </template>
 
 <style lang="scss">
+@media (max-width:1000px){
+    .earth_img{
+        display: none;
+    }
+}
+
+@media(max-width:360px){
+    .we_value_img{
+        display: none;
+    }
+}
+
+
+@media (max-width:950px){
+    .biking{
+        display: none;
+    }
+}
+
+.we_value_img{
+    min-height: 263px;
+}
+
+
+
 .cta-container {
     display: flex;
     justify-content: center;
 }
+
 .first-row{
     background: linear-gradient(0deg, rgba(67, 197, 217, 0.2), rgba(255, 255, 255, 0) 20%);
 }
@@ -178,8 +212,8 @@
 .join-us{
     background: rgba(245, 229, 230, 0.6);
 }
-.partner-image{
-    max-height: 100%
+.waterloo-img{
+    margin-left: -40px;
 }
 </style>
 
@@ -230,7 +264,7 @@ export default {
             image:require("../assets/about_us/tina-photo.svg"),
             name:"Tina White",
             title:"Executive Director",
-            bio:"Tina is PhD candidate at Stanford University where she designs neural network architectures for scientific simulations. Covid Watch began with a post she made in the early days of the pandemic."
+            bio:"Tina is a PhD candidate at Stanford University where she designs neural network architectures for scientific simulations. Covid Watch began with a post she made in the early days of the pandemic."
         },
         {
             image:require("../assets/about_us/james-photo.svg"),
@@ -251,18 +285,16 @@ export default {
             bio:"Zsombor is a mobile app developer with more than ten years of experience building next-generation networks, notably including an app called Berkanan Messenger that runs on Bluetooth mesh networks."
         },
         ],
-        academic_partners: [
-        {
+        stanford: {
             grey:require("../assets/about_us/logo-stanford-black.svg"),
             color:require("../assets/about_us/logo-stanford-red.svg"), 
             src:require("../assets/about_us/logo-stanford-black.svg")
         },    
-        {
+        waterloo: {
             grey:require("../assets/about_us/logo-university-of-waterloo-gray.svg"),
             color:require("../assets/about_us/logo-university-of-waterloo.svg"),
             src:require("../assets/about_us/logo-university-of-waterloo-gray.svg")
         },
-        ],
         collaborator_projects: [
         {
             grey:require("../assets/about_us/logo-TCN-coalition-gray.svg"),
@@ -289,6 +321,12 @@ export default {
     components: {
         Button,
         CTA
-    }
+    },
+    head(){
+        return {
+            title: "About Us | Covid Watch",
+        };
+    },
+
 }
 </script>

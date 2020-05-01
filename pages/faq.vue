@@ -21,14 +21,19 @@
           </a>
         <v-row id="hero">
           
-          <v-col class="hero-copy" cols="7">
+          <v-col class="hero-copy" :md="7" :sm="10">
             <h1>Frequently Asked Questions</h1>
           </v-col>
 
           <v-spacer></v-spacer>
 
-          <v-col cols="4">
-            <img style="max-height:370px;" src="../assets/faq_page/arrow_man.svg" alt="arrow_man">
+          <!-- Jesse: there is something like :smAndDown but couldnt figure out exaclty how to make work quickly 
+          https://vuetifyjs.com/en/customization/breakpoints/
+
+          so instead have some repeition like :xs="8" :sm="8"
+          -->
+          <v-col :sm="8" :md="4">
+            <img id="arrow-man" src="../assets/faq_page/arrow_man.svg" alt="arrow_man">
           </v-col>
         </v-row>
 
@@ -37,7 +42,7 @@
         <v-row>
 
           <!-- left side navigator -->
-          <v-col cols="3">
+          <v-col :md="3" id="left-navigation">
             <ul id="navigation" class="pl-0">
               <div class="sections-container" v-for="(section, i) in sectionList" :key="i">
 
@@ -55,7 +60,7 @@
           <v-spacer></v-spacer>
 
           <!-- list -->
-          <v-col cols="8">
+          <v-col :sm="12" :md="8">
 
 
             <v-expansion-panels 
@@ -110,6 +115,26 @@
 
   #faq {
     min-height: 1000px;
+
+    #arrow-man {
+      max-height:370px;
+      min-width: 360px;
+      width: 90%;
+    }
+
+    // at screen width of 960px, the navigation left bar disappears and the content takes over the v-row
+    @media (max-width:960px){
+      #left-navigation {
+        display: none;
+      }
+    }
+
+    // messed around for a while thinking the arrow-man svg was causing a huge white margin on the right side but it appears it may not be...?
+    @media (max-width:600px) {
+        #arrow-man {
+          display: none;
+      }
+    }
 
     #hero {
       margin-top: 50px;

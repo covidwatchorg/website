@@ -8,7 +8,7 @@
 <template>
     <v-row class="cta-container my-12">
         <v-col cols="4">
-            <Button secondary :nuxt="nuxt" :to="to" :href="href" :pdf="pdf" :content="content">
+            <Button class="cta-button" secondary :nuxt="nuxt" :to="to" :href="href" :pdf="pdf" :content="content">
                 <img
                     v-if="pdf"
                     class="mr-3"
@@ -38,9 +38,10 @@
   .cta-container {
     display: flex;
     justify-content: center;
+  }
 
-    // not sure why 'Read the whitepaper' is text-transformed to be uppercase in the whitepaper download case.  I played w some different ways to fix it without luck
-    // text-transform: none;
+  .cta-button {
+      min-width: 300px;
   }
  
 </style>
