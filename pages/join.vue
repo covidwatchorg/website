@@ -82,7 +82,7 @@
 <style lang="scss">
 #join {
     a {
-        color: #A680B7
+        color: #2C58B1;
     }
 
     .hero-copy {
