@@ -1,25 +1,23 @@
 <template>
     <v-container grid-list-xs>
         <v-row id="how-it-works">
-            <Step primary> hi</Step>
-
 
             <!-- First row-->
-            <v-row id="header" class="px-12 pt-12">
+            <v-row id="header" class="px-12 mt-12">
 
                 <v-col cols="12" :md="7" :sm="12">
-                    <div>
+                    <div class="mt-10">
                         <p class="title-caps">HOW IT WORKS</p>
                         <h1 class="mt-6">Our Privacy-Preserving Protocol</h1>
                         <div class="mt-10">
-                            <p>Covid Watch uses the international open-source TCN Protocol first developed in our community to send anonymous exposure notifications via private, local Bluetooth signals. Let’s find out more about how it works for Sam and Jane, two users of the app</p>
+                            <p>Covid Watch uses the international open-source TCN Protocol first developed in our community to send anonymous exposure notifications via private, local Bluetooth signals. Let’s find out more about how it works for Sam and Jane, two users of the app.</p>
                         </div>
                     </div>
                 </v-col>
 
-                <v-spacer></v-spacer>
+                <!-- <v-spacer></v-spacer> -->
                 <v-col :md="4">
-                    <img class="connected_img" src="../assets/how_it_works/people-connected-new.svg">
+                    <img class="connected_img" src="../assets/how_it_works/connected_group_final.svg">
                 </v-col>
             </v-row>
 
