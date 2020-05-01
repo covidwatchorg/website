@@ -14,7 +14,6 @@
                     </div>
                 </v-col>
 
-                <!-- <v-spacer></v-spacer> -->
                 <v-col :md="4">
                     <img class="connected_img" src="../assets/how_it_works/connected_group_final.svg">
                 </v-col>
@@ -87,7 +86,7 @@
                
             </v-row>
 
-            <v-row>
+            <v-row class="no-gutters">
                 <v-spacer></v-spacer>
                 <v-col :md="4" :sm="8">
                     <img class="woman-triangle" src="../assets/how_it_works/woman-triangle.svg">
