@@ -23,7 +23,7 @@
                             </v-col>
                             <v-spacer/> 
 
-                            <v-col :sm="5">
+                             <v-col class="mt-md-12" cols="10" :sm="8" :md="5">
                                 <Button secondary hero nuxt to="/pilot">
                                     Join Our Team
 
