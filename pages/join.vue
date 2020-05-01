@@ -172,6 +172,7 @@ export default {
                 role: "Experience with cryptography"
             },
         ]
-    })
+    }),
+    title: "Join Us | Covid Watch"
 }
 </script>
