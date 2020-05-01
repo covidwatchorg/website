@@ -124,9 +124,13 @@ export default {
           title: "Get Involved",
           links: [
             {
-              title: "Partner with Us",
-              href: "/partner"
+              title: "Start a Pilot",
+              href: "/pilot"
             },
+            // {
+            //   title: "Partner with Us",
+            //   href: "/partner"
+            // },
             {
               title: "Join Us",
               href: "/volunteer"
