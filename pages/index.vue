@@ -180,7 +180,7 @@
       // hacky way to get whitepaper button to not take up margin on right of screen
       .cta-whitepaper {
         display: flex;
-        justify-content: start;
+        justify-content: flex-start;
         width: 160px;
       }
   }
