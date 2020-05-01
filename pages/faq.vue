@@ -104,7 +104,6 @@
     </v-row>
 
 
-      <!-- there is white space at below the Newsletter caused by v-container padding.  Perhaps adjust this to not have padding on bottom? -->
       <!-- Newsletter -->
       <Newsletter></Newsletter>
 

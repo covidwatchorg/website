@@ -25,12 +25,16 @@
   &#main-content {
     padding-top: 0px;
     padding-bottom: 0px;
+
+    div:first-of-type {
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
   }
 }
 
 // this manages the transitions between pages.
 // more info/options we can play with: https://www.vuemastery.com/courses/animating-vue/page-transitions
-
 .slide-fade-enter {
   transform: translateX(10px);
   opacity: 0;
