@@ -16,15 +16,16 @@
 
               <v-row no-gutters class="mr-12 pr-12 mb-4 mt-10 d-flex flex-wrap">
                 <v-col class="mr-6" :xs="10">
-                  <Button primary hero nuxt to="/about" class="mt-4">
-                    Download Android Beta
+                  <Button primary hero nuxt to="/pilot" class="mt-4">
+                    Start a Pilot
                   </Button>
                 </v-col>
                 <!-- <v-spacer></v-spacer> -->
                 <v-col :xs="10">
-                  <Button secondary hero nuxt to="/about" class="mt-4">
-                    iOS Coming Soon
-                  </Button>
+                  <!-- no secondary CTA for now, per Grant's instruction -->
+                  <!-- <Button secondary hero nuxt to="/about" class="mt-4">
+                    Download App
+                  </Button> -->
                 </v-col>
                 <v-spacer></v-spacer>
               </v-row>
