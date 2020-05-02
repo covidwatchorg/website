@@ -41,9 +41,7 @@
               :key="i"
               class="d-flex flex-column align-left"
             >
-              <img class="card-img" :src="card.img" :alt="card.title" />
-              <h3 class="mt-10">{{ card.title }}</h3>
-              <p class="caption mt-5">{{ card.body }}</p>
+              <WhyCard :img="card.img" :title="card.title" :body="card.body"></WhyCard>
             </v-col>
           </v-row>
 
@@ -56,13 +54,7 @@
 
           <v-row>
             <v-col :md="4" :sm="8" v-for="(card, i) in whyCards" :key="i">
-              <div class="img-container">
-                <img class="card-img" :src="card.img" :alt="card.title" />
-              </div>
-              <div class="content-container">
-                <h3 class="mt-10">{{ card.title }}</h3>
-                <p class="caption mt-5">{{ card.body }}</p>
-              </div>
+              <WhyCard :img="card.img" :title="card.title" :body="card.body"></WhyCard>
             </v-col>
           </v-row>
 
@@ -203,6 +195,12 @@
   #why-covid-watch {
     background-image: url("../assets/home_page/lavender_slope.svg");
     background-size: contain;
+
+    .img-container {
+      display: flex;
+      justify-content: center;
+      height: 200px;
+    }
   }
 
   .why-background {
@@ -212,22 +210,15 @@
 
   .hero-copy {
     margin-top: 50px;
+
+    @media #{map-get($display-breakpoints, 'sm-only')} {
+      margin-top: 20px;
+    }
+
+    @media #{map-get($display-breakpoints, 'xs-only')} {
+      margin-top: 0px;
+    }
   }
-
-  .card-img {
-    // keeps the how it works svgs reasonably sized aligned w Figma
-    max-height: 200px;
-  }
-
-  #why-covid-watch .img-container {
-    display: flex;
-    justify-content: center;
-    height: 200px;
-  }
-
-  // #why-covid-watch .content-container {
-
-  // }
 
   #latest-news {
     // note: this is #71cddf with 15% opacity
@@ -240,12 +231,14 @@
 import Button from "../components/Button.vue";
 import CTA from "../components/CTA.vue";
 import NewsCard from "../components/NewsCard.vue";
+import WhyCard from "../components/WhyCard.vue";
 
 export default {
   components: {
     Button,
+    CTA,
     NewsCard,
-    CTA
+    WhyCard
   },
   methods: {
     hideBackground(e) {
