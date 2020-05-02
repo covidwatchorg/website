@@ -54,7 +54,7 @@
           <h2 class="plum--text mb-12">Why Covid Watch</h2>
 
           <v-row class="justify-center">
-            <v-col :md="4" :sm="6" :xs="12" v-for="(card, i) in whyCards" :key="i">
+            <v-col :md="4" :sm="8" v-for="(card, i) in whyCards" :key="i">
               <WhyCard :img="card.img" :title="card.title" :body="card.body" max-height="200px"></WhyCard>
             </v-col>
           </v-row>
