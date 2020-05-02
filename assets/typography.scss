@@ -1,14 +1,47 @@
-// Note that some typography is handled via overriden vuetify variables in variables.scss
+@import "~vuetify/src/styles/settings/_variables";
+
+body {
+  font-size: 18px;
+
+  @media #{map-get($display-breakpoints, 'sm-and-down')} {
+    font-size: 16px;
+  }
+}
+
 h1 {
   color: var(--v-tangerine-base);
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 61px;
+
+  @media #{map-get($display-breakpoints, 'sm-and-down')} {
+    font-size: 36px;
+    line-height: 44px;
+  }
 }
 
 h2 {
   color: var(--v-plum-base);
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 49px;
+
+  @media #{map-get($display-breakpoints, 'sm-and-down')} {
+    font-size: 28px;
+    line-height: 34px;
+  }
 }
 
 h3 {
   color: var(--v-plum-base);
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 32px;
+
+  @media #{map-get($display-breakpoints, 'sm-and-down')} {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 a {
