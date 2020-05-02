@@ -5,9 +5,7 @@
         <v-row id="hero">
           <v-col :sm="8" :xs="12" class="px-10">
             <div class="hero-copy">
-              <h1>
-                Together, we have the power to stop the spread of COVID-19
-              </h1>
+              <h1>Together, we have the power to stop the spread of COVID-19</h1>
 
               <p class="subtitle mt-10">
                 Protect the health for your family and community while
@@ -15,17 +13,15 @@
               </p>
 
               <v-row no-gutters class="mr-12 pr-12 mb-4 mt-10 d-flex flex-wrap">
-                <v-col class="mr-6" :xs="10">
-                  <Button primary hero nuxt to="/pilot" class="mt-4">
-                    Start a Pilot
-                  </Button>
+                <v-col class="mr-6" :xs="12">
+                  <Button primary hero nuxt to="/pilot" class="mt-4">Start a Pilot</Button>
                 </v-col>
                 <!-- <v-spacer></v-spacer> -->
                 <v-col :xs="10">
                   <!-- no secondary CTA for now, per Grant's instruction -->
                   <!-- <Button secondary hero nuxt to="/about" class="mt-4">
                     Download App
-                  </Button> -->
+                  </Button>-->
                 </v-col>
                 <v-spacer></v-spacer>
               </v-row>
@@ -39,7 +35,7 @@
 
           <v-row>
             <v-col
-              :md="3" 
+              :md="3"
               :sm="8"
               v-for="(card, i) in howItWorksCards"
               :key="i"
@@ -51,7 +47,6 @@
             </v-col>
           </v-row>
 
-
           <CTA to="/how-it-works" content="Learn More"></CTA>
         </v-row>
 
@@ -60,18 +55,14 @@
           <h2 class="plum--text mb-12">Why Covid Watch</h2>
 
           <v-row>
-            <v-col             
-              :md="4" 
-              :sm="8"
-              v-for="(card, i) in whyCards" 
-              :key="i">
-                <div class="img-container">
-                  <img class="card-img" :src="card.img" :alt="card.title" />
-                </div>
-                <div class="content-container">
-                  <h3 class="mt-10">{{ card.title }}</h3>
-                  <p class="caption mt-5">{{ card.body }}</p>
-                </div>
+            <v-col :md="4" :sm="8" v-for="(card, i) in whyCards" :key="i">
+              <div class="img-container">
+                <img class="card-img" :src="card.img" :alt="card.title" />
+              </div>
+              <div class="content-container">
+                <h3 class="mt-10">{{ card.title }}</h3>
+                <p class="caption mt-5">{{ card.body }}</p>
+              </div>
             </v-col>
           </v-row>
 
@@ -80,36 +71,31 @@
 
           <v-row class="cta-whitepaper">
             <v-col cols="4">
-                <Button class="cta-button" secondary>
-                      <img
-                          class="mr-3"
-                          style="height:20px;"
-                          src="../assets/home_page/pdf_logo.svg"
-                          alt="pdf"
-                      />
+              <Button class="cta-button" secondary>
+                <img
+                  class="mr-3"
+                  style="height:20px;"
+                  src="../assets/home_page/pdf_logo.svg"
+                  alt="pdf"
+                />
 
-                      <a href="/covid_watch_whitepaper.pdf" style="text-transform:none;">
-                          Read the Whitepaper
-                      </a>
-                </Button>
+                <a
+                  href="/covid_watch_whitepaper.pdf"
+                  style="text-transform:none;"
+                >Read the Whitepaper</a>
+              </Button>
             </v-col>
           </v-row>
-
- 
         </v-row>
 
         <!-- Latest News -->
         <v-row id="latest-news">
           <v-col>
-            <v-row
-              class="px-12 mt-12 mb-6 d-flex align-center justify-space-between"
-            >
+            <v-row class="px-12 mt-12 mb-6 d-flex align-center justify-space-between">
               <h2 class="pewter--text">Latest News</h2>
 
-              <nuxt-link
-                to="/news"
-                style="text-decoration:none;font-weight:600;font-style:normal;"
-                >More News &nbsp;
+              <nuxt-link to="/news" style="text-decoration:none;font-weight:600;font-style:normal;">
+                More News &nbsp;
                 <img
                   style="height:10px;"
                   src="../assets/home_page/arrow_icon.svg"
@@ -128,7 +114,7 @@
 
         <!-- Download the App -->
         <v-row id="download-app" class="mt-12">
-          <v-col  :md="4" :sm="10">
+          <v-col :md="4" :sm="10">
             <h1 class="tangerine--text">Download the App</h1>
             <div class="mt-12">
               <Button class="mt-4 mb-6">Download Android Beta</Button>
@@ -136,7 +122,7 @@
             </div>
           </v-col>
 
-          <v-spacer/>
+          <v-spacer />
 
           <v-col :md="8" :sm="12">
             <img
@@ -152,80 +138,71 @@
 </template>
 
 <style lang="scss">
+// this handles the transition effect between pages, see default.vue <transition> element
+.slide-fade-enter {
+  opacity: 0;
+  transform: translateX(10px);
+}
 
-  // this handles the transition effect between pages, see default.vue <transition> element
-  .slide-fade-enter {
-    opacity: 0;
-    transform: translateX(10px);
-  }
-
-  .slide-fade-enter-active {
-    transition: all 0.5s ease;
-  }
-
-
+.slide-fade-enter-active {
+  transition: all 0.5s ease;
+}
 
 #home {
+  @media (max-width: 400px) {
+    .news-card {
+      height: 380px;
+      min-width: 220px;
 
-    @media (max-width:400px){
-      .news-card {
-        height: 380px;
-        min-width: 220px;
-
-        .stripe {
-          width: 220px;
-        }
-      }
-
-      // hacky way to get whitepaper button to not take up margin on right of screen
-      .cta-whitepaper {
-        display: flex;
-        justify-content: flex-start;
-        width: 160px;
-      }
-  }
-
-    @media (min-width:400px){
-        .news-card {
-          height: 250px;
-          min-width: 320px;
-
-          .stripe {
-            width: 320px;
-          }
-        }
-
-      // hacky way to get whitepaper button to center
-      .cta-whitepaper {
-        display: flex;
-        justify-content: center;
+      .stripe {
+        width: 220px;
       }
     }
+
+    // hacky way to get whitepaper button to not take up margin on right of screen
+    .cta-whitepaper {
+      display: flex;
+      justify-content: flex-start;
+      width: 160px;
+    }
+  }
+
+  @media (min-width: 400px) {
+    .news-card {
+      height: 250px;
+      min-width: 320px;
+
+      .stripe {
+        width: 320px;
+      }
+    }
+
+    // hacky way to get whitepaper button to center
+    .cta-whitepaper {
+      display: flex;
+      justify-content: center;
+    }
+  }
 
   // these @media lines below govern the svg image in the hero.
-  @media (max-width:920px){
-      #hero {
-        background-image: none;
+  @media (max-width: 920px) {
+    #hero {
+      background-image: none;
     }
   }
 
-  @media (min-width:920px){
-      #hero {
-        background-image: url("../assets/home_page/hero_main.svg");
-        background-position-x: right;
-        background-size: contain;
-        height: 560px;
+  @media (min-width: 920px) {
+    #hero {
+      background-image: url("../assets/home_page/hero_main.svg");
+      background-position-x: right;
+      background-size: contain;
+      height: 560px;
     }
   }
 
   #why-covid-watch {
     background-image: url("../assets/home_page/lavender_slope.svg");
     background-size: contain;
-  }
-
-  // Jesse: I added this bc for some reason appears h2 elements not reading font-size from variables.scss
-  h2 {
-    font-size: 36px;
   }
 
   .why-background {
@@ -325,22 +302,28 @@ export default {
     newsCards: [
       {
         date: "April 8, 2020",
-        title: "Clever Cryptography Could Protect Privacy in Covid-19 Contact-Tracing Apps",
-        url: "https://www.wired.com/story/covid-19-contact-tracing-apps-cryptography/",
+        title:
+          "Clever Cryptography Could Protect Privacy in Covid-19 Contact-Tracing Apps",
+        url:
+          "https://www.wired.com/story/covid-19-contact-tracing-apps-cryptography/",
         author_name: "Andy Greenberg",
         outlet_name: "Wired"
       },
       {
         date: "April 9, 2020",
-        title: "Stanford researchers help develop privacy-focused coronavirus alert app",
-        url: "https://news.stanford.edu/2020/04/09/stanford-researchers-help-develop-privacy-focused-coronavirus-alert-app/",
+        title:
+          "Stanford researchers help develop privacy-focused coronavirus alert app",
+        url:
+          "https://news.stanford.edu/2020/04/09/stanford-researchers-help-develop-privacy-focused-coronavirus-alert-app/",
         author_name: "Tom Abate",
         outlet_name: "Stanford News"
       },
       {
         date: "March 29, 2020",
-        title: "One of the victims of the COVID-19 pandemic may be citizen privacy rights",
-        url: "https://www.japantimes.co.jp/news/2020/03/29/world/coronavirus-pandemic-privacy-rights/#.XqoOAZNKgUG",
+        title:
+          "One of the victims of the COVID-19 pandemic may be citizen privacy rights",
+        url:
+          "https://www.japantimes.co.jp/news/2020/03/29/world/coronavirus-pandemic-privacy-rights/#.XqoOAZNKgUG",
         author_name: "Rob Lever",
         outlet_name: "Japan Times"
       }
