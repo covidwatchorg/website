@@ -130,16 +130,6 @@
 </template>
 
 <style lang="scss">
-// this handles the transition effect between pages, see default.vue <transition> element
-.slide-fade-enter {
-  opacity: 0;
-  transform: translateX(10px);
-}
-
-.slide-fade-enter-active {
-  transition: all 0.5s ease;
-}
-
 #home {
   @media (max-width: 400px) {
     .news-card {
