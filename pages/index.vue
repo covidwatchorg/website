@@ -30,18 +30,19 @@
         </v-row>
 
         <!-- How It Works section -->
-        <v-row class="d-block mb-10 pa-12" id="how-it-works">
+        <v-row class="d-block mb-10 pa-12 justify-center" id="how-it-works">
           <h2 class="mb-12">How it Works</h2>
 
           <v-row>
             <v-col
               :md="3"
-              :sm="8"
+              :sm="6"
+              :xs="12"
               v-for="(card, i) in howItWorksCards"
               :key="i"
               class="d-flex flex-column align-left"
             >
-              <WhyCard :img="card.img" :title="card.title" :body="card.body"></WhyCard>
+              <WhyCard :img="card.img" :title="card.title" :body="card.body" aspect-ratio="1"></WhyCard>
             </v-col>
           </v-row>
 
@@ -52,9 +53,9 @@
         <v-row id="why-covid-watch" class="pa-12">
           <h2 class="plum--text mb-12">Why Covid Watch</h2>
 
-          <v-row>
-            <v-col :md="4" :sm="8" v-for="(card, i) in whyCards" :key="i">
-              <WhyCard :img="card.img" :title="card.title" :body="card.body"></WhyCard>
+          <v-row class="justify-center">
+            <v-col :md="4" :sm="6" :xs="12" v-for="(card, i) in whyCards" :key="i">
+              <WhyCard :img="card.img" :title="card.title" :body="card.body" max-height="200px"></WhyCard>
             </v-col>
           </v-row>
 

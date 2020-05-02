@@ -1,22 +1,19 @@
 <template>
   <div>
-    <img :src="img" :alt="title" />
+    <v-img :src="img" :alt="title" v-bind="$attrs" contain></v-img>
     <h3 class="mt-10">{{ title }}</h3>
-    <p class="caption mt-5">{{ body }}</p>
+    <p class="mt-5">{{ body }}</p>
   </div>
 </template>
 
 
 <style lang="scss" scoped>
-img {
-  // keeps the how it works svgs reasonably sized aligned w Figma
-  max-height: 200px;
-}
 </style>
 
 <script>
 export default {
   name: "WhyCard",
+  inheritAttrs: false,
   props: {
     title: String,
     body: String,

@@ -35,8 +35,8 @@ h2 {
 h3 {
   color: var(--v-plum-base);
   font-weight: 600;
-  font-size: 28px;
-  line-height: 34px;
+  font-size: 26px;
+  line-height: 32px;
 
   @media #{map-get($display-breakpoints, 'sm-and-down')} {
     font-size: 20px;
