@@ -10,22 +10,24 @@
       <img src="../assets/home_page/news_icon.svg" alt="news" />
       <div class="news-date">{{ card.date }}</div>
     </div>
-    <div class="pa-6">
-      <a
-        target="_blank"
-        :href="card.url"
-        class="primary--text"
-        style="text-decoration: none; font-weight: bold;"
-        >{{ card.title }}
-        <img
-          style="height: 10px;"
-          src="../assets/home_page/arrow_icon.svg"
-          alt="arrow"
-      /></a>
-      <v-card-text class="primary--text grow float-right">
+    <div class="px-6">
+      <div class="card_title mb-5">
+        <a
+          target="_blank"
+          :href="card.url"
+          class="primary--text"
+          style="text-decoration: none; font-weight: bold;"
+          >{{ card.title }}
+          <img
+            style="height: 10px;"
+            src="../assets/home_page/arrow_icon.svg"
+            alt="arrow"
+        /></a>
+      </div>
+      <v-text-card class="primary--text grow float-left">
         - {{ card.author_name }},
         <span style="font-style: italic;"> {{ card.outlet_name }} </span>
-      </v-card-text>
+      </v-text-card>
     </div>
 
     <slot></slot>
@@ -36,6 +38,10 @@
 .news-card {
   height: 250px;
   min-width: 320px;
+}
+
+.card_title {
+  min-height: 80px;
 }
 
 //     @media (max-width:400px){
