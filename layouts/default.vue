@@ -25,6 +25,11 @@
   &#main-content {
     padding-top: 0px;
     padding-bottom: 0px;
+
+    div:first-of-type {
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
   }
 }
 
