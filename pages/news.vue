@@ -3,7 +3,7 @@
     <v-row id="news">
       <v-col>
         <v-row id="hero">
-          <v-col cols="7">
+          <v-col :md="7" :sm="12" cols="12">
             <h1>News and Media</h1>
             <div
               id="filters"
@@ -13,32 +13,33 @@
               <v-col :sm="8" :md="1">
                 <p class="title mb-0">Filter:</p>
               </v-col>
-
-              <v-col :sm="8" :md="1">
-                <Button secondary @click="toShow = 'all'" class="filter px-2">
-                  All News
-                </Button>
-              </v-col>
-
-              <v-col :sm="8" :md="1">
-                <Button secondary @click="toShow = 'releases'" class="filter px-2">
-                  Releases
-                </Button>
-              </v-col>
-
-              <v-col :sm="8" :md="1">
-                <Button secondary @click="toShow = 'mentions'" class="filter px-2">
-                  Media
-                </Button>
-              </v-col>
               
+              <v-row id="filter-container">
+                <v-col :sm="8" :md="1">
+                  <Button secondary @click="toShow = 'all'" class="filter">
+                    All News
+                  </Button>
+                </v-col>
+
+                <v-col :sm="8" :md="1">
+                  <Button secondary @click="toShow = 'releases'" class="filter">
+                    Mentions
+                  </Button>
+                </v-col>
+
+                <v-col :sm="8" :md="1">
+                  <Button secondary @click="toShow = 'mentions'" class="filter">
+                    Releases
+                  </Button>
+                </v-col>
+              </v-row>
             </div>
           </v-col>
 
           <v-spacer></v-spacer>
 
           <v-col :sm="8" :md="4">
-            <img src="../assets/news_page/bench_dude.svg" alt="news" />
+            <img id="bench-dude" src="../assets/news_page/bench_dude.svg" alt="news" />
           </v-col>
         </v-row>
 
@@ -55,16 +56,20 @@
 </template>
 
 <style lang="scss">
+  #filter-container {
+    display: flex;
+    justify-content: space-around;
+  }
+
 #news {
   #filters {
     display: flex;
-    justify-content: space-between;
-    align-content: center;
+    justify-content: space-evenly;
   }
 
   @media (max-width:400px){
     .news-card {
-      height: 340px;
+      height: 300px;
       min-width: 220px;
     }
 
@@ -72,8 +77,15 @@
       width: 220px;
     }
 
-    #filters {
+    #filter-container {
       display: block;
+    }
+        #filters  {
+      display: block;
+    }
+
+    #bench-dude {
+      max-width: 260px;
     }
   }
 
@@ -82,6 +94,8 @@
     margin-top: 50px;
   }
 }
+
+
 </style>
 
 <script>
@@ -127,7 +141,7 @@ export default {
     }
   },
   data: () => ({
-    airtableList: json,
+    airtableList: json.sort((a,b) => (a.date < b.date) ? 1 : -1),
     toShow: "all"
   }),
   head() {
