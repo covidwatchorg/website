@@ -28,7 +28,7 @@
         </v-row>
 
         <!-- How It Works section -->
-        <v-row class="d-block mb-10 pa-4 pa-sm-12" id="how-it-works">
+        <v-row :class="pageSectionClass" id="how-it-works">
           <h2>How it Works</h2>
           <v-row class="justify-center">
             <v-col
@@ -62,7 +62,7 @@
         <!-- Latest News -->
         <v-row id="latest-news">
           <v-col>
-            <v-row class="px-4 px-sm-12 mt-12 mb-6 d-flex align-center justify-space-between">
+            <v-row :class="[pageSectionClass, largeMarginClass, flexCenterRowClass]">
               <h2 class="pewter--text">Latest News</h2>
 
               <nuxt-link to="/news" style="text-decoration:none;font-weight:600;font-style:normal;">
@@ -84,7 +84,7 @@
         </v-row>
 
         <!-- Download the App -->
-        <v-row id="download-app" class="px-12 mt-12">
+        <v-row id="download-app" :class="[pageSectionClass, largeMarginClass]">
           <v-col :md="4" :sm="10">
             <h1 class="tangerine--text">Download the App</h1>
             <div class="mt-12">
