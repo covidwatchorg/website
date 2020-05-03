@@ -19,7 +19,7 @@
                 <!-- <v-spacer></v-spacer> -->
                 <v-col :xs="10">
                   <!-- no secondary CTA for now, per Grant's instruction -->
-                  <!-- <Button secondary hero nuxt to="/about" class="mt-4">ma
+                  <!-- <Button secondary hero nuxt to="/about" class="mt-4">
                     Download App
                   </Button>-->
                 </v-col>
