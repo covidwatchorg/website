@@ -24,9 +24,8 @@
                             <v-spacer/> 
 
                              <v-col class="mt-md-12" cols="10" :sm="8" :md="5">
-                                <Button secondary hero nuxt to="/pilot">
-                                    Join Our Team
-
+                                <Button secondary hero nuxt to="/support">
+                                    Donate
                                 </Button>
                             </v-col>
                             <v-spacer/>
@@ -142,7 +141,6 @@
 
                     <a href="https://www.stanford.edu/">
                         <img :src="stanford.src"  @mouseover="stanford.src = stanford.color" @mouseleave="stanford.src = stanford.grey">
-
                     </a>
                 </v-col>
 

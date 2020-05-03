@@ -67,9 +67,13 @@
     justify-content: space-evenly;
   }
 
+  #bench-dude {
+      max-width: 380px;
+  }
+
   @media (max-width:400px){
     .news-card {
-      height: 300px;
+      height: 260px;
       min-width: 220px;
     }
 
