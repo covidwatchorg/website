@@ -1,22 +1,12 @@
 <template>
   <v-card :card="card" class="news-card">
-    <img
-      v-if="card.type === 'press_mention'"
-      class="stripe"
-      style="position: absolute;"
-      src="../assets/home_page/news_cards_top_accent.svg"
-      alt="stripe"
-    />
-    <img
-      v-if="card.type === 'press_release'"
-      class="stripe"
-      style="position: absolute;"
-      src="../assets/home_page/tangerine_stripe.svg"
-      alt="stripe"
+    <v-img
+      :src="card.type === 'press_release' ? press.stripe : news.stripe"
+      min-width="100%"
+      :gradient="card.type === 'press_release' ? press.gradient : news.gradient"
     />
     <div class="d-flex py-6 px-6 justify-space-between">
-      <img v-if="card.type === 'press_mention'" src="../assets/home_page/news_icon.svg" alt="news" />
-      <img v-if="card.type === 'press_release'" src="../assets/home_page/tangerine_news_icon.svg" alt="news" />
+      <img :src="card.type === 'press_release' ? press.icon : news.icon" />
       <div class="news-date">{{ card.date }}</div>
     </div>
     <div class="px-6 mt-4">
@@ -26,45 +16,28 @@
           :href="card.url"
           class="primary--text"
           style="text-decoration: none; font-weight: bold;"
-          >{{ card.title }}
-          <img
-            style="height: 10px;"
-            src="../assets/home_page/arrow_icon.svg"
-            alt="arrow"
-        /></a>
+        >
+          {{ card.title }}&nbsp;
+          <img style="height: 10px;" src="../assets/home_page/arrow_icon.svg" alt="arrow" />
+        </a>
       </div>
-      <div class="primary--text grow float-right">
-        <span style="font-style: italic;">- {{ card.outlet_name }} </span>
+      <div class="primary--text body-2 grow float-right mb-2">
+        <span style="font-style: italic;">- {{ card.outlet_name }}</span>
       </div>
     </div>
-
     <slot></slot>
   </v-card>
 </template>
 
 <style lang="scss" scoped>
 .news-card {
-  height: 230px;
-  min-width: 320px;
+  height: 100%;
+  max-width: 100%;
 }
 
 .card_title {
   min-height: 80px;
 }
-
-//     @media (max-width:400px){
-//         .news-card {
-//         height: 250px;
-//         min-width: 320px;
-//         }
-//     }
-
-//   @media (min-width:400px){
-//       .news-card {
-//         height: 350px;
-//         min-width: 300px;
-//     }
-//   }
 </style>
 
 <script>
@@ -72,6 +45,18 @@ export default {
   name: "NewsCard",
   props: {
     card: Object
-  }
+  },
+  data: () => ({
+    news: {
+      icon: require("../assets/home_page/news_icon.svg"),
+      stripe: require("../assets/home_page/news_cards_top_accent.svg"),
+      gradient: "to right, #43C4D9, #fff" // aqua
+    },
+    press: {
+      icon: require("../assets/home_page/tangerine_news_icon.svg"),
+      stripe: require("../assets/home_page/tangerine_stripe.svg"),
+      gradient: "to right, #F05452, #fff" // tangerine
+    }
+  })
 };
 </script>
