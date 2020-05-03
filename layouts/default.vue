@@ -87,10 +87,11 @@ export default {
         {
           title: "Mobile App",
           links: [
-            {
-              title: "Download",
-              href: "/download"
-            },
+            // commenting out for now
+            // {
+            //   title: "Download",
+            //   href: "/download"
+            // },
             {
               title: "How It Works",
               href: "/how-it-works"
