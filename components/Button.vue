@@ -4,10 +4,7 @@
     block
     :color="color"
     :class="{ hero: hero }"
-    :disabled="disabled"
-    :nuxt="nuxt"
-    :outlined="secondary || disabled"
-    :to="to"
+    :outlined="secondary"
     @click="$emit('click', $event)"
   >
     <slot></slot>
@@ -21,8 +18,6 @@ a.v-btn {
 .hero {
   height: 58px;
 }
-
-
 </style>
 
 <script>
@@ -30,10 +25,7 @@ export default {
   name: "Button",
   props: {
     hero: Boolean,
-    disabled: Boolean,
-    nuxt: Boolean,
     secondary: Boolean,
-    to: String,
     color: {
       type: String,
       default: "primary"
