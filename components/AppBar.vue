@@ -1,14 +1,14 @@
 <template>
   <v-app-bar app clipped-left class="white" height="110px" elevate-on-scroll>
     <v-container>
-      <v-row>
-        <v-col>
+      <v-row align="center">
+        <v-col cols="8" :sm="auto">
           <nuxt-link to="/">
-            <img src="../assets/logo/logo_text_blue.svg" alt="Covid Watch" id="logo-desktop" />
+            <v-img :src="logoSvg" alt="Covid Watch" id="logo-desktop" max-width="265px" contain></v-img>
           </nuxt-link>
         </v-col>
 
-        <v-spacer />
+        <v-spacer class="hidden-xs-only" />
         <!--Desktop menu-->
         <v-toolbar-items class="hidden-sm-and-down">
           <v-btn
@@ -22,24 +22,26 @@
           >{{ link.title }}</v-btn>
         </v-toolbar-items>
         <!--Mobile menu-->
-        <v-toolbar-items class="hidden-md-and-up">
-          <v-menu offset-y>
-            <template v-slot:activator="{ on }">
-              <v-btn text v-on="on" id="mobile-menu-btn">
-                <v-icon>mdi-menu</v-icon>
-              </v-btn>
-            </template>
-            <v-list class="d-md-none">
-              <v-list-item v-for="link in navLinks" :key="link.title">
-                <nuxt-link class="link" :to="link.href">
-                  {{
-                  link.title
-                  }}
-                </nuxt-link>
-              </v-list-item>
-            </v-list>
-          </v-menu>
-        </v-toolbar-items>
+        <v-col cols="3" :sm="1">
+          <v-toolbar-items class="hidden-md-and-up">
+            <v-menu offset-y>
+              <template v-slot:activator="{ on }">
+                <v-btn text v-on="on" id="mobile-menu-btn">
+                  <v-icon>mdi-menu</v-icon>
+                </v-btn>
+              </template>
+              <v-list class="d-md-none">
+                <v-list-item v-for="link in navLinks" :key="link.title">
+                  <nuxt-link class="link" :to="link.href">
+                    {{
+                    link.title
+                    }}
+                  </nuxt-link>
+                </v-list-item>
+              </v-list>
+            </v-menu>
+          </v-toolbar-items>
+        </v-col>
       </v-row>
     </v-container>
   </v-app-bar>
@@ -101,6 +103,9 @@ export default {
   props: {
     navLinks: Array,
     title: String
-  }
+  },
+  data: () => ({
+    logoSvg: require("../assets/logo/logo_text_blue.svg")
+  })
 };
 </script>
