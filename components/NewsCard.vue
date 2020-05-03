@@ -4,8 +4,6 @@
       :src="card.type === 'press_release' ? press.stripe : news.stripe"
       min-width="100%"
       :gradient="card.type === 'press_release' ? press.gradient : news.gradient"
-      cover
-      position="left"
     />
     <div class="d-flex py-6 px-6 justify-space-between">
       <img :src="card.type === 'press_release' ? press.icon : news.icon" />
