@@ -236,7 +236,7 @@ export default {
   },
   data: () => ({
     // panel controls which sections in the list are open upon loading the page.
-    panel: [0,1,2,3,4],
+    panel: [0],
     sectionList: [
       {
         id: "#our-alert-system",
