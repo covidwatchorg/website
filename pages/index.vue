@@ -111,7 +111,7 @@
         </v-row>
 
         <!-- Download the App -->
-        <v-row id="download-app" :class="[pageSectionClass, largeMarginClass]">
+        <v-row id="download-app" class="mobile_imgs" :class="[pageSectionClass, largeMarginClass]">
           <v-col :md="4" :sm="10">
             <h1 class="tangerine--text">Download the App</h1>
             <div class="mt-12">
@@ -144,7 +144,7 @@
     .mobile_imgs {
       background-image: url("../assets/home_page/mobile_background.svg");
       background-position-x: right;
-      background-position-y: 96%;
+      background-position-y: 86%;
     }
   }
   @media (max-width: 400px) {
