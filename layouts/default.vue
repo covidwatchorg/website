@@ -15,7 +15,6 @@
 
     <!-- Footer-->
     <Footer :sections="footerSections"></Footer>
-
   </v-app>
 </template>
 
