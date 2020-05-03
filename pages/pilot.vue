@@ -91,7 +91,7 @@
 
       <!-- help for public health section -->
       <v-row id="public-health" class="pa-12 mt-12">
-        <h2 class="mb-12 section-title">Help for Public Health</h2>
+        <h2 class="section-title">Help for Public Health</h2>
 
         <v-row>
           <v-col :md="4" :sm="8" v-for="(card, i) in whyCards" :key="i" class="px-6">
