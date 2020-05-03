@@ -12,14 +12,14 @@
                 preserving your privacy through mobile alerts.
               </p>
 
-              <v-row no-gutters class="mr-12 pr-12 mb-4 mt-10 d-flex flex-wrap">
-                <v-col class="mr-6" :xs="12">
+              <v-row no-gutters class="mb-4 mt-10 d-flex flex-wrap">
+                <v-col class="mr-6" cols="12" :sm="8" :md="3">
                   <Button primary hero nuxt to="/pilot" class="mt-4">Start a Pilot</Button>
                 </v-col>
                 <!-- <v-spacer></v-spacer> -->
                 <v-col :xs="10">
                   <!-- no secondary CTA for now, per Grant's instruction -->
-                  <!-- <Button secondary hero nuxt to="/about" class="mt-4">
+                  <!-- <Button secondary hero nuxt to="/about" class="mt-4">ma
                     Download App
                   </Button>-->
                 </v-col>
@@ -30,14 +30,13 @@
         </v-row>
 
         <!-- How It Works section -->
-        <v-row class="d-block mb-10 pa-12 justify-center" id="how-it-works">
+        <v-row class="d-block mb-10 pa-4 pa-sm-12" id="how-it-works">
           <h2 class="mb-12">How it Works</h2>
-
-          <v-row>
+          <v-row class="justify-center">
             <v-col
               :md="3"
-              :sm="6"
-              :xs="12"
+              :sm="8"
+              cols="12"
               v-for="(card, i) in howItWorksCards"
               :key="i"
               class="d-flex flex-column align-left"
@@ -50,41 +49,22 @@
         </v-row>
 
         <!-- Why Covid Watch -->
-        <v-row id="why-covid-watch" class="pa-12">
+        <v-row id="why-covid-watch" class="pa-4 pa-sm-12">
           <h2 class="plum--text mb-12">Why Covid Watch</h2>
 
           <v-row class="justify-center">
-            <v-col :md="4" :sm="8" v-for="(card, i) in whyCards" :key="i">
+            <v-col :md="4" :sm="8" cols="12" v-for="(card, i) in whyCards" :key="i">
               <WhyCard :img="card.img" :title="card.title" :body="card.body" max-height="200px"></WhyCard>
             </v-col>
           </v-row>
 
-          <!-- commented this out as spacing was getting wacky on small screens -->
-          <!-- <CTA pdf content="Read the whitepaper" href="/covid_watch_whitepaper.pdf"></CTA> -->
-
-          <v-row class="cta-whitepaper">
-            <v-col cols="4">
-              <Button class="cta-button" secondary>
-                <img
-                  class="mr-3"
-                  style="height:20px;"
-                  src="../assets/home_page/pdf_logo.svg"
-                  alt="pdf"
-                />
-
-                <a
-                  href="/covid_watch_whitepaper.pdf"
-                  style="text-transform:none;"
-                >Read the Whitepaper</a>
-              </Button>
-            </v-col>
-          </v-row>
+          <CTA pdf content="Read the whitepaper" href="/covid_watch_whitepaper.pdf"></CTA>
         </v-row>
 
         <!-- Latest News -->
         <v-row id="latest-news">
           <v-col>
-            <v-row class="px-12 mt-12 mb-6 d-flex align-center justify-space-between">
+            <v-row class="px-4 px-sm-12 mt-12 mb-6 d-flex align-center justify-space-between">
               <h2 class="pewter--text">Latest News</h2>
 
               <nuxt-link to="/news" style="text-decoration:none;font-weight:600;font-style:normal;">
