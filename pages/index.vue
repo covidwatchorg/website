@@ -3,18 +3,18 @@
     <v-row id="home">
       <v-col>
         <v-row id="hero">
-          <v-col :sm="8" :xs="12" class="px-10">
-            <div class="hero-copy">
+          <v-col :sm="8" :xs="12" class="px-10 hero-copy">
+            <!-- <div > -->
               <h1>Together, we have the power to stop the spread of COVID-19</h1>
 
-              <p class="subtitle mt-10">
+              <p class="subtitle">
                 Protect the health for your family and community while
                 preserving your privacy through mobile alerts.
               </p>
 
-              <v-row no-gutters class="mr-12 pr-12 mb-4 mt-10 d-flex flex-wrap">
+              <v-row no-gutters class="ctas mr-12 pr-12 mb-4 d-flex flex-wrap">
                 <v-col class="mr-6" :xs="12">
-                  <Button primary hero nuxt to="/pilot" class="mt-4">Start a Pilot</Button>
+                  <Button primary hero nuxt to="/pilot">Start a Pilot</Button>
                 </v-col>
                 <!-- <v-spacer></v-spacer> -->
                 <v-col :xs="10">
@@ -25,7 +25,7 @@
                 </v-col>
                 <v-spacer></v-spacer>
               </v-row>
-            </div>
+            <!-- </div> -->
           </v-col>
         </v-row>
 
@@ -106,7 +106,7 @@
         </v-row>
 
         <!-- Download the App -->
-        <v-row id="download-app" class="mt-12">
+        <v-row id="download-app" class="px-12 mt-12">
           <v-col :md="4" :sm="10">
             <h1 class="tangerine--text">Download the App</h1>
             <div class="mt-12">
@@ -134,7 +134,7 @@
 #home {
   @media (max-width: 400px) {
     .news-card {
-      height: 380px;
+      height: 260px;
       min-width: 220px;
 
       .stripe {
@@ -168,19 +168,52 @@
   }
 
   // these @media lines below govern the svg image in the hero.
-  @media (max-width: 920px) {
+
+
+
+
+  @media (max-width: 760px) {
     #hero {
       background-image: none;
+
+      .subtitle  {
+        margin-top: 40px;
+      }
+
+      .ctas {
+        margin-top: 10px;
+      }
     }
   }
 
-  @media (min-width: 920px) {
+  @media (min-width: 760px) {
     #hero {
       background-image: url("../assets/home_page/hero_main.svg");
       background-position-x: right;
       background-size: contain;
-      height: 560px;
+
+      .subtitle  {
+        margin-top: 2vw;
+      }
+
+      .ctas {
+        margin-top: 2vw;
+      }
     }
+
+    @media (min-width: 1760px) {
+      #hero {
+        height: 570px;
+      }
+    }
+
+    @media (max-width: 1760px) {
+    #hero {
+      height: 44vw;
+    }
+  }
+
+    
   }
 
   #why-covid-watch {
@@ -285,6 +318,7 @@ export default {
     ],
     newsCards: [
       {
+        type: "press_mention",
         date: "April 8, 2020",
         title:
           "Clever Cryptography Could Protect Privacy in Covid-19 Contact-Tracing Apps",
@@ -294,6 +328,7 @@ export default {
         outlet_name: "Wired"
       },
       {
+        type: "press_mention",
         date: "April 9, 2020",
         title:
           "Stanford researchers help develop privacy-focused coronavirus alert app",
@@ -303,6 +338,7 @@ export default {
         outlet_name: "Stanford News"
       },
       {
+        type: "press_mention",
         date: "March 29, 2020",
         title:
           "One of the victims of the COVID-19 pandemic may be citizen privacy rights",

@@ -15,12 +15,15 @@
 
     <!-- Footer-->
     <Footer :sections="footerSections"></Footer>
+
   </v-app>
 </template>
 
 <style lang="scss">
 .container {
   max-width: 1240px;
+  // this padding: 0px prevents awkward white space padding for the whole app
+  padding: 0px;
 
   &#main-content {
     padding-top: 0px;
