@@ -131,7 +131,7 @@ export default {
           title: "Get Involved",
           links: [
             {
-              title: "Start a Pilot",
+              title: "Use Our Solution",
               href: "/pilot"
             },
             // commented out until we have a clear sense of what 'partnering' means and copy
