@@ -5,26 +5,28 @@
         <v-row id="hero">
           <v-col :sm="8" :xs="12" class="px-10 hero-copy">
             <!-- <div > -->
-              <h1>Together, we have the power to stop the spread of COVID-19</h1>
+            <h1>Together, we have the power to stop the spread of COVID-19</h1>
 
-              <p class="subtitle">
-                Protect the health for your family and community while
-                preserving your privacy through mobile alerts.
-              </p>
+            <p class="subtitle">
+              Protect the health for your family and community while preserving
+              your privacy through mobile alerts.
+            </p>
 
-              <v-row no-gutters class="ctas mb-4 mt-10 d-flex flex-wrap">
-                <v-col class="mr-6" cols="12" :sm="8" :md="3">
-                  <Button primary hero nuxt to="/pilot" class="mt-4">Start a Pilot</Button>
-                </v-col>
-                <!-- <v-spacer></v-spacer> -->
-                <v-col :xs="10">
-                  <!-- no secondary CTA for now, per Grant's instruction -->
-                  <!-- <Button secondary hero nuxt to="/about" class="mt-4">ma
+            <v-row no-gutters class="ctas mb-4 mt-10 d-flex flex-wrap">
+              <v-col class="mr-6" cols="12" :sm="8" :md="3">
+                <Button primary hero nuxt to="/pilot" class="mt-4"
+                  >Start a Pilot</Button
+                >
+              </v-col>
+              <!-- <v-spacer></v-spacer> -->
+              <v-col :xs="10">
+                <!-- no secondary CTA for now, per Grant's instruction -->
+                <!-- <Button secondary hero nuxt to="/about" class="mt-4">ma
                     Download App
                   </Button>-->
-                </v-col>
-                <v-spacer></v-spacer>
-              </v-row>
+              </v-col>
+              <v-spacer></v-spacer>
+            </v-row>
             <!-- </div> -->
           </v-col>
         </v-row>
@@ -41,7 +43,12 @@
               :key="i"
               class="d-flex flex-column align-left"
             >
-              <WhyCard :img="card.img" :title="card.title" :body="card.body" aspect-ratio="1"></WhyCard>
+              <WhyCard
+                :img="card.img"
+                :title="card.title"
+                :body="card.body"
+                aspect-ratio="1"
+              ></WhyCard>
             </v-col>
           </v-row>
 
@@ -53,24 +60,48 @@
           <h2 class="plum--text mb-12">Why Covid Watch</h2>
 
           <v-row class="justify-center">
-            <v-col :md="4" :sm="8" cols="12" v-for="(card, i) in whyCards" :key="i">
-              <WhyCard :img="card.img" :title="card.title" :body="card.body" max-height="200px"></WhyCard>
+            <v-col
+              :md="4"
+              :sm="8"
+              cols="12"
+              v-for="(card, i) in whyCards"
+              :key="i"
+            >
+              <WhyCard
+                :img="card.img"
+                :title="card.title"
+                :body="card.body"
+                max-height="200px"
+              ></WhyCard>
             </v-col>
           </v-row>
 
-          <CTA pdf content="Read the whitepaper" href="/covid_watch_whitepaper.pdf"></CTA>
+          <CTA
+            pdf
+            content="Read the whitepaper"
+            href="/covid_watch_whitepaper.pdf"
+          ></CTA>
         </v-row>
 
         <!-- Latest News -->
         <v-row id="latest-news">
           <v-col>
-            <v-row class="px-4 px-sm-12 mt-12 mb-6 d-flex align-center justify-space-between">
+            <v-row
+              class="px-4 px-sm-12 mt-12 mb-6 d-flex align-center justify-space-between"
+            >
               <h2 class="pewter--text">Latest News</h2>
 
-              <nuxt-link to="/news" style="text-decoration:none;font-weight:600;font-style:normal;">
+              <nuxt-link
+                to="/news"
+                style="
+                  text-decoration: none;
+                  font-weight: 600;
+                  font-style: normal;
+                "
+              >
                 More News &nbsp;
                 <img
-                  style="height:10px;"
+                  style="height: 10px;"
                   src="../assets/home_page/arrow_icon.svg"
                   alt="arrow"
                 />
@@ -86,7 +117,7 @@
         </v-row>
 
         <!-- Download the App -->
-        <v-row id="download-app" class="px-12 mt-12">
+        <v-row id="download-app" class="mobile_imgs px-12 mt-12">
           <v-col :md="4" :sm="10">
             <h1 class="tangerine--text">Download the App</h1>
             <div class="mt-12">
@@ -97,12 +128,15 @@
 
           <v-spacer />
 
-          <v-col :md="8" :sm="12">
-            <img
-              style="width:100%;min-width:300px;"
-              src="../assets/home_page/mobile_mockups_group.svg"
-              alt="mobile"
-            />
+          <v-col
+            class="mx-4"
+            v-for="(img, i) in mobileImages"
+            :key="i"
+            cols="12"
+            :md="2"
+            :sm="5"
+          >
+            <img :src="img" alt="mobile" />
           </v-col>
         </v-row>
       </v-col>
@@ -112,6 +146,13 @@
 
 <style lang="scss">
 #home {
+  @media (min-width: 960px) {
+    .mobile_imgs {
+      background-image: url("../assets/home_page/mobile_background.svg");
+      background-position-x: right;
+      background-position-y: bottom;
+    }
+  }
   @media (max-width: 400px) {
     .news-card {
       height: 260px;
@@ -149,14 +190,11 @@
 
   // these @media lines below govern the svg image in the hero.
 
-
-
-
   @media (max-width: 760px) {
     #hero {
       background-image: none;
 
-      .subtitle  {
+      .subtitle {
         margin-top: 40px;
       }
 
@@ -172,7 +210,7 @@
       background-position-x: right;
       background-size: contain;
 
-      .subtitle  {
+      .subtitle {
         margin-top: 2vw;
       }
 
@@ -188,12 +226,10 @@
     }
 
     @media (max-width: 1760px) {
-    #hero {
-      height: 44vw;
+      #hero {
+        height: 44vw;
+      }
     }
-  }
-
-    
   }
 
   #why-covid-watch {
