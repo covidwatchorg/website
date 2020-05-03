@@ -53,7 +53,6 @@
 
 <style lang="scss">
   #support {
-
       .hero-copy {
         margin-top: 50px;
       }

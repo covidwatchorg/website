@@ -2,36 +2,13 @@
   <v-container>
     <v-row id="faq">
       <v-col cols="12">
-        
-        <a target="_blank" href="https://docs.google.com/forms/d/1ZKt7ewHUvDmCFHdhXOckFTjK8-ZJhIw1W94BoCLOdWA/viewform?edit_requested=true">
-              <v-hover v-slot:default="{ hover }" > 
-                <v-alert 
-                  outlined 
-                  dense 
-                  dismissable 
-                  color="info" 
-                  type="info"
-                  :elevation="hover ? 2 : 0"
-                  :class="{ 'on-hover': hover }"
-                  class="d-flex pa-2 mx-10 justify-center"
-                  >
-                    Have an old smartphone to donate for Covid Watch to use for testing?  Click here!
-                  </v-alert>
-              </v-hover>
-          </a>
         <v-row id="hero">
-          
           <v-col cols="12" :sm="8" :xs="12" class="hero-copy">
             <h1>Frequently Asked Questions</h1>
           </v-col>
 
           <v-spacer></v-spacer>
 
-          <!-- Jesse: there is something like :smAndDown but couldnt figure out exaclty how to make work quickly 
-          https://vuetifyjs.com/en/customization/breakpoints/
-
-          so instead have some repeition like :xs="8" :sm="8"
-          -->
           <v-col :sm="8" :md="4">
             <img id="arrow-man" src="../assets/faq_page/arrow_man.svg" alt="arrow_man">
           </v-col>
