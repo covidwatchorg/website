@@ -1,26 +1,55 @@
 <template>
-    <v-card :card="card" class="news-card">
-            <img class="stripe" style="position:absolute;" src="../assets/home_page/news_cards_top_accent.svg" alt="stripe">
-            <div class="d-flex py-6 px-6 justify-space-between">
-            <img src="../assets/home_page/news_icon.svg" alt=news>
-            <div class="news-date">{{card.date}}</div>
-            </div>
-            <div class="pa-6">
-            <a target="_blank" :href="card.url" class="primary--text" style="text-decoration:none;font-weight:bold;">{{card.title}} <img style="height:10px;" src="../assets/home_page/arrow_icon.svg" alt="arrow"></a>
-            <div class="primary--text float-right mt-10">
-                - {{card.author_name}}, <span style="font-style:italic;"> {{card.outlet_name}} </span>
-            </div>
-        </div>
+  <v-card :card="card" class="news-card">
+    <img
+      v-if="card.type === 'press_mention'"
+      class="stripe"
+      style="position: absolute;"
+      src="../assets/home_page/news_cards_top_accent.svg"
+      alt="stripe"
+    />
+    <img
+      v-if="card.type === 'press_release'"
+      class="stripe"
+      style="position: absolute;"
+      src="../assets/home_page/lavender_news_stripe.svg"
+      alt="stripe"
+    />
+    <div class="d-flex py-6 px-6 justify-space-between">
+      <img v-if="card.type === 'press_mention'" src="../assets/home_page/news_icon.svg" alt="news" />
+      <img v-if="card.type === 'press_release'" src="../assets/home_page/lavender_news_icon.svg" alt="news" />
+      <div class="news-date">{{ card.date }}</div>
+    </div>
+    <div class="px-6 mt-4">
+      <div class="card_title mb-5">
+        <a
+          target="_blank"
+          :href="card.url"
+          class="primary--text"
+          style="text-decoration: none; font-weight: bold;"
+          >{{ card.title }}
+          <img
+            style="height: 10px;"
+            src="../assets/home_page/arrow_icon.svg"
+            alt="arrow"
+        /></a>
+      </div>
+      <div class="primary--text grow float-right">
+        <span style="font-style: italic;">- {{ card.outlet_name }} </span>
+      </div>
+    </div>
 
-        <slot></slot>
-    </v-card>
+    <slot></slot>
+  </v-card>
 </template>
-
 
 <style lang="scss" scoped>
 .news-card {
-    height: 250px;
-    min-width: 320px;
+  height: 230px;
+  min-width: 320px;
+}
+
+.card_title {
+  min-height: 80px;
 }
 
 //     @media (max-width:400px){
@@ -39,10 +68,10 @@
 </style>
 
 <script>
-    export default {
-    name: "NewsCard",
-    props: {
-        card: Object
-    }
-    };
+export default {
+  name: "NewsCard",
+  props: {
+    card: Object
+  }
+};
 </script>

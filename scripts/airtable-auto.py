@@ -6,7 +6,7 @@ import os
 
 def valid_entry(entry):
 
-    for value in ['type', 'author_name', 'url','outlet_name', 'title', 'date']:
+    for value in ['type', 'url','outlet_name', 'title', 'date']:
         if value not in entry:
             return False
 
