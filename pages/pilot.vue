@@ -24,7 +24,7 @@
 
         <v-spacer />
         <v-col cols="3">
-          <img class="woman_globe_img" src="../assets/pilot_page/woman_globe.svg" />
+          <img class="shrink-on-small-screen" src="../assets/pilot_page/woman_globe.svg" />
         </v-col>
       </v-row>
 
@@ -114,16 +114,6 @@
 
 <style lang="scss">
 #pilot {
-  @media (max-width: 400px) {
-    .woman_globe_img {
-      max-width: 200px;
-    }
-
-    .shrink-on-small-screen {
-      max-width: 200px;
-    }
-  }
-
   a {
     color: white;
     text-transform: none;

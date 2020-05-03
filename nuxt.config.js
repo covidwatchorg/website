@@ -50,9 +50,10 @@ export default {
    */
   vuetify: {
     customVariables: [
-      "~/assets/variables.scss",
+      "~/assets/images.scss",
       "~/assets/mixins.scss",
-      "~/assets/typography.scss"
+      "~/assets/typography.scss",
+      "~/assets/variables.scss"
     ],
     theme: {
       options: {
