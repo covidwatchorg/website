@@ -150,7 +150,7 @@
     .mobile_imgs {
       background-image: url("../assets/home_page/mobile_background.svg");
       background-position-x: right;
-      background-position-y: bottom;
+      background-position-y: 96%;
     }
   }
   @media (max-width: 400px) {
