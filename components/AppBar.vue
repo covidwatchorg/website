@@ -1,29 +1,32 @@
 <template>
   <v-app-bar app clipped-left class="white" height="110px" elevate-on-scroll>
     <v-container>
-      <v-row align="center">
-        <v-col cols="8" :sm="auto">
+      <v-row align="center" justify="space-between">
+        <v-col cols="8" sm="auto">
           <nuxt-link to="/">
             <v-img :src="logoSvg" alt="Covid Watch" id="logo-desktop" max-width="265px" contain></v-img>
           </nuxt-link>
         </v-col>
+        <v-spacer></v-spacer>
 
-        <v-spacer class="hidden-xs-only" />
         <!--Desktop menu-->
-        <v-toolbar-items class="hidden-sm-and-down">
-          <v-btn
-            v-for="link in navLinks"
-            :key="link.title"
-            :title="link.title"
-            :to="link.href"
-            nuxt
-            text
-            :ripple="false"
-          >{{ link.title }}</v-btn>
-        </v-toolbar-items>
+        <v-col class="hidden-sm-and-down" sm="auto">
+          <v-toolbar-items>
+            <v-btn
+              v-for="link in navLinks"
+              :key="link.title"
+              :title="link.title"
+              :to="link.href"
+              nuxt
+              text
+              :ripple="false"
+              class="py-4"
+            >{{ link.title }}</v-btn>
+          </v-toolbar-items>
+        </v-col>
         <!--Mobile menu-->
-        <v-col cols="3" :sm="1">
-          <v-toolbar-items class="hidden-md-and-up">
+        <v-col cols="3" :sm="1" class="hidden-md-and-up">
+          <v-toolbar-items>
             <v-menu offset-y>
               <template v-slot:activator="{ on }">
                 <v-btn text v-on="on" id="mobile-menu-btn">
