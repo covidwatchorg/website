@@ -88,7 +88,7 @@
 
             <v-row>
                 <v-spacer></v-spacer>
-                <v-col :md="4" :sm="8" class="ma-n1 pa-0 d-flex">
+                <v-col :md="4" :sm="8" class="pa-0 d-flex">
                     <img class="woman-triangle" src="../assets/how_it_works/woman-triangle.svg">
                 </v-col>
                 <v-spacer></v-spacer>
@@ -105,10 +105,6 @@
 <style lang="scss">
 
 #how-it-works{
-    .woman-triangle{
-        z-index: 4;
-    }
-
     @media (max-width:960px){
         .connected_img{
             display: none;
