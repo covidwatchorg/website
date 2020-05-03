@@ -4,62 +4,51 @@
 
 -->
 
-
 <template>
-    <v-row class="cta-container my-12">
-        <v-col cols="4">
-            <Button class="cta-button" secondary :nuxt="nuxt" :to="to" :href="href" :pdf="pdf" :content="content">
-                <img
-                    v-if="pdf"
-                    class="mr-3"
-                    style="height:20px;"
-                    src="../assets/home_page/pdf_logo.svg"
-                    alt="pdf"
-                />
-
-                <!-- <a> tag if it's a pdf -->
-                <a :href="href"  v-if="pdf" style="text-transform:none;">
-                    {{content}}
-                </a>
-
-                <!-- else just display name of button normally -->
-                <div v-if="!pdf">
-                    {{content}}
-                </div>
-
-            </Button>
-        </v-col>
-    </v-row>
+  <v-row class="cta-container my-12">
+    <v-col :md="4" :xs="12">
+      <Button class="cta-button" secondary :nuxt="nuxt" :to="to" :href="href">
+        <img
+          v-if="pdf"
+          class="mr-3"
+          style="height:20px;"
+          src="../assets/home_page/pdf_logo.svg"
+          alt="pdf"
+        />
+        <!-- <a> tag if it's a pdf -->
+        <a :href="href" v-if="pdf" style="text-transform:none;">{{content}}</a>
+        <!-- else just display name of button normally -->
+        <div v-else>{{content}}</div>
+      </Button>
+    </v-col>
+  </v-row>
 </template>
 
 
 <style lang="scss" scoped>
+.cta-container {
+  display: flex;
+  justify-content: center;
+}
 
-  .cta-container {
-    display: flex;
-    justify-content: center;
-  }
-
-  .cta-button {
-      min-width: 300px;
-  }
- 
+.cta-button {
+  min-width: 300px;
+}
 </style>
 
 <script>
 import Button from "../components/Button.vue";
 
 export default {
-    components: {
-        Button
-    },
-    props: {
-        href: String,
-        nuxt: Boolean,
-        to: String,
-        pdf: Boolean,
-        content: String
-    }
-
-}
+  components: {
+    Button
+  },
+  props: {
+    href: String,
+    nuxt: Boolean,
+    to: String,
+    pdf: Boolean,
+    content: String
+  }
+};
 </script>

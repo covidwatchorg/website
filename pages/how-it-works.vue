@@ -154,13 +154,6 @@
                 width: 260px;
             }
     }
-
-      @media (max-width: 400px) {
-
-        .shrink-on-small-screen {
-            max-width: 200px;
-        }
-    }
 }
 </style>
 
