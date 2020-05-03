@@ -111,15 +111,6 @@
 <style lang="scss">
 #home {
   @media (max-width: 400px) {
-    .news-card {
-      height: 260px;
-      min-width: 220px;
-
-      .stripe {
-        width: 220px;
-      }
-    }
-
     // hacky way to get whitepaper button to not take up margin on right of screen
     .cta-whitepaper {
       display: flex;
@@ -129,15 +120,6 @@
   }
 
   @media (min-width: 400px) {
-    .news-card {
-      height: 250px;
-      min-width: 320px;
-
-      .stripe {
-        width: 320px;
-      }
-    }
-
     // hacky way to get whitepaper button to center
     .cta-whitepaper {
       display: flex;
