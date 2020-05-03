@@ -211,6 +211,12 @@ export default {
     Button,
     Newsletter
   },
+  mounted() {
+    // this offsets the location where any anchor tags take you so that they aren't underneat AppBar
+    window.addEventListener("hashchange", function () {
+      window.scrollTo(window.scrollX, window.scrollY - 150);
+    });
+  },
   methods: {
     setStyle: function (e) {
       // ended up just using this Vuetify class I discovered instead of 'open-header' v-expansion-panel-header--active
@@ -230,7 +236,7 @@ export default {
   },
   data: () => ({
     // panel controls which sections in the list are open upon loading the page.
-    panel: [0],
+    panel: [0,1,2,3,4],
     sectionList: [
       {
         id: "#our-alert-system",
