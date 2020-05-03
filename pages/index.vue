@@ -39,7 +39,12 @@
               :key="i"
               class="d-flex flex-column align-left"
             >
-              <WhyCard :img="card.img" :title="card.title" :body="card.body" aspect-ratio="1"></WhyCard>
+              <WhyCard
+                :img="card.img"
+                :title="card.title"
+                :body="card.body"
+                aspect-ratio="1"
+              ></WhyCard>
             </v-col>
           </v-row>
 
@@ -51,12 +56,27 @@
           <h2 class="plum--text">Why Covid Watch</h2>
 
           <v-row class="justify-center">
-            <v-col :md="4" :sm="8" cols="12" v-for="(card, i) in whyCards" :key="i">
-              <WhyCard :img="card.img" :title="card.title" :body="card.body" max-height="200px"></WhyCard>
+            <v-col
+              :md="4"
+              :sm="8"
+              cols="12"
+              v-for="(card, i) in whyCards"
+              :key="i"
+            >
+              <WhyCard
+                :img="card.img"
+                :title="card.title"
+                :body="card.body"
+                max-height="200px"
+              ></WhyCard>
             </v-col>
           </v-row>
 
-          <CTA pdf content="Read the whitepaper" href="/covid_watch_whitepaper.pdf"></CTA>
+          <CTA
+            pdf
+            content="Read the whitepaper"
+            href="/covid_watch_whitepaper.pdf"
+          ></CTA>
         </v-row>
 
         <!-- Latest News -->
@@ -65,10 +85,17 @@
             <v-row :class="[pageSectionClass, largeMarginClass, flexCenterRowClass]">
               <h2 class="pewter--text">Latest News</h2>
 
-              <nuxt-link to="/news" style="text-decoration:none;font-weight:600;font-style:normal;">
+              <nuxt-link
+                to="/news"
+                style="
+                  text-decoration: none;
+                  font-weight: 600;
+                  font-style: normal;
+                "
+              >
                 More News &nbsp;
                 <img
-                  style="height:10px;"
+                  style="height: 10px;"
                   src="../assets/home_page/arrow_icon.svg"
                   alt="arrow"
                 />
@@ -84,7 +111,7 @@
         </v-row>
 
         <!-- Download the App -->
-        <v-row id="download-app" :class="[pageSectionClass, largeMarginClass]">
+        <v-row id="download-app" class="mobile_imgs" :class="[pageSectionClass, largeMarginClass]">
           <v-col :md="4" :sm="10">
             <h1 class="tangerine--text">Download the App</h1>
             <div class="mt-12">
@@ -95,12 +122,15 @@
 
           <v-spacer />
 
-          <v-col :md="8" :sm="12">
-            <img
-              style="width:100%;min-width:300px;"
-              src="../assets/home_page/mobile_mockups_group.svg"
-              alt="mobile"
-            />
+          <v-col
+            class="mx-4"
+            v-for="(img, i) in mobileImages"
+            :key="i"
+            cols="12"
+            :md="2"
+            :sm="5"
+          >
+            <img :src="img" alt="mobile" />
           </v-col>
         </v-row>
       </v-col>
@@ -110,6 +140,13 @@
 
 <style lang="scss">
 #home {
+  @media (min-width: 960px) {
+    .mobile_imgs {
+      background-image: url("../assets/home_page/mobile_background.svg");
+      background-position-x: right;
+      background-position-y: 86%;
+    }
+  }
   @media (max-width: 400px) {
     .news-card {
       height: 260px;
