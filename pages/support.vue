@@ -34,7 +34,7 @@
         <v-row class="mt-12 pt-6">
           <v-col>
             <h3>How We Use Donations</h3>
-            <p class="mt-8">Funding for this project will be used primarily for app development and marketing. In terms of product development, funds will be used to support team members who are experiencing financial hardship and who require support to be able to continue working on app development, beta testing, and technical support; this would ensure more dedicated hours spent by developers on this project, resulting in higher-quality work being produced as soon as possible.</p>
+            <p class="mt-8">Funding for this project will be used primarily for app development and marketing to achieve the high adoption necessary for effectiveness.  In terms of product development, funds will be used to support volunteers who are experiencing financial hardship and who require support to be able to continue working on app development, beta testing, and technical support; this would ensure more dedicated hours spent by developers on this project, resulting in higher-quality work being produced as soon as possible.</p>
           </v-col>        
         </v-row>
 
@@ -68,7 +68,6 @@
         .donate-svg {
             max-height:280px;
         }
-        
       }
 
       @media (min-width:400px){

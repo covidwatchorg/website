@@ -71,6 +71,7 @@
                 width: 100%;
                 font-size: 18px;
                 font-style: italic;
+                padding: 12px;
             }
         }
 
@@ -78,13 +79,14 @@
             background-color: #2C58B1;
             font-family: Montserrat;
             font-style: normal;
-            font-weight: 500;
+            font-weight: 600;
             font-size: 18px;
             line-height: 22px;
             text-align: center;
             height: 47px;
-            min-width: 200px;
+            min-width: 287px;
             margin-left: 20px;
+            border-radius: 8px;
         }
 
          #mc-embedded-subscribe:hover {
@@ -109,6 +111,7 @@
                 #mc-embedded-subscribe {
                     margin-left: 0px;
                     margin-top: 6px;
+                    width: 180px;
                 }
             }
         }

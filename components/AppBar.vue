@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar app clipped-left class="white" height="120px" elevate-on-scroll>
+  <v-app-bar app clipped-left class="white" height="110px" elevate-on-scroll>
     <v-container>
       <v-row>
         <v-col>

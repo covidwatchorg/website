@@ -86,9 +86,9 @@
                
             </v-row>
 
-            <v-row class="no-gutters">
+            <v-row>
                 <v-spacer></v-spacer>
-                <v-col :md="4" :sm="8">
+                <v-col :md="4" :sm="8" class="pa-0 d-flex">
                     <img class="woman-triangle" src="../assets/how_it_works/woman-triangle.svg">
                 </v-col>
                 <v-spacer></v-spacer>
