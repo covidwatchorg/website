@@ -25,7 +25,7 @@
           />
         </a>
       </div>
-      <div class="primary--text grow float-right">
+      <div class="primary--text body-2 grow float-right mb-2">
         <span style="font-style: italic;">- {{ card.outlet_name }}</span>
       </div>
     </div>
