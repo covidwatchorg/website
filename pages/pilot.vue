@@ -33,7 +33,11 @@
         <h2 class="section-title">Why Covid Watch?</h2>
         <v-row>
           <v-col :md="3">
-            <img class="adjust-img" src="../assets/pilot_page/woman_target.svg" alt="target" />
+            <img
+              class="shrink-on-small-screen"
+              src="../assets/pilot_page/woman_target.svg"
+              alt="target"
+            />
           </v-col>
 
           <v-col :md="9">
@@ -46,7 +50,11 @@
 
         <v-row>
           <v-col :md="3" class="show-on-small-screen">
-            <img src="../assets/pilot_page/woman_medical_device.svg" alt="target" />
+            <img
+              class="shrink-on-small-screen"
+              src="../assets/pilot_page/woman_medical_device.svg"
+              alt="target"
+            />
           </v-col>
           <v-col :md="9">
             <div class="copy">
@@ -55,13 +63,21 @@
             </div>
           </v-col>
           <v-col :md="3" class="hide-on-small-screen">
-            <img src="../assets/pilot_page/woman_medical_device.svg" alt="target" />
+            <img
+              class="shrink-on-small-screen"
+              src="../assets/pilot_page/woman_medical_device.svg"
+              alt="target"
+            />
           </v-col>
         </v-row>
 
         <v-row>
           <v-col :md="3">
-            <img src="../assets/pilot_page/phone_god.svg" alt="target" />
+            <img
+              class="shrink-on-small-screen"
+              src="../assets/pilot_page/phone_god.svg"
+              alt="target"
+            />
           </v-col>
 
           <v-col :md="9">
@@ -98,6 +114,16 @@
 
 <style lang="scss">
 #pilot {
+  @media (max-width: 400px) {
+    .woman_globe_img {
+      max-width: 200px;
+    }
+
+    .shrink-on-small-screen {
+      max-width: 200px;
+    }
+  }
+
   a {
     color: white;
     text-transform: none;
@@ -124,11 +150,6 @@
     h2 {
       margin-bottom: 30px;
     }
-  }
-
-  #why-covid-watch .adjust-img {
-    max-width: 260px;
-    min-width: 180px;
   }
 
   // this below shows elements consistently on the screen w the image above text.  without this the middle value prop only has the image below
