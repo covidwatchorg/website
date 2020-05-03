@@ -17,12 +17,8 @@
           class="primary--text"
           style="text-decoration: none; font-weight: bold;"
         >
-          {{ card.title }}
-          <img
-            style="height: 10px;"
-            src="../assets/home_page/arrow_icon.svg"
-            alt="arrow"
-          />
+          {{ card.title }}&nbsp;
+          <img style="height: 10px;" src="../assets/home_page/arrow_icon.svg" alt="arrow" />
         </a>
       </div>
       <div class="primary--text body-2 grow float-right mb-2">
