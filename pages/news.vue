@@ -29,7 +29,7 @@
 
                 <v-col :sm="8" :md="1">
                   <Button secondary @click="toShow = 'mentions'" class="filter">
-                    Releases
+                    Press Releases
                   </Button>
                 </v-col>
               </v-row>
