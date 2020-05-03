@@ -25,10 +25,12 @@ h2 {
   font-weight: 600;
   font-size: 40px;
   line-height: 49px;
+  margin-bottom: 48px;
 
   @media #{map-get($display-breakpoints, 'sm-and-down')} {
     font-size: 28px;
     line-height: 34px;
+    margin-bottom: 34px;
   }
 }
 

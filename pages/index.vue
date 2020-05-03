@@ -4,36 +4,32 @@
       <v-col>
         <v-row id="hero">
           <v-col :sm="8" :xs="12" class="px-10 hero-copy">
-            <!-- <div > -->
             <h1>Together, we have the power to stop the spread of COVID-19</h1>
 
             <p class="subtitle">
-              Protect the health for your family and community while preserving
-              your privacy through mobile alerts.
+              Protect the health for your family and community while
+              preserving your privacy through mobile alerts.
             </p>
 
             <v-row no-gutters class="ctas mb-4 mt-10 d-flex flex-wrap">
               <v-col class="mr-6" cols="12" :sm="8" :md="3">
-                <Button primary hero nuxt to="/pilot" class="mt-4"
-                  >Start a Pilot</Button
-                >
+                <Button primary hero nuxt to="/pilot" class="mt-4">Start a Pilot</Button>
               </v-col>
               <!-- <v-spacer></v-spacer> -->
               <v-col :xs="10">
                 <!-- no secondary CTA for now, per Grant's instruction -->
                 <!-- <Button secondary hero nuxt to="/about" class="mt-4">ma
                     Download App
-                  </Button>-->
+                </Button>-->
               </v-col>
               <v-spacer></v-spacer>
             </v-row>
-            <!-- </div> -->
           </v-col>
         </v-row>
 
         <!-- How It Works section -->
-        <v-row class="d-block mb-10 pa-4 pa-sm-12" id="how-it-works">
-          <h2 class="mb-12">How it Works</h2>
+        <v-row :class="pageSectionClass" id="how-it-works">
+          <h2>How it Works</h2>
           <v-row class="justify-center">
             <v-col
               :md="3"
@@ -56,8 +52,8 @@
         </v-row>
 
         <!-- Why Covid Watch -->
-        <v-row id="why-covid-watch" class="pa-4 pa-sm-12">
-          <h2 class="plum--text mb-12">Why Covid Watch</h2>
+        <v-row id="why-covid-watch" :class="pageSectionClass">
+          <h2 class="plum--text">Why Covid Watch</h2>
 
           <v-row class="justify-center">
             <v-col
@@ -86,9 +82,7 @@
         <!-- Latest News -->
         <v-row id="latest-news">
           <v-col>
-            <v-row
-              class="px-4 px-sm-12 mt-12 mb-6 d-flex align-center justify-space-between"
-            >
+            <v-row :class="[pageSectionClass, largeMarginClass, flexCenterRowClass]">
               <h2 class="pewter--text">Latest News</h2>
 
               <nuxt-link
@@ -117,7 +111,7 @@
         </v-row>
 
         <!-- Download the App -->
-        <v-row id="download-app" class="mobile_imgs px-12 mt-12">
+        <v-row id="download-app" :class="[pageSectionClass, largeMarginClass]">
           <v-col :md="4" :sm="10">
             <h1 class="tangerine--text">Download the App</h1>
             <div class="mt-12">
