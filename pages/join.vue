@@ -99,6 +99,13 @@
             .donate-svg {
                 max-height:360px;
             }
+
+
+                #mc-embedded-subscribe {
+                    margin-left: 0px;
+                    margin-top: 6px;
+                    width: 180px;
+                }
         }
     }
     

@@ -15,12 +15,15 @@
 
     <!-- Footer-->
     <Footer :sections="footerSections"></Footer>
+
   </v-app>
 </template>
 
 <style lang="scss">
 .container {
   max-width: 1240px;
+  padding-left: 10px;
+  padding-right: 10px;
 
   &#main-content {
     padding-top: 0px;
@@ -64,7 +67,7 @@ export default {
     return {
       navLinks: [
         {
-          title: "How It Works",
+          title: "How it Works",
           href: "/how-it-works"
         },
         {
@@ -128,7 +131,7 @@ export default {
           title: "Get Involved",
           links: [
             {
-              title: "Start a Pilot",
+              title: "Use Our Solution",
               href: "/pilot"
             },
             // commented out until we have a clear sense of what 'partnering' means and copy

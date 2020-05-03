@@ -1,5 +1,3 @@
-<!-- class shrink-on-small-screen is modified w scss on pilot.vue -->
-
 <template>
   <div>
     <v-img class="shrink-on-small-screen" :src="img" :alt="title" v-bind="$attrs" contain></v-img>
@@ -7,10 +5,6 @@
     <p class="mt-5">{{ body }}</p>
   </div>
 </template>
-
-
-<style lang="scss" scoped>
-</style>
 
 <script>
 export default {

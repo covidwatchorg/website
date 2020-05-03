@@ -11,12 +11,12 @@
       v-if="card.type === 'press_release'"
       class="stripe"
       style="position: absolute;"
-      src="../assets/home_page/lavender_news_stripe.svg"
+      src="../assets/home_page/tangerine_stripe.svg"
       alt="stripe"
     />
     <div class="d-flex py-6 px-6 justify-space-between">
       <img v-if="card.type === 'press_mention'" src="../assets/home_page/news_icon.svg" alt="news" />
-      <img v-if="card.type === 'press_release'" src="../assets/home_page/lavender_news_icon.svg" alt="news" />
+      <img v-if="card.type === 'press_release'" src="../assets/home_page/tangerine_news_icon.svg" alt="news" />
       <div class="news-date">{{ card.date }}</div>
     </div>
     <div class="px-6 mt-4">

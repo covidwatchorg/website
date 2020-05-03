@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row id="faq">
-      <v-col>
+      <v-col cols="12">
         
         <a target="_blank" href="https://docs.google.com/forms/d/1ZKt7ewHUvDmCFHdhXOckFTjK8-ZJhIw1W94BoCLOdWA/viewform?edit_requested=true">
               <v-hover v-slot:default="{ hover }" > 
@@ -21,7 +21,7 @@
           </a>
         <v-row id="hero">
           
-          <v-col class="hero-copy" :md="7" :sm="10">
+          <v-col cols="12" :sm="8" :xs="12" class="hero-copy">
             <h1>Frequently Asked Questions</h1>
           </v-col>
 
@@ -46,7 +46,7 @@
             <ul id="navigation" class="pl-0">
               <div class="sections-container" v-for="(section, i) in sectionList" :key="i">
 
-                <li class=" pl-6 section-text primary--text" :id="i">
+                <li class="section-text primary--text" :id="i">
                   <a :href="section.id">
                     {{section.title}}
                   </a>  
@@ -60,7 +60,7 @@
           <v-spacer></v-spacer>
 
           <!-- list -->
-          <v-col :sm="12" :md="8">
+          <v-col cols="12" :sm="12" :md="8">
 
 
             <v-expansion-panels 
@@ -195,16 +195,11 @@
         line-height: 34px;
       }
 
-
-      // started to build this out
-      // .panel-header {
-      //   border-bottom: 3px solid rgb(67,196,217,.5);
-      // }
-
       // playing w hacky ways to make the arrows next to each section title
-      .mdi-chevron-down {
-        margin-right: 450px;
-      }
+      // .mdi-chevron-down {
+        // creates a white margin on the right on mobile but makes the little arrow next to the text
+        // margin-right: 450px;
+      // }
 
       #alerts {
         width: 200px;
@@ -258,7 +253,7 @@ export default {
   },
   data: () => ({
     // panel controls which sections in the list are open upon loading the page.
-    panel: [0, 1, 2, 3, 4, 5],
+    panel: [0],
     sectionList: [
       {
         id: "#our-alert-system",
@@ -266,7 +261,7 @@ export default {
       },
       {
         id: "#how-it-works",
-        title: "How It Works"
+        title: "How it Works"
       },
       {
         id: "#privacy",
@@ -368,7 +363,7 @@ export default {
             "answer": "Covid Watch is voluntary, decentralized, anonymous and Bluetooth-based. The response to the coronavirus is a global patchwork of local efforts, and it’s no different with app-based solutions to slow the spread of COVID-19." +
                       "Some countries and companies are releasing apps that are not based on the same privacy-protecting principles at the center of our mission. A tracing solution that monitors you via Bluetooth and stores every interaction you have in a centralized database that is accessible by the government is the least private solution to the problem we face. This would represent a once-in-a-lifetime erosion of civil liberties." +
                       "We are aligned with <a href='https://tcn-coalition.org/'>a global group of privacy-minded technologists</a> that have coalesced around solutions that protect your privacy and public health at the same time." +
-                      "Read more about the <a href='https://tcn-coalition.org/'>TCN Coalition</a>TCN Coalition and our <a href='https://github.com/TCNCoalition/TCN'>shared commitment</a> to protecting your privacy."
+                      "Read more about the <a href='https://tcn-coalition.org/'>TCN Coalition</a> and our <a href='https://github.com/TCNCoalition/TCN'>shared commitment</a> to protecting your privacy."
           },
           {
             "question": "Are Apple and Google building contact tracing apps?",
