@@ -198,6 +198,13 @@
 </template>
 
 <style lang="scss">
+@media (max-width: 400px){
+  .we_value_img{
+     max-width: 260px;
+  }
+}
+
+
 @media (max-width: 1000px) {
   .earth_img {
     display: none;
