@@ -11,7 +11,7 @@
 
             <div class="mt-12">
               <p class="title">We can't do this work alone.</p>
-              <p>We've grown from a pair of researchers from Stanford University and the University of Waterloo into an interdisciplinary team of more than 400 researchers, software engineers, public health and security experts.</p>
+              <p>We've grown from a pair of researchers from Stanford University and the University of Waterloo into an interdisciplinary team of researchers, software engineers, public health and security experts.</p>
               <p>In addition to our founders, a number of our volunteers are working full-time on the project. However, there is plenty of room to contribute as a volunteer or advisor even if you can only put in a few hours a week</p>
             </div>
 
@@ -28,7 +28,7 @@
         <v-row class="mt-12 pt-6">
           <v-col>
             <h2>Volunteer</h2>
-            <p class="mt-6">If you'd like an invitation to the 400+ person Slack group that we're using to coordinate, just send a message to contact@covid-watch.org.</p>
+            <p class="mt-6">If you'd like an invitation to the 400+ person Slack group that we're using to coordinate, just send a message to <a href="mailto:contact@covid-watch.org">contact@covid-watch.org</a>. Please send a resume along with your email so we can direct you to the right place.</p>
 
             <h4 class="mt-6 mb-4">Most Wanted Volunteers</h4>
             <ul>
@@ -65,6 +65,15 @@
           </v-col>   
         </v-row>
 
+        <v-row class="mb-8">
+            <v-col>
+                <h3>Partner With Us</h3>
+                <p class="mt-8">From the beginning, we’ve sought to partner with those that share our values and formed coalitions around shared values. These are unprecedented times, and we believe we can overcome challenges more quickly working together. </p>
+                <p>In particular, we are looking for groups with access to technology infrastructure as well as public health departments offering or seeking solutions in the rapidly evolving world of digital public health.</p>
+                <p>If this is you, please reach out.</p>
+            </v-col>
+        </v-row>   
+
 
         <v-row class="mb-12">
             <v-col>
@@ -92,20 +101,13 @@
         @media (max-width:400px) {
             .donate-svg {
                 display: none;
-            }   
+            }
         }
 
         @media (min-width:400px) {
             .donate-svg {
                 max-height:360px;
-            }
-
-
-                #mc-embedded-subscribe {
-                    margin-left: 0px;
-                    margin-top: 6px;
-                    width: 180px;
-                }
+            } 
         }
     }
     
@@ -129,8 +131,8 @@ export default {
                 desc: "with consistent full-time or part-time availability"
             },            
             {
-                role: "Marketing and Communications Managers",
-                desc: "to lead aspects of marketing, media outreach, and fundraising"
+                role: "Intellectual Property and Software Lawyers",
+                desc: ""
             },            
         ],
         otherRoles: [
