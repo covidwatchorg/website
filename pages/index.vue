@@ -3,8 +3,8 @@
     <v-row id="home">
       <v-col>
         <v-row id="hero">
-          <v-col :sm="8" :xs="12" class="px-10 hero-copy">
-            <h1>Together, we have the power to stop COVID-19</h1>
+          <v-col :md="7" :sm="8" cols="12">
+            <h1>Together, we have the power to stop COVID-19.</h1>
 
             <p class="subtitle">
               Protect yourself, your family and your community with
@@ -52,39 +52,30 @@
         </v-row>
 
         <!-- Latest News -->
-        <v-row id="latest-news">
-          <v-col>
-            <v-row :class="[pageSectionClass, largeMarginClass, flexCenterRowClass]">
-              <h2 class="pewter--text">Featured News</h2>
+        <v-row id="latest-news" :class="[pageSectionClass, largeMarginClass, flexCenterRowClass]">
+          <h2 class="pewter--text">Featured News</h2>
+          <nuxt-link to="/news" class="font-weight-bold" style="text-decoration: none">
+            More News &nbsp;
+            <img
+              style="height: 10px;"
+              src="../assets/home_page/arrow_icon.svg"
+              alt="arrow"
+            />
+          </nuxt-link>
 
-              <nuxt-link
-                to="/news"
-                style="
-                  text-decoration: none;
-                  font-weight: 600;
-                  font-style: normal;
-                "
-              >
-                More News &nbsp;
-                <img
-                  style="height: 10px;"
-                  src="../assets/home_page/arrow_icon.svg"
-                  alt="arrow"
-                />
-              </nuxt-link>
-
-              <v-row class="my-8">
-                <v-col :md="4" :sm="6" v-for="(card, i) in newsCards" :key="i">
-                  <NewsCard :card="card"></NewsCard>
-                </v-col>
-              </v-row>
-            </v-row>
+          <v-col :md="4" :sm="6" cols="12" v-for="(card, i) in newsCards" :key="i">
+            <NewsCard :card="card"></NewsCard>
           </v-col>
         </v-row>
 
         <!-- Download the App -->
-        <v-row id="download-app" class="mobile_imgs" :class="[pageSectionClass, largeMarginClass]">
-          <v-col :md="4" :sm="10">
+        <v-row
+          id="download-app"
+          class="mobile_imgs"
+          :class="[pageSectionClass, largeMarginClass]"
+          justify="center"
+        >
+          <v-col :md="4" :sm="10" cols="12">
             <h1 class="tangerine--text">Download the App</h1>
             <div class="mt-12">
               <a target="_blank" href="https://covidapp.typeform.com/to/kpp8Id">
@@ -96,8 +87,15 @@
 
           <v-spacer />
 
-          <v-col class="mx-4" v-for="(img, i) in mobileImages" :key="i" cols="12" :md="2" :sm="5">
-            <img :src="img" alt="mobile" />
+          <v-col
+            class="mx-md-4"
+            v-for="(img, i) in mobileImages"
+            :key="i"
+            :md="2"
+            :sm="4"
+            cols="auto"
+          >
+            <img :src="img" />
           </v-col>
         </v-row>
       </v-col>
@@ -112,22 +110,6 @@
       background-image: url("../assets/home_page/mobile_background.svg");
       background-position-x: right;
       background-position-y: 86%;
-    }
-  }
-  @media (max-width: 400px) {
-    // hacky way to get whitepaper button to not take up margin on right of screen
-    .cta-whitepaper {
-      display: flex;
-      justify-content: flex-start;
-      width: 160px;
-    }
-  }
-
-  @media (min-width: 400px) {
-    // hacky way to get whitepaper button to center
-    .cta-whitepaper {
-      display: flex;
-      justify-content: center;
     }
   }
 
@@ -189,18 +171,6 @@
   .why-background {
     max-height: 420px;
     max-width: 1240px;
-  }
-
-  .hero-copy {
-    margin-top: 50px;
-
-    @media #{map-get($display-breakpoints, 'sm-only')} {
-      margin-top: 20px;
-    }
-
-    @media #{map-get($display-breakpoints, 'xs-only')} {
-      margin-top: 0px;
-    }
   }
 
   #latest-news {
