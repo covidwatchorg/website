@@ -180,6 +180,11 @@ export default {
     CTA,
     WhyCard
   },
+  head() {
+    return {
+      title: "Pilot | Covid Watch"
+    };
+  },
   data: () => ({
     whyCards: [
       {
