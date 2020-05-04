@@ -6,7 +6,7 @@
 
 <template>
   <v-row class="cta-container my-12">
-    <v-col :md="4" :xs="12">
+    <v-col :md="4" sm="6" cols="12">
       <Button class="cta-button" secondary :nuxt="nuxt" :to="to" :href="href">
         <img
           v-if="pdf"
