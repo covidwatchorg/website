@@ -113,10 +113,15 @@
         <!-- Download the App -->
         <v-row id="download-app" class="mobile_imgs" :class="[pageSectionClass, largeMarginClass]">
           <v-col :md="4" :sm="10">
-            <h1 class="tangerine--text">Download the App</h1>
+            <h1 class="tangerine--text">Get the App</h1>
             <div class="mt-12">
-              <Button class="mt-4 mb-6">Download Android Beta</Button>
-              <Button secondary>iOS Coming Soon</Button>
+                <a href="https://covidapp.typeform.com/to/kpp8Id">
+                  <Button class="mt-4 mb-6">
+                    Get Early Access
+                  </Button>
+                </a>
+              <!-- if we ever want a secondary CTA -->
+              <!-- <Button secondary>iOS Coming Soon</Button> -->
             </div>
           </v-col>
 
