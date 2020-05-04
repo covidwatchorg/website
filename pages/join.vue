@@ -3,6 +3,23 @@
   <v-container>
     <v-row id="join">
       <v-col class="py-0 px-12">
+        <a target="_blank" href="https://docs.google.com/forms/d/1ZKt7ewHUvDmCFHdhXOckFTjK8-ZJhIw1W94BoCLOdWA/viewform?edit_requested=true">
+            <v-hover v-slot:default="{ hover }" > 
+            <v-alert 
+                outlined 
+                dense 
+                dismissable 
+                color="info" 
+                type="info"
+                :elevation="hover ? 2 : 0"
+                :class="{ 'on-hover': hover }"
+                class="d-flex pa-2 mx-10 justify-center"
+                >
+                Have an old smartphone to donate for Covid Watch to use for testing?  Click here!
+                </v-alert>
+            </v-hover>
+        </a>
+
         <v-row id="hero">
           
           <v-col class="hero-copy" :md="7" :sm="10" cols="12">
