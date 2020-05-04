@@ -13,7 +13,7 @@
 
             <v-row no-gutters class="ctas mb-4 mt-10 d-flex flex-wrap">
               <v-col class="mr-6" cols="12" :sm="8" :md="3">
-                <Button primary hero nuxt to="/pilot" class="mt-4">Start a Pilot</Button>
+                <Button primary hero nuxt to="/pilot" class="mt-4" style="text-transform:none;">Start a Pilot</Button>
               </v-col>
               <!-- <v-spacer></v-spacer> -->
               <v-col :xs="10">
@@ -145,6 +145,7 @@
 
 <style lang="scss">
 #home {
+  
   @media (min-width: 960px) {
     .mobile_imgs {
       background-image: url("../assets/home_page/mobile_background.svg");
