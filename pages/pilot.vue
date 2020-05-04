@@ -1,6 +1,6 @@
 <template>
   <v-row id="pilot">
-    <v-col cols="12">
+    <v-col cols="12" class="py-0">
       <!-- Hero -->
       <v-row id="hero" class="first-row pa-12">
         <v-col cols="12" :md="8" :sm="12">
@@ -42,7 +42,7 @@
 
           <v-col :md="9">
             <div class="copy ml-4">
-              <h2>Focus Resources Where They're Needed</h2>
+              <h3>Focus Resources Where They're Needed</h3>
               <p>Manual contact tracing is labor-intensive. Local public health officials need a way to focus and prioritize their efforts. With the Covid Watch app, those who have been possibly exposed to the coronavirus will receive an anonymous alert. That will be followed by instructions on how to protect themselves and their community as well as how to call local public health officials.</p>
             </div>
           </v-col>
@@ -58,7 +58,7 @@
           </v-col>
           <v-col :md="9">
             <div class="copy">
-              <h2>The Highest Standard of Privacy</h2>
+              <h3>The Highest Standard of Privacy</h3>
               <p>Covid Watch is anonymous and effective.  Our app logs interactions via Bluetooth in a decentralized system. Privacy-focused solutions ease fears of surveillance and lead to higher adoption rates among community members. There’s no need to upend long-standing expectations around privacy during a pandemic when technology exists to safely and securely stop the coronavirus. </p>
             </div>
           </v-col>
@@ -82,7 +82,7 @@
 
           <v-col :md="9">
             <div class="copy">
-              <h2>Tech That Works Together</h2>
+              <h3>Tech That Works Together</h3>
               <p>We helped set the standard for protecting users’ personal information, and we are committed to bringing this standard to communities around the world. Interoperability of different apps and systems is key to slowing the spread. Our work influenced many other research teams and later the world's largest tech companies to adopt an anonymous approach to coronavirus exposure alerts. We are aligned with the open source community working all over the world to bring forward a cooperative solution to COVID-19.</p>
             </div>
           </v-col>
@@ -91,7 +91,10 @@
 
       <!-- help for public health section -->
       <v-row id="public-health" :class="pageSectionClass">
-        <h2 class="section-title">Help for Public Health</h2>
+        <div style="display:block">
+          <h2 class="section-title">Help for Public Health</h2>
+          <p>We have a targeted set of solutions for communities.</p>
+        </div>
 
         <v-row>
           <v-col :md="4" :sm="8" v-for="(card, i) in whyCards" :key="i" class="px-6">
@@ -137,9 +140,10 @@
     justify-content: center;
     height: 100%;
 
-    h2 {
+    h3 {
       margin-bottom: 30px;
     }
+
   }
 
   // this below shows elements consistently on the screen w the image above text.  without this the middle value prop only has the image below

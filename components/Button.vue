@@ -16,6 +16,7 @@
 <style lang="scss" scoped>
 .v-btn {
   text-transform: none;
+  font-weight: bold;
 }
 </style>
 
