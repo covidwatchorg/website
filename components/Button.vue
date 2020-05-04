@@ -5,6 +5,8 @@
     :color="color"
     :class="{ hero: hero }"
     :outlined="secondary"
+    :nuxt="nuxt"
+    :to="to"
     @click="$emit('click', $event)"
   >
     <slot></slot>
@@ -26,6 +28,8 @@ export default {
   props: {
     hero: Boolean,
     secondary: Boolean,
+    nuxt: Boolean,
+    to: String,
     color: {
       type: String,
       default: "primary"
