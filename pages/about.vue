@@ -3,7 +3,7 @@
     <v-row id="about">
       <!-- First row-->
       <v-row id="header" class="first-row" :class="pageSectionClass">
-        <v-col cols="12" :md="7" :sm="12">
+        <v-col cols="12" :md="7">
           <div class="mb-12">
             <h1 class="mb-5">About Us</h1>
             <div class="subtitle">
@@ -51,7 +51,6 @@
           <v-col
             cols="12"
             :md="4"
-            :sm="12"
             v-for="(card, i) in valueCards"
             :key="i"
             class="d-flex flex-column align-left"
@@ -74,7 +73,7 @@
       <!-- join us row -->
       <v-row class="join-us" :class="pageSectionClass" id="join-us">
         <v-row class="mb-3">
-          <v-col cols="10" :md="2" :sm="10">
+          <v-col cols="10" :md="2">
             <h2>Join Us</h2>
           </v-col>
 
@@ -100,7 +99,6 @@
               }}</Button>
               <Button v-if="!cta.link" secondary>
                 <a
-                  style="text-transform: none;"
                   href="mailto:contact@covid-watch.org"
                   >{{ cta.button_text }}</a
                 >
@@ -131,7 +129,7 @@
               <v-col :md="5">
                 <img class="mr-5" :src="founder.image" />
               </v-col>
-              <v-col cols="12" :md="7" :sm="12">
+              <v-col cols="12" :md="7">
                 <div class="title">{{ founder.name }}</div>
                 <div class="subtitle">
                   <i>{{ founder.title }}</i>
@@ -201,7 +199,7 @@
             <a :href="collab.url">
               <img class="collab-img" :src="collab.src" />
               <div class="caption d-flex justify-start">
-                <div style="font-size: 16px;">{{ collab.name }}</div>
+                <div class="body-2">{{ collab.name }}</div>
               </div>
             </a>
           </v-col>
