@@ -92,24 +92,24 @@
     #faq {
       min-height: 1000px;
 
-      .jump-target{
-        position: relative;
-        padding-top: 30px;
-        padding-bottom: 30px;
-        border-top: 90px solid transparent;
-        margin-top: -90px;
-        -webkit-background-clip: padding-box;
-        -moz-background-clip: padding;
-        background-clip: padding-box;
-      }
+      // .jump-target{
+      //   position: relative;
+      //   padding-top: 30px;
+      //   padding-bottom: 30px;
+      //   border-top: 90px solid transparent;
+      //   margin-top: -90px;
+      //   -webkit-background-clip: padding-box;
+      //   -moz-background-clip: padding;
+      //   background-clip: padding-box;
+      // }
 
-      .jump-target::before {
-          content: "";
-          position: absolute;
-          top: -25px;
-          left: 0;
-          right: 0;
-      }
+      // .jump-target::before {
+      //     content: "";
+      //     position: absolute;
+      //     top: -25px;
+      //     left: 0;
+      //     right: 0;
+      // }
 
     #arrow-man {
       max-height:370px;
@@ -230,13 +230,13 @@ export default {
     Button,
     Newsletter
   },
-  // mounted() {
-  //           // this offsets the location where any anchor tags take you so that they aren't underneath AppBar
-              // note: this works in Chrome but not in Firefox and perhaps other browsers?
-  //   window.addEventListener("hashchange", function () {
-  //     window.scrollTo(window.scrollX, window.scrollY - 150);
-  //   });
-  // },
+  mounted() {
+            // this offsets the location where any anchor tags take you so that they aren't underneath AppBar
+             // note: this works in Chrome but not in Firefox and perhaps other browsers?
+    window.addEventListener("hashchange", function () {
+      window.scrollTo(window.scrollX, window.scrollY - 150);
+    });
+  },
   methods: {
     setStyle: function (e) {
       // ended up just using this Vuetify class I discovered instead of 'open-header' v-expansion-panel-header--active
@@ -256,7 +256,7 @@ export default {
   },
   data: () => ({
     // panel controls which sections in the list are open upon loading the page.
-    panel: [0,1,2,3,4],
+    panel: [0,],
     sectionList: [
       {
         id: "#our-alert-system",
