@@ -1,5 +1,5 @@
 <template>
-  <v-footer app absolute color="primary" style="white--text" dark>
+  <v-footer app absolute color="primary" style="white--text; position: relative" dark>
     <v-container>
       <v-row>
         <v-col cols="12" sm="6" md="2" v-for="section in sections" :key="section.title">
