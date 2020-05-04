@@ -15,7 +15,7 @@
           <v-row no-gutters class="mr-10 mb-4 mt-10">
             <v-col :sm="5">
               <!-- the hero prop doesnt seem to be working to give the 58px height so inline CSS'ed it -->
-              <Button style="height:58px;" primary hero>
+              <Button primary hero>
                 <a href="mailto: contact@covid-watch.org" >Use Our Solutions</a>
               </Button>
             </v-col>
