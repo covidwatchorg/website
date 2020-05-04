@@ -120,6 +120,11 @@ export default {
     components: {
         Newsletter
     },
+    head() {
+      return {
+        title: "Join our Team | Covid Watch"
+      };
+    },
     data: () => ({
         urgentRoles: [
             {
