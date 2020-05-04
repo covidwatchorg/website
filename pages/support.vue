@@ -61,8 +61,8 @@
             >We have been approved as a not-for-profit organization in the state of Arizona. We have submitted the required application with the IRS, and are awaiting their response and our 501(c)(3) letter. Per the IRS regulations, while this application is pending, we are allowed to operate as a 501(c)(3) charitable organization and are eligible to receive tax deductible, charitable contributions.</p>
             <p>
               <a
-                class="primary--text"
-                style="font-weight:600;text-decoration:none;"
+                class="primary--text font-weight-medium"
+                style="text-decoration:none;"
                 href="mailto: contact@covid-watch.org"
               >Contact us</a> for more information.
             </p>
