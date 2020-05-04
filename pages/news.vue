@@ -46,7 +46,7 @@
         <!-- all news cards section -->
         <v-row id="news-cards" class="mt-8">
           <!-- modularized NewsCard version -->
-          <v-col :md="4" :sm="6" :xs="8"  v-for="(card, i) in cardsToRender" :key="i">
+          <v-col :md="4" :sm="6" cols="12" v-for="(card, i) in cardsToRender" :key="i">
             <NewsCard :card="card"></NewsCard>
           </v-col>
         </v-row>
@@ -56,10 +56,10 @@
 </template>
 
 <style lang="scss">
-  #filter-container {
-    display: flex;
-    justify-content: space-around;
-  }
+#filter-container {
+  display: flex;
+  justify-content: space-around;
+}
 
 #news {
   #filters {
@@ -68,23 +68,14 @@
   }
 
   #bench-dude {
-      max-width: 380px;
+    max-width: 380px;
   }
 
-  @media (max-width:400px){
-    .news-card {
-      height: 260px;
-      min-width: 220px;
-    }
-
-    .stripe {
-      width: 220px;
-    }
-
+  @media (max-width: 400px) {
     #filter-container {
       display: block;
     }
-        #filters  {
+    #filters {
       display: block;
     }
 
@@ -93,45 +84,42 @@
     }
   }
 
-
   #hero {
     margin-top: 50px;
   }
 }
-
-
 </style>
 
 <script>
 import NewsCard from "../components/NewsCard.vue";
 import Button from "../components/Button.vue";
 import json from "../assets/medialist.json";
-import gsap from 'gsap'; //this is a javascript animation library, more info: https://www.vuemastery.com/courses/animating-vue/intro-to-GSAP-3
+import gsap from "gsap"; //this is a javascript animation library, more info: https://www.vuemastery.com/courses/animating-vue/intro-to-GSAP-3
 
 export default {
   mounted() {
-        gsap.from('.news-card' , {
-        duration: 0.5,
-        opacity: 0,
-        scale: .8,
-        x: 0,
-        ease: 'power1',
-        stagger: 0.04
-      })
+    gsap.from(".news-card", {
+      duration: 0.5,
+      opacity: 0,
+      scale: 0.8,
+      x: 0,
+      ease: "power1",
+      stagger: 0.04
+    });
   },
   components: {
     NewsCard,
     Button
   },
-  updated: function () {
-        gsap.from('.news-card' , {
-        duration: 0.2,
-        opacity: 0,
-        scale: .8,
-        x: 0,
-        ease: 'power1',
-        stagger: 0.04
-      });
+  updated: function() {
+    gsap.from(".news-card", {
+      duration: 0.2,
+      opacity: 0,
+      scale: 0.8,
+      x: 0,
+      ease: "power1",
+      stagger: 0.04
+    });
   },
   computed: {
     cardsToRender() {
@@ -140,12 +128,12 @@ export default {
       } else if (this.toShow === "mentions") {
         return this.airtableList.filter(card => card.type === "press_mention");
       } else {
-        return this.airtableList.filter(card => card.type === "press_release") ;
+        return this.airtableList.filter(card => card.type === "press_release");
       }
     }
   },
   data: () => ({
-    airtableList: json.sort((a,b) => (a.date < b.date) ? 1 : -1),
+    airtableList: json.sort((a, b) => (a.date < b.date ? 1 : -1)),
     toShow: "all"
   }),
   head() {
@@ -154,5 +142,4 @@ export default {
     };
   }
 };
-
 </script>
