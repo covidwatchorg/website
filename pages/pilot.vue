@@ -37,6 +37,7 @@
               class="shrink-on-small-screen"
               src="../assets/pilot_page/woman_target.svg"
               alt="target"
+              style="width:100%"
             />
           </v-col>
 
