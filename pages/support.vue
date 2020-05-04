@@ -3,7 +3,7 @@
     <v-row id="support">
       <v-col>
         <v-row id="hero" :class="pageSectionClass" justify="center" align="center">
-          <v-col class="hero-copy" :md="7" :sm="10" cols="12">
+          <v-col :md="7" :sm="10" cols="12">
             <h1>Support Us</h1>
 
             <div :class="largeMarginClass">
