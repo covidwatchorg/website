@@ -97,7 +97,7 @@
         padding-top: 30px;
         padding-bottom: 30px;
         border-top: 90px solid transparent;
-        margin-top: -50px;
+        margin-top: -90px;
         -webkit-background-clip: padding-box;
         -moz-background-clip: padding;
         background-clip: padding-box;
