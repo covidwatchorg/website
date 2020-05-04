@@ -233,9 +233,7 @@ export default {
   // mounted() {
   //           // this offsets the location where any anchor tags take you so that they aren't underneath AppBar
               // note: this works in Chrome but not in Firefox and perhaps other browsers?
-  //   console.log("mounted")
   //   window.addEventListener("hashchange", function () {
-  //     console.log("inside")
   //     window.scrollTo(window.scrollX, window.scrollY - 150);
   //   });
   // },
