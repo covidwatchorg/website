@@ -78,7 +78,7 @@
           justify="center"
         >
           <v-col :md="4" :sm="10" cols="12">
-            <h1 class="tangerine--text">Download the App</h1>
+            <h1 class="tangerine--text">Get the App</h1>
             <div class="mt-12">
               <a target="_blank" href="https://covidapp.typeform.com/to/kpp8Id">
                 <Button class="mt-4 mb-6">Get Early Access</Button>
@@ -114,13 +114,15 @@
       background-position-x: right;
       background-position-y: 86%;
     }
-
-    // #how-it-works {
-    //   margin-top: -200px;
-    // }
   }
 
   // these @media lines below govern the svg image in the hero.
+  @media (max-width: 500px) {
+    .news-card {
+      width: 280px;
+    }
+  }
+
 
   @media (max-width: 760px) {
     #hero {
