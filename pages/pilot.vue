@@ -1,6 +1,6 @@
 <template>
   <v-row id="pilot">
-    <v-col cols="12">
+    <v-col cols="12" >
       <!-- Hero -->
       <v-row id="hero" class="first-row pa-12">
         <v-col cols="12" :md="8" :sm="12">

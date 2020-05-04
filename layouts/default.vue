@@ -4,8 +4,8 @@
     <AppBar :navLinks="navLinks" :title="title"></AppBar>
 
     <!--Main content, pulled in by nuxt. Thanks, nuxt!-->
-    <v-content style="padding-bottom: 0px;">
-      <v-container id="main-content">
+    <v-content class="pb-0">
+      <v-container id="main-content" class="px-0">
         <!-- this transition element manages the fade in/out of each page -->
         <transition name="slide-fade" mode="out-in">
           <nuxt />

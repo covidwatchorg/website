@@ -2,7 +2,7 @@
 <!-- IMPROVEMENT: make these roles updatable via Airtable -->
   <v-container>
     <v-row id="join">
-      <v-col>
+      <v-col class="py-0 px-12">
         <v-row id="hero">
           
           <v-col class="hero-copy" :md="7" :sm="10" cols="12">
@@ -82,9 +82,9 @@
             </v-col>
         </v-row>
 
-        <Newsletter/>
       </v-col>
     </v-row>
+    <Newsletter/>
   </v-container>
 </template>
 
