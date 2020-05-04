@@ -52,7 +52,7 @@
         </v-row>
 
         <!-- Latest News -->
-        <v-row id="latest-news" :class="[pageSectionClass, largeMarginClass, flexCenterRowClass]">
+        <v-row id="latest-news" :class="[pageSectionClass, flexCenterRowClass]">
           <h2 class="pewter--text">Featured News</h2>
           <nuxt-link to="/news" class="font-weight-bold" style="text-decoration: none">
             More News &nbsp;
@@ -63,9 +63,11 @@
             />
           </nuxt-link>
 
-          <v-col :md="4" :sm="6" cols="12" v-for="(card, i) in newsCards" :key="i">
-            <NewsCard :card="card"></NewsCard>
-          </v-col>
+          <v-row>
+            <v-col :md="4" :sm="6" cols="12" v-for="(card, i) in newsCards" :key="i">
+              <NewsCard :card="card"></NewsCard>
+            </v-col>
+          </v-row>
         </v-row>
 
         <!-- Download the App -->
@@ -79,9 +81,10 @@
             <h1 class="tangerine--text">Download the App</h1>
             <div class="mt-12">
               <a target="_blank" href="https://covidapp.typeform.com/to/kpp8Id">
-                <Button class="mt-4 mb-6">Test the Beta App</Button>
+                <Button class="mt-4 mb-6">Get Early Access</Button>
               </a>
-              <Button secondary disabled>iOS Coming Soon</Button>
+              <!-- no secondary CTA for now -->
+              <!-- <Button secondary disabled>iOS Coming Soon</Button> -->
             </div>
           </v-col>
 
