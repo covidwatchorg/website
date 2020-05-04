@@ -115,7 +115,7 @@
           <v-col :md="4" :sm="10">
             <h1 class="tangerine--text">Get the App</h1>
             <div class="mt-12">
-                <a href="https://covidapp.typeform.com/to/kpp8Id">
+                <a target="_blank" href="https://covidapp.typeform.com/to/kpp8Id">
                   <Button class="mt-4 mb-6">
                     Get Early Access
                   </Button>
