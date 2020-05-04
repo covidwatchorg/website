@@ -37,12 +37,11 @@
               class="shrink-on-small-screen"
               src="../assets/pilot_page/woman_target.svg"
               alt="target"
-              style="width:100%"
             />
           </v-col>
 
           <v-col :md="9">
-            <div class="copy">
+            <div class="copy ml-4">
               <h2>Focus Resources Where They're Needed</h2>
               <p>Manual contact tracing is labor-intensive. Local public health officials need a way to focus and prioritize their efforts. With the Covid Watch app, those who have been possibly exposed to the coronavirus will receive an anonymous alert. That will be followed by instructions on how to protect themselves and their community as well as how to call local public health officials.</p>
             </div>
