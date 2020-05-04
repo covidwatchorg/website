@@ -52,7 +52,7 @@
                 class="my-2 faqCard"
               >
                   <v-expansion-panel-header @click="setStyle($event)" class="closed-header panel-header">
-                    <h3 :id="faq.questionId">{{faq.question}}</h3>
+                    <h3 class="jump-target" :id="faq.questionId"> {{faq.question}} </h3>
 
 
                     <!-- adds the svg arrow but it doesn't turn around automatically when card is expanded -->
@@ -89,8 +89,27 @@
 
 <style lang="scss">
 
-  #faq {
-    min-height: 1000px;
+    #faq {
+      min-height: 1000px;
+
+      .jump-target{
+        position: relative;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border-top: 90px solid transparent;
+        margin-top: -50px;
+        -webkit-background-clip: padding-box;
+        -moz-background-clip: padding;
+        background-clip: padding-box;
+      }
+
+      .jump-target::before {
+          content: "";
+          position: absolute;
+          top: -25px;
+          left: 0;
+          right: 0;
+      }
 
     #arrow-man {
       max-height:370px;
@@ -211,13 +230,15 @@ export default {
     Button,
     Newsletter
   },
-  mounted() {
-    // this offsets the location where any anchor tags take you so that they aren't underneath AppBar
-
-    window.addEventListener("hashchange", function () {
-      window.scrollTo(window.scrollX, window.scrollY - 150);
-    });
-  },
+  // mounted() {
+  //           // this offsets the location where any anchor tags take you so that they aren't underneath AppBar
+              // note: this works in Chrome but not in Firefox and perhaps other browsers?
+  //   console.log("mounted")
+  //   window.addEventListener("hashchange", function () {
+  //     console.log("inside")
+  //     window.scrollTo(window.scrollX, window.scrollY - 150);
+  //   });
+  // },
   methods: {
     setStyle: function (e) {
       // ended up just using this Vuetify class I discovered instead of 'open-header' v-expansion-panel-header--active

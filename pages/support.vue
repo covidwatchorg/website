@@ -10,7 +10,7 @@
 
             <div class="mt-12">
               <p class="title">We can't do this work alone.</p>
-              <p>Donate to Covid Watch to help us combat COVID-19 with technology.  Together, we have the power to stop the spread. All contributions are tax deductible</p>
+              <p>Donate to Covid Watch to help us combat COVID-19 with technology.  Together, we have the power to stop the spread. All contributions are tax deductible.</p>
             </div>
 
             <!-- inline style to be updated once we have global widths for Button component possibly -->
