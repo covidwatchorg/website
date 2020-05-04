@@ -114,6 +114,10 @@
       background-position-x: right;
       background-position-y: 86%;
     }
+
+    // #how-it-works {
+    //   margin-top: -200px;
+    // }
   }
 
   // these @media lines below govern the svg image in the hero.
@@ -147,6 +151,9 @@
       }
     }
 
+
+
+
     @media (min-width: 1760px) {
       #hero {
         height: 570px;
@@ -157,6 +164,10 @@
       #hero {
         height: 44vw;
       }
+
+      #how-it-works {
+          margin-top: -4vw;
+        }
     }
   }
 
