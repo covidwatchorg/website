@@ -30,7 +30,7 @@
                                 </div>
                             </div>
 
-                            <input type="submit" name="subscribe" id="mc-embedded-subscribe" value="Subscribe" class=" button">
+                            <input type="submit" name="subscribe" id="mc-embedded-subscribe" value="Subscribe" class="button">
                         </div>
                     </form>
                 </div>
@@ -84,7 +84,6 @@
             line-height: 22px;
             text-align: center;
             height: 47px;
-            min-width: 287px;
             margin-left: 20px;
             border-radius: 8px;
         }

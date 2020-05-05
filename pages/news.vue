@@ -22,13 +22,13 @@
                 </v-col>
 
                 <v-col :sm="8" :md="1">
-                  <Button secondary @click="toShow = 'releases'" class="filter">
+                  <Button secondary @click="toShow = 'mentions'" class="filter">
                     Mentions
                   </Button>
                 </v-col>
 
                 <v-col :sm="8" :md="1">
-                  <Button secondary @click="toShow = 'mentions'" class="filter">
+                  <Button secondary @click="toShow = 'releases'" class="filter">
                     Press Releases
                   </Button>
                 </v-col>
@@ -116,7 +116,7 @@ export default {
         scale: .8,
         x: 0,
         ease: 'power1',
-        stagger: 0.08
+        stagger: 0.04
       })
   },
   components: {
@@ -125,12 +125,12 @@ export default {
   },
   updated: function () {
         gsap.from('.news-card' , {
-        duration: 0.5,
+        duration: 0.2,
         opacity: 0,
         scale: .8,
         x: 0,
         ease: 'power1',
-        stagger: 0.08
+        stagger: 0.04
       });
   },
   computed: {
