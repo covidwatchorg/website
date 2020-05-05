@@ -23,7 +23,7 @@ def main():
 
     media_list = []
 
-    for page in airtable.get_iter(view='dont_change_this_name'):
+    for page in airtable.get_iter(view='^^dont_change_news_name'):
         for record in page:
             new_values = record['fields']
 
