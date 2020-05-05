@@ -108,6 +108,7 @@
 
 <style lang="scss">
 #home {
+  
   @media (min-width: 960px) {
     .mobile_imgs {
       background-image: url("../assets/home_page/mobile_background.svg");
