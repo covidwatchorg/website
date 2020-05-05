@@ -2,24 +2,7 @@
 <!-- IMPROVEMENT: make these roles updatable via Airtable -->
   <v-container>
     <v-row id="join">
-      <v-col class="py-0 px-12">
-        <a target="_blank" href="https://docs.google.com/forms/d/1ZKt7ewHUvDmCFHdhXOckFTjK8-ZJhIw1W94BoCLOdWA/viewform?edit_requested=true">
-            <v-hover v-slot:default="{ hover }" > 
-            <v-alert 
-                outlined 
-                dense 
-                dismissable 
-                color="info" 
-                type="info"
-                :elevation="hover ? 2 : 0"
-                :class="{ 'on-hover': hover }"
-                class="d-flex pa-2 mx-10 justify-center"
-                >
-                Have an old smartphone to donate for Covid Watch to use for testing?  Click here!
-                </v-alert>
-            </v-hover>
-        </a>
-
+      <v-col>
         <v-row id="hero">
           
           <v-col class="hero-copy" :md="7" :sm="10" cols="12">
@@ -28,7 +11,7 @@
 
             <div class="mt-12">
               <p class="title">We can't do this work alone.</p>
-              <p>We've grown from a pair of researchers from Stanford University and the University of Waterloo into an interdisciplinary team of researchers, software engineers, public health and security experts.</p>
+              <p>We've grown from a pair of researchers from Stanford University and the University of Waterloo into an interdisciplinary team of more than 400 researchers, software engineers, public health and security experts.</p>
               <p>In addition to our founders, a number of our volunteers are working full-time on the project. However, there is plenty of room to contribute as a volunteer or advisor even if you can only put in a few hours a week</p>
             </div>
 
@@ -45,7 +28,7 @@
         <v-row class="mt-12 pt-6">
           <v-col>
             <h2>Volunteer</h2>
-            <p class="mt-6">If you'd like an invitation to the 400+ person Slack group that we're using to coordinate, just send a message to <a href="mailto:contact@covid-watch.org">contact@covid-watch.org</a>. Please send a resume along with your email so we can direct you to the right place.</p>
+            <p class="mt-6">If you'd like an invitation to the 400+ person Slack group that we're using to coordinate, just send a message to contact@covid-watch.org.</p>
 
             <h4 class="mt-6 mb-4">Most Wanted Volunteers</h4>
             <ul>
@@ -58,6 +41,14 @@
             
             <ul>
                 <li v-for="(item, i) in developerRoles" :key="i">{{item.role}}</li>
+            </ul>
+
+            <h4 class="mt-6">Healthcare Professionals</h4>
+            <p>We are looking for healthcare professionals and experts to join our effort. We'd love to speak with you even if you just have a couple of hours to provide some advice.</p>
+            <p>Some of the expertise we need:</p>
+            
+            <ul>
+                <li v-for="(item, i) in medicalRoles" :key="i">{{item.role}}</li>
             </ul>
 
             <h4 class="mt-6">Other Roles</h4>
@@ -82,15 +73,6 @@
           </v-col>   
         </v-row>
 
-        <v-row class="mb-8">
-            <v-col>
-                <h3>Partner With Us</h3>
-                <p class="mt-8">From the beginning, we’ve sought to partner with those that share our values and formed coalitions around shared values. These are unprecedented times, and we believe we can overcome challenges more quickly working together. </p>
-                <p>In particular, we are looking for groups with access to technology infrastructure as well as public health departments offering or seeking solutions in the rapidly evolving world of digital public health.</p>
-                <p>If this is you, please reach out.</p>
-            </v-col>
-        </v-row>   
-
 
         <v-row class="mb-12">
             <v-col>
@@ -99,48 +81,42 @@
             </v-col>
         </v-row>
 
+        <Newsletter/>
       </v-col>
     </v-row>
-    <Newsletter/>
   </v-container>
 </template>
 
 <style lang="scss">
 #join {
-    a {
-        color: #2C58B1;
+    @media (max-width:400px) {
+        .donate-svg {
+            display: none;
+        }   
     }
 
-    .hero-copy {
-            margin-top: 50px;
+    @media (min-width:400px) {
+        .donate-svg {
+            max-height:360px;
         }
 
-        @media (max-width:400px) {
-            .donate-svg {
-                display: none;
+
+            #mc-embedded-subscribe {
+                margin-left: 0px;
+                margin-top: 6px;
+                width: 180px;
             }
-        }
-
-        @media (min-width:400px) {
-            .donate-svg {
-                max-height:360px;
-            } 
-        }
     }
-    
+}
+
 </style>
 
 <script>
 import Newsletter from "../components/Newsletter"
 
 export default {
-    components: {
+components: {
         Newsletter
-    },
-    head() {
-      return {
-        title: "Join our Team | Covid Watch"
-      };
     },
     data: () => ({
         urgentRoles: [
@@ -153,8 +129,8 @@ export default {
                 desc: "with consistent full-time or part-time availability"
             },            
             {
-                role: "Intellectual Property and Software Lawyers",
-                desc: ""
+                role: "Marketing and Communications Managers",
+                desc: "to lead aspects of marketing, media outreach, and fundraising"
             },            
         ],
         otherRoles: [
@@ -201,6 +177,29 @@ export default {
             },
             {
                 role: "Experience with cryptography"
+            },
+        ],
+        medicalRoles: [
+            {
+                role: "Public health experience, especially with contact tracing or public health research with infectious diseases"
+            },
+            {
+                role: "Deep knowledge of health systems (at federal, state, province, or county level)"
+            },
+            {
+                role: "Public health intervention research"
+            },
+            {
+                role: "Science of behavior change"
+            },
+            {
+                role: "Infectious disease"
+            },
+            {
+                role: "Digital health and designing for public health and medical decision-making"
+            },
+            {
+                role: "Experience with labs and testing"
             },
         ]
     }),

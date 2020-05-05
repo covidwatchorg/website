@@ -4,7 +4,6 @@
       <!-- First row-->
       <v-row id="header" :class="pageSectionClass">
         <v-col cols="12" :md="7" :sm="12">
-          <div class="mt-10">
             <p class="title-caps">HOW IT WORKS</p>
             <h1 class="mt-6">Our Privacy-Preserving Protocol</h1>
             <div class="mt-10">
@@ -15,7 +14,6 @@
                 private, local Bluetooth signals. Let’s find out more about how
                 it works for Sam and Jane, two users of the app:
               </p>
-            </div>
           </div>
         </v-col>
 

@@ -92,24 +92,9 @@
     #faq {
       min-height: 1000px;
 
-      // .jump-target{
-      //   position: relative;
-      //   padding-top: 30px;
-      //   padding-bottom: 30px;
-      //   border-top: 90px solid transparent;
-      //   margin-top: -90px;
-      //   -webkit-background-clip: padding-box;
-      //   -moz-background-clip: padding;
-      //   background-clip: padding-box;
-      // }
-
-      // .jump-target::before {
-      //     content: "";
-      //     position: absolute;
-      //     top: -25px;
-      //     left: 0;
-      //     right: 0;
-      // }
+      .hero-copy {
+        margin-top: 50px;
+      }
 
     #arrow-man {
       max-height:370px;
@@ -129,10 +114,6 @@
         #arrow-man {
           display: none;
       }
-    }
-
-    #hero {
-      margin-top: 50px;
     }
 
     // option: mediocre fixed left navigation section:

@@ -16,10 +16,10 @@
             </div>
             <v-row align="center" justify="space-between">
               <v-col cols="8" sm="6">
-                <Button hero>Donate</Button>
+                <Button target="_blank" :href="paypalLink" hero>Donate</Button>
               </v-col>
               <v-col cols="8" sm="6">
-                <a :href="paypalLink">
+                <a target="_blank" :href="paypalLink">
                   <v-img
                     :src="require('../assets/support_page/payment_options.svg')"
                     max-width="100%"
@@ -44,7 +44,7 @@
           </v-col>
         </v-row>
 
-        <v-row :class="[pageSectionClass, largeMarginClass]">
+        <v-row :class="pageSectionClass">
           <v-col>
             <h3>How We Use Donations</h3>
             <p

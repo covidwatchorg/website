@@ -85,11 +85,6 @@ export default {
         {
           title: "Mobile App",
           links: [
-            // commenting out for now
-            // {
-            //   title: "Download",
-            //   href: "/download"
-            // },
             {
               title: "How It Works",
               href: "/how-it-works"
@@ -113,19 +108,6 @@ export default {
             }
           ]
         },
-        // {
-        //   title: "Resources",
-        //   links: [
-        //     {
-        //       title: "Privacy Policy",
-        //       href: "/privacy-policy"
-        //     },
-        //     {
-        //       title: "Terms of Use",
-        //       href: "/terms-of-use"
-        //     }
-        //   ]
-        // },
         {
           title: "Get Involved",
           links: [
@@ -133,11 +115,6 @@ export default {
               title: "Use Our Solution",
               href: "/pilot"
             },
-            // commented out until we have a clear sense of what 'partnering' means and copy
-            // {
-            //   title: "Partner with Us",
-            //   href: "/partner"
-            // },
             {
               title: "Join Us",
               href: "/join"

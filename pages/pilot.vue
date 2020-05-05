@@ -3,7 +3,7 @@
 
     <v-col cols="12" class="py-0">
       <!-- Hero -->
-      <v-row id="hero" class="first-row pa-12">
+      <v-row id="hero" :class="pageSectionClass">
         <v-col cols="12" :md="8" :sm="12">
           <div class="mb-12">
             <h1 class="mb-5">Bring Covid Watch to Your Community</h1>
