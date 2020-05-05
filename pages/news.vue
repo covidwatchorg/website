@@ -99,12 +99,12 @@ import gsap from "gsap"; //this is a javascript animation library, more info: ht
 export default {
   mounted() {
     gsap.from(".news-card", {
-      duration: 0.5,
+      duration: 0.2,
       opacity: 0,
       scale: 0.8,
       x: 0,
       ease: "power1",
-      stagger: 0.04
+      stagger: 0.02
     });
   },
   components: {
@@ -118,7 +118,7 @@ export default {
       scale: 0.8,
       x: 0,
       ease: "power1",
-      stagger: 0.04
+      stagger: 0.02
     });
   },
   computed: {

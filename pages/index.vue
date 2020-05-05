@@ -26,7 +26,7 @@
             <v-col
               :md="3"
               :sm="8"
-              cols="12"
+              cols="10"
               v-for="(card, i) in howItWorksCards"
               :key="i"
               class="d-flex flex-column align-left"
@@ -43,12 +43,12 @@
           <h2 class="plum--text">Why Covid Watch</h2>
 
           <v-row class="justify-center">
-            <v-col :md="4" :sm="8" cols="12" v-for="(card, i) in whyCards" :key="i">
+            <v-col :md="4" :sm="8" cols="10" v-for="(card, i) in whyCards" :key="i">
               <WhyCard :img="card.img" :title="card.title" :body="card.body" max-height="200px"></WhyCard>
             </v-col>
           </v-row>
 
-          <CTA pdf content="Read the whitepaper" href="/covid_watch_whitepaper.pdf"></CTA>
+          <CTA pdf content="Read the Whitepaper" href="/covid_watch_whitepaper.pdf"></CTA>
         </v-row>
 
         <!-- Latest News -->
