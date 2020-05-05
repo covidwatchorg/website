@@ -3,8 +3,10 @@
     depressed
     block
     :color="color"
-    :class="{ hero: hero }"
+    :x-large="hero"
     :outlined="secondary"
+    :nuxt="nuxt"
+    :to="to"
     @click="$emit('click', $event)"
   >
     <slot></slot>
@@ -12,11 +14,9 @@
 </template>
 
 <style lang="scss" scoped>
-a.v-btn {
+.v-btn {
   text-transform: none;
-}
-.hero {
-  height: 58px;
+  font-weight: bold;
 }
 </style>
 
@@ -26,6 +26,8 @@ export default {
   props: {
     hero: Boolean,
     secondary: Boolean,
+    nuxt: Boolean,
+    to: String,
     color: {
       type: String,
       default: "primary"
