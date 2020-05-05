@@ -1,5 +1,6 @@
 <template>
   <v-row id="pilot">
+
     <v-col cols="12" class="py-0">
       <!-- Hero -->
       <v-row id="hero" class="first-row pa-12">
