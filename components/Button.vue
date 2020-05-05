@@ -3,7 +3,7 @@
     depressed
     block
     :color="color"
-    :class="{ hero: hero }"
+    :x-large="hero"
     :outlined="secondary"
     :nuxt="nuxt"
     :to="to"
@@ -13,12 +13,15 @@
   </v-btn>
 </template>
 
-<style lang="scss" scoped>
-a.v-btn {
+<style scoped>
+/* Not SCSS since the deep (>>>) selector doesn't seem to work in SCSS */
+.v-btn {
   text-transform: none;
+  font-weight: bold;
 }
-.hero {
-  height: 58px;
+
+.v-btn >>> a:hover {
+  color: inherit;
 }
 </style>
 
