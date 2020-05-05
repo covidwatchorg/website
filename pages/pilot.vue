@@ -15,9 +15,8 @@
 
           <v-row no-gutters class="mr-10 mb-4 mt-10">
             <v-col :sm="5">
-              <!-- the hero prop doesnt seem to be working to give the 58px height so inline CSS'ed it -->
-              <Button primary hero>
-                <a href="mailto: contact@covid-watch.org" >Use Our Solutions</a>
+              <Button target="_blank" href="https://docs.google.com/forms/d/10slgO4dkSXfN4qIAd1mXCeMmPelvp3MbTVDIzX8QAzk/edit" primary hero>
+                Use Our Solution
               </Button>
             </v-col>
           </v-row>
@@ -105,9 +104,8 @@
 
         <v-row class="mr-10 mb-4 mt-10 pb-12 d-flex justify-center">
           <v-col :sm="4">
-            <!-- the hero prop doesnt seem to be working to give the 58px height so inline CSS'ed it -->
-            <Button primary>
-              <a href="mailto: contact@covid-watch.org">Use Our Solutions</a>
+            <Button target="_blank" href="https://docs.google.com/forms/d/10slgO4dkSXfN4qIAd1mXCeMmPelvp3MbTVDIzX8QAzk/edit" primary>
+              Use Our Solution
             </Button>
           </v-col>
         </v-row>
