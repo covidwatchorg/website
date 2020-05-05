@@ -4,7 +4,7 @@ name: Airtable
 
 on:
   schedule: 
-    - cron: '0 0 1 1 *'
+    - cron: '0 */12 * * *'
 
 jobs:
   build:
@@ -17,14 +17,15 @@ jobs:
         env:
           AIRTABLE_BASE_KEY: ${{ secrets.AIRTABLE_BASE_KEY }}
           AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }} 
+        working-directory: scripts
         run: |
-          cd scripts
           pip3 install airtable-python-wrapper
           chmod +x airtable-auto.py
           ./airtable-auto.py
+          
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v2
+        uses: colbymorrison/create-pull-request@v2
         with:
-          commit-message: "auto-add new media"
-          title: "Changes by add-media github action"
-          body: "Automated changes"
+          commit-message: "auto-add new news"
+          title: "Airtable GitHub action -- Update News"
+          body: "New News from Airtable"
