@@ -3,26 +3,18 @@
     <v-row id="home">
       <v-col>
         <v-row id="hero">
-          <v-col :sm="8" :xs="12" class="px-10 hero-copy">
-            <h1>Together, we have the power to stop the spread of COVID-19</h1>
+          <v-col :md="7" :sm="8" cols="12">
+            <h1>Together, we have the power to stop COVID-19.</h1>
 
             <p class="subtitle">
-              Protect the health for your family and community while
-              preserving your privacy through mobile alerts.
+              Protect yourself, your family and your community with
+              anonymous mobile alerts.
             </p>
 
             <v-row no-gutters class="ctas mb-4 mt-10 d-flex flex-wrap">
               <v-col class="mr-6" cols="12" :sm="8" :md="3">
                 <Button primary hero nuxt to="/pilot" class="mt-4">Start a Pilot</Button>
               </v-col>
-              <!-- <v-spacer></v-spacer> -->
-              <v-col :xs="10">
-                <!-- no secondary CTA for now, per Grant's instruction -->
-                <!-- <Button secondary hero nuxt to="/about" class="mt-4">ma
-                    Download App
-                </Button>-->
-              </v-col>
-              <v-spacer></v-spacer>
             </v-row>
           </v-col>
         </v-row>
@@ -34,17 +26,12 @@
             <v-col
               :md="3"
               :sm="8"
-              cols="12"
+              cols="10"
               v-for="(card, i) in howItWorksCards"
               :key="i"
               class="d-flex flex-column align-left"
             >
-              <WhyCard
-                :img="card.img"
-                :title="card.title"
-                :body="card.body"
-                aspect-ratio="1"
-              ></WhyCard>
+              <WhyCard :img="card.img" :title="card.title" :body="card.body" aspect-ratio="1"></WhyCard>
             </v-col>
           </v-row>
 
@@ -56,86 +43,62 @@
           <h2 class="plum--text">Why Covid Watch</h2>
 
           <v-row class="justify-center">
-            <v-col
-              :md="4"
-              :sm="8"
-              cols="12"
-              v-for="(card, i) in whyCards"
-              :key="i"
-            >
-              <WhyCard
-                :img="card.img"
-                :title="card.title"
-                :body="card.body"
-                max-height="200px"
-              ></WhyCard>
+            <v-col :md="4" :sm="8" cols="10" v-for="(card, i) in whyCards" :key="i">
+              <WhyCard :img="card.img" :title="card.title" :body="card.body" max-height="200px"></WhyCard>
             </v-col>
           </v-row>
 
-          <CTA
-            pdf
-            content="Read the whitepaper"
-            href="/covid_watch_whitepaper.pdf"
-          ></CTA>
+          <CTA pdf content="Read the Whitepaper" href="/covid_watch_whitepaper.pdf"></CTA>
         </v-row>
 
         <!-- Latest News -->
-        <v-row id="latest-news">
-          <v-col>
-            <v-row :class="[pageSectionClass, largeMarginClass, flexCenterRowClass]">
-              <h2 class="pewter--text">Latest News</h2>
+        <v-row id="latest-news" :class="[pageSectionClass, flexCenterRowClass]">
+          <h2 class="pewter--text">Featured News</h2>
+          <nuxt-link to="/news" class="font-weight-bold" style="text-decoration: none">
+            More News &nbsp;
+            <img
+              style="height: 10px;"
+              src="../assets/home_page/arrow_icon.svg"
+              alt="arrow"
+            />
+          </nuxt-link>
 
-              <nuxt-link
-                to="/news"
-                style="
-                  text-decoration: none;
-                  font-weight: 600;
-                  font-style: normal;
-                "
-              >
-                More News &nbsp;
-                <img
-                  style="height: 10px;"
-                  src="../assets/home_page/arrow_icon.svg"
-                  alt="arrow"
-                />
-              </nuxt-link>
-
-              <v-row class="my-8">
-                <v-col :md="4" :sm="6" v-for="(card, i) in newsCards" :key="i">
-                  <NewsCard :card="card"></NewsCard>
-                </v-col>
-              </v-row>
-            </v-row>
-          </v-col>
+          <v-row>
+            <v-col :md="4" :sm="6" cols="12" v-for="(card, i) in newsCards" :key="i">
+              <NewsCard :card="card"></NewsCard>
+            </v-col>
+          </v-row>
         </v-row>
 
         <!-- Download the App -->
-        <v-row id="download-app" class="mobile_imgs" :class="[pageSectionClass, largeMarginClass]">
-          <v-col :md="4" :sm="10">
+        <v-row
+          id="download-app"
+          class="mobile_imgs"
+          :class="[pageSectionClass, largeMarginClass]"
+          justify="center"
+        >
+          <v-col :md="4" :sm="10" cols="12">
             <h1 class="tangerine--text">Get the App</h1>
             <div class="mt-12">
-                <a target="_blank" href="https://covidapp.typeform.com/to/kpp8Id">
-                  <Button class="mt-4 mb-6">
-                    Get Early Access
-                  </Button>
-                </a>
-              <!-- if we ever want a secondary CTA -->
-              <!-- <Button secondary>iOS Coming Soon</Button> -->
+              <a target="_blank" href="https://covidapp.typeform.com/to/kpp8Id">
+                <Button class="mt-4 mb-6">Get Early Access</Button>
+              </a>
+              <!-- no secondary CTA for now -->
+              <!-- <Button secondary disabled>iOS Coming Soon</Button> -->
             </div>
           </v-col>
 
           <v-spacer />
 
           <v-col
-            class="mx-4"
+            class="mx-md-4"
             v-for="(img, i) in mobileImages"
             :key="i"
-            cols="12"
             :md="2"
-            :sm="5"
+            :sm="4"
+            cols="auto"
           >
-            <img :src="img" alt="mobile" />
+            <img :src="img" />
           </v-col>
         </v-row>
       </v-col>
@@ -153,24 +116,14 @@
       background-position-y: 86%;
     }
   }
-  @media (max-width: 400px) {
-    // hacky way to get whitepaper button to not take up margin on right of screen
-    .cta-whitepaper {
-      display: flex;
-      justify-content: flex-start;
-      width: 160px;
-    }
-  }
-
-  @media (min-width: 400px) {
-    // hacky way to get whitepaper button to center
-    .cta-whitepaper {
-      display: flex;
-      justify-content: center;
-    }
-  }
 
   // these @media lines below govern the svg image in the hero.
+  @media (max-width: 500px) {
+    .news-card {
+      width: 280px;
+    }
+  }
+
 
   @media (max-width: 760px) {
     #hero {
@@ -201,6 +154,9 @@
       }
     }
 
+
+
+
     @media (min-width: 1760px) {
       #hero {
         height: 570px;
@@ -211,6 +167,10 @@
       #hero {
         height: 44vw;
       }
+
+      #how-it-works {
+          margin-top: -4vw;
+        }
     }
   }
 
@@ -228,18 +188,6 @@
   .why-background {
     max-height: 420px;
     max-width: 1240px;
-  }
-
-  .hero-copy {
-    margin-top: 50px;
-
-    @media #{map-get($display-breakpoints, 'sm-only')} {
-      margin-top: 20px;
-    }
-
-    @media #{map-get($display-breakpoints, 'xs-only')} {
-      margin-top: 0px;
-    }
   }
 
   #latest-news {
@@ -270,27 +218,27 @@ export default {
   data: () => ({
     howItWorksCards: [
       {
-        title: "Privacy First",
+        title: "Always Anonymous",
         body:
-          "Sam and Jane’s interaction is logged on their phones anonymously.",
+          "While Sam and Jane chat, their phones note each others’ anonymous signals and list them securely.",
         img: require("../assets/home_page/how_it_works_1.svg")
       },
       {
         title: "Diagnosis Reports",
         body:
-          "Sam later tests postive for COVID-19 and he enters his results into the secure Covid Watch system.",
+          "A few days later, Sam tests positive for COVID-19. He enters the verified results into the Covid Watch app.",
         img: require("../assets/home_page/how_it_works_2.svg")
       },
       {
-        title: "Contact Alerts",
+        title: "Exposure Alerts",
         body:
-          "Jane’s phone gets a notification that a recent contact has tested positive for COVID-19.",
+          "Jane’s phone gets an alert that someone she’s seen has now tested positive. The app tells her how to take action.",
         img: require("../assets/home_page/how_it_works_3.svg")
       },
       {
-        title: "Community Safety",
+        title: "Safe Communities",
         body:
-          "Jane and Sam helped keep their communities safe. They share the app so that others can, too.",
+          "Jane and Sam help keep their communities safe, indoors. They share the app so that others can, too.",
         img: require("../assets/home_page/how_it_works_4.svg")
       }
     ],
@@ -298,19 +246,19 @@ export default {
       {
         title: "No tracking, ever",
         body:
-          "No personal information is shared. No GPS locations are stored. Bluetooth signals anonymously log when you've been near another phone with Covid Watch installed.",
+          "No personal information is shared. No GPS locations are stored. Bluetooth signals send out random numbers that are later used to send exposure alerts, anonymously.",
         img: require("../assets/home_page/why_covid_watch_1.svg")
       },
       {
-        title: "Easier than staying home",
+        title: "Back to life, safely",
         body:
-          "You can leave your home and help keep your community healthy just by installing the app. You don't even need to keep the app open for it to protect you.",
+          "Even if you leave your home, you can help keep yourself and your community safe by using Covid Watch. You don't even need to open the app again for it to protect you.",
         img: require("../assets/home_page/why_covid_watch_2.svg")
       },
       {
-        title: "Share with each other",
+        title: "Peace of mind, together",
         body:
-          "Trust comes when we work together. Covid Watch is a non-profit on a mission to protect your health and privacy, not big tech or government.",
+          "Trust comes when we work together. Covid Watch is a nonprofit on a mission to protect your health and privacy, not big tech or government.",
         img: require("../assets/home_page/why_covid_watch_3.svg")
       }
     ],
