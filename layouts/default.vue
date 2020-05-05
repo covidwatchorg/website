@@ -25,8 +25,7 @@
   padding-right: 10px;
 
   &#main-content {
-    padding-top: 0px;
-    padding-bottom: 0px;
+    padding: 0px;
 
     div.container:first-of-type {
       padding-top: 0px;
