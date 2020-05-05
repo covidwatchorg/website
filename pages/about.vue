@@ -193,6 +193,7 @@
 
         <v-row class="d-md-flex justify-space-evenly no-gutters align-center">
           <v-col
+            class="mt-6 mt-sm-0"
             cols="12"
             :sm="4"
             v-for="(collab, i) in collaborator_projects"
@@ -276,6 +277,11 @@
 }
 .waterloo-img {
   margin-left: -40px;
+  max-width: 260px;
+}
+
+.stanford-img {
+   max-width: 260px;
 }
 
 </style>
