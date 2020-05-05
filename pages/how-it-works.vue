@@ -128,7 +128,7 @@
       <v-row class="d-block" :class="pageSectionClass" justify="center">
         <v-col cols="12">
           <h2 class="text-center">
-            &nbsp&nbspWant to Know More?
+            &nbsp;&nbsp;Want to Know More?
             <nuxt-link to="/faq">
               visit our FAQ
               <img
@@ -137,7 +137,7 @@
                 alt="arrow"
               />
             </nuxt-link>
-            &nbsp&nbsp
+            &nbsp;&nbsp;
           </h2>
         </v-col>
       </v-row>
