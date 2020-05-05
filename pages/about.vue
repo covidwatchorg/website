@@ -2,31 +2,31 @@
   <v-container grid-list-xs>
     <v-row id="about">
       <!-- First row-->
-      <v-row id="header" class="first-row mb-10 pa-12">
-        <v-col cols="12" :md="7" :sm="12">
+      <v-row id="header" class="first-row" :class="pageSectionClass">
+        <v-col cols="12" :md="7">
           <div class="mb-12">
             <h1 class="mb-5">About Us</h1>
             <div class="subtitle">
               <p>
-                Covid Watch is a
-                <b>nonprofit</b>, global effort to give you the power to reduce the spread of COVID-19 in the palm of your hand.
+                Covid Watch puts the power to stop COVID-19 in the palm of your
+                hand.
               </p>
               <p>
-                We build and foster the adoption of decentralized technology that preserves your right to
-                <b>privacy</b> while
-                <b>protecting</b> your community.
+                We build and foster decentralized technology that allows you to
+                send anonymous exposure alerts to protect your community without
+                sharing any personal information.
               </p>
               <p>
-                We want to speed our return to a world where we can be
-                <b>together</b> again, safely and securely.
+                Our open source, international nonprofit wants to help the world
+                return to normal, so we can be together again, freely, safely
+                and securely.
               </p>
             </div>
           </div>
 
           <v-row no-gutters class="mr-10 mt-10">
             <v-col cols="10" class="mt-12 mb-10 mb-md-0" :sm="8" :md="5">
-              <!-- /partner doesnt exist yet -->
-              <Button primary hero nuxt to="/partner">Use Our Solution</Button>
+              <Button primary hero nuxt to="/pilot">Use Our Solutions</Button>
             </v-col>
             <v-spacer />
 
@@ -44,33 +44,36 @@
       </v-row>
 
       <!-- We value row -->
-      <v-row class="mb-10 pa-12" id="we-value">
+      <v-row :class="pageSectionClass" id="we-value">
         <h2>We Value</h2>
 
         <v-row>
           <v-col
-            cols="10"
+            cols="12"
             :md="4"
-            :sm="10"
             v-for="(card, i) in valueCards"
             :key="i"
             class="d-flex flex-column align-left"
           >
             <img class="we_value_img" :src="card.img" :alt="card.title" />
-            <h3 class="mt-10">{{card.title}}</h3>
-            <div class="mt-5">{{card.body}}</div>
+            <h3 class="mt-10">{{ card.title }}</h3>
+            <div class="mt-5">{{ card.body }}</div>
           </v-col>
         </v-row>
 
         <v-row class="mt-8">
-          <CTA pdf content="Read the whitepaper" href="/covid_watch_whitepaper.pdf"></CTA>
+          <CTA
+            pdf
+            content="Read the whitepaper"
+            href="/covid_watch_whitepaper.pdf"
+          ></CTA>
         </v-row>
       </v-row>
 
       <!-- join us row -->
-      <v-row class="join-us mb-10 pa-12" id="join-us">
+      <v-row class="join-us" :class="pageSectionClass" id="join-us">
         <v-row class="mb-3">
-          <v-col cols="10" :md="2" :sm="10">
+          <v-col cols="10" :md="2">
             <h2>Join Us</h2>
           </v-col>
 
@@ -90,65 +93,77 @@
             v-for="(cta, i) in callsToAction"
             :key="i"
           >
-            <!-- these should probably link to different places -->
             <div class="mb-4">
-              <Button v-if="cta.link" secondary nuxt :to="cta.link">{{ cta.button_text }}</Button>
+              <Button v-if="cta.link" secondary nuxt :to="cta.link">{{
+                cta.button_text
+              }}</Button>
               <Button v-if="!cta.link" secondary>
                 <a
-                  style="text-transform:none;"
                   href="mailto:contact@covid-watch.org"
-                >{{ cta.button_text }}</a>
+                  >{{ cta.button_text }}</a
+                >
               </Button>
             </div>
 
-            <div>{{cta.cta_text}}</div>
+            <div>{{ cta.cta_text }}</div>
           </v-col>
         </v-row>
       </v-row>
 
       <!-- team row-->
-      <v-row class="mb-5 pa-12" id="our-team">
-        <v-col cols="10" :md="12" :sm="10">
+      <v-row :class="pageSectionClass" id="our-team">
+        <v-col cols="11">
           <div class="mb-5">
-            <h2>Our Team</h2>
+            <h2>Team</h2>
           </div>
-          <p
-            class="subtitle"
-          >Covid Watch is a group of more than 400 volunteers from around the world. We are scientific researchers, privacy and public health experts, journalists, developers, and designers.</p>
+          <p class="subtitle">
+            Covid Watch is a group of more than 400 volunteers from around the
+            world. Our team includes experts in privacy and public health,
+            technologists, developers, writers and designers.
+          </p>
         </v-col>
 
-        <template v-for="(founder,n) in founders">
+        <template v-for="(founder, n) in founders">
           <v-col :key="n">
             <v-row>
               <v-col :md="5">
                 <img class="mr-5" :src="founder.image" />
               </v-col>
-              <v-col cols="10" :md="7" :sm="10">
-                <div class="title">{{founder.name}}</div>
+              <v-col cols="12" :md="7">
+                <div class="title">{{ founder.name }}</div>
                 <div class="subtitle">
-                  <i>{{founder.title}}</i>
+                  <i>{{ founder.title }}</i>
                 </div>
-                <img src="../assets/about_us/top-accent.svg" />
-                <div class="founder-bio">
-                  <p>{{founder.bio}}</p>
+                <img
+                  class="founder_img"
+                  src="../assets/about_us/top-accent.svg"
+                />
+                <div>
+                  {{ founder.bio }}
                 </div>
               </v-col>
             </v-row>
           </v-col>
-          <v-responsive v-if="n+1 === 2" :key="`width-${n}`" width="100%"></v-responsive>
+          <v-responsive
+            v-if="n + 1 === 2"
+            :key="`width-${n}`"
+            width="1000%"
+          ></v-responsive>
         </template>
       </v-row>
 
       <!-- academic partners row-->
-      <v-row class="pa-12" id="academic-partners">
+      <v-row :class="pageSectionClass" id="academic-partners">
         <v-col class="mb-10" :md="3" :sm="8">
           <h3 class="pt-5">Academic Partners</h3>
         </v-col>
 
-        <div class="d-md-flex justify-md-space-between align-center">
-          <v-col :md="3" :sm="6">
+        <v-row justify="space-around" align="center">
+          <v-col :md="4" :sm="6">
             <a href="https://www.stanford.edu/">
-              <img
+              <v-img
+                max-width="100%"
+                class="stanford-img"
                 :src="stanford.src"
                 @mouseover="stanford.src = stanford.color"
                 @mouseleave="stanford.src = stanford.grey"
@@ -156,9 +171,10 @@
             </a>
           </v-col>
 
-          <v-col :md="3" :sm="6">
+          <v-col :md="4" :sm="6">
             <a href="https://uwaterloo.ca/">
-              <img
+              <v-img
+                max-width="100%"
                 class="waterloo-img"
                 :src="waterloo.src"
                 @mouseover="waterloo.src = waterloo.color"
@@ -166,64 +182,78 @@
               />
             </a>
           </v-col>
-        </div>
+        </v-row>
       </v-row>
 
       <!-- colabs row-->
-      <v-row class="pa-12" id="collaborator-projects">
+      <v-row :class="pageSectionClass" id="collaborator-projects">
         <v-col class="mb-10" :md="3" :sm="8">
           <h3 class="pt-6">Collaborator Partners</h3>
         </v-col>
 
-        <div class="d-md-flex justify-md-space-between align-center">
+        <v-row class="d-md-flex justify-space-evenly no-gutters align-center">
           <v-col
-            :md="2"
-            :sm="6"
+            class="mt-6 mt-sm-0"
+            cols="12"
+            :sm="4"
             v-for="(collab, i) in collaborator_projects"
             :key="i"
             @mouseover="collab.src = collab.color"
             @mouseleave="collab.src = collab.grey"
+            :id="collab.id"
           >
-            <a :href="collab.url">
+            <a :href="collab.url" class="d-flex flex-column align-center">
               <img class="collab-img" :src="collab.src" />
-              <div class="caption d-flex justify-start collab-name">
-                <div style="font-size:16px;">{{ collab.name }}</div>
-              </div>
+                <div style="font-size: 16px;">{{ collab.name }}</div>
             </a>
           </v-col>
-        </div>
+        </v-row>
       </v-row>
     </v-row>
   </v-container>
 </template>
 
 <style lang="scss">
-@media (max-width: 400px){
-  .we_value_img{
-     max-width: 260px;
+  #safe-paths {
+        div {
+      text-align: center;
+    }
   }
-}
+
+  #tcn-coalition {
+    img {
+      margin-left: 80px;
+    }
+
+    div {
+      text-align: center;
+      margin-left: 80px;
+    }
+  }
 
 
-@media (max-width: 1000px) {
-  .earth_img {
-    display: none;
+  @media (max-width: 400px) {
+    .we_value_img {
+      max-width: 260px;
+    }
   }
-}
 
-@media (max-width: 950px) {
-  .biking {
-    display: none;
+  @media (max-width: 950px) {
+    .earth_img {
+      display: none;
+    }
+
+    .biking {
+      display: none;
+    }
   }
+
+.founder_img {
+  max-width: 100%;
 }
 
 .we_value_img {
   min-height: 263px;
-}
-
-.cta-container {
-  display: flex;
-  justify-content: left;
 }
 
 .first-row {
@@ -247,7 +277,13 @@
 }
 .waterloo-img {
   margin-left: -40px;
+  max-width: 260px;
 }
+
+.stanford-img {
+   max-width: 260px;
+}
+
 </style>
 
 <script>
@@ -276,7 +312,7 @@ export default {
         link: "/pilot"
       },
       {
-        button_text: "Email Us",
+        button_text: "Partner With Us",
         cta_text:
           "We are working with partners that share our commitment to health and human rights. If your organization has tools to help stop the spread or expertise, let’s work together.",
         link: ""
@@ -284,19 +320,19 @@ export default {
     ],
     valueCards: [
       {
-        title: "Healthy Communities",
+        title: "Health",
         body:
-          "Technology should be a tool to keep those around us healthy. Global pandemics threaten our health and economy. We make tools that will allow us to take back control of our lives, safely and efficiently.",
+          "Technology should be a tool to keep those around us safe. Global pandemics threaten our health and economy. We make tools that will allow us to take back control of our lives, safely and efficiently.",
         img: require("../assets/about_us/woman-exercising.svg")
       },
       {
-        title: "Privacy Preservation",
+        title: "Privacy",
         body:
-          "Each person should control information about their health, even when our health impacts those around us. Covid Watch does not collect any personal information. We protect data and privacy while protecting public health.",
+          "Each person should control information about their health, even when our health impacts those around us. Covid Watch does not collect any personal information. We protect data and privacy while protecting communities.",
         img: require("../assets/about_us/woman-medical-advice.svg")
       },
       {
-        title: "Cooperation on COVID",
+        title: "Cooperation",
         body:
           "We are setting precedents  in real time, giving individuals and communities the power to confront this global challenge. We work closely with public health officials and organizations that share our values.",
         img: require("../assets/about_us/woman-social-network.svg")
@@ -322,7 +358,7 @@ export default {
         name: "Rhys Fenwick",
         title: "Head of Communications",
         bio:
-          "Rhys is a science communicator from the University of Wollongong, Australia with a background in medical biotechnology and software development."
+          "Rhys is a science communicator from Australia with a background in biotechnology and software development. His main area of focus is communicating emerging technologies to broad audiences."
       },
       {
         image: require("../assets/about_us/zsombor-photo.svg"),
@@ -346,27 +382,28 @@ export default {
     },
     collaborator_projects: [
       {
+        id: "coepi",
         url: "https://www.coepi.org/",
         grey: require("../assets/about_us/logo-coepi-gray.svg"),
         color: require("../assets/about_us/logo-coepi.svg"),
         src: require("../assets/about_us/logo-coepi-gray.svg"),
-        name: "Community Epidemiology in Action",
-        href: "https://www.coepi.org/"
+        name: "CoEpi"
       },
       {
-        url: "http://safepaths.mit.edu/",
+        id: "safe-paths",
+        url: "https://covidsafepaths.org/",
         grey: require("../assets/about_us/logo-privacykit-gray.svg"),
         color: require("../assets/about_us/logo-privacykit.svg"),
         src: require("../assets/about_us/logo-privacykit-gray.svg"),
-        name: "PrivateKit: SafePaths",
-        href: "http://safepaths.mit.edu/"
+        name: "Covid SafePaths"
       },
       {
+        id: "tcn-coalition",
         url: "https://tcn-coalition.org/",
         grey: require("../assets/about_us/logo-TCN-coalition-gray.svg"),
         color: require("../assets/about_us/logo-TCN-coalition.svg"),
         src: require("../assets/about_us/logo-TCN-coalition-gray.svg"),
-        name: "TCN Coalition"
+        name: "Founding Member"
       }
     ],
     title: "About Us | Covid Watch"
