@@ -1,13 +1,13 @@
 <template>
   <v-container>
-    <v-row id="news">
+    <v-row id="news" :class="pageSectionClass">
       <v-col>
-        <v-row id="hero">
+        <v-row id="hero" >
           <v-col :md="7" :sm="12" cols="12">
             <h1>News and Media</h1>
             <div
               id="filters"
-              class="mt-10"
+              class="mt-10" 
               style="max-width:500px;"
             >
               <v-col :sm="8" :md="1">
@@ -84,9 +84,6 @@
     }
   }
 
-  #hero {
-    margin-top: 50px;
-  }
 }
 </style>
 

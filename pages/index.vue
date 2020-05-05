@@ -81,7 +81,7 @@
             <h1 class="tangerine--text">Get the App</h1>
             <div class="mt-12">
               <a target="_blank" href="https://covidapp.typeform.com/to/kpp8Id">
-                <Button class="mt-4 mb-6">Get Early Access</Button>
+                <Button hero class="mt-4 mb-6">Get Early Access</Button>
               </a>
               <!-- no secondary CTA for now -->
               <!-- <Button secondary disabled>iOS Coming Soon</Button> -->

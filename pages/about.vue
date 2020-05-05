@@ -62,11 +62,7 @@
         </v-row>
 
         <v-row class="mt-8">
-          <CTA
-            pdf
-            content="Read the whitepaper"
-            href="/covid_watch_whitepaper.pdf"
-          ></CTA>
+          <CTA pdf content="Read the Whitepaper" href="/covid_watch_whitepaper.pdf"></CTA>
         </v-row>
       </v-row>
 

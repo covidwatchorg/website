@@ -7,6 +7,7 @@
     :outlined="secondary"
     :nuxt="nuxt"
     :to="to"
+    :href="href"
     @click="$emit('click', $event)"
   >
     <slot></slot>
@@ -29,6 +30,7 @@
 export default {
   name: "Button",
   props: {
+    href: String,
     hero: Boolean,
     secondary: Boolean,
     nuxt: Boolean,

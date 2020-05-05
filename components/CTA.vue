@@ -16,7 +16,7 @@
           alt="pdf"
         />
         <!-- <a> tag if it's a pdf -->
-        <a :href="href" v-if="pdf" style="text-transform:none;">{{content}}</a>
+        <a target="_blank" :href="href" v-if="pdf" style="text-transform:none;">{{content}}</a>
         <!-- else just display name of button normally -->
         <div v-else>{{content}}</div>
       </Button>
