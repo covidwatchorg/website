@@ -285,13 +285,13 @@ export default {
       },
       {
         type: "press_mention",
-        date: "March 29, 2020",
+        date: "May 5, 2020",
         title:
-          "One of the victims of the COVID-19 pandemic may be citizen privacy rights",
+          "Here come COVID-19 tracing apps - and privacy trade-offs",
         url:
-          "https://www.japantimes.co.jp/news/2020/03/29/world/coronavirus-pandemic-privacy-rights/#.XqoOAZNKgUG",
-        author_name: "Rob Lever",
-        outlet_name: "Japan Times"
+          "https://apnews.com/15c028c48502db395681ebca0099de5a",
+        author_name: "",
+        outlet_name: "Associated Press (AP)"
       }
     ],
     mobileImages: [
