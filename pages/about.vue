@@ -284,7 +284,7 @@ export default {
         link: "/pilot"
       },
       {
-        button_text: "PARTNER WITH US",
+        button_text: "Partner with Us",
         cta_text:
           "We are working with partners that share our commitment to health and human rights. If your organization has tools to help stop the spread or expertise, let’s work together.",
         link: ""
