@@ -11,7 +11,7 @@
                 Covid Watch uses the international, open source
                 <a href="https://tcn-coalition.org/"> TCN Protocol </a> first
                 developed in our community to send anonymous exposure alerts via
-                private, local Bluetooth signals. Let’s find out more about how
+                private, local Bluetooth Signals. Let’s find out more about how
                 it works for Sam and Jane, two users of the app:
               </p>
           </div>
@@ -30,7 +30,7 @@
         <Step
           :img_num="require('../assets/how_it_works/num-1.svg')"
           :img_step="require('../assets/how_it_works/step-1.svg')"
-          title="Bluetooth signals"
+          title="Bluetooth Signals"
           text="After Jane installs Covid Watch, her phone begins to send out signals over Bluetooth that carry random, anonymous numbers. Her phone also looks for signals sent by other phones nearby. Bluetooth works only across short distances."
         ></Step>
 
@@ -67,7 +67,7 @@
             :img_num="require('../assets/how_it_works/num-5.svg')"
             :img_step="require('../assets/how_it_works/num-5-img.svg')"
             title="Voluntary Reports"
-            text="A few days later, Sam tests positive for COVID-19. Sam chooses to report his diagnosis using a verification code in the app. When he does, his list of random numbers is sent to other Covid Watch users."
+            text="A few days later, Sam tests positive for COVID-19. He chooses to report the diagnosis using a verification code in the app. When he does, his list of random numbers is sent to other Covid Watch users."
           ></Step>
 
           <!-- Step 6 -->
@@ -77,7 +77,7 @@
               :img_num="require('../assets/how_it_works/num-6.svg')"
               :img_step="require('../assets/how_it_works/num-6-img.svg')"
               title="Exposure Alerts"
-              text="On Jane’s phone, the Covid Watch app compares her list against the numbers of those who have tested positive for COVID-19. When Sam shares his result, Jane alert that she may have been exposed to the coronavirus."
+              text="On Jane’s phone, the Covid Watch app compares her list against the numbers of those who have tested positive for COVID-19. When Sam shares his result, Jane receives an alert that she may have been exposed to the coronavirus."
             ></Step>
 
             <!-- Step7 -->
@@ -85,7 +85,7 @@
               :img_num="require('../assets/how_it_works/num-7.svg')"
               :img_step="require('../assets/how_it_works/num-7-img.svg')"
               title="A Call to Action"
-              text="Jane's phone downloads and checks the numbers from COVID-19 positive users. Jane's phone recognizes a number, and she receives an alert that she may have been exposed to COVID-19."
+              text="The alert tells Jane what day she was exposed and what she should do to protect people in her community. With the app, she is empowered to act quickly."
             ></Step>
 
             <!-- Step 8 -->
