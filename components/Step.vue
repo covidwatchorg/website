@@ -2,12 +2,12 @@
     <div>
         <v-row 
             v-if="$vuetify.breakpoint.smAndDown"
-            class="py-5 px-12 d-flex align-end step-container"
+            class="pa-4 pa-sm-12 d-flex align-end step-container"
             > 
-            <v-col cols="10">
+            <v-col cols="12">
                 <img class="step_img" :src="img_step">
             </v-col>
-            <v-col cols="11" >
+            <v-col cols="12" >
                 <img :src="img_num">
                 <h3 class="mb-4"> {{ title }} </h3>
                 <p class="mb-5">
