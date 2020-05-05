@@ -13,13 +13,16 @@
   </v-btn>
 </template>
 
-<style lang="scss" scoped>
+<style scoped>
+/* Not SCSS since the deep (>>>) selector doesn't seem to work in SCSS */
 .v-btn {
   text-transform: none;
   font-weight: bold;
 }
 
-
+.v-btn >>> a:hover {
+  color: inherit;
+}
 </style>
 
 <script>
