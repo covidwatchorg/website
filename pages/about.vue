@@ -100,7 +100,6 @@
               }}</Button>
               <Button v-if="!cta.link" secondary>
                 <a
-                  style="text-transform: none;"
                   href="mailto:contact@covid-watch.org"
                   >{{ cta.button_text }}</a
                 >
@@ -160,10 +159,12 @@
           <h3 class="pt-5">Academic Partners</h3>
         </v-col>
 
-        <div class="d-md-flex justify-md-space-between align-center">
-          <v-col :md="3" :sm="6">
+        <v-row justify="space-around" align="center">
+          <v-col :md="4" :sm="6">
             <a href="https://www.stanford.edu/">
-              <img
+              <v-img
+                max-width="100%"
+                class="stanford-img"
                 :src="stanford.src"
                 @mouseover="stanford.src = stanford.color"
                 @mouseleave="stanford.src = stanford.grey"
@@ -171,9 +172,10 @@
             </a>
           </v-col>
 
-          <v-col :md="3" :sm="6">
+          <v-col :md="4" :sm="6">
             <a href="https://uwaterloo.ca/">
-              <img
+              <v-img
+                max-width="100%"
                 class="waterloo-img"
                 :src="waterloo.src"
                 @mouseover="waterloo.src = waterloo.color"
@@ -181,7 +183,7 @@
               />
             </a>
           </v-col>
-        </div>
+        </v-row>
       </v-row>
 
       <!-- colabs row-->
@@ -190,43 +192,61 @@
           <h3 class="pt-6">Collaborator Partners</h3>
         </v-col>
 
-        <div class="d-md-flex justify-md-space-between align-center">
+        <v-row class="d-md-flex justify-space-evenly no-gutters align-center">
           <v-col
-            cols="6"
+            cols="12"
+            :sm="4"
             v-for="(collab, i) in collaborator_projects"
             :key="i"
             @mouseover="collab.src = collab.color"
             @mouseleave="collab.src = collab.grey"
+            :id="collab.id"
           >
-            <a :href="collab.url">
+            <a :href="collab.url" class="d-flex flex-column align-center">
               <img class="collab-img" :src="collab.src" />
-              <div class="caption d-flex justify-start">
                 <div style="font-size: 16px;">{{ collab.name }}</div>
-              </div>
             </a>
           </v-col>
-        </div>
+        </v-row>
       </v-row>
     </v-row>
   </v-container>
 </template>
 
 <style lang="scss">
-@media (max-width: 400px) {
-  .we_value_img {
-    max-width: 260px;
-  }
-}
-
-@media (max-width: 950px) {
-  .earth_img {
-    display: none;
+  #safe-paths {
+        div {
+      text-align: center;
+    }
   }
 
-  .biking {
-    display: none;
+  #tcn-coalition {
+    img {
+      margin-left: 80px;
+    }
+
+    div {
+      text-align: center;
+      margin-left: 80px;
+    }
   }
-}
+
+
+  @media (max-width: 400px) {
+    .we_value_img {
+      max-width: 260px;
+    }
+  }
+
+  @media (max-width: 950px) {
+    .earth_img {
+      display: none;
+    }
+
+    .biking {
+      display: none;
+    }
+  }
 
 .founder_img {
   max-width: 100%;
@@ -258,6 +278,7 @@
 .waterloo-img {
   margin-left: -40px;
 }
+
 </style>
 
 <script>
@@ -286,7 +307,7 @@ export default {
         link: "/pilot"
       },
       {
-        button_text: "PARTNER WITH US",
+        button_text: "Partner With Us",
         cta_text:
           "We are working with partners that share our commitment to health and human rights. If your organization has tools to help stop the spread or expertise, let’s work together.",
         link: ""
@@ -356,6 +377,7 @@ export default {
     },
     collaborator_projects: [
       {
+        id: "coepi",
         url: "https://www.coepi.org/",
         grey: require("../assets/about_us/logo-coepi-gray.svg"),
         color: require("../assets/about_us/logo-coepi.svg"),
@@ -363,6 +385,7 @@ export default {
         name: "CoEpi"
       },
       {
+        id: "safe-paths",
         url: "https://covidsafepaths.org/",
         grey: require("../assets/about_us/logo-privacykit-gray.svg"),
         color: require("../assets/about_us/logo-privacykit.svg"),
@@ -370,11 +393,12 @@ export default {
         name: "Covid SafePaths"
       },
       {
+        id: "tcn-coalition",
         url: "https://tcn-coalition.org/",
         grey: require("../assets/about_us/logo-TCN-coalition-gray.svg"),
         color: require("../assets/about_us/logo-TCN-coalition.svg"),
         src: require("../assets/about_us/logo-TCN-coalition-gray.svg"),
-        name: "TCN Coalition (founding member)"
+        name: "Founding Member"
       }
     ],
     title: "About Us | Covid Watch"
