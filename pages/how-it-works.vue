@@ -11,7 +11,10 @@
                 Covid Watch uses the international, open source
                 <a href="https://tcn-coalition.org/"> TCN Protocol </a> first
                 developed in our community to send anonymous exposure alerts via
-                private, local Bluetooth Signals. Let’s find out more about how
+                private, local Bluetooth signals. 
+              </p>
+              <p>
+                Let’s find out more about how
                 it works for Sam and Jane, two users of the app:
               </p>
           </div>

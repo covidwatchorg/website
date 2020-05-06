@@ -266,10 +266,10 @@ export default {
             "answer": "<p> Contact tracing is the process of reconstructing the interactions of a sick person from the time they were infected until the time they were diagnosed and quarantined. <a target='_blank' href='https://www.cdc.gov/coronavirus/2019-ncov/php/open-america/contact-tracing.html'>Manual contact tracing</a> takes a lot of effort and looks a lot like detective work. Imagine trying to list everyone you talked to for the past two weeks in your normal, undistanced life. Not so easy. </p> " +
                       "<p> The Covid Watch app helps narrow and augment the work of manual contact tracers. This is not contact tracing. We use the Bluetooth feature on your smartphone to sense when you are near someone else with Covid Watch installed. A list of times you were in close proximity to other users is stored on your phone. The people you’ve seen will have a corresponding record on their phones. </p>" +
                       "<p> If either person tests positive for COVID-19, they can inform the app about their diagnosis. Without requiring them to remember whom they saw in the past two weeks, Covid Watch will automatically warn everyone they saw about potential infection and encourage them to take steps like getting tested or self-quarantining. We call this key intervention an ‘exposure alert.’ </p>" +
-                      "<p> You can learn more about our exposure notification system on our <a target='_blank' href='/how-it-works'>How It Works</a> page. Or you can read our original <a target='_blank' href='/covid_watch_whitepaper.pdf'>White Paper</a> that describes Covid Watch’s founding vision of privacy-preserving technology. </p>"
+                      "<p> You can learn more about our exposure alert system on our <a target='_blank' href='/how-it-works'>How It Works</a> page. Or you can read our original <a target='_blank' href='/covid_watch_whitepaper.pdf'>White Paper</a> that describes Covid Watch’s founding vision of privacy-preserving technology. </p>"
           },
           {
-            "question": "How do exposure notifications help to stop the spread?",
+            "question": "How do exposure alerts help to stop the spread?",
             "answer": "<p>The coronavirus will be with us for a long time. Realistically, we can’t stay under lockdown without wreaking immense economic havoc and threatening our way of life. </p> " +
                       "<p>Covid Watch’s mission is to use technology to make it safer for us all to be together again. As testing becomes more prevalent and communities take steps to come back together, we need a system that reflects our real-world social contacts accurately and offers steps to take as soon as the coronavirus is detected.</p>" +
                       "<p>Exposure alerts, like those provided by Covid Watch, will empower individuals and communities with the information they need to respond to potential infection. Actionable information allows people to quarantine earlier, get tested more quickly, and stop the spread. Public health officials and <a target='_blank' href='https://www.cdc.gov/coronavirus/2019-ncov/php/open-america/contact-tracing.html'>manual contact tracers</a> can not be everywhere. We augment their work by anonymously alerting people if they are at higher risk.</p>" 
@@ -285,7 +285,7 @@ export default {
         "questionId": "how-it-works",
         "content": [
           {
-            "question": "Why does the Covid Watch app use my Bluetooth signal?",
+            "question": "Why does the Covid Watch app use my Bluetooth Signal?",
             "answer": "<p>Bluetooth signals allow us to know who’s actually close to you and for how long. If you’re on the first floor of a tall building, and someone else is on the 15th, a Bluetooth signal would not log your interaction. That’s not true of other ways to view your location, like GPS.</p> " +
                       "<p>Also, your Bluetooth signal belongs to you and your phone. This allows us to never store your data centrally. Instead, random numbers that list your interactions via Bluetooth are stored on your own device.</p>" +
                       "<p>You can learn more about the tech behind our contact tracing solution in our <a target='_blank' href='/covid_watch_whitepaper.pdf'>White Paper</a>.</p>"
@@ -329,7 +329,7 @@ export default {
           },
           {
             "question": "Who gets access to the information I share with the Covid Watch app?",
-            "answer": "<p>The Covid Watch app stores everything only on your phone. “Everything” isn’t much—it’s the random numbers you’ve been sending out and the list of those you’ve gathered from those around you. No one but you has access to this. If you uninstall the app, your proximity log is gone, and we wouldn’t be able to restore it.</p>" +
+            "answer": "<p>The Covid Watch app stores everything only on your phone. 'Everything' isn’t much — it’s the random numbers you’ve been sending out and the list of those you’ve gathered from those around you. No one but you has access to this. If you uninstall the app, your proximity log is gone, and we wouldn’t be able to restore it.</p>" +
                       "<p>You can choose to share a positive test result by uploading this anonymous info to our database. This will be accessible to our database administrators, but it’s just a list of random numbers. These random numbers aren't meaningful except to the devices which have picked up your phone's Bluetooth signal during social contacts. And all they tell those phones is that they have been in proximity of someone who is now infected.</p>"
           },
           {
@@ -351,7 +351,7 @@ export default {
                       "<p>Read more about the <a target='_blank' href='https://tcn-coalition.org/'>TCN Coalition</a> and our <a target='_blank' href='https://github.com/TCNCoalition/TCN'>shared commitment</a> to protecting your privacy. </p>"
           },
           {
-            "question": "Are Apple and Google building contact tracing apps?",
+            "question": "Are Apple and Google building apps like this?",
             "answer": "<p>No. They will not be building apps themselves. </p>" +
                       "<p>Apple and Google made a rare joint announcement in April: these two competitors would be working together on creating systems to allow for anonymous exposure alerts. More specifically, they would be building a set of programming tools, called an API, that would allow apps like Covid Watch to more easily use the Bluetooth systems built into billions of smartphones around the world. </p>" +
                       "<p>Apple and Google responded to challenges Covid Watch and others faced in building a privacy-protecting app to notify communities and individuals of potential exposure to the coronavirus. The Covid Watch app will use these new APIs to offer private solutions to public health problems.</p>" +
@@ -359,9 +359,9 @@ export default {
           },
           {
             "question": "Are you working with the government?",
-            "answer": "Covid Watch is a nonprofit, not a government agency or a private company focused on profit. Our mission is to protect your health and your privacy. The COVID-19 pandemic, however, presents a once-in-a-lifetime challenge to society. Since this crisis began, governments have taken the lead on testing for the virus, issuing stay-at-home orders and <a target='blank' href=''https://www.cdc.gov/coronavirus/2019-ncov/php/principles-contact-tracing.html>manual contact tracing</a>." +
-                      "The Covid Watch app makes it easier for governments to focus on their role, by alerting more people of exposure than would be notified by manual contact tracing and testing efforts alone. We are working closely with local public health officials to verify testing results and provide people with the tools they need to act quickly." +
-                      "We understand the importance of data security, and we will be adhering to health privacy laws for the regions in which the app is available. We will be fully compliant with GDPR and HIPAA laws."
+            "answer": "<p>Covid Watch is a nonprofit, not a government agency or a private company focused on profit. Our mission is to protect your health and your privacy. The COVID-19 pandemic, however, presents a once-in-a-lifetime challenge to society. Since this crisis began, governments have taken the lead on testing for the virus, issuing stay-at-home orders and <a target='blank' href=''https://www.cdc.gov/coronavirus/2019-ncov/php/principles-contact-tracing.html>manual contact tracing</a>.</p>" +
+                      "<p>The Covid Watch app makes it easier for governments to focus on their role, by alerting more people of exposure than would be notified by manual contact tracing and testing efforts alone. We are working closely with local public health officials to verify testing results and provide people with the tools they need to act quickly.</p>" +
+                      "<p>We understand the importance of data security, and we will be adhering to health privacy laws for the regions in which the app is available. We will be fully compliant with GDPR and HIPAA laws.</p>"
           },
         ]
       },      

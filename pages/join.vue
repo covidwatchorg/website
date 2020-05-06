@@ -81,9 +81,9 @@
             </v-col>
         </v-row>
 
-        <Newsletter/>
       </v-col>
     </v-row>
+    <Newsletter/>
   </v-container>
 </template>
 
