@@ -105,5 +105,9 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
+  },
+  generate: {
+    fallback: true,
+    fallback: '404.html'
   }
 };
