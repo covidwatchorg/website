@@ -263,15 +263,15 @@ export default {
       }
     ],
     newsCards: [
-      {
+        {
         type: "press_mention",
-        date: "April 8, 2020",
+        date: "May 5, 2020",
         title:
-          "Clever Cryptography Could Protect Privacy in Covid-19 Contact-Tracing Apps",
+          "Here come COVID-19 tracing apps - and privacy trade-offs",
         url:
-          "https://www.wired.com/story/covid-19-contact-tracing-apps-cryptography/",
-        author_name: "Andy Greenberg",
-        outlet_name: "Wired"
+          "https://apnews.com/15c028c48502db395681ebca0099de5a",
+        author_name: "",
+        outlet_name: "Associated Press (AP)"
       },
       {
         type: "press_mention",
@@ -285,13 +285,13 @@ export default {
       },
       {
         type: "press_mention",
-        date: "May 5, 2020",
+        date: "April 8, 2020",
         title:
-          "Here come COVID-19 tracing apps - and privacy trade-offs",
+          "Clever Cryptography Could Protect Privacy in Covid-19 Contact-Tracing Apps",
         url:
-          "https://apnews.com/15c028c48502db395681ebca0099de5a",
-        author_name: "",
-        outlet_name: "Associated Press (AP)"
+          "https://www.wired.com/story/covid-19-contact-tracing-apps-cryptography/",
+        author_name: "Andy Greenberg",
+        outlet_name: "Wired"
       }
     ],
     mobileImages: [
