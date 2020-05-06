@@ -266,10 +266,10 @@ export default {
             "answer": "<p> Contact tracing is the process of reconstructing the interactions of a sick person from the time they were infected until the time they were diagnosed and quarantined. <a target='_blank' href='https://www.cdc.gov/coronavirus/2019-ncov/php/open-america/contact-tracing.html'>Manual contact tracing</a> takes a lot of effort and looks a lot like detective work. Imagine trying to list everyone you talked to for the past two weeks in your normal, undistanced life. Not so easy. </p> " +
                       "<p> The Covid Watch app helps narrow and augment the work of manual contact tracers. This is not contact tracing. We use the Bluetooth feature on your smartphone to sense when you are near someone else with Covid Watch installed. A list of times you were in close proximity to other users is stored on your phone. The people you’ve seen will have a corresponding record on their phones. </p>" +
                       "<p> If either person tests positive for COVID-19, they can inform the app about their diagnosis. Without requiring them to remember whom they saw in the past two weeks, Covid Watch will automatically warn everyone they saw about potential infection and encourage them to take steps like getting tested or self-quarantining. We call this key intervention an ‘exposure alert.’ </p>" +
-                      "<p> You can learn more about our exposure notification system on our <a target='_blank' href='/how-it-works'>How It Works</a> page. Or you can read our original <a target='_blank' href='/covid_watch_whitepaper.pdf'>White Paper</a> that describes Covid Watch’s founding vision of privacy-preserving technology. </p>"
+                      "<p> You can learn more about our exposure alert system on our <a target='_blank' href='/how-it-works'>How It Works</a> page. Or you can read our original <a target='_blank' href='/covid_watch_whitepaper.pdf'>White Paper</a> that describes Covid Watch’s founding vision of privacy-preserving technology. </p>"
           },
           {
-            "question": "How do exposure notifications help to stop the spread?",
+            "question": "How do exposure alerts help to stop the spread?",
             "answer": "<p>The coronavirus will be with us for a long time. Realistically, we can’t stay under lockdown without wreaking immense economic havoc and threatening our way of life. </p> " +
                       "<p>Covid Watch’s mission is to use technology to make it safer for us all to be together again. As testing becomes more prevalent and communities take steps to come back together, we need a system that reflects our real-world social contacts accurately and offers steps to take as soon as the coronavirus is detected.</p>" +
                       "<p>Exposure alerts, like those provided by Covid Watch, will empower individuals and communities with the information they need to respond to potential infection. Actionable information allows people to quarantine earlier, get tested more quickly, and stop the spread. Public health officials and <a target='_blank' href='https://www.cdc.gov/coronavirus/2019-ncov/php/open-america/contact-tracing.html'>manual contact tracers</a> can not be everywhere. We augment their work by anonymously alerting people if they are at higher risk.</p>" 
@@ -285,7 +285,7 @@ export default {
         "questionId": "how-it-works",
         "content": [
           {
-            "question": "Why does the Covid Watch app use my Bluetooth signal?",
+            "question": "Why does the Covid Watch app use my Bluetooth Signal?",
             "answer": "<p>Bluetooth signals allow us to know who’s actually close to you and for how long. If you’re on the first floor of a tall building, and someone else is on the 15th, a Bluetooth signal would not log your interaction. That’s not true of other ways to view your location, like GPS.</p> " +
                       "<p>Also, your Bluetooth signal belongs to you and your phone. This allows us to never store your data centrally. Instead, random numbers that list your interactions via Bluetooth are stored on your own device.</p>" +
                       "<p>You can learn more about the tech behind our contact tracing solution in our <a target='_blank' href='/covid_watch_whitepaper.pdf'>White Paper</a>.</p>"
@@ -351,7 +351,7 @@ export default {
                       "<p>Read more about the <a target='_blank' href='https://tcn-coalition.org/'>TCN Coalition</a> and our <a target='_blank' href='https://github.com/TCNCoalition/TCN'>shared commitment</a> to protecting your privacy. </p>"
           },
           {
-            "question": "Are Apple and Google building contact tracing apps?",
+            "question": "Are Apple and Google building apps like this?",
             "answer": "<p>No. They will not be building apps themselves. </p>" +
                       "<p>Apple and Google made a rare joint announcement in April: these two competitors would be working together on creating systems to allow for anonymous exposure alerts. More specifically, they would be building a set of programming tools, called an API, that would allow apps like Covid Watch to more easily use the Bluetooth systems built into billions of smartphones around the world. </p>" +
                       "<p>Apple and Google responded to challenges Covid Watch and others faced in building a privacy-protecting app to notify communities and individuals of potential exposure to the coronavirus. The Covid Watch app will use these new APIs to offer private solutions to public health problems.</p>" +
