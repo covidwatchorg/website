@@ -329,7 +329,7 @@ export default {
           },
           {
             "question": "Who gets access to the information I share with the Covid Watch app?",
-            "answer": "<p>The Covid Watch app stores everything only on your phone. “Everything” isn’t much—it’s the random numbers you’ve been sending out and the list of those you’ve gathered from those around you. No one but you has access to this. If you uninstall the app, your proximity log is gone, and we wouldn’t be able to restore it.</p>" +
+            "answer": "<p>The Covid Watch app stores everything only on your phone. 'Everything' isn’t much — it’s the random numbers you’ve been sending out and the list of those you’ve gathered from those around you. No one but you has access to this. If you uninstall the app, your proximity log is gone, and we wouldn’t be able to restore it.</p>" +
                       "<p>You can choose to share a positive test result by uploading this anonymous info to our database. This will be accessible to our database administrators, but it’s just a list of random numbers. These random numbers aren't meaningful except to the devices which have picked up your phone's Bluetooth signal during social contacts. And all they tell those phones is that they have been in proximity of someone who is now infected.</p>"
           },
           {
@@ -359,9 +359,9 @@ export default {
           },
           {
             "question": "Are you working with the government?",
-            "answer": "Covid Watch is a nonprofit, not a government agency or a private company focused on profit. Our mission is to protect your health and your privacy. The COVID-19 pandemic, however, presents a once-in-a-lifetime challenge to society. Since this crisis began, governments have taken the lead on testing for the virus, issuing stay-at-home orders and <a target='blank' href=''https://www.cdc.gov/coronavirus/2019-ncov/php/principles-contact-tracing.html>manual contact tracing</a>." +
-                      "The Covid Watch app makes it easier for governments to focus on their role, by alerting more people of exposure than would be notified by manual contact tracing and testing efforts alone. We are working closely with local public health officials to verify testing results and provide people with the tools they need to act quickly." +
-                      "We understand the importance of data security, and we will be adhering to health privacy laws for the regions in which the app is available. We will be fully compliant with GDPR and HIPAA laws."
+            "answer": "<p>Covid Watch is a nonprofit, not a government agency or a private company focused on profit. Our mission is to protect your health and your privacy. The COVID-19 pandemic, however, presents a once-in-a-lifetime challenge to society. Since this crisis began, governments have taken the lead on testing for the virus, issuing stay-at-home orders and <a target='blank' href=''https://www.cdc.gov/coronavirus/2019-ncov/php/principles-contact-tracing.html>manual contact tracing</a>.</p>" +
+                      "<p>The Covid Watch app makes it easier for governments to focus on their role, by alerting more people of exposure than would be notified by manual contact tracing and testing efforts alone. We are working closely with local public health officials to verify testing results and provide people with the tools they need to act quickly.</p>" +
+                      "<p>We understand the importance of data security, and we will be adhering to health privacy laws for the regions in which the app is available. We will be fully compliant with GDPR and HIPAA laws.</p>"
           },
         ]
       },      
