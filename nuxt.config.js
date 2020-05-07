@@ -107,7 +107,6 @@ export default {
     extend(config, ctx) {}
   },
   generate: {
-    fallback: "404.html",
     fallback: true
   }
 };
