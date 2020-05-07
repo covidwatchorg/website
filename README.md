@@ -1,7 +1,8 @@
-# website
+# Website
 ![Build](https://github.com/covid19risk/website/workflows/Build/badge.svg)
+![Deploy](https://github.com/covid19risk/website/workflows/Deploy/badge.svg)
 
-The covid-watch website -- under construction
+The Covid-Watch website: https://covid-watch.org/
 
 ## Build Setup
 
