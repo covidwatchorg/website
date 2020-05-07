@@ -6,11 +6,16 @@
           <b>{{ section.title }}</b>
           <v-list class="footer-link-list" dense>
             <v-list-item v-for="link in section.links" :key="link.title" class="pl-0">
-              <nuxt-link class="link" :to="link.href">
+              <nuxt-link v-if="link.title !== 'Contact Us'" class="link" :to="link.href">
                 {{
                 link.title
                 }}
               </nuxt-link>
+              <a v-else :href="link.href">
+                  {{
+                  link.title
+                  }}
+              </a>
             </v-list-item>
           </v-list>
         </v-col>
