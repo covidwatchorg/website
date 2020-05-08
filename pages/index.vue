@@ -281,11 +281,11 @@ export default {
       },
       {
         type: "press_mention",
-        date: "April 9, 2020",
-        title: "Stanford researchers help develop privacy-focused coronavirus alert app",
-        url: "https://news.stanford.edu/2020/04/09/stanford-researchers-help-develop-privacy-focused-coronavirus-alert-app/",
+        date: "April 8, 2020",
+        title: "Clever Cryptography Could Protect Privacy in Covid-19 Contact Tracing Apps",
+        url: "https://www.wired.com/story/covid-19-contact-tracing-apps-cryptography/",
         author_name: "",
-        outlet_name: "Stanford News"
+        outlet_name: "Wired"
       }
     ],
     mobileImages: [
