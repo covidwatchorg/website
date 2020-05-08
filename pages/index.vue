@@ -264,34 +264,28 @@ export default {
     ],
     newsCards: [
         {
-        type: "press_mention",
-        date: "May 5, 2020",
-        title:
-          "Here come COVID-19 tracing apps - and privacy trade-offs",
-        url:
-          "https://apnews.com/15c028c48502db395681ebca0099de5a",
+        type: "press_release",
+        date: "May 7, 2020",
+        title: "Emergent Ventures singles out the Covid Watch app for coronavirus response",
+        url: "https://drive.google.com/file/d/1uVVPVzwUnBhqeOQU4Vw9O-Sng77uNzmt/view",
         author_name: "",
-        outlet_name: "Associated Press (AP)"
+        outlet_name: "Press Release, Covid Watch"
+      },
+      {
+        type: "press_mention",
+        date: "May 6, 2020",
+        title: "This App Protects Privacy While Tracing Covid-19 Infections",
+        url: "https://reason.com/podcast/this-app-protects-privacy-while-tracing-covid-19-infections/",
+        author_name: "",
+        outlet_name: "Reason Magazine"
       },
       {
         type: "press_mention",
         date: "April 9, 2020",
-        title:
-          "Stanford researchers help develop privacy-focused coronavirus alert app",
-        url:
-          "https://news.stanford.edu/2020/04/09/stanford-researchers-help-develop-privacy-focused-coronavirus-alert-app/",
-        author_name: "Tom Abate",
+        title: "Stanford researchers help develop privacy-focused coronavirus alert app",
+        url: "https://news.stanford.edu/2020/04/09/stanford-researchers-help-develop-privacy-focused-coronavirus-alert-app/",
+        author_name: "",
         outlet_name: "Stanford News"
-      },
-      {
-        type: "press_mention",
-        date: "April 8, 2020",
-        title:
-          "Clever Cryptography Could Protect Privacy in Covid-19 Contact-Tracing Apps",
-        url:
-          "https://www.wired.com/story/covid-19-contact-tracing-apps-cryptography/",
-        author_name: "Andy Greenberg",
-        outlet_name: "Wired"
       }
     ],
     mobileImages: [
