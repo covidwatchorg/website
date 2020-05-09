@@ -50,7 +50,7 @@ export default {
   router: {
     extendRoutes(routes, resolve) {
       routes.push(
-        { path: "/article", redirect: { name: "article" } },
+        { path: "/articles", redirect: { name: "index" } },
         { path: "/collaborate", redirect: { name: "join" } }
       );
     }
