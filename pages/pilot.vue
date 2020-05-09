@@ -15,7 +15,7 @@
 
           <v-row no-gutters class="mr-10 mb-4 mt-10">
             <v-col :sm="5">
-              <Button target="_blank" href="https://docs.google.com/forms/d/10slgO4dkSXfN4qIAd1mXCeMmPelvp3MbTVDIzX8QAzk/edit" primary hero>
+              <Button target="_blank" href="https://covidapp.typeform.com/to/rN6LaK" primary hero>
                 Use Our Solution
               </Button>
             </v-col>
@@ -104,7 +104,7 @@
 
         <v-row class="mr-10 mb-4 mt-10 pb-12 d-flex justify-center">
           <v-col :sm="4">
-            <Button target="_blank" href="https://docs.google.com/forms/d/10slgO4dkSXfN4qIAd1mXCeMmPelvp3MbTVDIzX8QAzk/edit" primary>
+            <Button target="_blank" href="https://covidapp.typeform.com/to/rN6LaK" primary>
               Use Our Solution
             </Button>
           </v-col>
