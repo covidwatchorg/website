@@ -45,9 +45,16 @@ export default {
    */
   modules: ["nuxt-webfontloader"],
   /*
-   ** Add middleware that runs server-side (before vue-server-renderer)
+   ** Redirect a few routes from the old website to new pages
    */
-  serverMiddleware: ["~/api/redirects"],
+  router: {
+    extendRoutes(routes, resolve) {
+      routes.push(
+        { path: "/article", redirect: { name: "article" } },
+        { path: "/collaborate", redirect: { name: "join" } }
+      );
+    }
+  },
   /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module
