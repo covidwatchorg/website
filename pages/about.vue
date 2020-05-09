@@ -165,17 +165,18 @@
           <h3 class="pt-6">Collaborator Partners</h3>
         </v-col>
 
-        <v-row class="justify-space-evenly no-gutters align-center">
+        <v-row justify="space-evenly" align="center">
           <v-col
             cols="12"
             :sm="4"
             v-for="(collab, i) in collaborator_projects"
             :key="i"
             :id="collab.id"
+            class="text-center"
           >
             <a :href="collab.url">
-              <v-img max-width="100%" class="collab-img" :src="collab.src" contain />
-              <!-- <div style="font-size: 16px;">{{ collab.name }}</div> -->
+              <v-img class="collab-img" :src="collab.src" contain />
+              <div style="font-size: 16px;">{{ collab.name }}</div>
             </a>
           </v-col>
         </v-row>
@@ -187,28 +188,15 @@
 <style lang="scss">
 .collab-img {
   filter: grayscale(100%);
+  max-width: 260px;
+  max-height: 70px;
+  margin-left: auto;
+  margin-right: auto;
 
   &:hover {
     filter: grayscale(0%);
   }
 }
-
-// #safe-paths {
-//   div {
-//     text-align: center;
-//   }
-// }
-
-// #tcn-coalition {
-//   img {
-//     margin-left: 80px;
-//   }
-
-//   div {
-//     text-align: center;
-//     margin-left: 80px;
-//   }
-// }
 
 @media (max-width: 400px) {
   .we_value_img {
@@ -252,14 +240,6 @@
 }
 .join-us {
   background: rgba(245, 229, 230, 0.6);
-}
-#waterloo-img {
-  margin-left: -40px;
-  max-width: 260px;
-}
-
-#stanford-img {
-  max-width: 260px;
 }
 </style>
 
@@ -355,6 +335,12 @@ export default {
     },
     collaborator_projects: [
       {
+        id: "tcn-coalition",
+        url: "https://tcn-coalition.org/",
+        src: require("../assets/about_us/logo-TCN-coalition.svg"),
+        name: "Founding Member"
+      },
+      {
         id: "coepi",
         url: "https://www.coepi.org/",
         src: require("../assets/about_us/logo-coepi.svg"),
@@ -365,12 +351,6 @@ export default {
         url: "https://covidsafepaths.org/",
         src: require("../assets/about_us/logo-safepaths.svg"),
         name: "Covid SafePaths"
-      },
-      {
-        id: "tcn-coalition",
-        url: "https://tcn-coalition.org/",
-        src: require("../assets/about_us/logo-TCN-coalition.svg"),
-        name: "Founding Member"
       }
     ],
     title: "About Us | Covid Watch"
