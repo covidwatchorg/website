@@ -90,7 +90,7 @@
 <script>
 import NewsCard from "../components/NewsCard.vue";
 import Button from "../components/Button.vue";
-import json from "../assets/medialist.json";
+import json from "../assets/data/medialist.json";
 import gsap from "gsap"; //this is a javascript animation library, more info: https://www.vuemastery.com/courses/animating-vue/intro-to-GSAP-3
 
 export default {
