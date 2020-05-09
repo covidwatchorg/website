@@ -45,6 +45,10 @@ export default {
    */
   modules: ["nuxt-webfontloader"],
   /*
+   ** Add middleware that runs server-side (before vue-server-renderer)
+   */
+  serverMiddleware: ["~/api/redirects"],
+  /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module
    */
@@ -107,6 +111,6 @@ export default {
     extend(config, ctx) {}
   },
   generate: {
-    fallback: true
+    fallback: true // generate a 404.html fallback page
   }
 };

@@ -1,0 +1,10 @@
+[
+  {
+    "from": "/articles",
+    "to": "/article"
+  },
+  {
+    "from": "/collaborate",
+    "to": "/join"
+  }
+]
