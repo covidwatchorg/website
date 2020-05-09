@@ -32,7 +32,7 @@ def main():
 
 
     with open('../assets/medialist.json', 'w') as f:
-        json.dump(media_list, f)
+        json.dump(media_list, f, indent=2)
 
 if __name__ == '__main__':
     main()
