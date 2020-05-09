@@ -90,14 +90,13 @@
             :key="i"
           >
             <div class="mb-4">
-              <Button v-if="cta.link" secondary nuxt :to="cta.link">{{
+              <Button v-if="cta.link" secondary nuxt :to="cta.link">
+                {{
                 cta.button_text
-              }}</Button>
+                }}
+              </Button>
               <Button v-if="!cta.link" secondary>
-                <a
-                  href="mailto:contact@covid-watch.org"
-                  >{{ cta.button_text }}</a
-                >
+                <a href="mailto:contact@covid-watch.org">{{ cta.button_text }}</a>
               </Button>
             </div>
 
@@ -130,21 +129,12 @@
                 <div class="subtitle">
                   <i>{{ founder.title }}</i>
                 </div>
-                <img
-                  class="founder_img"
-                  src="../assets/about_us/top-accent.svg"
-                />
-                <div>
-                  {{ founder.bio }}
-                </div>
+                <img class="founder_img" src="../assets/about_us/top-accent.svg" />
+                <div>{{ founder.bio }}</div>
               </v-col>
             </v-row>
           </v-col>
-          <v-responsive
-            v-if="n + 1 === 2"
-            :key="`width-${n}`"
-            width="1000%"
-          ></v-responsive>
+          <v-responsive v-if="n + 1 === 2" :key="`width-${n}`" width="1000%"></v-responsive>
         </template>
       </v-row>
 
@@ -157,25 +147,13 @@
         <v-row justify="space-around" align="center">
           <v-col :md="4" :sm="6">
             <a href="https://www.stanford.edu/">
-              <v-img
-                max-width="100%"
-                class="stanford-img"
-                :src="stanford.src"
-                @mouseover="stanford.src = stanford.color"
-                @mouseleave="stanford.src = stanford.grey"
-              />
+              <v-img max-width="100%" id="stanford-img" class="collab-img" :src="stanford.src" />
             </a>
           </v-col>
 
           <v-col :md="4" :sm="6">
             <a href="https://uwaterloo.ca/">
-              <v-img
-                max-width="100%"
-                class="waterloo-img"
-                :src="waterloo.src"
-                @mouseover="waterloo.src = waterloo.color"
-                @mouseleave="waterloo.src = waterloo.grey"
-              />
+              <v-img max-width="100%" id="waterloo-img" class="collab-img" :src="waterloo.src" />
             </a>
           </v-col>
         </v-row>
@@ -187,20 +165,17 @@
           <h3 class="pt-6">Collaborator Partners</h3>
         </v-col>
 
-        <v-row class="d-md-flex justify-space-evenly no-gutters align-center">
+        <v-row class="justify-space-evenly no-gutters align-center">
           <v-col
-            class="mt-6 mt-sm-0"
             cols="12"
             :sm="4"
             v-for="(collab, i) in collaborator_projects"
             :key="i"
-            @mouseover="collab.src = collab.color"
-            @mouseleave="collab.src = collab.grey"
             :id="collab.id"
           >
-            <a :href="collab.url" class="d-flex flex-column align-center">
-              <img class="collab-img" :src="collab.src" />
-                <div style="font-size: 16px;">{{ collab.name }}</div>
+            <a :href="collab.url">
+              <v-img max-width="100%" class="collab-img" :src="collab.src" contain />
+              <!-- <div style="font-size: 16px;">{{ collab.name }}</div> -->
             </a>
           </v-col>
         </v-row>
@@ -210,39 +185,46 @@
 </template>
 
 <style lang="scss">
-  #safe-paths {
-        div {
-      text-align: center;
-    }
+.collab-img {
+  filter: grayscale(100%);
+
+  &:hover {
+    filter: grayscale(0%);
+  }
+}
+
+// #safe-paths {
+//   div {
+//     text-align: center;
+//   }
+// }
+
+// #tcn-coalition {
+//   img {
+//     margin-left: 80px;
+//   }
+
+//   div {
+//     text-align: center;
+//     margin-left: 80px;
+//   }
+// }
+
+@media (max-width: 400px) {
+  .we_value_img {
+    max-width: 260px;
+  }
+}
+
+@media (max-width: 950px) {
+  .earth_img {
+    display: none;
   }
 
-  #tcn-coalition {
-    img {
-      margin-left: 80px;
-    }
-
-    div {
-      text-align: center;
-      margin-left: 80px;
-    }
+  .biking {
+    display: none;
   }
-
-
-  @media (max-width: 400px) {
-    .we_value_img {
-      max-width: 260px;
-    }
-  }
-
-  @media (max-width: 950px) {
-    .earth_img {
-      display: none;
-    }
-
-    .biking {
-      display: none;
-    }
-  }
+}
 
 .founder_img {
   max-width: 100%;
@@ -271,15 +253,14 @@
 .join-us {
   background: rgba(245, 229, 230, 0.6);
 }
-.waterloo-img {
+#waterloo-img {
   margin-left: -40px;
   max-width: 260px;
 }
 
-.stanford-img {
-   max-width: 260px;
+#stanford-img {
+  max-width: 260px;
 }
-
 </style>
 
 <script>
@@ -365,40 +346,30 @@ export default {
       }
     ],
     stanford: {
-      grey: require("../assets/about_us/logo-stanford-black.svg"),
-      color: require("../assets/about_us/logo-stanford-red.svg"),
-      src: require("../assets/about_us/logo-stanford-black.svg"),
+      src: require("../assets/about_us/logo-stanford.svg"),
       href: "https://www.stanford.edu/"
     },
     waterloo: {
-      grey: require("../assets/about_us/logo-university-of-waterloo-gray.svg"),
-      color: require("../assets/about_us/logo-university-of-waterloo.svg"),
-      src: require("../assets/about_us/logo-university-of-waterloo-gray.svg"),
+      src: require("../assets/about_us/logo-university-of-waterloo.svg"),
       href: "https://uwaterloo.ca/"
     },
     collaborator_projects: [
       {
         id: "coepi",
         url: "https://www.coepi.org/",
-        grey: require("../assets/about_us/logo-coepi-gray.svg"),
-        color: require("../assets/about_us/logo-coepi.svg"),
-        src: require("../assets/about_us/logo-coepi-gray.svg"),
+        src: require("../assets/about_us/logo-coepi.svg"),
         name: "CoEpi"
       },
       {
         id: "safe-paths",
         url: "https://covidsafepaths.org/",
-        grey: require("../assets/about_us/logo-privacykit-gray.svg"),
-        color: require("../assets/about_us/logo-privacykit.svg"),
-        src: require("../assets/about_us/logo-privacykit-gray.svg"),
+        src: require("../assets/about_us/logo-safepaths.svg"),
         name: "Covid SafePaths"
       },
       {
         id: "tcn-coalition",
         url: "https://tcn-coalition.org/",
-        grey: require("../assets/about_us/logo-TCN-coalition-gray.svg"),
-        color: require("../assets/about_us/logo-TCN-coalition.svg"),
-        src: require("../assets/about_us/logo-TCN-coalition-gray.svg"),
+        src: require("../assets/about_us/logo-TCN-coalition.svg"),
         name: "Founding Member"
       }
     ],
