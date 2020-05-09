@@ -34,8 +34,9 @@ def main():
 
             if valid_entry(new_values):
                 media_list.append(new_values)
+
     with open("../assets/data/medialist.json", "w") as f:
-        json.dump(media_list, f)
+        json.dump(media_list, f, indent=2)
 
 
 if __name__ == "__main__":
