@@ -22,7 +22,7 @@
             <ul id="navigation" class="pl-0">
               <div class="sections-container" v-for="(faq, i) in faqList" :key="i">
                 <li class="section-text primary--text" :id="i">
-                  <a :href="`#${faq.sectionId}`">{{faq.section}}</a>
+                  <a :href="`#${faq.sectionId}`" @click="expandSection(i)">{{faq.section}}</a>
                 </li>
               </div>
             </ul>
@@ -188,6 +188,11 @@ export default {
     });
   },
   methods: {
+    expandSection(index) {
+      if (!this.panel.includes(index)) {
+        this.panel.push(index);
+      }
+    },
     setStyle: function(e) {
       // ended up just using this Vuetify class I discovered instead of 'open-header' v-expansion-panel-header--active
       // still leaving this function in case it proves useful to have an 'open-header' class in the future
