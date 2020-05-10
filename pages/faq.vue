@@ -34,10 +34,7 @@
           <v-col cols="12" :sm="12" :md="8">
             <v-expansion-panels multiple flat hover v-model="panel">
               <v-expansion-panel v-for="(faq, i) in faqList" :key="i" class="faqCard">
-                <v-expansion-panel-header
-                  @click="setStyle($event)"
-                  class="closed-header panel-header"
-                >
+                <v-expansion-panel-header class="panel-header">
                   <h3 class="jump-target" :id="faq.sectionId">{{faq.section}}</h3>
                 </v-expansion-panel-header>
 
@@ -106,18 +103,17 @@
     border-bottom: 3px solid rgb(67, 196, 217, 0.5);
   }
 
-  .closed-header {
+  .v-expansion-panel-header {
     h3 {
       color: #2c58b1;
     }
     border-bottom: 3px solid rgb(67, 196, 217, 0.5);
-  }
-
-  .v-expansion-panel-header--active {
-    h3 {
-      color: #828282;
+    &--active {
+      h3 {
+        color: #828282;
+      }
+      border-bottom: none;
     }
-    border-bottom: none;
   }
 
   .faqCard {
@@ -172,16 +168,6 @@ export default {
     expandSection(index) {
       if (!this.panel.includes(index)) {
         this.panel.push(index);
-      }
-    },
-    setStyle: function(e) {
-      // ended up just using this Vuetify class I discovered instead of 'open-header' v-expansion-panel-header--active
-      // still leaving this function in case it proves useful to have an 'open-header' class in the future
-      let classList = Array.from(e.currentTarget.classList);
-      if (classList.includes("closed-header")) {
-        classList[classList.indexOf("closed-header")] = "open-header";
-      } else {
-        classList[classList.indexOf("open-header")] = "closed-header";
       }
     }
   },
