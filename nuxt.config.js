@@ -45,6 +45,17 @@ export default {
    */
   modules: ["nuxt-webfontloader"],
   /*
+   ** Redirect a few routes from the old website to new pages
+   */
+  router: {
+    extendRoutes(routes, resolve) {
+      routes.push(
+        { path: "/articles", redirect: { name: "index" } },
+        { path: "/collaborate", redirect: { name: "join" } }
+      );
+    }
+  },
+  /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module
    */
@@ -107,6 +118,6 @@ export default {
     extend(config, ctx) {}
   },
   generate: {
-    fallback: true
+    fallback: true // generate a 404.html fallback page
   }
 };
