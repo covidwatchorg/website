@@ -2,6 +2,7 @@
   <v-container>
     <v-row id="faq">
       <v-col cols="12">
+        <!-- hero section -->
         <v-row id="hero">
           <v-col cols="12" :sm="8" :xs="12" class="hero-copy">
             <h1>Frequently Asked Questions</h1>
@@ -19,9 +20,9 @@
           <!-- left side navigator -->
           <v-col :md="3" id="left-navigation">
             <ul id="navigation" class="pl-0">
-              <div class="sections-container" v-for="(section, i) in sectionList" :key="i">
+              <div class="sections-container" v-for="(faq, i) in faqList" :key="i">
                 <li class="section-text primary--text" :id="i">
-                  <a :href="section.id">{{section.title}}</a>
+                  <a :href="`#${faq.sectionId}`">{{faq.section}}</a>
                 </li>
               </div>
             </ul>
@@ -37,7 +38,7 @@
                   @click="setStyle($event)"
                   class="closed-header panel-header"
                 >
-                  <h3 class="jump-target" :id="faq.questionId">{{faq.question}}</h3>
+                  <h3 class="jump-target" :id="faq.sectionId">{{faq.section}}</h3>
 
                   <!-- adds the svg arrow but it doesn't turn around automatically when card is expanded -->
                   <!-- possible CSS/Javascript work in the future -->
@@ -211,28 +212,10 @@ export default {
   data: () => ({
     // panel controls which sections in the list are open upon loading the page.
     panel: [0],
-    sectionList: [
-      {
-        id: "#our-alert-system",
-        title: "Our Alert System"
-      },
-      {
-        id: "#how-it-works",
-        title: "How it Works"
-      },
-      {
-        id: "#privacy",
-        title: "Privacy"
-      },
-      {
-        id: "#working-together",
-        title: "Working Together"
-      }
-    ],
     faqList: [
       {
-        question: "Our Alert System",
-        questionId: "our-alert-system",
+        section: "Our Alert System",
+        sectionId: "our-alert-system",
         content: [
           {
             question: "What is contact tracing? Is that what Covid Watch does?",
@@ -257,8 +240,8 @@ export default {
         ]
       },
       {
-        question: "How It Works",
-        questionId: "how-it-works",
+        section: "How It Works",
+        sectionId: "how-it-works",
         content: [
           {
             question: "Why does the Covid Watch app use my Bluetooth Signal?",
@@ -288,8 +271,8 @@ export default {
         ]
       },
       {
-        question: "Privacy",
-        questionId: "privacy",
+        section: "Privacy",
+        sectionId: "privacy",
         content: [
           {
             question: "How does the Covid Watch app protect my privacy?",
@@ -329,8 +312,8 @@ export default {
         ]
       },
       {
-        question: "Working Together",
-        questionId: "working-together",
+        section: "Working Together",
+        sectionId: "working-together",
         content: [
           {
             question: "What makes Covid Watch different?",
