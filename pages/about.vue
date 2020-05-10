@@ -148,6 +148,39 @@
         </template>
       </v-row>
 
+      <!-- Advisors row-->
+      <v-row :class="pageSectionClass">
+        <v-col cols="11">
+          <div class="mb-5">
+            <h2>Advisors</h2>
+          </div>
+        </v-col>
+
+        <template>
+          <v-container class="grey lighten-5">
+            <v-row no-gutters>
+              <v-col
+                v-for="(advisor, n) in advisors"
+                :key="n"
+                cols="12"
+                sm="4"
+              >
+                <div
+                  class="advisor-card"
+                >
+                  <div class="title">
+                    {{ advisor.name }}
+                  </div>
+                  <div>
+                    {{ advisor.description }}
+                  </div>
+                </div>
+              </v-col>
+            </v-row>
+          </v-container>
+        </template>
+      </v-row>
+
       <!-- academic partners row-->
       <v-row :class="pageSectionClass" id="academic-partners">
         <v-col class="mb-10" :md="3" :sm="8">
@@ -280,6 +313,15 @@
    max-width: 260px;
 }
 
+.advisor-card {
+  margin: 0px 20px 30px 0px;
+  padding-left: 10px;
+}
+
+.org {
+  font-size: 14px;
+}
+
 </style>
 
 <script>
@@ -332,6 +374,32 @@ export default {
         body:
           "We are setting precedents  in real time, giving individuals and communities the power to confront this global challenge. We work closely with public health officials and organizations that share our values.",
         img: require("../assets/about_us/woman-social-network.svg")
+      }
+    ],
+    advisors: [
+      {
+        name: "Dr. Plinio Pelegrini Morita (PhD)",
+        description: "Assistant Professor and J.W. Graham Information Technology Emerging Leader Chair in Applied Health Informatics at School of Public Health and Health Systems, University of Waterloo, Canada."
+      },
+      {
+        name: "Joshua Cohen",
+        description: "Faculty at Apple University; Distinguished Senior Fellow at UC Berkeley; Editor at Boston Review."
+      },
+       {
+        name: "Dan Boneh",
+        description: "Professor of Computer Science and Electrical Engineering at Stanford University"
+      },
+      {
+        name: "Al Gidari",
+        description: "Director of Privacy at Center for Internet and Society, Stanford Law School"
+      },
+      {
+        name: "Julie Parsonnet",
+        description: "Professor of Medicine and of Epidemiology and Population Health at Stanford University"
+      },
+      {
+        name: "Charles Belle",
+        description: "Fellow at Center for Internet and Society at Stanford Law School"
       }
     ],
     founders: [
