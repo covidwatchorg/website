@@ -387,19 +387,19 @@ export default {
       },
        {
         name: "Dan Boneh",
-        description: "Professor of Computer Science and Electrical Engineering at Stanford University"
+        description: "Professor of Computer Science and Electrical Engineering at Stanford University."
       },
       {
         name: "Al Gidari",
-        description: "Director of Privacy at Center for Internet and Society, Stanford Law School"
+        description: "Director of Privacy at Center for Internet and Society, Stanford Law School."
       },
       {
         name: "Julie Parsonnet",
-        description: "Professor of Medicine and of Epidemiology and Population Health at Stanford University"
+        description: "Professor of Medicine and of Epidemiology and Population Health at Stanford University."
       },
       {
         name: "Charles Belle",
-        description: "Fellow at Center for Internet and Society at Stanford Law School"
+        description: "Fellow at Center for Internet and Society at Stanford Law School."
       }
     ],
     founders: [
