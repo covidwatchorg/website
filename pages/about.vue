@@ -145,13 +145,13 @@
         </v-col>
 
         <v-row justify="space-around" align="center">
-          <v-col :md="4" :sm="6">
+          <v-col :md="4" :sm="6" class="collab-img-col">
             <a href="https://www.stanford.edu/">
               <v-img max-width="100%" id="stanford-img" class="collab-img" :src="stanford.src" />
             </a>
           </v-col>
 
-          <v-col :md="4" :sm="6">
+          <v-col :md="4" :sm="6" class="collab-img-col">
             <a href="https://uwaterloo.ca/">
               <v-img max-width="100%" id="waterloo-img" class="collab-img" :src="waterloo.src" />
             </a>
@@ -172,11 +172,11 @@
             v-for="(collab, i) in collaborator_projects"
             :key="i"
             :id="collab.id"
-            class="text-center"
+            class="text-center collab-img-col"
           >
             <a :href="collab.url">
               <v-img class="collab-img" :src="collab.src" contain />
-              <div style="font-size: 16px;">{{ collab.name }}</div>
+              <span class="body-2">{{ collab.name }}</span>
             </a>
           </v-col>
         </v-row>
@@ -186,16 +186,18 @@
 </template>
 
 <style lang="scss">
-.collab-img {
+.collab-img-col {
   filter: grayscale(100%);
-  max-width: 260px;
-  max-height: 70px;
-  margin-left: auto;
-  margin-right: auto;
 
   &:hover {
     filter: grayscale(0%);
   }
+}
+.collab-img {
+  max-width: 260px;
+  max-height: 70px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (max-width: 400px) {
