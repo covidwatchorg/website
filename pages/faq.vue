@@ -39,12 +39,6 @@
                   class="closed-header panel-header"
                 >
                   <h3 class="jump-target" :id="faq.sectionId">{{faq.section}}</h3>
-
-                  <!-- adds the svg arrow but it doesn't turn around automatically when card is expanded -->
-                  <!-- possible CSS/Javascript work in the future -->
-                  <!-- <template v-slot:actions>
-                        <img src="../assets/faq_page/arrow.svg" alt="arrow">
-                  </template>-->
                 </v-expansion-panel-header>
 
                 <v-expansion-panel-content>
@@ -93,13 +87,6 @@
     }
   }
 
-  // option: mediocre fixed left navigation section:
-  // #navigation {
-  // position: fixed;
-  // 396px is approx the same as if not position:fixed and in line w Figma
-  // top: 396px;
-  // }
-
   .sections-container {
     list-style: none;
   }
@@ -141,12 +128,6 @@
       font-size: 28px;
       line-height: 34px;
     }
-
-    // playing w hacky ways to make the arrows next to each section title
-    // .mdi-chevron-down {
-    // creates a white margin on the right on mobile but makes the little arrow next to the text
-    // margin-right: 450px;
-    // }
 
     #alerts {
       width: 200px;
