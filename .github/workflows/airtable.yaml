@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-     - name: Create hotfix branch
+      - name: Create hotfix branch
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "octocat"
