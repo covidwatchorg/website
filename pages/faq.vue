@@ -33,7 +33,7 @@
           <!-- list -->
           <v-col cols="12" :sm="12" :md="8">
             <v-expansion-panels multiple flat hover v-model="panel">
-              <v-expansion-panel v-for="(faq, i) in faqList" :key="i" class="my-2 faqCard">
+              <v-expansion-panel v-for="(faq, i) in faqList" :key="i" class="faqCard">
                 <v-expansion-panel-header
                   @click="setStyle($event)"
                   class="closed-header panel-header"
@@ -117,11 +117,6 @@
     // uncomment line-height: 60px for position: fixed left nav
     // line-height: 60px;
     border-bottom: 3px solid rgb(67, 196, 217, 0.5);
-  }
-
-  // this sets some CSS that Vuetify creates to eliminate margin top and bottom for each faq section name
-  .v-application .my-2 {
-    margin: 0px;
   }
 
   .closed-header {
