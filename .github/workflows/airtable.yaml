@@ -13,6 +13,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+     - name: Create hotfix branch
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "octocat"
+          git checkout -b "auto-add-news"
+
       - name: Run airtable script
         env:
           AIRTABLE_BASE_KEY: ${{ secrets.AIRTABLE_BASE_KEY }}
@@ -23,9 +29,17 @@ jobs:
           chmod +x airtable-auto.py
           ./airtable-auto.py
           
-      - name: Create Pull Request
-        uses: colbymorrison/create-pull-request@v2
-        with:
-          commit-message: "auto-add new news"
-          title: "Airtable GitHub action -- Update News"
-          body: "New News from Airtable"
+      - name: Update master and prod
+        run: |
+          git fetch --all
+
+          git add assets/data/medialist.json
+          git commit -m "auto update news from airtable"
+
+          git checkout master
+          # Only update medialist.json 
+          git checkout auto-add-news assets/data/medialist.json
+          git commit -m "auto update news from airtable"
+          git push origin master
+
+          git branch -D auto-add-news
