@@ -1,5 +1,3 @@
-# copied directly from Colby's previous work:  https://github.com/covid19risk/legacy_website/blob/12ebd1324c1c03bdab90c9522ecabbf6f9e53014/.github/workflows/airtable.yaml
-
 name: Airtable
 
 on:
@@ -39,7 +37,7 @@ jobs:
           git checkout master
           # Only update medialist.json 
           git checkout auto-add-news assets/data/medialist.json
-          git commit -m "auto update news from airtable"
+          git diff-index --quiet HEAD -- || git commit -m "auto update news from airtable"
           git push origin master
 
           git branch -D auto-add-news
