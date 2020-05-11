@@ -227,7 +227,7 @@ export default {
           {
             question: "How much will Covid Watch drain my phone’s battery?",
             answer:
-              "<p>We expect Covid Watch to drain your battery significantly less than using a pair of Bluetooth headphones. We use standard low-energy Bluetooth interfaces, and we send Bluetooth chirps every few minutes rather than in a constant stream.</p> "
+              "<p>We expect Covid Watch to drain your battery significantly less than using a pair of Bluetooth headphones. We use standard, low-energy Bluetooth interfaces, and we send Bluetooth chirps every few minutes rather than in a constant stream.</p> "
           },
           {
             question:
