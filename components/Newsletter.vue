@@ -8,58 +8,45 @@
           class="mt-8"
         >To receive periodic updates, subscribe to our newsletter by entering your email below.</p>
 
-        <!-- Jesse note: there is a lot of pre-built code here that is copy/pasted from Mailchimp's 'create a subscribe button' service, be careful editing ids -->
-        <link
-          href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css"
-          rel="stylesheet"
-          type="text/css"
-        />
-        <div class="mt-10" id="mc_embed_signup">
+        <div id="mc_embed_signup">
           <form
             action="https://covid19risk.us19.list-manage.com/subscribe/post?u=2edaa31c7afb7799ee770eb46&amp;id=362b89c2c0"
             method="post"
             id="mc-embedded-subscribe-form"
             name="mc-embedded-subscribe-form"
             ref="mc-embedded-subscribe-form"
-            class="validate pa-0"
+            class="validate"
             target="_blank"
             novalidate
           >
-            <v-row id="mc_embed_signup_scroll" align="center">
-              <v-col>
-                <div class="pa-0 mc-field-group">
-                  <input
-                    placeholder="Email address"
-                    type="email"
-                    value
-                    name="EMAIL"
-                    class="pl-4 required email"
-                    id="mce-EMAIL"
-                  />
-                </div>
-
-                <div id="mce-responses" class="clear">
-                  <div class="response" style="display:none"></div>
-                  <div class="response" style="display:none"></div>
-                </div>
-
-                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                  <input
-                    type="text"
-                    name="b_2edaa31c7afb7799ee770eb46_362b89c2c0"
-                    tabindex="-1"
-                    value
-                  />
-                </div>
+            <v-row id="mc_embed_signup_scroll" align="center" justify="start">
+              <v-col class="mc-field-group">
+                <input
+                  type="email"
+                  value
+                  name="EMAIL"
+                  class="email"
+                  id="mce-EMAIL"
+                  placeholder="email address"
+                  required
+                />
               </v-col>
-
+              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                <input
+                  type="text"
+                  name="b_6a3a62b4b32f5a4329abff0d0_353a151b02"
+                  tabindex="-1"
+                  value
+                />
+              </div>
               <v-col cols="10" :sm="6" :md="3">
                 <Button hero id="mc-embedded-subscribe" name="subscribe" @click="submit">Subscribe</Button>
               </v-col>
             </v-row>
           </form>
         </div>
+        <!--End mc_embed_signup-->
       </v-col>
 
       <v-spacer></v-spacer>
@@ -120,27 +107,6 @@
 }
 </style>
 
-
-<script src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
-<script>
-(function($) {
-  window.fnames = new Array();
-  window.ftypes = new Array();
-  fnames[0] = "EMAIL";
-  ftypes[0] = "email";
-  fnames[1] = "FNAME";
-  ftypes[1] = "text";
-  fnames[2] = "LNAME";
-  ftypes[2] = "text";
-  fnames[3] = "ADDRESS";
-  ftypes[3] = "address";
-  fnames[4] = "PHONE";
-  ftypes[4] = "phone";
-  fnames[5] = "BIRTHDAY";
-  ftypes[5] = "birthday";
-})(jQuery);
-var $mcj = jQuery.noConflict(true);
-</script>
 <script>
 import Button from "../components/Button.vue";
 
