@@ -2,7 +2,7 @@
   <v-row>
     <v-col cols="12" class="pa-12 mt-12 d-flex" id="subscribe">
       <v-col cols="9">
-        <h2 class="plum--text">Newsletter</h2>
+        <h2>Newsletter</h2>
 
         <p
           class="mt-8"
@@ -20,12 +20,13 @@
             method="post"
             id="mc-embedded-subscribe-form"
             name="mc-embedded-subscribe-form"
+            ref="mc-embedded-subscribe-form"
             class="validate pa-0"
             target="_blank"
             novalidate
           >
-            <div id="mc_embed_signup_scroll">
-              <div>
+            <v-row id="mc_embed_signup_scroll" align="center">
+              <v-col>
                 <div class="pa-0 mc-field-group">
                   <input
                     placeholder="Email address"
@@ -51,16 +52,12 @@
                     value
                   />
                 </div>
-              </div>
+              </v-col>
 
-              <input
-                type="submit"
-                name="subscribe"
-                id="mc-embedded-subscribe"
-                value="Subscribe"
-                class="button"
-              />
-            </div>
+              <v-col cols="10" :sm="6" :md="3">
+                <Button hero id="mc-embedded-subscribe" name="subscribe" @click="submit">Subscribe</Button>
+              </v-col>
+            </v-row>
           </form>
         </div>
       </v-col>
@@ -70,30 +67,6 @@
       <v-col id="subscribe-woman-col" cols="3">
         <img src="../assets/faq_page/subscribe_woman.svg" alt="subscribe" />
       </v-col>
-
-      <script
-        type="text/javascript"
-        src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"
-      ></script>
-      <script type="text/javascript">
-  (function($) {
-    window.fnames = new Array();
-    window.ftypes = new Array();
-    fnames[0] = "EMAIL";
-    ftypes[0] = "email";
-    fnames[1] = "FNAME";
-    ftypes[1] = "text";
-    fnames[2] = "LNAME";
-    ftypes[2] = "text";
-    fnames[3] = "ADDRESS";
-    ftypes[3] = "address";
-    fnames[4] = "PHONE";
-    ftypes[4] = "phone";
-    fnames[5] = "BIRTHDAY";
-    ftypes[5] = "birthday";
-  })(jQuery);
-  var $mcj = jQuery.noConflict(true);
-      </script>
     </v-col>
   </v-row>
 </template>
@@ -126,24 +99,6 @@
     }
   }
 
-  #mc-embedded-subscribe {
-    background-color: #2c58b1;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 22px;
-    text-align: center;
-    height: 47px;
-    margin-left: 20px;
-    border-radius: 8px;
-  }
-
-  #mc-embedded-subscribe:hover {
-    // trying to recreate the <Button> hover effect
-    background-color: #4e70cd;
-  }
-
   @media screen {
     @media (max-width: 960px) {
       #subscribe-woman-col {
@@ -159,15 +114,39 @@
       }
 
       #mc-embedded-subscribe {
-        margin-left: 0px;
-        margin-top: 6px;
-        width: 180px;
+        margin: 1em 0 1em 0;
       }
     }
   }
 }
 </style>
 
+
+<script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"
+></script>
+<script src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+<script>
+(function($) {
+  window.fnames = new Array();
+  window.ftypes = new Array();
+  fnames[0] = "EMAIL";
+  ftypes[0] = "email";
+  fnames[1] = "FNAME";
+  ftypes[1] = "text";
+  fnames[2] = "LNAME";
+  ftypes[2] = "text";
+  fnames[3] = "ADDRESS";
+  ftypes[3] = "address";
+  fnames[4] = "PHONE";
+  ftypes[4] = "phone";
+  fnames[5] = "BIRTHDAY";
+  ftypes[5] = "birthday";
+})(jQuery);
+var $mcj = jQuery.noConflict(true);
+</script>
 <script>
 import Button from "../components/Button.vue";
 
@@ -175,6 +154,11 @@ export default {
   name: "Newsletter",
   components: {
     Button
+  },
+  methods: {
+    submit() {
+      this.$refs["mc-embedded-subscribe-form"].submit();
+    }
   }
 };
 </script>
