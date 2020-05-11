@@ -227,7 +227,7 @@ export default {
           {
             question: "How much will Covid Watch drain my phone’s battery?",
             answer:
-              "<p>We expect Covid Watch to drain your battery significantly less than using a pair of Bluetooth headphones. We use standard low-energy Bluetooth interfaces, and we send Bluetooth chirps every few minutes rather than in a constant stream.</p> "
+              "<p>We expect Covid Watch to drain your battery significantly less than using a pair of Bluetooth headphones. We use standard, low-energy Bluetooth interfaces, and we send Bluetooth chirps every few minutes rather than in a constant stream.</p> "
           },
           {
             question:
@@ -245,7 +245,7 @@ export default {
             question: "How does the Covid Watch app protect my privacy?",
             answer:
               "<p>In short, we don’t collect data about who you are, where you go or who you’re near. With the Covid Watch app, your phone periodically sends out Bluetooth signals, essentially saying to nearby phones, “Hey, I’m here!” If another phone nearby also has the app and says, “Hey, I’m here too,” both phones will log the interaction and store it for two to four weeks right there inside your device.</p>" +
-              "<p>If you are diagnosed with COVID-19, you can choose to share your test results with other Covid Watch users after they are verified by local health officials.  Once you do that, you upload a random number to our database that allows other devices to recognize that the Bluetooth numbers they list are associated with a positive result. The database contains no personal information and no locations. A hacker who broke into our database or your phone would just find a list of random numbers.</p>"
+              "<p>If you are diagnosed with COVID-19, once your test results are verified by local health officials you can choose to share your results with other Covid Watch users. Once you do that, you upload a random number to our database that allows other devices to recognize that the Bluetooth numbers they list are associated with a positive result. The database contains no personal information and no locations. A hacker who broke into our database or your phone would just find a list of random numbers.</p>"
           },
           {
             question:
