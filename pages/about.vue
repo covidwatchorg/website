@@ -273,7 +273,7 @@ export default {
       {
         button_text: "Partner With Us",
         cta_text:
-          "We are working with partners that share our commitment to health and human rights. If your organization has tools to help stop the spread or expertise, let’s work together.",
+          "We are working with partners that share our commitment to health and human rights. If your organization has expertise or tools to help stop the spread, let’s work together.",
         link: ""
       }
     ],
