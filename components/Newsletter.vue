@@ -93,7 +93,6 @@
       box-shadow: inset 0px 2px 10px rgba(0, 0, 0, 0.2);
       border-radius: 10px;
       width: 100%;
-      font-size: 18px;
       font-style: italic;
       padding: 12px;
     }
