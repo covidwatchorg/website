@@ -4,7 +4,7 @@
       <v-col>
         <v-row id="hero">
           <v-col :md="7" :sm="8" cols="12">
-            <h1>Together, we have the power to stop COVID-19.</h1>
+            <h1>Together, we have the power to stop COVID-19</h1>
 
             <p class="subtitle">
               Protect yourself, your family and your community with
