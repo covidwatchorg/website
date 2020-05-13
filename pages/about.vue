@@ -148,11 +148,11 @@
         </template>
       </v-row>
 
-      <!-- Advisors row-->
+      <!-- Advisers row-->
       <v-row :class="pageSectionClass">
         <v-col cols="11">
           <div class="mb-5">
-            <h2>Advisors</h2>
+            <h2>Advisers</h2>
           </div>
         </v-col>
 
@@ -160,19 +160,19 @@
           <v-container class="grey lighten-5">
             <v-row no-gutters>
               <v-col
-                v-for="(advisor, n) in advisors"
+                v-for="(adviser, n) in advisers"
                 :key="n"
                 cols="12"
                 sm="4"
               >
                 <div
-                  class="advisor-card"
+                  class="adviser-card"
                 >
                   <div class="title">
-                    {{ advisor.name }}
+                    {{ adviser.name }}
                   </div>
                   <div>
-                    {{ advisor.description }}
+                    {{ adviser.description }}
                   </div>
                 </div>
               </v-col>
@@ -313,7 +313,7 @@
    max-width: 260px;
 }
 
-.advisor-card {
+.adviser-card {
   margin: 0px 20px 30px 0px;
   padding-left: 10px;
 }
@@ -376,11 +376,7 @@ export default {
         img: require("../assets/about_us/woman-social-network.svg")
       }
     ],
-    advisors: [
-      {
-        name: "Dr. Plinio Pelegrini Morita (PhD)",
-        description: "Assistant Professor and J.W. Graham Information Technology Emerging Leader Chair in Applied Health Informatics at School of Public Health and Health Systems, University of Waterloo, Canada."
-      },
+    advisers: [
       {
         name: "Joshua Cohen",
         description: "Faculty at Apple University; Distinguished Senior Fellow at UC Berkeley; Editor at Boston Review."
@@ -392,6 +388,10 @@ export default {
       {
         name: "Al Gidari",
         description: "Director of Privacy at Center for Internet and Society, Stanford Law School."
+      },
+      {
+        name: "Dr. Plinio Pelegrini Morita (PhD)",
+        description: "Assistant Professor and J.W. Graham Information Technology Emerging Leader Chair in Applied Health Informatics at University of Waterloo, Canada."
       },
       {
         name: "Julie Parsonnet",
