@@ -66,3 +66,11 @@ a {
   text-transform: uppercase;
   font-weight: 600;
 }
+
+.title-link {
+  color: rgba(0,0,0,.87);
+  text-decoration: none;
+  &:hover {
+    color: var(--v-aqua-base);
+  }
+}

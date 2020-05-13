@@ -138,6 +138,40 @@
         </template>
       </v-row>
 
+      <!-- Advisers row-->
+      <v-row :class="pageSectionClass">
+        <v-col cols="11">
+          <div class="mb-5">
+            <h2>Advisers</h2>
+          </div>
+        </v-col>
+
+        <template>
+          <v-container class="grey lighten-5">
+            <v-row no-gutters>
+              <v-col
+                v-for="(adviser, n) in advisers"
+                :key="n"
+                cols="12"
+                sm="4"
+              >
+                <div
+                  class="adviser-card"
+                >
+                  <a :href="adviser.link" target="_blank"><div class="title-link title">
+                    {{ adviser.name }}
+                  </div></a>
+                  <img class="founder_img" src="../assets/about_us/top-accent.svg" />
+                  <div>
+                    {{ adviser.description }}
+                  </div>
+                </div>
+              </v-col>
+            </v-row>
+          </v-container>
+        </template>
+      </v-row>
+
       <!-- academic partners row-->
       <v-row :class="pageSectionClass" id="academic-partners">
         <v-col class="mb-10" :md="3" :sm="8">
@@ -243,6 +277,11 @@
 .join-us {
   background: rgba(245, 229, 230, 0.6);
 }
+
+.adviser-card {
+  margin: 0px 35px 35px 0px;
+  padding: 10px;
+}
 </style>
 
 <script>
@@ -295,6 +334,38 @@ export default {
         body:
           "We are setting precedents  in real time, giving individuals and communities the power to confront this global challenge. We work closely with public health officials and organizations that share our values.",
         img: require("../assets/about_us/woman-social-network.svg")
+      }
+    ],
+    advisers: [
+      {
+        name: "Dan Boneh",
+        description: "Professor of Computer Science and Electrical Engineering at Stanford University.",
+        link: 'https://profiles.stanford.edu/dan-boneh'
+      },
+      {
+        name: "Joshua Cohen",
+        description: "Faculty at Apple University; Distinguished Senior Fellow at UC Berkeley; Editor at Boston Review.",
+        link: 'http://bostonreview.net/joshua-cohen'
+      },
+      {
+        name: "Al Gidari",
+        description: "Director of Privacy at Center for Internet and Society, Stanford Law School.",
+        link: 'http://cyberlaw.stanford.edu/about/people/albert-gidari'
+      },
+      {
+        name: "Dr. Plinio Pelegrini Morita",
+        description: "Assistant Professor and J.W. Graham Information Technology Emerging Leader Chair in Applied Health Informatics at University of Waterloo, Canada.",
+        link: 'https://uwaterloo.ca/advanced-interface-design-lab/people-profiles/plinio-pelegrini-morita'
+      },
+      {
+        name: "Julie Parsonnet",
+        description: "Professor of Medicine and of Epidemiology and Population Health at Stanford University.",
+        link: 'https://profiles.stanford.edu/julie-parsonnet'
+      },
+      {
+        name: "Charles Belle",
+        description: "Fellow at Center for Internet and Society at Stanford Law School.",
+        link: 'http://cyberlaw.stanford.edu/about/people/charles-belle'
       }
     ],
     founders: [
