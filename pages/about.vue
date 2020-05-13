@@ -279,8 +279,8 @@
 }
 
 .adviser-card {
-  margin: 0px 20px 30px 0px;
-  padding-left: 10px;
+  margin: 0px 35px 35px 0px;
+  padding: 10px;
 }
 </style>
 
