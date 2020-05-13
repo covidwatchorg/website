@@ -158,9 +158,9 @@
                 <div
                   class="adviser-card"
                 >
-                  <div class="title">
+                  <a :href="adviser.link"><div class="title">
                     {{ adviser.name }}
-                  </div>
+                  </div></a>
                   <div>
                     {{ adviser.description }}
                   </div>
@@ -338,27 +338,33 @@ export default {
     advisers: [
       {
         name: "Joshua Cohen",
-        description: "Faculty at Apple University; Distinguished Senior Fellow at UC Berkeley; Editor at Boston Review."
+        description: "Faculty at Apple University; Distinguished Senior Fellow at UC Berkeley; Editor at Boston Review.",
+        link: 'http://bostonreview.net/joshua-cohen'
       },
        {
         name: "Dan Boneh",
-        description: "Professor of Computer Science and Electrical Engineering at Stanford University."
+        description: "Professor of Computer Science and Electrical Engineering at Stanford University.",
+        link: 'https://profiles.stanford.edu/dan-boneh'
       },
       {
         name: "Al Gidari",
-        description: "Director of Privacy at Center for Internet and Society, Stanford Law School."
+        description: "Director of Privacy at Center for Internet and Society, Stanford Law School.",
+        link: 'http://cyberlaw.stanford.edu/about/people/albert-gidari'
       },
       {
         name: "Dr. Plinio Pelegrini Morita (PhD)",
-        description: "Assistant Professor and J.W. Graham Information Technology Emerging Leader Chair in Applied Health Informatics at University of Waterloo, Canada."
+        description: "Assistant Professor and J.W. Graham Information Technology Emerging Leader Chair in Applied Health Informatics at University of Waterloo, Canada.",
+        link: 'https://uwaterloo.ca/advanced-interface-design-lab/people-profiles/plinio-pelegrini-morita'
       },
       {
         name: "Julie Parsonnet",
-        description: "Professor of Medicine and of Epidemiology and Population Health at Stanford University."
+        description: "Professor of Medicine and of Epidemiology and Population Health at Stanford University.",
+        link: 'https://profiles.stanford.edu/julie-parsonnet'
       },
       {
         name: "Charles Belle",
-        description: "Fellow at Center for Internet and Society at Stanford Law School."
+        description: "Fellow at Center for Internet and Society at Stanford Law School.",
+        link: 'http://cyberlaw.stanford.edu/about/people/charles-belle'
       }
     ],
     founders: [
