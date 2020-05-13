@@ -205,7 +205,7 @@ export default {
       {
         title: "Smart Support",
         body:
-          "Covid Watch is learning alongside you as we both work to protect your community. Expect our researchers to be extremely attentive to the app’s effect in your community and responsive feedback in a fast-moving world.",
+          "Covid Watch is learning alongside you as we both work to protect your community. Expect our researchers to be extremely attentive to the app’s effect in your community and provide responsive feedback in a fast-moving world.",
         img: require("../assets/pilot_page/woman_helpdesk.svg")
       }
     ]
