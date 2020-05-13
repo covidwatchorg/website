@@ -245,7 +245,7 @@ export default {
             question: "How does the Covid Watch app protect my privacy?",
             answer:
               "<p>In short, we don’t collect data about who you are, where you go or who you’re near. With the Covid Watch app, your phone periodically sends out Bluetooth signals, essentially saying to nearby phones, “Hey, I’m here!” If another phone nearby also has the app and says, “Hey, I’m here too,” both phones will log the interaction and store it for two to four weeks right there inside your device.</p>" +
-              "<p>If you are diagnosed with COVID-19, you can choose to share your test results with other Covid Watch users. Once your results have been verified by local health officials, your phone will upload a random number to our database. Other Covid Watch users whose phones have stored the same random number will then be notified that they were exposed to someone who tested positive for COVID-19. Our database contains no personal information and no locations. A hacker who broke into our database or your phone would just find a list of random numbers.</p>"
+              "<p>If you are diagnosed with COVID-19, you can choose to share your test results with other Covid Watch users after they are verified by local health officials.  Once you do that, you upload a random number to our database that allows other devices to recognize that the Bluetooth numbers they list are associated with a positive result. The database contains no personal information and no locations. A hacker who broke into our database or your phone would just find a list of random numbers.</p>"
           },
           {
             question:
@@ -273,7 +273,7 @@ export default {
             question:
               "How are you sure I can’t be identified when I share my test results?",
             answer:
-              "<p>We couldn't identify you even if we wanted to (and we don't). Covid Watch does not ask you for identifying information. The communications between phones do not contain any information about who these phones belong to. For example, if you are close to the same person twice on different days, your phone won’t even know whether it was the same person or different people.</p>" +
+              "<p>We can't identify you. Covid Watch does not ask you for identifying information. The communications between phones do not contain any information about who these phones belong to. For example, if you are close to the same person twice on different days, your phone won’t even know whether it was the same person or different people.</p>" +
               "<p>Our database does not contain identifying information. Exposure alerts can only be generated using a combination of the information in the shared database and the information stored on your phone.</p>"
           }
         ]
