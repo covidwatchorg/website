@@ -374,18 +374,13 @@ export default {
       },
       {
         name: "Plinio Pelegrini Morita, PhD",
-        description: "Assistant Professor and J.W. Graham Information Technology Emerging Leader Chair in Applied Health Informatics, University of Waterloo (Canada)",
+        description: "J.W. Graham Information Technology Emerging Leader Chair in Applied Health Informatics, University of Waterloo",
         link: 'https://uwaterloo.ca/advanced-interface-design-lab/people-profiles/plinio-pelegrini-morita'
       },
       {
         name: "Julie Parsonnet, MD",
         description: "Professor of Medicine and of Epidemiology and Population Health, Stanford University",
         link: 'https://profiles.stanford.edu/julie-parsonnet'
-      },
-      {
-        name: "Harper Reed",
-        description: "Senior Fellow, USC Annenberg Innovation Lab",
-        link: 'https://harperreed.com/'
       },
       {
         name: "Harper Reed",
