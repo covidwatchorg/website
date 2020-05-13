@@ -273,7 +273,7 @@ export default {
             question:
               "How are you sure I can’t be identified when I share my test results?",
             answer:
-              "<p>We don't identify you, because we can’t identify you. Covid Watch does not ask for you for identifying information. The communications between phones do not contain any information about who these phones belong to. For example, if you are close to the same person twice on different days, your phone won’t even know whether it was the same person or different people.</p>" +
+              "<p>We can't identify you. Covid Watch does not ask you for identifying information. The communications between phones do not contain any information about who these phones belong to. For example, if you are close to the same person twice on different days, your phone won’t even know whether it was the same person or different people.</p>" +
               "<p>Our database does not contain identifying information. Exposure alerts can only be generated using a combination of the information in the shared database and the information stored on your phone.</p>"
           }
         ]
