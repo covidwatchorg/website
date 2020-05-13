@@ -158,9 +158,10 @@
                 <div
                   class="adviser-card"
                 >
-                  <a :href="adviser.link"><div class="title">
+                  <a :href="adviser.link"><div class="title-link title">
                     {{ adviser.name }}
                   </div></a>
+                  <img class="founder_img" src="../assets/about_us/top-accent.svg" />
                   <div>
                     {{ adviser.description }}
                   </div>
