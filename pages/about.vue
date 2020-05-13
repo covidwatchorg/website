@@ -158,7 +158,7 @@
                 <div
                   class="adviser-card"
                 >
-                  <a :href="adviser.link"><div class="title-link title">
+                  <a :href="adviser.link" target="_blank"><div class="title-link title">
                     {{ adviser.name }}
                   </div></a>
                   <img class="founder_img" src="../assets/about_us/top-accent.svg" />
@@ -338,14 +338,14 @@ export default {
     ],
     advisers: [
       {
-        name: "Joshua Cohen",
-        description: "Faculty at Apple University; Distinguished Senior Fellow at UC Berkeley; Editor at Boston Review.",
-        link: 'http://bostonreview.net/joshua-cohen'
-      },
-       {
         name: "Dan Boneh",
         description: "Professor of Computer Science and Electrical Engineering at Stanford University.",
         link: 'https://profiles.stanford.edu/dan-boneh'
+      },
+      {
+        name: "Joshua Cohen",
+        description: "Faculty at Apple University; Distinguished Senior Fellow at UC Berkeley; Editor at Boston Review.",
+        link: 'http://bostonreview.net/joshua-cohen'
       },
       {
         name: "Al Gidari",
@@ -353,7 +353,7 @@ export default {
         link: 'http://cyberlaw.stanford.edu/about/people/albert-gidari'
       },
       {
-        name: "Dr. Plinio Pelegrini Morita (PhD)",
+        name: "Dr. Plinio Pelegrini Morita",
         description: "Assistant Professor and J.W. Graham Information Technology Emerging Leader Chair in Applied Health Informatics at University of Waterloo, Canada.",
         link: 'https://uwaterloo.ca/advanced-interface-design-lab/people-profiles/plinio-pelegrini-morita'
       },
