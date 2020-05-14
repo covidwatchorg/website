@@ -353,8 +353,9 @@ export default {
       },
       {
         name: "Joshua Cohen, PhD",
-        description: "Faculty, Apple University; Distinguished Senior Fellow, UC Berkeley; Editor, Boston Review",
-        link: 'http://bostonreview.net/joshua-cohen'
+        description:
+          "Faculty at Apple University; Distinguished Senior Fellow at UC Berkeley; Editor, Boston Review",
+        link: "http://bostonreview.net/joshua-cohen"
       },
       {
         name: "Peter Eckersley, PhD",
