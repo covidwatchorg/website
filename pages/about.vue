@@ -393,6 +393,11 @@ export default {
         link: 'https://harperreed.com/'
       },
       {
+        name: "Arthur Reingold, MD",
+        description: "Professor and Division Head of Epidemiology and Biostatistics, UC Berkeley School of Public Health",
+        link: 'https://publichealth.berkeley.edu/people/arthur-reingold/'
+      },
+      {
         name: "Asa Tapley, MD, MSc",
         description: "Fellow, Allergy and Infectious Diseases, University of Washington",
         link: 'https://aid.uw.edu/fellow/asa-tapley'
