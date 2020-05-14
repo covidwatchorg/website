@@ -170,15 +170,27 @@
         </v-col>
 
         <v-row justify="space-around" align="center">
-          <v-col :md="4" :sm="6" class="collab-img-col">
+          <v-col :md="5" :sm="6" class="collab-img-col">
             <a href="https://www.stanford.edu/">
-              <v-img max-width="100%" id="stanford-img" class="collab-img" :src="stanford.src" />
+              <v-img
+                max-width="100%"
+                id="stanford-img"
+                class="collab-img"
+                :src="stanford.src"
+                contain
+              />
             </a>
           </v-col>
 
-          <v-col :md="4" :sm="6" class="collab-img-col">
+          <v-col :md="3" :sm="6" class="collab-img-col">
             <a href="https://uwaterloo.ca/">
-              <v-img max-width="100%" id="waterloo-img" class="collab-img" :src="waterloo.src" />
+              <v-img
+                max-width="100%"
+                id="waterloo-img"
+                class="collab-img"
+                :src="waterloo.src"
+                contain
+              />
             </a>
           </v-col>
         </v-row>
@@ -186,11 +198,11 @@
 
       <!-- colabs row-->
       <v-row :class="pageSectionClass" id="collaborator-projects">
-        <v-col class="mb-10" :md="3" :sm="8">
+        <v-col class="mb-10" :md="5" :sm="8">
           <h3 class="pt-6">Collaborator Partners</h3>
         </v-col>
 
-        <v-row justify="space-evenly" align="center">
+        <v-row justify="center" align="center">
           <v-col
             cols="12"
             :sm="4"
@@ -439,16 +451,22 @@ export default {
         name: "Founding Member"
       },
       {
-        id: "coepi",
-        url: "https://www.coepi.org/",
-        src: require("../assets/about_us/logo-coepi.svg"),
-        name: "CoEpi"
-      },
-      {
         id: "safe-paths",
         url: "https://covidsafepaths.org/",
         src: require("../assets/about_us/logo-safepaths.svg"),
         name: "Covid SafePaths"
+      },
+      {
+        id: "openmined",
+        url: "https://www.openmined.org/",
+        src: require("../assets/about_us/logo-openmined.svg"),
+        name: "OpenMined"
+      },
+      {
+        id: "coepi",
+        url: "https://www.coepi.org/",
+        src: require("../assets/about_us/logo-coepi.svg"),
+        name: "CoEpi"
       }
     ],
     title: "About Us | Covid Watch"
