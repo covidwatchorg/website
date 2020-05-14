@@ -359,6 +359,11 @@ export default {
         link: "http://bostonreview.net/joshua-cohen"
       },
       {
+        name: "Peter Eckersley, PhD",
+        description: "Convener, stop-covid.tech and Distinguished Technology Fellow, EFF",
+        link: 'https://stop-covid.tech'
+      },
+      {
         name: "Jerry Fiddler",
         description: "Principal, Zygote Ventures",
         link: "http://zygoteventures.com/about-the-principal/"
