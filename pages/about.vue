@@ -353,7 +353,7 @@ export default {
         link: 'http://bostonreview.net/joshua-cohen'
       },
       {
-        name: "Jeremy Fiddler",
+        name: "Jerry Fiddler",
         description: "Principal, Zygote Ventures",
         link: 'http://zygoteventures.com/about-the-principal/'
       },
