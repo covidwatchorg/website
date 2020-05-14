@@ -205,11 +205,11 @@
         <v-row justify="center" align="center">
           <v-col
             cols="12"
-            :sm="4"
+            :md="6"
             v-for="(collab, i) in collaborator_projects"
             :key="i"
             :id="collab.id"
-            class="text-center collab-img-col"
+            class="text-center collab-img-col mb-6"
           >
             <a :href="collab.url">
               <v-img class="collab-img" :src="collab.src" contain />
@@ -457,17 +457,17 @@ export default {
         name: "Covid SafePaths"
       },
       {
+        id: "coepi",
+        url: "https://www.coepi.org/",
+        src: require("../assets/about_us/logo-coepi.svg"),
+        name: "CoEpi"
+      },
+      {
         id: "openmined",
         url: "https://www.openmined.org/",
         src: require("../assets/about_us/logo-openmined.svg"),
         name: "OpenMined"
       },
-      {
-        id: "coepi",
-        url: "https://www.coepi.org/",
-        src: require("../assets/about_us/logo-coepi.svg"),
-        name: "CoEpi"
-      }
     ],
     title: "About Us | Covid Watch"
   }),
