@@ -165,12 +165,12 @@
 
       <!-- academic partners row-->
       <v-row :class="pageSectionClass" id="academic-partners">
-        <v-col class="mb-10" :md="3" :sm="8">
+        <v-col class="mb-10" :md="4" :sm="8">
           <h3 class="pt-5">Academic Partners</h3>
         </v-col>
 
         <v-row justify="space-around" align="center">
-          <v-col :md="5" :sm="6" class="collab-img-col">
+          <v-col :md="4" :sm="6" class="collab-img-col">
             <a href="https://www.stanford.edu/">
               <v-img
                 max-width="100%"
@@ -182,7 +182,7 @@
             </a>
           </v-col>
 
-          <v-col :md="3" :sm="6" class="collab-img-col">
+          <v-col :md="4" :sm="6" class="collab-img-col">
             <a href="https://uwaterloo.ca/">
               <v-img
                 max-width="100%"
@@ -198,7 +198,7 @@
 
       <!-- colabs row-->
       <v-row :class="pageSectionClass" id="collaborator-projects">
-        <v-col class="mb-10" :md="5" :sm="8">
+        <v-col class="mb-10" :md="4" :sm="8">
           <h3 class="pt-6">Collaborator Partners</h3>
         </v-col>
 
