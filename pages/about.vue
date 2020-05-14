@@ -149,22 +149,13 @@
         <template>
           <v-container class="grey lighten-5">
             <v-row no-gutters>
-              <v-col
-                v-for="(adviser, n) in advisers"
-                :key="n"
-                cols="12"
-                sm="4"
-              >
-                <div
-                  class="adviser-card"
-                >
-                  <a :href="adviser.link" target="_blank"><div class="title-link title">
-                    {{ adviser.name }}
-                  </div></a>
+              <v-col v-for="(adviser, n) in advisers" :key="n" cols="12" sm="4">
+                <div class="adviser-card">
+                  <a :href="adviser.link" target="_blank">
+                    <div class="title-link title">{{ adviser.name }}</div>
+                  </a>
                   <img class="founder_img" src="../assets/about_us/top-accent.svg" />
-                  <div>
-                    {{ adviser.description }}
-                  </div>
+                  <div>{{ adviser.description }}</div>
                 </div>
               </v-col>
             </v-row>
@@ -339,59 +330,68 @@ export default {
     advisers: [
       {
         name: "Charles Belle, JD",
-        description: "Fellow at Center for Internet and Society at Stanford Law School.",
-        link: 'http://cyberlaw.stanford.edu/about/people/charles-belle'
+        description:
+          "Fellow at Center for Internet and Society at Stanford Law School.",
+        link: "http://cyberlaw.stanford.edu/about/people/charles-belle"
       },
       {
         name: "Dan Boneh, PhD",
-        description: "Professor of Computer Science and Electrical Engineering, Stanford University",
-        link: 'https://profiles.stanford.edu/dan-boneh'
+        description:
+          "Professor of Computer Science and Electrical Engineering, Stanford University",
+        link: "https://profiles.stanford.edu/dan-boneh"
       },
       {
         name: "Joshua Cohen, PhD",
-        description: "Faculty at Apple University; Distinguished Senior Fellow at UC Berkeley; Editor, Boston Review",
-        link: 'http://bostonreview.net/joshua-cohen'
+        description:
+          "Faculty at Apple University; Distinguished Senior Fellow at UC Berkeley; Editor, Boston Review",
+        link: "http://bostonreview.net/joshua-cohen"
       },
       {
         name: "Jerry Fiddler",
         description: "Principal, Zygote Ventures",
-        link: 'http://zygoteventures.com/about-the-principal/'
+        link: "http://zygoteventures.com/about-the-principal/"
       },
       {
         name: "Al Gidari, JD",
-        description: "Director of Privacy at Center for Internet and Society, Stanford Law School",
-        link: 'http://cyberlaw.stanford.edu/about/people/albert-gidari'
+        description:
+          "Director of Privacy at Center for Internet and Society, Stanford Law School",
+        link: "http://cyberlaw.stanford.edu/about/people/albert-gidari"
       },
       {
         name: "Robert M. Grant, MD, MPH",
-        description: "MPH Professor of Medicine, University of California San Francisco",
-        link: 'https://profiles.ucsf.edu/robert.grant'
+        description:
+          "MPH Professor of Medicine, University of California San Francisco",
+        link: "https://profiles.ucsf.edu/robert.grant"
       },
       {
-        name: "Jeffrey Landish",
+        name: "Jeffrey Ladish",
         description: "Security Consultant, Gordian Research",
-        link: 'https://jeffreyladish.com/'
+        link: "https://jeffreyladish.com/"
       },
       {
         name: "Plinio Pelegrini Morita, PhD",
-        description: "J.W. Graham Information Technology Emerging Leader Chair in Applied Health Informatics, University of Waterloo",
-        link: 'https://uwaterloo.ca/advanced-interface-design-lab/people-profiles/plinio-pelegrini-morita'
+        description:
+          "J.W. Graham Information Technology Emerging Leader Chair in Applied Health Informatics, University of Waterloo",
+        link:
+          "https://uwaterloo.ca/advanced-interface-design-lab/people-profiles/plinio-pelegrini-morita"
       },
       {
         name: "Julie Parsonnet, MD",
-        description: "Professor of Medicine and of Epidemiology and Population Health, Stanford University",
-        link: 'https://profiles.stanford.edu/julie-parsonnet'
+        description:
+          "Professor of Medicine and of Epidemiology and Population Health, Stanford University",
+        link: "https://profiles.stanford.edu/julie-parsonnet"
       },
       {
         name: "Harper Reed",
         description: "Senior Fellow, USC Annenberg Innovation Lab",
-        link: 'https://harperreed.com/'
+        link: "https://harperreed.com/"
       },
       {
         name: "Asa Tapley, MD, MSc",
-        description: "Fellow, Allergy and Infectious Diseases, University of Washington",
-        link: 'https://aid.uw.edu/fellow/asa-tapley'
-      },
+        description:
+          "Fellow, Allergy and Infectious Diseases, University of Washington",
+        link: "https://aid.uw.edu/fellow/asa-tapley"
+      }
     ],
     founders: [
       {
