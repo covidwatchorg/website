@@ -349,8 +349,13 @@ export default {
       },
       {
         name: "Joshua Cohen, PhD",
-        description: "Faculty at Apple University; Distinguished Senior Fellow at UC Berkeley; Editor, Boston Review",
+        description: "Faculty, Apple University; Distinguished Senior Fellow, UC Berkeley; Editor, Boston Review",
         link: 'http://bostonreview.net/joshua-cohen'
+      },
+      {
+        name: "Peter Eckersley, PhD",
+        description: "Convener, stop-covid.tech and Distinguished Technology Fellow, EFF",
+        link: 'https://stop-covid.tech'
       },
       {
         name: "Jerry Fiddler",
@@ -368,7 +373,7 @@ export default {
         link: 'https://profiles.ucsf.edu/robert.grant'
       },
       {
-        name: "Jeffrey Landish",
+        name: "Jeffrey Ladish",
         description: "Security Consultant, Gordian Research",
         link: 'https://jeffreyladish.com/'
       },
