@@ -1,294 +1,294 @@
 [
   {
-    "author_name": "Carolyn Said",
+    "id": 1,
     "type": "press_mention",
-    "url": "https://www.sfchronicle.com/business/article/Latest-weapon-in-tracing-and-tracking-coronavirus-15219887.php",
-    "outlet_name": "San Francisco Chronicle",
-    "date": "2020-04-23",
     "title": "Latest weapon in tracing and tracking coronavirus infections: your smartphone.  Read the full story here.  ",
-    "Name": 1
+    "url": "https://www.sfchronicle.com/business/article/Latest-weapon-in-tracing-and-tracking-coronavirus-15219887.php",
+    "author_name": "Carolyn Said",
+    "outlet_name": "San Francisco Chronicle",
+    "date": "2020-04-23"
   },
   {
-    "author_name": "Ben Christopher",
+    "id": 2,
     "type": "press_mention",
-    "url": "https://lostcoastoutpost.com/2020/apr/23/how-coronavirus-could-test-californias-commitment/",
-    "outlet_name": "Lost Coast Outpost",
-    "date": "2020-04-15",
     "title": "How Coronavirus Could Test California\u2019s Commitment to Privacy",
-    "Name": 2
+    "url": "https://lostcoastoutpost.com/2020/apr/23/how-coronavirus-could-test-californias-commitment/",
+    "author_name": "Ben Christopher",
+    "outlet_name": "Lost Coast Outpost",
+    "date": "2020-04-15"
   },
   {
-    "author_name": "Lisa Stiffler",
+    "id": 3,
     "type": "press_mention",
-    "url": "https://www.geekwire.com/2020/uw-microsoft-release-contact-tracing-app-aiming-battle-covid-19-preserving-privacy/",
-    "outlet_name": "Geekwire",
-    "date": "2020-04-22",
     "title": "UW and Microsoft release contact-tracing app to battle COVID-19 while preserving privacy",
-    "Name": 3
+    "url": "https://www.geekwire.com/2020/uw-microsoft-release-contact-tracing-app-aiming-battle-covid-19-preserving-privacy/",
+    "author_name": "Lisa Stiffler",
+    "outlet_name": "Geekwire",
+    "date": "2020-04-22"
   },
   {
-    "author_name": "David Uberti",
+    "id": 4,
     "type": "press_mention",
-    "url": "https://www.wsj.com/articles/apps-to-track-the-new-coronavirus-have-an-old-problem-getting-the-downloads-11588115728",
-    "outlet_name": "Wall Street Journal",
-    "date": "2020-04-28",
     "title": "Apps to Track the New Coronavirus Have an Old Problem: Getting the Downloads",
-    "Name": 4
+    "url": "https://www.wsj.com/articles/apps-to-track-the-new-coronavirus-have-an-old-problem-getting-the-downloads-11588115728",
+    "author_name": "David Uberti",
+    "outlet_name": "Wall Street Journal",
+    "date": "2020-04-28"
   },
   {
-    "author_name": "Jack Stewart",
+    "id": 5,
     "type": "press_mention",
-    "url": "https://www.marketplace.org/2020/04/28/covid-19-contact-tracing-apple-google/",
-    "outlet_name": "Marketplace",
-    "date": "2020-04-28",
     "title": "Apple, Google plan to release contact-tracing tool this week.  Read the COVID-19 Economy FAQs.",
-    "Name": 5
+    "url": "https://www.marketplace.org/2020/04/28/covid-19-contact-tracing-apple-google/",
+    "author_name": "Jack Stewart",
+    "outlet_name": "Marketplace",
+    "date": "2020-04-28"
   },
   {
-    "author_name": "Becky McCall",
+    "id": 6,
     "type": "press_mention",
-    "url": "https://www.thelancet.com/journals/landig/article/PIIS2589-7500(20)30103-5/fulltext",
-    "outlet_name": "The Lancet",
-    "date": "2020-04-28",
     "title": "Shut down and reboot\u2014preparing to minimise infection in a post-COVID-19 era",
-    "Name": 6
+    "url": "https://www.thelancet.com/journals/landig/article/PIIS2589-7500(20)30103-5/fulltext",
+    "author_name": "Becky McCall",
+    "outlet_name": "The Lancet",
+    "date": "2020-04-28"
   },
   {
-    "author_name": "Brendan Bordelon",
+    "id": 7,
     "type": "press_mention",
-    "url": "https://www.nationaljournal.com/s/706167/bluetooth-based-contact-tracing-earns-high-marks-on-privacy-but-will-it-work?&unlock=YYCGSQ5LQVL6GN06",
-    "outlet_name": "National Journal",
-    "date": "2020-04-19",
     "title": "Bluetooth-based contact tracing earns high marks on privacy. But will it work?  Privacy advocates are coalescing.",
-    "Name": 7
+    "url": "https://www.nationaljournal.com/s/706167/bluetooth-based-contact-tracing-earns-high-marks-on-privacy-but-will-it-work?&unlock=YYCGSQ5LQVL6GN06",
+    "author_name": "Brendan Bordelon",
+    "outlet_name": "National Journal",
+    "date": "2020-04-19"
   },
   {
-    "author_name": "Andy Greenberg",
+    "id": 8,
     "type": "press_mention",
-    "url": "https://www.wired.com/story/apple-google-contact-tracing-strengths-weaknesses/",
-    "outlet_name": "Wired",
-    "date": "2020-04-17",
     "title": "Does Covid-19 Contact Tracing Pose a Privacy Risk? Your Questions, Answered",
-    "Name": 8
+    "url": "https://www.wired.com/story/apple-google-contact-tracing-strengths-weaknesses/",
+    "author_name": "Andy Greenberg",
+    "outlet_name": "Wired",
+    "date": "2020-04-17"
   },
   {
-    "author_name": "Ker Than",
+    "id": 9,
     "type": "press_mention",
-    "url": "https://news.stanford.edu/2020/04/14/covid-19-research-roundup/",
-    "outlet_name": "Stanford News",
-    "date": "2020-04-14",
     "title": "Meet the Stanford researchers mobilizing to understand, fight COVID-19",
-    "Name": 9
-  },
-  {
-    "author_name": "Khari Johnson",
-    "type": "press_mention",
-    "url": "https://venturebeat.com/2020/04/13/what-privacy-preserving-coronavirus-tracing-apps-need-to-succeed/",
-    "outlet_name": "VentureBeat",
-    "date": "2020-04-13",
-    "title": "What privacy-preserving coronavirus tracing apps need to succeed",
-    "Name": 10
-  },
-  {
-    "author_name": "Chris Ip",
-    "type": "press_mention",
-    "url": "https://www.engadget.com/apple-google-contact-tracing-explainer-170056298.html",
-    "outlet_name": "Engadget",
-    "date": "2020-04-13",
-    "title": "The importance of Apple and Google\u2019s rare collaboration on contact tracing",
-    "Name": 11
-  },
-  {
-    "author_name": "Andy Greenberg",
-    "type": "press_mention",
-    "url": "https://www.wired.com/story/apple-google-bluetooth-contact-tracing-covid-19/",
-    "outlet_name": "Wired",
-    "date": "2020-04-10",
-    "title": "How Apple and Google Are Enabling Covid-19 Contact-Tracing",
-    "Name": 12
-  },
-  {
-    "author_name": "Tom Abate",
-    "type": "press_mention",
-    "url": "https://news.stanford.edu/2020/04/09/stanford-researchers-help-develop-privacy-focused-coronavirus-alert-app/",
+    "url": "https://news.stanford.edu/2020/04/14/covid-19-research-roundup/",
+    "author_name": "Ker Than",
     "outlet_name": "Stanford News",
-    "date": "2020-04-09",
-    "title": "Stanford researchers help develop privacy-focused coronavirus alert app",
-    "Name": 13
+    "date": "2020-04-14"
   },
   {
+    "id": 10,
+    "type": "press_mention",
+    "title": "What privacy-preserving coronavirus tracing apps need to succeed",
+    "url": "https://venturebeat.com/2020/04/13/what-privacy-preserving-coronavirus-tracing-apps-need-to-succeed/",
+    "author_name": "Khari Johnson",
+    "outlet_name": "VentureBeat",
+    "date": "2020-04-13"
+  },
+  {
+    "id": 11,
+    "type": "press_mention",
+    "title": "The importance of Apple and Google\u2019s rare collaboration on contact tracing",
+    "url": "https://www.engadget.com/apple-google-contact-tracing-explainer-170056298.html",
+    "author_name": "Chris Ip",
+    "outlet_name": "Engadget",
+    "date": "2020-04-13"
+  },
+  {
+    "id": 12,
+    "type": "press_mention",
+    "title": "How Apple and Google Are Enabling Covid-19 Contact-Tracing",
+    "url": "https://www.wired.com/story/apple-google-bluetooth-contact-tracing-covid-19/",
     "author_name": "Andy Greenberg",
-    "type": "press_mention",
-    "url": "https://www.wired.com/story/covid-19-contact-tracing-apps-cryptography/",
     "outlet_name": "Wired",
-    "date": "2020-04-08",
-    "title": "Clever Cryptography Could Protect Privacy in Covid-19 Contact Tracing Apps",
-    "Name": 14
+    "date": "2020-04-10"
   },
   {
+    "id": 13,
     "type": "press_mention",
+    "title": "Stanford researchers help develop privacy-focused coronavirus alert app",
+    "url": "https://news.stanford.edu/2020/04/09/stanford-researchers-help-develop-privacy-focused-coronavirus-alert-app/",
+    "author_name": "Tom Abate",
+    "outlet_name": "Stanford News",
+    "date": "2020-04-09"
+  },
+  {
+    "id": 14,
+    "type": "press_mention",
+    "title": "Clever Cryptography Could Protect Privacy in Covid-19 Contact Tracing Apps",
+    "url": "https://www.wired.com/story/covid-19-contact-tracing-apps-cryptography/",
+    "author_name": "Andy Greenberg",
+    "outlet_name": "Wired",
+    "date": "2020-04-08"
+  },
+  {
+    "id": 15,
+    "type": "press_mention",
+    "title": "Johns Hopkins Review of Contact Tracing Capacity",
     "url": "https://www.centerforhealthsecurity.org/resources/COVID-19/COVID-19-fact-sheets/200408-contact-tracing-factsheet.pdf",
     "outlet_name": "Bloomberg School of Public Health",
-    "date": "2020-04-08",
-    "title": "Johns Hopkins Review of Contact Tracing Capacity",
-    "Name": 15
+    "date": "2020-04-08"
   },
   {
-    "author_name": "David Ingram and Jacob Ward",
+    "id": 16,
     "type": "press_mention",
-    "url": "https://www.nbcnews.com/tech/tech-news/behind-global-efforts-make-privacy-first-coronavirus-tracking-app-n1177871",
-    "outlet_name": "NBC News",
-    "date": "2020-04-07",
     "title": "Behind the global efforts to make a privacy-first coronavirus tracking app",
-    "Name": 16
+    "url": "https://www.nbcnews.com/tech/tech-news/behind-global-efforts-make-privacy-first-coronavirus-tracking-app-n1177871",
+    "author_name": "David Ingram and Jacob Ward",
+    "outlet_name": "NBC News",
+    "date": "2020-04-07"
   },
   {
-    "author_name": "Hannah Murphy",
+    "id": 17,
     "type": "press_mention",
-    "url": "https://drive.google.com/file/d/1VH9uwJJliheVy5unCXtAHQbEdsuJdYD7/view",
-    "outlet_name": "Financial Times",
-    "date": "2020-04-03",
     "title": "US and Europe race to develop \u2018contact tracing\u2019 apps",
-    "Name": 17
+    "url": "https://drive.google.com/file/d/1VH9uwJJliheVy5unCXtAHQbEdsuJdYD7/view",
+    "author_name": "Hannah Murphy",
+    "outlet_name": "Financial Times",
+    "date": "2020-04-03"
   },
   {
-    "author_name": "Khari Johnson",
+    "id": 18,
     "type": "press_mention",
-    "url": "https://venturebeat.com/2020/04/02/surveillance-ai-and-saving-lives-top-agenda-at-coronavirus-conference/",
-    "outlet_name": "VentureBeat",
-    "date": "2020-04-02",
     "title": "Surveillance, AI, and saving lives top agenda at coronavirus conference",
-    "Name": 18
+    "url": "https://venturebeat.com/2020/04/02/surveillance-ai-and-saving-lives-top-agenda-at-coronavirus-conference/",
+    "author_name": "Khari Johnson",
+    "outlet_name": "VentureBeat",
+    "date": "2020-04-02"
   },
   {
+    "id": 19,
     "type": "press_mention",
+    "title": "A Mobile App Intervention to Slow COVID-19 Using Crowdsourced Data",
     "url": "https://www.youtube.com/watch?v=l5q8HuH82WE&list=PLYLBSCrrqNXxhUFJJtKauxr5HItq4a3gu&index=16&t=0s",
     "outlet_name": "Stanford HAI",
-    "date": "2020-04-01",
-    "title": "A Mobile App Intervention to Slow COVID-19 Using Crowdsourced Data",
-    "Name": 19
+    "date": "2020-04-01"
   },
   {
+    "id": 20,
     "type": "press_mention",
+    "title": "Fellow Working to Devise COVID-19 Alert Application",
     "url": "https://www.krellinst.org/csgf/about-doe-csgf/news-events/white-covid-watch",
     "outlet_name": "Department of Energy",
-    "date": "2020-03-31",
-    "title": "Fellow Working to Devise COVID-19 Alert Application",
-    "Name": 20
+    "date": "2020-03-31"
   },
   {
-    "author_name": "Amrita Khalid",
+    "id": 21,
     "type": "press_mention",
-    "url": "https://qz.com/1840479/governments-likely-to-defer-to-google-and-apple-on-covid-19-contact-tracing/",
-    "outlet_name": "Quartz",
-    "date": "2020-04-18",
     "title": "Governments likely to defer to Big Tech on Covid-19 contact tracing",
-    "Name": 21
-  },
-  {
-    "author_name": "Rob Lever",
-    "type": "press_mention",
-    "url": "https://www.japantimes.co.jp/news/2020/03/29/world/coronavirus-pandemic-privacy-rights/#.XqnYHZNKgUE",
-    "outlet_name": "Agence France-Presse",
-    "date": "2020-03-29",
-    "title": "One of the victims of the COVID-19 pandemic may be citizen privacy rights",
-    "Name": 22
-  },
-  {
-    "author_name": " Amrita Khalid and Amanda Shendruk",
-    "type": "press_mention",
-    "url": "https://qz.com/1838625/how-bluetooth-could-power-a-global-experiment-in-contact-tracing/",
+    "url": "https://qz.com/1840479/governments-likely-to-defer-to-google-and-apple-on-covid-19-contact-tracing/",
+    "author_name": "Amrita Khalid",
     "outlet_name": "Quartz",
-    "date": "2020-04-16",
-    "title": "How Bluetooth could unleash the world\u2019s largest experiment in digital contact tracing",
-    "Name": 23
+    "date": "2020-04-18"
   },
   {
+    "id": 22,
+    "type": "press_mention",
+    "title": "One of the victims of the COVID-19 pandemic may be citizen privacy rights",
+    "url": "https://www.japantimes.co.jp/news/2020/03/29/world/coronavirus-pandemic-privacy-rights/#.XqnYHZNKgUE",
+    "author_name": "Rob Lever",
+    "outlet_name": "Agence France-Presse",
+    "date": "2020-03-29"
+  },
+  {
+    "id": 23,
+    "type": "press_mention",
+    "title": "How Bluetooth could unleash the world\u2019s largest experiment in digital contact tracing",
+    "url": "https://qz.com/1838625/how-bluetooth-could-power-a-global-experiment-in-contact-tracing/",
+    "author_name": " Amrita Khalid and Amanda Shendruk",
+    "outlet_name": "Quartz",
+    "date": "2020-04-16"
+  },
+  {
+    "id": 24,
     "type": "press_release",
+    "title": "Covid Watch Celebrates Apple and Google COVID-19 Contact Tracing Announcement",
     "url": "https://drive.google.com/file/d/11KxYSEOIbepcA1OGMPT2vGLbfvLWPnEu/view",
     "outlet_name": "Press Release, Covid Watch",
-    "date": "2020-04-10",
-    "title": "Covid Watch Celebrates Apple and Google COVID-19 Contact Tracing Announcement",
-    "Name": 24
+    "date": "2020-04-10"
   },
   {
-    "author_name": "Khari Johnson",
+    "id": 25,
     "type": "press_mention",
-    "url": "https://venturebeat.com/2020/05/04/apple-and-google-prohibit-location-tracking-in-new-contact-tracing-guidelines/",
-    "outlet_name": "VentureBeat",
-    "date": "2020-05-04",
     "title": "Apple and Google prohibit location tracking in new contact tracing guidelines",
-    "Name": 25
+    "url": "https://venturebeat.com/2020/05/04/apple-and-google-prohibit-location-tracking-in-new-contact-tracing-guidelines/",
+    "author_name": "Khari Johnson",
+    "outlet_name": "VentureBeat",
+    "date": "2020-05-04"
   },
   {
-    "author_name": "Matt O'Brien and Christina Larson",
+    "id": 26,
     "type": "press_mention",
-    "url": "https://apnews.com/15c028c48502db395681ebca0099de5a",
-    "outlet_name": "The Associated Press",
-    "date": "2020-05-05",
     "title": "Here come COVID-19 tracing apps - and privacy trade-offs",
-    "Name": 26
+    "url": "https://apnews.com/15c028c48502db395681ebca0099de5a",
+    "author_name": "Matt O'Brien and Christina Larson",
+    "outlet_name": "The Associated Press",
+    "date": "2020-05-05"
   },
   {
-    "author_name": "U.S. Digital Response",
+    "id": 27,
     "type": "press_mention",
-    "url": "https://medium.com/u-s-digital-response/understanding-digital-contact-tracing-limitations-implications-and-recommendations-fb54d23f586c",
-    "outlet_name": "U.S. Digital Response",
-    "date": "2020-04-27",
     "title": "Understanding Digital Contact Tracing: Limitations, Implications and Recommendations",
-    "Name": 27
+    "url": "https://medium.com/u-s-digital-response/understanding-digital-contact-tracing-limitations-implications-and-recommendations-fb54d23f586c",
+    "author_name": "U.S. Digital Response",
+    "outlet_name": "U.S. Digital Response",
+    "date": "2020-04-27"
   },
   {
-    "author_name": "ACLU",
+    "id": 28,
     "type": "press_mention",
-    "url": "https://www.aclu.org/report/aclu-white-paper-principles-technology-assisted-contact-tracing",
-    "outlet_name": "ACLU",
-    "date": "2020-04-16",
     "title": "ACLU's Principles for Technology-Assisted Contact-Tracing",
-    "Name": 28
+    "url": "https://www.aclu.org/report/aclu-white-paper-principles-technology-assisted-contact-tracing",
+    "author_name": "ACLU",
+    "outlet_name": "ACLU",
+    "date": "2020-04-16"
   },
   {
-    "author_name": "Jeffrey Pawlick",
+    "id": 29,
     "type": "press_mention",
-    "url": "https://mercatornet.com/governments-should-give-legal-incentives-for-decentralized-covid-apps/62602/",
-    "outlet_name": "Mercatornet",
-    "date": "2020-05-05",
     "title": "Governments should give legal incentives for decentralized Covid apps",
-    "Name": 29
+    "url": "https://mercatornet.com/governments-should-give-legal-incentives-for-decentralized-covid-apps/62602/",
+    "author_name": "Jeffrey Pawlick",
+    "outlet_name": "Mercatornet",
+    "date": "2020-05-05"
   },
   {
-    "author_name": "Thomas Daigle",
+    "id": 30,
     "type": "press_mention",
-    "url": "https://www.cbc.ca/news/technology/contact-tracing-apps-alberta-canada-1.5556933",
-    "outlet_name": "CBC",
-    "date": "2020-05-06",
     "title": "More users needed: Lessons from Alberta's coronavirus contact tracing app",
-    "Name": 30
+    "url": "https://www.cbc.ca/news/technology/contact-tracing-apps-alberta-canada-1.5556933",
+    "author_name": "Thomas Daigle",
+    "outlet_name": "CBC",
+    "date": "2020-05-06"
   },
   {
-    "author_name": "Nick Gillespie",
+    "id": 31,
     "type": "press_mention",
-    "url": "https://reason.com/podcast/this-app-protects-privacy-while-tracing-covid-19-infections/",
-    "outlet_name": "Reason Magazine",
-    "date": "2020-05-06",
     "title": "This App Protects Privacy While Tracing Covid-19 Infections",
-    "Name": 31
+    "url": "https://reason.com/podcast/this-app-protects-privacy-while-tracing-covid-19-infections/",
+    "author_name": "Nick Gillespie",
+    "outlet_name": "Reason Magazine",
+    "date": "2020-05-06"
   },
   {
-    "author_name": "Covid Watch",
+    "id": 32,
     "type": "press_release",
-    "url": "https://drive.google.com/file/d/1uVVPVzwUnBhqeOQU4Vw9O-Sng77uNzmt/view?usp=sharing",
-    "outlet_name": "Press Release, Covid Watch",
-    "date": "2020-05-07",
     "title": "Emergent Ventures singles out the Covid Watch app for coronavirus response",
-    "Name": 32
+    "url": "https://drive.google.com/file/d/1uVVPVzwUnBhqeOQU4Vw9O-Sng77uNzmt/view?usp=sharing",
+    "author_name": "Covid Watch",
+    "outlet_name": "Press Release, Covid Watch",
+    "date": "2020-05-07"
   },
   {
+    "id": 33,
     "type": "press_mention",
+    "title": "Sophia the Robot interviews Covid Watch's executive director",
     "url": "https://www.youtube.com/watch?v=ioc4QXHuKXI&feature=youtu.be",
     "outlet_name": "Sophia the Robot",
-    "date": "2020-05-07",
-    "title": "Sophia the Robot interviews Covid Watch's executive director",
-    "Name": 33
+    "date": "2020-05-07"
   }
 ]
