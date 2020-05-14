@@ -342,9 +342,8 @@ export default {
     advisers: [
       {
         name: "Charles Belle, JD",
-        description:
-          "Fellow at Center for Internet and Society at Stanford Law School.",
-        link: "http://cyberlaw.stanford.edu/about/people/charles-belle"
+        description: "Fellow at Center for Internet and Society, Stanford Law School",
+        link: 'http://cyberlaw.stanford.edu/about/people/charles-belle'
       },
       {
         name: "Dan Boneh, PhD",
@@ -354,9 +353,13 @@ export default {
       },
       {
         name: "Joshua Cohen, PhD",
-        description:
-          "Faculty at Apple University; Distinguished Senior Fellow at UC Berkeley; Editor, Boston Review",
-        link: "http://bostonreview.net/joshua-cohen"
+        description: "Faculty, Apple University; Distinguished Senior Fellow, UC Berkeley; Editor, Boston Review",
+        link: 'http://bostonreview.net/joshua-cohen'
+      },
+      {
+        name: "Peter Eckersley, PhD",
+        description: "Convener, stop-covid.tech",
+        link: 'https://stop-covid.tech'
       },
       {
         name: "Jerry Fiddler",
@@ -395,8 +398,13 @@ export default {
       },
       {
         name: "Harper Reed",
-        description: "Senior Fellow, USC Annenberg Innovation Lab",
-        link: "https://harperreed.com/"
+        description: "Entrepreneur, TCN Coalition",
+        link: 'https://harperreed.com/'
+      },
+      {
+        name: "Arthur Reingold, MD",
+        description: "Professor and Division Head of Epidemiology and Biostatistics, UC Berkeley School of Public Health",
+        link: 'https://publichealth.berkeley.edu/people/arthur-reingold/'
       },
       {
         name: "Asa Tapley, MD, MSc",
