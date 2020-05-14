@@ -339,7 +339,7 @@ export default {
     advisers: [
       {
         name: "Charles Belle, JD",
-        description: "Fellow at Center for Internet and Society at Stanford Law School.",
+        description: "Fellow at Center for Internet and Society, Stanford Law School",
         link: 'http://cyberlaw.stanford.edu/about/people/charles-belle'
       },
       {
@@ -354,7 +354,7 @@ export default {
       },
       {
         name: "Peter Eckersley, PhD",
-        description: "Convener, stop-covid.tech and Distinguished Technology Fellow, EFF",
+        description: "Convener, stop-covid.tech",
         link: 'https://stop-covid.tech'
       },
       {
@@ -389,7 +389,7 @@ export default {
       },
       {
         name: "Harper Reed",
-        description: "Senior Fellow, USC Annenberg Innovation Lab",
+        description: "Entrepreneur, TCN Coalition",
         link: 'https://harperreed.com/'
       },
       {
