@@ -171,7 +171,7 @@
 
         <v-row justify="space-around" align="center">
           <v-col :md="4" :sm="6" class="collab-img-col">
-            <a href="https://www.stanford.edu/">
+            <a target="_blank" href="https://www.stanford.edu/">
               <v-img
                 max-width="100%"
                 id="stanford-img"
@@ -183,7 +183,7 @@
           </v-col>
 
           <v-col :md="4" :sm="6" class="collab-img-col">
-            <a href="https://uwaterloo.ca/">
+            <a target="_blank" href="https://uwaterloo.ca/">
               <v-img
                 max-width="100%"
                 id="waterloo-img"
@@ -211,7 +211,7 @@
             :id="collab.id"
             class="text-center collab-img-col mb-6"
           >
-            <a :href="collab.url">
+            <a target="_blank" :href="collab.url">
               <v-img class="collab-img" :src="collab.src" contain />
               <span class="body-2">{{ collab.name }}</span>
             </a>
