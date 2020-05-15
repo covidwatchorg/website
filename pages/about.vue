@@ -149,22 +149,13 @@
         <template>
           <v-container class="grey lighten-5">
             <v-row no-gutters>
-              <v-col
-                v-for="(adviser, n) in advisers"
-                :key="n"
-                cols="12"
-                sm="4"
-              >
-                <div
-                  class="adviser-card"
-                >
-                  <a :href="adviser.link" target="_blank"><div class="title-link title">
-                    {{ adviser.name }}
-                  </div></a>
+              <v-col v-for="(adviser, n) in advisers" :key="n" cols="12" sm="4">
+                <div class="adviser-card">
+                  <a :href="adviser.link" target="_blank">
+                    <div class="title-link title">{{ adviser.name }}</div>
+                  </a>
                   <img class="founder_img" src="../assets/about_us/top-accent.svg" />
-                  <div>
-                    {{ adviser.description }}
-                  </div>
+                  <div>{{ adviser.description }}</div>
                 </div>
               </v-col>
             </v-row>
@@ -174,20 +165,32 @@
 
       <!-- academic partners row-->
       <v-row :class="pageSectionClass" id="academic-partners">
-        <v-col class="mb-10" :md="3" :sm="8">
+        <v-col class="mb-10" :md="4" :sm="8">
           <h3 class="pt-5">Academic Partners</h3>
         </v-col>
 
         <v-row justify="space-around" align="center">
           <v-col :md="4" :sm="6" class="collab-img-col">
             <a href="https://www.stanford.edu/">
-              <v-img max-width="100%" id="stanford-img" class="collab-img" :src="stanford.src" />
+              <v-img
+                max-width="100%"
+                id="stanford-img"
+                class="collab-img"
+                :src="stanford.src"
+                contain
+              />
             </a>
           </v-col>
 
           <v-col :md="4" :sm="6" class="collab-img-col">
             <a href="https://uwaterloo.ca/">
-              <v-img max-width="100%" id="waterloo-img" class="collab-img" :src="waterloo.src" />
+              <v-img
+                max-width="100%"
+                id="waterloo-img"
+                class="collab-img"
+                :src="waterloo.src"
+                contain
+              />
             </a>
           </v-col>
         </v-row>
@@ -195,18 +198,18 @@
 
       <!-- colabs row-->
       <v-row :class="pageSectionClass" id="collaborator-projects">
-        <v-col class="mb-10" :md="3" :sm="8">
+        <v-col class="mb-10" :md="4" :sm="8">
           <h3 class="pt-6">Collaborator Partners</h3>
         </v-col>
 
-        <v-row justify="space-evenly" align="center">
+        <v-row justify="center" align="center">
           <v-col
             cols="12"
-            :sm="4"
+            :md="6"
             v-for="(collab, i) in collaborator_projects"
             :key="i"
             :id="collab.id"
-            class="text-center collab-img-col"
+            class="text-center collab-img-col mb-6"
           >
             <a :href="collab.url">
               <v-img class="collab-img" :src="collab.src" contain />
@@ -339,64 +342,77 @@ export default {
     advisers: [
       {
         name: "Charles Belle, JD",
-        description: "Fellow at Center for Internet and Society at Stanford Law School.",
+        description: "Fellow at Center for Internet and Society, Stanford Law School",
         link: 'http://cyberlaw.stanford.edu/about/people/charles-belle'
       },
       {
         name: "Dan Boneh, PhD",
-        description: "Professor of Computer Science and Electrical Engineering, Stanford University",
-        link: 'https://profiles.stanford.edu/dan-boneh'
+        description:
+          "Professor of Computer Science and Electrical Engineering, Stanford University",
+        link: "https://profiles.stanford.edu/dan-boneh"
       },
       {
         name: "Joshua Cohen, PhD",
-        description: "Faculty, Apple University; Distinguished Senior Fellow, UC Berkeley; Editor, Boston Review",
-        link: 'http://bostonreview.net/joshua-cohen'
+        description:
+          "Faculty at Apple University; Distinguished Senior Fellow at UC Berkeley; Editor, Boston Review",
+        link: "http://bostonreview.net/joshua-cohen"
       },
       {
         name: "Peter Eckersley, PhD",
-        description: "Convener, stop-covid.tech and Distinguished Technology Fellow, EFF",
+        description: "Convener, stop-covid.tech",
         link: 'https://stop-covid.tech'
       },
       {
         name: "Jerry Fiddler",
         description: "Principal, Zygote Ventures",
-        link: 'http://zygoteventures.com/about-the-principal/'
+        link: "http://zygoteventures.com/about-the-principal/"
       },
       {
         name: "Al Gidari, JD",
-        description: "Director of Privacy at Center for Internet and Society, Stanford Law School",
-        link: 'http://cyberlaw.stanford.edu/about/people/albert-gidari'
+        description:
+          "Director of Privacy at Center for Internet and Society, Stanford Law School",
+        link: "http://cyberlaw.stanford.edu/about/people/albert-gidari"
       },
       {
         name: "Robert M. Grant, MD, MPH",
-        description: "MPH Professor of Medicine, University of California San Francisco",
-        link: 'https://profiles.ucsf.edu/robert.grant'
+        description:
+          "MPH Professor of Medicine, University of California San Francisco",
+        link: "https://profiles.ucsf.edu/robert.grant"
       },
       {
         name: "Jeffrey Ladish",
         description: "Security Consultant, Gordian Research",
-        link: 'https://jeffreyladish.com/'
+        link: "https://jeffreyladish.com/"
       },
       {
         name: "Plinio Pelegrini Morita, PhD",
-        description: "J.W. Graham Information Technology Emerging Leader Chair in Applied Health Informatics, University of Waterloo",
-        link: 'https://uwaterloo.ca/advanced-interface-design-lab/people-profiles/plinio-pelegrini-morita'
+        description:
+          "J.W. Graham Information Technology Emerging Leader Chair in Applied Health Informatics, University of Waterloo",
+        link:
+          "https://uwaterloo.ca/advanced-interface-design-lab/people-profiles/plinio-pelegrini-morita"
       },
       {
         name: "Julie Parsonnet, MD",
-        description: "Professor of Medicine and of Epidemiology and Population Health, Stanford University",
-        link: 'https://profiles.stanford.edu/julie-parsonnet'
+        description:
+          "Professor of Medicine and of Epidemiology and Population Health, Stanford University",
+        link: "https://profiles.stanford.edu/julie-parsonnet"
       },
       {
         name: "Harper Reed",
-        description: "Senior Fellow, USC Annenberg Innovation Lab",
+        description: "Entrepreneur, TCN Coalition",
         link: 'https://harperreed.com/'
       },
       {
-        name: "Asa Tapley, MD, MSc",
-        description: "Fellow, Allergy and Infectious Diseases, University of Washington",
-        link: 'https://aid.uw.edu/fellow/asa-tapley'
+        name: "Arthur Reingold, MD",
+        description: "Professor and Division Head of Epidemiology and Biostatistics, UC Berkeley School of Public Health",
+        link: 'https://publichealth.berkeley.edu/people/arthur-reingold/'
       },
+      {
+        name: "Asa Tapley, MD, MSc",
+        description:
+          "Fellow, Allergy and Infectious Diseases, University of Washington",
+        link: "https://aid.uw.edu/fellow/asa-tapley"
+      }
     ],
     founders: [
       {
@@ -444,17 +460,23 @@ export default {
         name: "Founding Member"
       },
       {
+        id: "safe-paths",
+        url: "https://covidsafepaths.org/",
+        src: require("../assets/about_us/logo-safepaths.svg"),
+        name: "Covid SafePaths"
+      },
+      {
         id: "coepi",
         url: "https://www.coepi.org/",
         src: require("../assets/about_us/logo-coepi.svg"),
         name: "CoEpi"
       },
       {
-        id: "safe-paths",
-        url: "https://covidsafepaths.org/",
-        src: require("../assets/about_us/logo-safepaths.svg"),
-        name: "Covid SafePaths"
-      }
+        id: "openmined",
+        url: "https://www.openmined.org/",
+        src: require("../assets/about_us/logo-openmined.svg"),
+        name: "OpenMined"
+      },
     ],
     title: "About Us | Covid Watch"
   }),
