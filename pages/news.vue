@@ -2,35 +2,31 @@
   <v-container>
     <v-row id="news" :class="pageSectionClass">
       <v-col>
-        <v-row id="hero" >
+        <v-row id="hero">
           <v-col :md="7" :sm="12" cols="12">
-            <h1>News and Media</h1>
-            <div
-              id="filters"
-              class="mt-10" 
-              style="max-width:500px;"
-            >
+            <h1 class="mb-5">News and Media</h1>
+            <p>
+              Want to reach our press team? Contact us at
+              <a
+                href="mailto:media@covid-watch.org"
+              >media@covid-watch.org</a>.
+            </p>
+            <div id="filters" class="mt-10" style="max-width:500px;">
               <v-col :sm="8" :md="1">
                 <p class="title mb-0">Filter:</p>
               </v-col>
-              
+
               <v-row id="filter-container">
                 <v-col :sm="8" :md="1">
-                  <Button secondary @click="toShow = 'all'" class="filter">
-                    All News
-                  </Button>
+                  <Button secondary @click="toShow = 'all'" class="filter">All News</Button>
                 </v-col>
 
                 <v-col :sm="8" :md="1">
-                  <Button secondary @click="toShow = 'mentions'" class="filter">
-                    Mentions
-                  </Button>
+                  <Button secondary @click="toShow = 'mentions'" class="filter">Mentions</Button>
                 </v-col>
 
                 <v-col :sm="8" :md="1">
-                  <Button secondary @click="toShow = 'releases'" class="filter">
-                    Press Releases
-                  </Button>
+                  <Button secondary @click="toShow = 'releases'" class="filter">Press Releases</Button>
                 </v-col>
               </v-row>
             </div>
@@ -83,7 +79,6 @@
       max-width: 260px;
     }
   }
-
 }
 </style>
 
