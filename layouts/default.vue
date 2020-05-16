@@ -87,11 +87,13 @@ export default {
           links: [
             {
               title: "How It Works",
-              href: "/how-it-works"
+              href: "/how-it-works",
+              nuxt: true
             },
             {
               title: "FAQ",
-              href: "/faq"
+              href: "/faq",
+              nuxt: true
             }
           ]
         },
@@ -100,11 +102,23 @@ export default {
           links: [
             {
               title: "About Us",
-              href: "/about"
+              href: "/about",
+              nuxt: true
             },
             {
               title: "News",
-              href: "/news"
+              href: "/news",
+              nuxt: true
+            }
+          ]
+        },
+        {
+          title: "Resources",
+          links: [
+            {
+              title: "Privacy Policy",
+              href: "/covid_watch_privacy_policy.pdf",
+              nuxt: false
             }
           ]
         },
@@ -113,15 +127,18 @@ export default {
           links: [
             {
               title: "Use Our Solution",
-              href: "/pilot"
+              href: "/pilot",
+              nuxt: true
             },
             {
               title: "Join Us",
-              href: "/join"
+              href: "/join",
+              nuxt: true
             },
             {
               title: "Contact Us",
-              href: "mailto:contact@covid-watch.org"
+              href: "mailto:contact@covid-watch.org",
+              nuxt: false
             }
           ]
         }
