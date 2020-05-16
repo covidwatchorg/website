@@ -2,18 +2,14 @@
   <v-container>
     <v-row id="news" :class="pageSectionClass">
       <v-col>
-        <v-row id="hero" >
+        <v-row id="hero">
           <v-col :md="7" :sm="12" cols="12">
             <h1>News and Media</h1>
-            <div
-              id="filters"
-              class="mt-10" 
-              style="max-width:500px;"
-            >
+            <div id="filters" class="mt-10" style="max-width: 500px;">
               <v-col :sm="8" :md="1">
                 <p class="title mb-0">Filter:</p>
               </v-col>
-              
+
               <v-row id="filter-container">
                 <v-col :sm="8" :md="1">
                   <Button secondary @click="toShow = 'all'" class="filter">
@@ -39,14 +35,24 @@
           <v-spacer></v-spacer>
 
           <v-col :sm="8" :md="4">
-            <img id="bench-dude" src="../assets/news_page/bench_dude.svg" alt="news" />
+            <img
+              id="bench-dude"
+              src="../assets/news_page/bench_dude.svg"
+              alt="news"
+            />
           </v-col>
         </v-row>
 
         <!-- all news cards section -->
         <v-row id="news-cards" class="mt-8">
           <!-- modularized NewsCard version -->
-          <v-col :md="4" :sm="6" cols="12" v-for="(card, i) in cardsToRender" :key="i">
+          <v-col
+            :md="4"
+            :sm="6"
+            cols="12"
+            v-for="(card, i) in cardsToRender"
+            :key="i"
+          >
             <NewsCard :card="card"></NewsCard>
           </v-col>
         </v-row>
@@ -83,7 +89,6 @@
       max-width: 260px;
     }
   }
-
 }
 </style>
 
@@ -101,21 +106,21 @@ export default {
       scale: 0.8,
       x: 0,
       ease: "power1",
-      stagger: 0.02
+      stagger: 0.02,
     });
   },
   components: {
     NewsCard,
-    Button
+    Button,
   },
-  updated: function() {
+  updated: function () {
     gsap.from(".news-card", {
       duration: 0.2,
       opacity: 0,
       scale: 0.8,
       x: 0,
       ease: "power1",
-      stagger: 0.02
+      stagger: 0.02,
     });
   },
   computed: {
@@ -123,20 +128,24 @@ export default {
       if (this.toShow === "all") {
         return this.airtableList;
       } else if (this.toShow === "mentions") {
-        return this.airtableList.filter(card => card.type === "press_mention");
+        return this.airtableList.filter(
+          (card) => card.type === "press_mention"
+        );
       } else {
-        return this.airtableList.filter(card => card.type === "press_release");
+        return this.airtableList.filter(
+          (card) => card.type === "press_release"
+        );
       }
-    }
+    },
   },
   data: () => ({
     airtableList: json.sort((a, b) => (a.date < b.date ? 1 : -1)),
-    toShow: "all"
+    toShow: "all",
   }),
   head() {
     return {
-      title: "News | Covid Watch"
+      title: "News | Covid Watch",
     };
-  }
+  },
 };
 </script>

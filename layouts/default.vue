@@ -59,27 +59,27 @@ import Footer from "../components/Footer.vue";
 export default {
   components: {
     AppBar,
-    Footer
+    Footer,
   },
   data() {
     return {
       navLinks: [
         {
           title: "How it Works",
-          href: "/how-it-works"
+          href: "/how-it-works",
         },
         {
           title: "FAQ",
-          href: "/faq"
+          href: "/faq",
         },
         {
           title: "About",
-          href: "/about"
+          href: "/about",
         },
         {
           title: "News",
-          href: "/news"
-        }
+          href: "/news",
+        },
       ],
       footerSections: [
         {
@@ -87,48 +87,47 @@ export default {
           links: [
             {
               title: "How It Works",
-              href: "/how-it-works"
+              href: "/how-it-works",
             },
             {
               title: "FAQ",
-              href: "/faq"
-            }
-          ]
+              href: "/faq",
+            },
+          ],
         },
         {
           title: "Organization",
           links: [
             {
               title: "About Us",
-              href: "/about"
+              href: "/about",
             },
             {
               title: "News",
-              href: "/news"
-            }
-          ]
+              href: "/news",
+            },
+          ],
         },
         {
           title: "Get Involved",
           links: [
             {
               title: "Use Our Solution",
-              href: "/pilot"
+              href: "/pilot",
             },
             {
               title: "Join Us",
-              href: "/join"
+              href: "/join",
             },
             {
               title: "Contact Us",
-              href: "mailto:contact@covid-watch.org"
-            }
-          ]
-        }
+              href: "mailto:contact@covid-watch.org",
+            },
+          ],
+        },
       ],
-      title: "Covid Watch"
+      title: "Covid Watch",
     };
-  }
+  },
 };
 </script>
-
