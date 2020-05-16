@@ -4,9 +4,10 @@
       <v-col cols="9">
         <h2>Newsletter</h2>
 
-        <p
-          class="mt-8"
-        >To receive periodic updates, subscribe to our newsletter by entering your email below.</p>
+        <p class="mt-8">
+          To receive periodic updates, subscribe to our newsletter by entering
+          your email below.
+        </p>
 
         <div id="mc_embed_signup">
           <form
@@ -32,7 +33,10 @@
                 />
               </v-col>
               <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-              <div style="position: absolute; left: -5000px;" aria-hidden="true">
+              <div
+                style="position: absolute; left: -5000px;"
+                aria-hidden="true"
+              >
                 <input
                   type="text"
                   name="b_6a3a62b4b32f5a4329abff0d0_353a151b02"
@@ -41,7 +45,13 @@
                 />
               </div>
               <v-col cols="10" :sm="6" :md="3">
-                <Button hero id="mc-embedded-subscribe" name="subscribe" @click="submit">Subscribe</Button>
+                <Button
+                  hero
+                  id="mc-embedded-subscribe"
+                  name="subscribe"
+                  @click="submit"
+                  >Subscribe</Button
+                >
               </v-col>
             </v-row>
           </form>
@@ -113,12 +123,12 @@ import Button from "../components/Button.vue";
 export default {
   name: "Newsletter",
   components: {
-    Button
+    Button,
   },
   methods: {
     submit() {
       this.$refs["mc-embedded-subscribe-form"].submit();
-    }
-  }
+    },
+  },
 };
 </script>
