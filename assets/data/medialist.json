@@ -290,5 +290,14 @@
     "url": "https://www.youtube.com/watch?v=ioc4QXHuKXI&feature=youtu.be",
     "outlet_name": "Sophia the Robot",
     "date": "2020-05-07"
+  },
+  {
+    "id": 34,
+    "type": "press_mention",
+    "title": "Startups Quickly Roll Out Contact-Tracing Apps, But Business Prospects Are Unclear",
+    "url": "https://www.wsj.com/articles/startups-quickly-roll-out-contact-tracing-apps-but-business-prospects-are-unclear-11589448601",
+    "author_name": "Tomio Geron",
+    "outlet_name": "Wall Street Journal",
+    "date": "2020-05-14"
   }
 ]
