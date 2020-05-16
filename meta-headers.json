@@ -1,9 +1,12 @@
 {
-    "charset": "utf-8",
-    "viewport": "width=device-width, initial-scale=1",
-    "description": "We put the power to stop COVID-19 in the palm of your hand.",
-    "title": "Covid Watch",
-    "type": "website",
-    "url": "https://www.covid-watch.org",
-    "image": "https://www.covid-watch.org/logo_text_blue_copy.svg"
+  "charset": "utf-8",
+  "viewport": "width=device-width, initial-scale=1",
+  "description": "We put the power to stop COVID-19 in the palm of your hand.",
+  "title": "Covid Watch",
+  "type": "website",
+  "url": "https://www.covid-watch.org",
+  "image": "/assets/social/card_facebook_dark.png",
+  "twitter:title": "Covid Watch",
+  "twitter:card": "summary_large_image",
+  "twitter:image": "/assets/social/card_twitter_light.png"
 }

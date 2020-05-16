@@ -18,7 +18,7 @@ export default {
       })),
       ...Object.entries(metaHeaders).map(([key, value]) => ({
         hid: `og:${key}`,
-        name: `og:${key}`,
+        property: `og:${key}`,
         content: value,
       })),
     ],
