@@ -14,15 +14,15 @@ export default {
       ...Object.entries(metaHeaders).map(([key, value]) => ({
         hid: key,
         name: key,
-        content: value
+        content: value,
       })),
       ...Object.entries(metaHeaders).map(([key, value]) => ({
         hid: `og:${key}`,
         name: `og:${key}`,
-        content: value
-      }))
+        content: value,
+      })),
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
   /*
    ** Customize the progress-bar color
@@ -53,7 +53,7 @@ export default {
         { path: "/articles", redirect: { name: "index" } },
         { path: "/collaborate", redirect: { name: "join" } }
       );
-    }
+    },
   },
   /*
    ** vuetify module configuration
@@ -64,11 +64,11 @@ export default {
       "~/assets/images.scss",
       "~/assets/mixins.scss",
       "~/assets/typography.scss",
-      "~/assets/variables.scss"
+      "~/assets/variables.scss",
     ],
     theme: {
       options: {
-        customProperties: true
+        customProperties: true,
       },
       themes: {
         light: {
@@ -88,16 +88,16 @@ export default {
           info: "#2C58B1", // bluejay
           warning: "#43C4D9", // aqua
           error: "#F05452", // tangerine
-          success: "#A680B7" // lavender
-        }
-      }
+          success: "#A680B7", // lavender
+        },
+      },
     },
     defaultAssets: {
       font: {
-        family: "Montserrat"
-      }
+        family: "Montserrat",
+      },
     },
-    treeShake: true // override production-only default so defaultAssets work as expected
+    treeShake: true, // override production-only default so defaultAssets work as expected
   },
   /*
    ** nuxt-webfontloader module configuration
@@ -105,8 +105,8 @@ export default {
    */
   webfontloader: {
     google: {
-      families: ["Montserrat:400,600,700"] // Loads Monserrat with 400, 600 and 700 weights
-    }
+      families: ["Montserrat:400,600,700"], // Loads Monserrat with 400, 600 and 700 weights
+    },
   },
   /*
    ** Build configuration
@@ -115,9 +115,9 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend(config, ctx) {},
   },
   generate: {
-    fallback: true // generate a 404.html fallback page
-  }
+    fallback: true, // generate a 404.html fallback page
+  },
 };
