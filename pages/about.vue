@@ -62,11 +62,7 @@
         </v-row>
 
         <v-row class="mt-8">
-          <CTA
-            pdf
-            content="Read the Whitepaper"
-            href="/covid_watch_whitepaper.pdf"
-          ></CTA>
+          <CTA pdf content="Read the Whitepaper" href="/covid_watch_whitepaper.pdf"></CTA>
         </v-row>
       </v-row>
 
@@ -94,13 +90,13 @@
             :key="i"
           >
             <div class="mb-4">
-              <Button v-if="cta.link" secondary nuxt :to="cta.link">
-                {{ cta.button_text }}
-              </Button>
+              <Button v-if="cta.link" secondary nuxt :to="cta.link">{{ cta.button_text }}</Button>
               <Button v-if="!cta.link" secondary>
-                <a href="mailto:contact@covid-watch.org">{{
+                <a href="mailto:contact@covid-watch.org">
+                  {{
                   cta.button_text
-                }}</a>
+                  }}
+                </a>
               </Button>
             </div>
 
@@ -133,19 +129,12 @@
                 <div class="subtitle">
                   <i>{{ founder.title }}</i>
                 </div>
-                <img
-                  class="founder_img"
-                  src="../assets/about_us/top-accent.svg"
-                />
+                <img class="founder_img" src="../assets/about_us/top-accent.svg" />
                 <div>{{ founder.bio }}</div>
               </v-col>
             </v-row>
           </v-col>
-          <v-responsive
-            v-if="n + 1 === 2"
-            :key="`width-${n}`"
-            width="1000%"
-          ></v-responsive>
+          <v-responsive v-if="n + 1 === 2" :key="`width-${n}`" width="1000%"></v-responsive>
         </template>
       </v-row>
 
@@ -162,18 +151,11 @@
             <v-row no-gutters>
               <v-col v-for="(adviser, n) in advisers" :key="n" cols="12" sm="4">
                 <div class="adviser-card">
-                  <a :href="adviser.link" target="_blank"
-                    ><div class="title-link title">
-                      {{ adviser.name }}
-                    </div></a
-                  >
-                  <img
-                    class="founder_img"
-                    src="../assets/about_us/top-accent.svg"
-                  />
-                  <div>
-                    {{ adviser.description }}
-                  </div>
+                  <a :href="adviser.link" target="_blank">
+                    <div class="title-link title">{{ adviser.name }}</div>
+                  </a>
+                  <img class="founder_img" src="../assets/about_us/top-accent.svg" />
+                  <div>{{ adviser.description }}</div>
                 </div>
               </v-col>
             </v-row>
@@ -183,29 +165,31 @@
 
       <!-- academic partners row-->
       <v-row :class="pageSectionClass" id="academic-partners">
-        <v-col class="mb-10" :md="3" :sm="8">
+        <v-col class="mb-10" :md="4" :sm="8">
           <h3 class="pt-5">Academic Partners</h3>
         </v-col>
 
         <v-row justify="space-around" align="center">
           <v-col :md="4" :sm="6" class="collab-img-col">
-            <a href="https://www.stanford.edu/">
+            <a target="_blank" href="https://www.stanford.edu/">
               <v-img
                 max-width="100%"
                 id="stanford-img"
                 class="collab-img"
                 :src="stanford.src"
+                contain
               />
             </a>
           </v-col>
 
           <v-col :md="4" :sm="6" class="collab-img-col">
-            <a href="https://uwaterloo.ca/">
+            <a target="_blank" href="https://uwaterloo.ca/">
               <v-img
                 max-width="100%"
                 id="waterloo-img"
                 class="collab-img"
                 :src="waterloo.src"
+                contain
               />
             </a>
           </v-col>
@@ -214,20 +198,20 @@
 
       <!-- colabs row-->
       <v-row :class="pageSectionClass" id="collaborator-projects">
-        <v-col class="mb-10" :md="3" :sm="8">
+        <v-col class="mb-10" :md="4" :sm="8">
           <h3 class="pt-6">Collaborator Partners</h3>
         </v-col>
 
-        <v-row justify="space-evenly" align="center">
+        <v-row justify="center" align="center">
           <v-col
             cols="12"
-            :sm="4"
+            :md="6"
             v-for="(collab, i) in collaborator_projects"
             :key="i"
             :id="collab.id"
-            class="text-center collab-img-col"
+            class="text-center collab-img-col mb-6"
           >
-            <a :href="collab.url">
+            <a target="_blank" :href="collab.url">
               <v-img class="collab-img" :src="collab.src" contain />
               <span class="body-2">{{ collab.name }}</span>
             </a>
@@ -314,118 +298,123 @@ export default {
         button_text: "Volunteer",
         cta_text:
           "Covid Watch is a volunteer-led effort to fight COVID-19. Are you a developer? A public health expert? A writer? We want your help.",
-        link: "/join",
+        link: "/join"
       },
       {
         button_text: "Donate",
         cta_text:
           "Our organization is here to make a difference, not a profit. We need your support to slow the spread. ",
-        link: "/support",
+        link: "/support"
       },
       {
         button_text: "Start a Pilot",
         cta_text:
           "Covid Watch works best when a community adopts it together. Are you looking for an app to help protect your state? Your company? Your country? Let’s talk.",
-        link: "/pilot",
+        link: "/pilot"
       },
       {
         button_text: "Partner With Us",
         cta_text:
           "We are working with partners that share our commitment to health and human rights. If your organization has expertise or tools to help stop the spread, let’s work together.",
-        link: "",
-      },
+        link: ""
+      }
     ],
     valueCards: [
       {
         title: "Health",
         body:
           "Technology should be a tool to keep those around us safe. Global pandemics threaten our health and economy. We make tools that will allow us to take back control of our lives, safely and efficiently.",
-        img: require("../assets/about_us/woman-exercising.svg"),
+        img: require("../assets/about_us/woman-exercising.svg")
       },
       {
         title: "Privacy",
         body:
           "Each person should control information about their health, even when our health impacts those around us. Covid Watch does not collect any personal information. We protect data and privacy while protecting communities.",
-        img: require("../assets/about_us/woman-medical-advice.svg"),
+        img: require("../assets/about_us/woman-medical-advice.svg")
       },
       {
         title: "Cooperation",
         body:
           "We are setting precedents  in real time, giving individuals and communities the power to confront this global challenge. We work closely with public health officials and organizations that share our values.",
-        img: require("../assets/about_us/woman-social-network.svg"),
-      },
+        img: require("../assets/about_us/woman-social-network.svg")
+      }
     ],
     advisers: [
       {
         name: "Charles Belle, JD",
         description:
-          "Fellow at Center for Internet and Society at Stanford Law School.",
-        link: "http://cyberlaw.stanford.edu/about/people/charles-belle",
+          "Fellow at Center for Internet and Society, Stanford Law School",
+        link: "http://cyberlaw.stanford.edu/about/people/charles-belle"
       },
       {
         name: "Dan Boneh, PhD",
         description:
           "Professor of Computer Science and Electrical Engineering, Stanford University",
-        link: "https://profiles.stanford.edu/dan-boneh",
+        link: "https://profiles.stanford.edu/dan-boneh"
       },
       {
         name: "Joshua Cohen, PhD",
         description:
-          "Faculty, Apple University; Distinguished Senior Fellow, UC Berkeley; Editor, Boston Review",
-        link: "http://bostonreview.net/joshua-cohen",
+          "Faculty at Apple University; Distinguished Senior Fellow at UC Berkeley; Editor, Boston Review",
+        link: "http://bostonreview.net/joshua-cohen"
       },
       {
         name: "Peter Eckersley, PhD",
-        description:
-          "Convener, stop-covid.tech and Distinguished Technology Fellow, EFF",
-        link: "https://stop-covid.tech",
+        description: "Convener, stop-covid.tech",
+        link: "https://stop-covid.tech"
       },
       {
         name: "Jerry Fiddler",
         description: "Principal, Zygote Ventures",
-        link: "http://zygoteventures.com/about-the-principal/",
+        link: "http://zygoteventures.com/about-the-principal/"
       },
       {
         name: "Al Gidari, JD",
         description:
           "Director of Privacy at Center for Internet and Society, Stanford Law School",
-        link: "http://cyberlaw.stanford.edu/about/people/albert-gidari",
+        link: "http://cyberlaw.stanford.edu/about/people/albert-gidari"
       },
       {
         name: "Robert M. Grant, MD, MPH",
         description:
           "MPH Professor of Medicine, University of California San Francisco",
-        link: "https://profiles.ucsf.edu/robert.grant",
+        link: "https://profiles.ucsf.edu/robert.grant"
       },
       {
         name: "Jeffrey Ladish",
         description: "Security Consultant, Gordian Research",
-        link: "https://jeffreyladish.com/",
+        link: "https://jeffreyladish.com/"
       },
       {
         name: "Plinio Pelegrini Morita, PhD",
         description:
           "J.W. Graham Information Technology Emerging Leader Chair in Applied Health Informatics, University of Waterloo",
         link:
-          "https://uwaterloo.ca/advanced-interface-design-lab/people-profiles/plinio-pelegrini-morita",
+          "https://uwaterloo.ca/advanced-interface-design-lab/people-profiles/plinio-pelegrini-morita"
       },
       {
         name: "Julie Parsonnet, MD",
         description:
           "Professor of Medicine and of Epidemiology and Population Health, Stanford University",
-        link: "https://profiles.stanford.edu/julie-parsonnet",
+        link: "https://profiles.stanford.edu/julie-parsonnet"
       },
       {
         name: "Harper Reed",
-        description: "Senior Fellow, USC Annenberg Innovation Lab",
-        link: "https://harperreed.com/",
+        description: "Entrepreneur, TCN Coalition",
+        link: "https://harperreed.com/"
+      },
+      {
+        name: "Arthur Reingold, MD",
+        description:
+          "Professor and Division Head of Epidemiology and Biostatistics, UC Berkeley School of Public Health",
+        link: "https://publichealth.berkeley.edu/people/arthur-reingold/"
       },
       {
         name: "Asa Tapley, MD, MSc",
         description:
           "Fellow, Allergy and Infectious Diseases, University of Washington",
-        link: "https://aid.uw.edu/fellow/asa-tapley",
-      },
+        link: "https://aid.uw.edu/fellow/asa-tapley"
+      }
     ],
     founders: [
       {
@@ -433,68 +422,74 @@ export default {
         name: "Tina White",
         title: "Executive Director",
         bio:
-          "Tina is a PhD candidate at Stanford University where she designs neural network architectures for scientific simulations. Covid Watch began with a post she made in the early days of the pandemic.",
+          "Tina is a PhD candidate at Stanford University where she designs neural network architectures for scientific simulations. Covid Watch began with a post she made in the early days of the pandemic."
       },
       {
         image: require("../assets/about_us/james-photo.svg"),
         name: "James Petrie",
         title: "Head of Research",
         bio:
-          "James is a PhD candidate in Applied Mathematics at the University of Waterloo where he focuses on numerical modelling, machine learning, and optimization.",
+          "James is a PhD candidate in Applied Mathematics at the University of Waterloo where he focuses on numerical modelling, machine learning, and optimization."
       },
       {
         image: require("../assets/about_us/rhys-photo.svg"),
         name: "Rhys Fenwick",
         title: "Head of Communications",
         bio:
-          "Rhys is a science communicator from Australia with a background in biotechnology and software development. His main area of focus is communicating emerging technologies to broad audiences.",
+          "Rhys is a science communicator from Australia with a background in biotechnology and software development. His main area of focus is communicating emerging technologies to broad audiences."
       },
       {
         image: require("../assets/about_us/zsombor-photo.svg"),
         name: "Zsombor Szabo",
         title: "Head of Engineering",
         bio:
-          "Zsombor is a mobile app developer with more than ten years of experience building next-generation networks, notably including an app called Berkanan Messenger that runs on Bluetooth mesh networks.",
-      },
+          "Zsombor is a mobile app developer with more than ten years of experience building next-generation networks, notably including an app called Berkanan Messenger that runs on Bluetooth mesh networks."
+      }
     ],
     stanford: {
       src: require("../assets/about_us/logo-stanford.svg"),
-      href: "https://www.stanford.edu/",
+      href: "https://www.stanford.edu/"
     },
     waterloo: {
       src: require("../assets/about_us/logo-university-of-waterloo.svg"),
-      href: "https://uwaterloo.ca/",
+      href: "https://uwaterloo.ca/"
     },
     collaborator_projects: [
       {
         id: "tcn-coalition",
         url: "https://tcn-coalition.org/",
         src: require("../assets/about_us/logo-TCN-coalition.svg"),
-        name: "Founding Member",
-      },
-      {
-        id: "coepi",
-        url: "https://www.coepi.org/",
-        src: require("../assets/about_us/logo-coepi.svg"),
-        name: "CoEpi",
+        name: "Founding Member"
       },
       {
         id: "safe-paths",
         url: "https://covidsafepaths.org/",
         src: require("../assets/about_us/logo-safepaths.svg"),
-        name: "Covid SafePaths",
+        name: "Covid SafePaths"
       },
+      {
+        id: "coepi",
+        url: "https://www.coepi.org/",
+        src: require("../assets/about_us/logo-coepi.svg"),
+        name: "CoEpi"
+      },
+      {
+        id: "openmined",
+        url: "https://www.openmined.org/",
+        src: require("../assets/about_us/logo-openmined.svg"),
+        name: "OpenMined"
+      }
     ],
-    title: "About Us | Covid Watch",
+    title: "About Us | Covid Watch"
   }),
   components: {
     Button,
-    CTA,
+    CTA
   },
   head() {
     return {
-      title: "About Us | Covid Watch",
+      title: "About Us | Covid Watch"
     };
-  },
+  }
 };
 </script>
