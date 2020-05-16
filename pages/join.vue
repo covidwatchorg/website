@@ -120,15 +120,20 @@
         <v-row class="mb-12">
           <v-col>
             <h3>Other Inquiries?</h3>
-            <p class="mt-8">
-              <a
-                class="primary--text"
-                style="font-weight: 600; text-decoration: none;"
-                href="mailto: contact@covid-watch.org"
-                >Contact us</a
-              >
-              for more information.
-            </p>
+            <p class="mt-8">Reach out to our team:</p>
+
+            <ul>
+              <li>
+                Media:
+                <a href="mailto:media@covid-watch.org">media@covid-watch.org</a>
+              </li>
+              <li>
+                General:
+                <a href="mailto: contact@covid-watch.org"
+                  >contact@covid-watch.org</a
+                >
+              </li>
+            </ul>
           </v-col>
         </v-row>
       </v-col>
