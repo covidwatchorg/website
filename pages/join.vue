@@ -129,7 +129,9 @@
               </li>
               <li>
                 General:
-                <a href="mailto: contact@covid-watch.org">contact@covid-watch.org</a>
+                <a href="mailto: contact@covid-watch.org"
+                  >contact@covid-watch.org</a
+                >
               </li>
             </ul>
           </v-col>
