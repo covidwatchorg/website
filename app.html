@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html {{ HTML_ATTRS }}>
-
-<head {{ HEAD_ATTRS }}>
-
+  <head {{ HEAD_ATTRS }}>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138209632-4"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-138209632-4"
+    ></script>
 
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-        gtag('config', 'UA-138209632-4');
+      gtag("config", "UA-138209632-4");
     </script>
-
 
     <title>Covid Watch</title>
 
-    <link rel="icon" href="logo_blue_no_text.svg">
+    <link rel="icon" href="logo_blue_no_text.svg" />
     {{ HEAD }}
-</head>
+  </head>
 
-<body {{ BODY_ATTRS }}>
+  <body {{ BODY_ATTRS }}>
     {{ APP }}
-</body>
-
-
+  </body>
 </html>

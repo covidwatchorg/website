@@ -1,6 +1,12 @@
 <template>
   <div>
-    <v-img class="shrink-on-small-screen" :src="img" :alt="title" v-bind="$attrs" contain></v-img>
+    <v-img
+      class="shrink-on-small-screen"
+      :src="img"
+      :alt="title"
+      v-bind="$attrs"
+      contain
+    ></v-img>
     <h3 class="mt-10">{{ title }}</h3>
     <p class="mt-5">{{ body }}</p>
   </div>
@@ -13,7 +19,7 @@ export default {
   props: {
     title: String,
     body: String,
-    img: String
-  }
+    img: String,
+  },
 };
 </script>

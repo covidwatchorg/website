@@ -18,7 +18,11 @@
           style="text-decoration: none; font-weight: bold;"
         >
           {{ card.title }}&nbsp;
-          <img style="height: 10px;" src="../assets/home_page/arrow_icon.svg" alt="arrow" />
+          <img
+            style="height: 10px;"
+            src="../assets/home_page/arrow_icon.svg"
+            alt="arrow"
+          />
         </a>
       </div>
       <div class="primary--text body-2 grow float-right mb-2">
@@ -44,19 +48,19 @@
 export default {
   name: "NewsCard",
   props: {
-    card: Object
+    card: Object,
   },
   data: () => ({
     news: {
       icon: require("../assets/home_page/news_icon.svg"),
       stripe: require("../assets/home_page/news_cards_top_accent.svg"),
-      gradient: "to right, #43C4D9, #fff" // aqua
+      gradient: "to right, #43C4D9, #fff", // aqua
     },
     press: {
       icon: require("../assets/home_page/tangerine_news_icon.svg"),
       stripe: require("../assets/home_page/tangerine_stripe.svg"),
-      gradient: "to right, #F05452, #fff" // tangerine
-    }
-  })
+      gradient: "to right, #F05452, #fff", // tangerine
+    },
+  }),
 };
 </script>

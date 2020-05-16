@@ -37,8 +37,8 @@ export default {
     to: String,
     color: {
       type: String,
-      default: "primary"
-    }
-  }
+      default: "primary",
+    },
+  },
 };
 </script>

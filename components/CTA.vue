@@ -11,19 +11,24 @@
         <img
           v-if="pdf"
           class="mr-3"
-          style="height:20px;"
+          style="height: 20px;"
           src="../assets/home_page/pdf_logo.svg"
           alt="pdf"
         />
         <!-- <a> tag if it's a pdf -->
-        <a target="_blank" :href="href" v-if="pdf" style="text-transform:none;">{{content}}</a>
+        <a
+          target="_blank"
+          :href="href"
+          v-if="pdf"
+          style="text-transform: none;"
+          >{{ content }}</a
+        >
         <!-- else just display name of button normally -->
-        <div v-else>{{content}}</div>
+        <div v-else>{{ content }}</div>
       </Button>
     </v-col>
   </v-row>
 </template>
-
 
 <style lang="scss" scoped>
 .cta-container {
@@ -41,14 +46,14 @@ import Button from "../components/Button.vue";
 
 export default {
   components: {
-    Button
+    Button,
   },
   props: {
     href: String,
     nuxt: Boolean,
     to: String,
     pdf: Boolean,
-    content: String
-  }
+    content: String,
+  },
 };
 </script>

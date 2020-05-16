@@ -4,7 +4,13 @@
       <v-row align="center" justify="space-between">
         <v-col cols="8" sm="auto">
           <nuxt-link to="/">
-            <v-img :src="logoSvg" alt="Covid Watch" id="logo-desktop" max-width="265px" contain></v-img>
+            <v-img
+              :src="logoSvg"
+              alt="Covid Watch"
+              id="logo-desktop"
+              max-width="265px"
+              contain
+            ></v-img>
           </nuxt-link>
         </v-col>
         <v-spacer></v-spacer>
@@ -21,7 +27,8 @@
               text
               :ripple="false"
               class="py-4"
-            >{{ link.title }}</v-btn>
+              >{{ link.title }}</v-btn
+            >
           </v-toolbar-items>
         </v-col>
         <!--Mobile menu-->
@@ -36,9 +43,7 @@
               <v-list class="d-md-none">
                 <v-list-item v-for="link in navLinks" :key="link.title">
                   <nuxt-link class="link" :to="link.href">
-                    {{
-                    link.title
-                    }}
+                    {{ link.title }}
                   </nuxt-link>
                 </v-list-item>
               </v-list>
@@ -105,10 +110,10 @@ export default {
   name: "AppBar",
   props: {
     navLinks: Array,
-    title: String
+    title: String,
   },
   data: () => ({
-    logoSvg: require("../assets/logo/logo_text_blue.svg")
-  })
+    logoSvg: require("../assets/logo/logo_text_blue.svg"),
+  }),
 };
 </script>
