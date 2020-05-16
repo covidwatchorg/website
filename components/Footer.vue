@@ -1,27 +1,45 @@
 <template>
-  <v-footer app absolute color="primary" style="white--text; position: relative" dark>
+  <v-footer
+    app
+    absolute
+    color="primary"
+    style="white--text; position: relative"
+    dark
+  >
     <v-container>
       <v-row>
-        <v-col cols="12" sm="6" md="2" v-for="section in sections" :key="section.title">
+        <v-col
+          cols="12"
+          sm="6"
+          md="2"
+          v-for="section in sections"
+          :key="section.title"
+        >
           <b>{{ section.title }}</b>
           <v-list class="footer-link-list" dense>
-            <v-list-item v-for="link in section.links" :key="link.title" class="pl-0">
-              <nuxt-link v-if="link.title !== 'Contact Us'" class="link" :to="link.href">
-                {{
-                link.title
-                }}
+            <v-list-item
+              v-for="link in section.links"
+              :key="link.title"
+              class="pl-0"
+            >
+              <nuxt-link
+                v-if="link.title !== 'Contact Us'"
+                class="link"
+                :to="link.href"
+              >
+                {{ link.title }}
               </nuxt-link>
               <a v-else :href="link.href">
-                  {{
-                  link.title
-                  }}
+                {{ link.title }}
               </a>
             </v-list-item>
           </v-list>
         </v-col>
         <v-spacer />
         <v-col :md="2">
-          <Button class="primary--text" nuxt to="/support" color="white">Donate</Button>
+          <Button class="primary--text" nuxt to="/support" color="white"
+            >Donate</Button
+          >
           <v-row justify="space-around" class="mb-2">
             <span class="group mt-8 pa-2">
               <a href="https://github.com/covid19risk" class="ma-3">
@@ -71,10 +89,10 @@ import Button from "./Button.vue";
 export default {
   name: "Footer",
   components: {
-    Button
+    Button,
   },
   props: {
-    sections: Array
-  }
+    sections: Array,
+  },
 };
 </script>
