@@ -22,11 +22,7 @@
               :key="link.title"
               class="pl-0"
             >
-              <nuxt-link
-                v-if="link.title !== 'Contact Us'"
-                class="link"
-                :to="link.href"
-              >
+              <nuxt-link v-if="link.nuxt" class="link" :to="link.href">
                 {{ link.title }}
               </nuxt-link>
               <a v-else :href="link.href">
