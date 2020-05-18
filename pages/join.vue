@@ -27,7 +27,11 @@
           <v-spacer></v-spacer>
 
           <v-col :md="4" :sm="8">
-            <img class="donate-svg" src="../assets/support_page/people_globe.svg" alt="globe" />
+            <img
+              class="donate-svg"
+              src="../assets/support_page/people_globe.svg"
+              alt="globe"
+            />
           </v-col>
         </v-row>
 
@@ -125,7 +129,9 @@
               </li>
               <li>
                 General:
-                <a href="mailto: contact@covid-watch.org">contact@covid-watch.org</a>
+                <a href="mailto: contact@covid-watch.org"
+                  >contact@covid-watch.org</a
+                >
               </li>
             </ul>
           </v-col>
