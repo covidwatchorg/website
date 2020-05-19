@@ -436,68 +436,68 @@ export default {
         name: "Tina White",
         title: "Executive Director",
         bio:
-          "Tina is a PhD candidate at Stanford University where she designs neural network architectures for scientific simulations. Covid Watch began with a post she made in the early days of the pandemic."
+          "Tina is a PhD candidate at Stanford University where she designs neural network architectures for scientific simulations. Covid Watch began with a post she made in the early days of the pandemic.",
       },
       {
         image: require("../assets/about_us/james-photo.svg"),
         name: "James Petrie",
         title: "Head of Research",
         bio:
-          "James is a PhD candidate in Applied Mathematics at the University of Waterloo where he focuses on numerical modelling, machine learning, and optimization."
+          "James is a PhD candidate in Applied Mathematics at the University of Waterloo where he focuses on numerical modelling, machine learning, and optimization.",
       },
       {
         image: require("../assets/about_us/rhys-photo.svg"),
         name: "Rhys Fenwick",
         title: "Head of Communications",
         bio:
-          "Rhys is a science communicator from Australia with a background in biotechnology and software development. His main area of focus is communicating emerging technologies to broad audiences."
+          "Rhys is a science communicator from Australia with a background in biotechnology and software development. His main area of focus is communicating emerging technologies to broad audiences.",
       },
       {
         image: require("../assets/about_us/zsombor-photo.svg"),
         name: "Zsombor Szabo",
         title: "Head of Engineering",
         bio:
-          "Zsombor is a mobile app developer with more than ten years of experience building next-generation networks, notably including an app called Berkanan Messenger that runs on Bluetooth mesh networks."
-      }
+          "Zsombor is a mobile app developer with more than ten years of experience building next-generation networks, notably including an app called Berkanan Messenger that runs on Bluetooth mesh networks.",
+      },
     ],
     stanford: {
       src: require("../assets/about_us/logo-stanford.svg"),
-      href: "https://www.stanford.edu/"
+      href: "https://www.stanford.edu/",
     },
     waterloo: {
       src: require("../assets/about_us/logo-university-of-waterloo.svg"),
-      href: "https://uwaterloo.ca/"
+      href: "https://uwaterloo.ca/",
     },
     collaborator_projects: [
       {
         id: "tcn-coalition",
         url: "https://tcn-coalition.org/",
         src: require("../assets/about_us/logo-TCN-coalition.svg"),
-        name: "Founding Member"
+        name: "Founding Member",
       },
       {
         id: "coepi",
         url: "https://www.coepi.org/",
         src: require("../assets/about_us/logo-coepi.svg"),
-        name: "CoEpi"
+        name: "CoEpi",
       },
       {
         id: "openmined",
         url: "https://www.openmined.org/",
         src: require("../assets/about_us/logo-openmined.svg"),
-        name: "OpenMined"
-      }
+        name: "OpenMined",
+      },
     ],
-    title: "About Us | Covid Watch"
+    title: "About Us | Covid Watch",
   }),
   components: {
     Button,
-    CTA
+    CTA,
   },
   head() {
     return {
-      title: "About Us | Covid Watch"
+      title: "About Us | Covid Watch",
     };
-  }
+  },
 };
 </script>
