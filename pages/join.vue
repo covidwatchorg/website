@@ -24,7 +24,6 @@
             </div>
           </v-col>
 
-
           <v-spacer></v-spacer>
 
           <v-col :md="4" :sm="8">
@@ -44,11 +43,10 @@
               If you'd like an invitation to the 500+ person Slack group that
               we're using to coordinate, fill out the form linked below.
             </p>
-            
 
             <v-col :md="4">
               <Button href="https://covidapp.typeform.com/to/MnRmBN">
-                  I want to volunteer!
+                I want to volunteer!
               </Button>
             </v-col>
 
