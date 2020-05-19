@@ -44,7 +44,7 @@
       </v-row>
 
       <!-- We value row -->
-      <v-row :class="pageSectionClass" id="we-value">
+      <v-row :class="{[pageSectionClass]: true, 'mx-2': $vuetify.breakpoint.smAndDown}" id="we-value">
         <h2>We Value</h2>
 
         <v-row>
@@ -69,9 +69,11 @@
           ></CTA>
         </v-row>
       </v-row>
+      </div>
 
       <!-- join us row -->
-      <v-row class="join-us" :class="pageSectionClass" id="join-us">
+      <div class="join-us">
+      <v-row :class="{[pageSectionClass]: true, 'mx-3': $vuetify.breakpoint.smAndDown}" id="join-us">
         <v-row class="mb-3">
           <v-col cols="10" :md="2">
             <h2>Join Us</h2>
@@ -108,9 +110,10 @@
           </v-col>
         </v-row>
       </v-row>
+      </div>
 
       <!-- team row-->
-      <v-row :class="pageSectionClass" id="our-team">
+      <v-row :class="{[pageSectionClass]: true, 'mx-2': $vuetify.breakpoint.smAndDown}" id="our-team">
         <v-col cols="11">
           <div class="mb-5">
             <h2>Team</h2>
@@ -150,7 +153,7 @@
       </v-row>
 
       <!-- Advisers row-->
-      <v-row :class="pageSectionClass">
+      <v-row :class="{[pageSectionClass]: true, 'mx-2': $vuetify.breakpoint.smAndDown}">
         <v-col cols="11">
           <div class="mb-5">
             <h2>Advisers</h2>
@@ -178,7 +181,7 @@
       </v-row>
 
       <!-- academic partners row-->
-      <v-row :class="pageSectionClass" id="academic-partners">
+      <v-row :class= "{[pageSectionClass]: true, 'mx-2': $vuetify.breakpoint.smAndDown}" id="academic-partners">
         <v-col class="mb-10" :md="4" :sm="8">
           <h3 class="pt-5">Academic Partners</h3>
         </v-col>
@@ -211,7 +214,7 @@
       </v-row>
 
       <!-- colabs row-->
-      <v-row :class="pageSectionClass" id="collaborator-projects">
+      <v-row :class= "{[pageSectionClass]: true, 'mx-2': $vuetify.breakpoint.smAndDown}"id="collaborator-projects">
         <v-col class="mb-10" :md="4" :sm="8">
           <h3 class="pt-6">Collaborator Partners</h3>
         </v-col>
