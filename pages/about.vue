@@ -219,7 +219,7 @@
         <v-row justify="center" align="center">
           <v-col
             cols="12"
-            :md="6"
+            :md="4"
             v-for="(collab, i) in collaborator_projects"
             :key="i"
             :id="collab.id"
@@ -474,12 +474,6 @@ export default {
         url: "https://tcn-coalition.org/",
         src: require("../assets/about_us/logo-TCN-coalition.svg"),
         name: "Founding Member",
-      },
-      {
-        id: "safe-paths",
-        url: "https://covidsafepaths.org/",
-        src: require("../assets/about_us/logo-safepaths.svg"),
-        name: "Covid SafePaths",
       },
       {
         id: "coepi",
