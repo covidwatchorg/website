@@ -73,7 +73,7 @@
 
       <!-- join us row -->
       <div class="join-us">
-      <v-row :class="{[pageSectionClass]: true, 'mx-3': $vuetify.breakpoint.smAndDown}" id="join-us">
+      <v-row :class="{[pageSectionClass]: true, 'mx-2': $vuetify.breakpoint.smAndDown}" id="join-us">
         <v-row class="mb-3">
           <v-col cols="10" :md="2">
             <h2>Join Us</h2>
