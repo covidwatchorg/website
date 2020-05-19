@@ -299,5 +299,21 @@
     "author_name": "Tomio Geron",
     "outlet_name": "Wall Street Journal",
     "date": "2020-05-14"
+  },
+  {
+    "id": 35,
+    "type": "press_mention",
+    "title": "Editorial: Use all weapons against virus",
+    "url": "https://wcfcourier.com/opinion/editorial/editorial-use-all-weapons-against-virus/article_1dc47d6f-d45a-5f96-9795-463b107716ca.html",
+    "outlet_name": "Waterloo Cedar Falls Courier",
+    "date": "2020-05-11"
+  },
+  {
+    "id": 36,
+    "type": "press_mention",
+    "title": "Emergent Ventures prize winners, third cohort",
+    "url": "https://marginalrevolution.com/marginalrevolution/2020/05/emergent-ventures-prize-winners-third-cohort.html",
+    "outlet_name": "Marginal Revolution",
+    "date": "2020-05-18"
   }
 ]
