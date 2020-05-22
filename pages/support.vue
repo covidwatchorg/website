@@ -73,9 +73,13 @@
               We have been approved as a not-for-profit organization in the
               state of Arizona. We have submitted the required application with
               the IRS, and are awaiting their response and our 501(c)(3) letter.
-              Per the IRS regulations, while this application is pending, we are
-              allowed to operate as a 501(c)(3) charitable organization and are
-              eligible to receive tax deductible, charitable contributions.
+              During the period our application is pending, we cannot provide
+              any assurances that contributions will be deductible for federal
+              tax purposes. However, we understand that the IRS tax exemption
+              typically will be retroactive to our incorporation date of March
+              12, 2020, which would retroactively make contributions deductible.
+              We currently have no reason to believe that our federal exemption,
+              if and when granted, will not be retroactive.
             </p>
             <p>
               <a
