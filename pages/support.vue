@@ -2,12 +2,7 @@
   <v-container>
     <v-row id="support">
       <v-col>
-        <v-row
-          id="hero"
-          :class="pageSectionClass"
-          justify="center"
-          align="center"
-        >
+        <v-row id="hero" :class="pageSectionClass" justify="center" align="center">
           <v-col :md="7" :sm="10" cols="12">
             <h1>Support Us</h1>
 
@@ -73,17 +68,20 @@
               We have been approved as a not-for-profit organization in the
               state of Arizona. We have submitted the required application with
               the IRS, and are awaiting their response and our 501(c)(3) letter.
-              Per the IRS regulations, while this application is pending, we are
-              allowed to operate as a 501(c)(3) charitable organization and are
-              eligible to receive tax deductible, charitable contributions.
+              During the period our application is pending, we cannot provide any
+              assurances that contributions will be deductible for federal tax
+              purposes. However, we understand that the IRS tax exemption
+              typically will be retroactive to our incorporation date of March
+              12, 2020, which would retroactively make contributions deductible.
+              We currently have no reason to believe that our federal
+              exemption, if and when granted, will not be retroactive.
             </p>
             <p>
               <a
                 class="primary--text font-weight-medium"
                 style="text-decoration: none;"
                 href="mailto: contact@covid-watch.org"
-                >Contact us</a
-              >
+              >Contact us</a>
               for more information.
             </p>
           </v-col>
@@ -98,16 +96,16 @@ import Button from "../components/Button.vue";
 
 export default {
   components: {
-    Button,
+    Button
   },
   head() {
     return {
-      title: "Support Us | Covid Watch",
+      title: "Support Us | Covid Watch"
     };
   },
   data: () => ({
     paypalLink:
-      "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=W3U2KCLJGV9A8&source=url",
-  }),
+      "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=W3U2KCLJGV9A8&source=url"
+  })
 };
 </script>
