@@ -232,6 +232,79 @@
           </v-col>
         </v-row>
       </v-row>
+
+      <v-row :class="pageSectionClass" id="team-members">
+        <v-col class="mb-10" :md="4" :sm="8">
+          <h3 class="pt-5">Team Members</h3>
+        </v-col>
+
+
+        <template>
+          <v-container class="grey lighten-5">
+            <h4 class="mb-1">Communications</h4>
+            <v-row no-gutters>
+              <v-col v-for="(member, n) in teamMembers.communications" :key="n" cols="12" sm="3">
+                <div>
+                  <div>{{ member }}</div>
+                </div>
+              </v-col>
+            </v-row>
+          </v-container>
+        </template>
+
+        <template>
+          <v-container class="grey lighten-5">
+            <h4 class="mb-1">Administrative</h4>
+
+            <v-row no-gutters>
+              <v-col v-for="(member, n) in teamMembers.administrative" :key="n" cols="12" sm="3">
+                <div>
+                  <div >{{ member }}</div>
+                </div>
+              </v-col>
+            </v-row>
+          </v-container>
+        </template>
+
+        <template>
+          <v-container class="grey lighten-5">
+            <h4 class="mb-1">Product and Design</h4>
+            <v-row no-gutters>
+              <v-col v-for="(member, n) in teamMembers.product" :key="n" cols="12" sm="3">
+                <div>
+                  <div>{{ member }}</div>
+                </div>
+              </v-col>
+            </v-row>
+          </v-container>
+        </template>
+
+        <template>
+          <v-container class="grey lighten-5">
+            <h4 class="mb-1">Engineering</h4>
+            <v-row no-gutters>
+              <v-col v-for="(member, n) in teamMembers.engineering" :key="n" cols="12" sm="3">
+                <div>
+                  <div>{{ member }}</div>
+                </div>
+              </v-col>
+            </v-row>
+          </v-container>
+        </template>
+
+        <template>
+          <v-container class="grey lighten-5">
+            <h4 class="mb-1">People and Culture</h4>
+            <v-row no-gutters>
+              <v-col v-for="(member, n) in teamMembers.culture" :key="n" cols="12" sm="3">
+                <div>
+                  <div>{{ member }}</div>
+                </div>
+              </v-col>
+            </v-row>
+          </v-container>
+        </template>
+      </v-row>
     </v-row>
   </v-container>
 </template>
@@ -307,6 +380,62 @@ import CTA from "../components/CTA.vue";
 
 export default {
   data: () => ({
+    teamMembers: {
+      administrative: [
+        'Aaron Theolet',
+        'Chuck Raby',
+        'Claire Liu',
+        'Denis Memiko',
+        'Eve Dill',
+        'Indrajit Shaw',
+        'Jeff Schwaber',
+        'Jessica Gross',
+        'Jolene Elizabeth',
+        'Kevin Philips',
+        'Oliver Nash',
+        'Rebecca Yu'
+      ],
+      communications: [
+        'Andreas Ink',
+        'Cherry Wu',
+        'Grant Slater',
+        'Mariati Messinger',
+        'Travis Marsh',
+        'Zack Astran'
+      ],
+      product: [
+        'Helen He',
+        'Jo Zeng',
+        'Michelle Xie',
+        'Rich Dandliker',
+        'Sameer Halai',
+        'Sebastien Le Tuan',
+        'Tessa Alexanian',
+        'Thi Nguyen',
+        'Victoria Nguyen',
+        'Victoria Skelly'
+      ],
+      engineering: [
+        'Colby Morrison',       'Dave Hunt',
+        'Henry de Valence',     'Ian Brown',
+        'Isaiah Becker-Mayer',  'Jesse Colligan',
+        'Joshua Liebow-Feeser', 'Kaushik Basnet',
+        'Kim de Rosa',          'Madhava Jay',
+        'Mark Ingle',           'Michael Shen',
+        'Nikhil Kumar',         'Nitin Kumar',
+        'Pavlo Apisov',         'Prabhu Inbarajan ',
+        'Racherl Quartararo',   'Scott Leibrand',
+        'Taylor Quartararo',    'Wenfei Zhou'
+      ],
+      culture: [
+        'Angie Kim',
+        'Erin LeBeau',
+        'Laure Merlin',
+        'Lawrence Kang',
+        'Louis Kang',
+        'Sydney Von Arx'
+      ],
+    },
     callsToAction: [
       {
         button_text: "Volunteer",
