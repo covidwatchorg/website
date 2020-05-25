@@ -21,7 +21,7 @@ def main():
         # these keys have been set up Github /websites repo secrets already
         airtable = Airtable(
             os.environ["AIRTABLE_TEAM_BASE_KEY"],
-            "news",
+            "team",
             api_key=os.environ["AIRTABLE_API_KEY"],
         )
     except KeyError:
