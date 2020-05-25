@@ -238,89 +238,11 @@
           <h3 class="pt-5">Team Members</h3>
         </v-col>
 
-        <template>
-          <v-container class="grey lighten-5">
-            <h4 class="mb-1">Communications</h4>
+        <template v-for="(group, key) in teamMembers">
+          <v-container :key="key" class="grey lighten-5">
+            <h4 class="mb-1 text-capitalize">{{ key }}</h4>
             <v-row no-gutters>
-              <v-col
-                v-for="(member, n) in teamMembers.communications"
-                :key="n"
-                cols="12"
-                sm="3"
-              >
-                <div>
-                  <div>{{ member }}</div>
-                </div>
-              </v-col>
-            </v-row>
-          </v-container>
-        </template>
-
-        <template>
-          <v-container class="grey lighten-5">
-            <h4 class="mb-1">Administrative</h4>
-
-            <v-row no-gutters>
-              <v-col
-                v-for="(member, n) in teamMembers.administrative"
-                :key="n"
-                cols="12"
-                sm="3"
-              >
-                <div>
-                  <div>{{ member }}</div>
-                </div>
-              </v-col>
-            </v-row>
-          </v-container>
-        </template>
-
-        <template>
-          <v-container class="grey lighten-5">
-            <h4 class="mb-1">Product and Design</h4>
-            <v-row no-gutters>
-              <v-col
-                v-for="(member, n) in teamMembers.product"
-                :key="n"
-                cols="12"
-                sm="3"
-              >
-                <div>
-                  <div>{{ member }}</div>
-                </div>
-              </v-col>
-            </v-row>
-          </v-container>
-        </template>
-
-        <template>
-          <v-container class="grey lighten-5">
-            <h4 class="mb-1">Engineering</h4>
-            <v-row no-gutters>
-              <v-col
-                v-for="(member, n) in teamMembers.engineering"
-                :key="n"
-                cols="12"
-                sm="3"
-              >
-                <div>
-                  <div>{{ member }}</div>
-                </div>
-              </v-col>
-            </v-row>
-          </v-container>
-        </template>
-
-        <template>
-          <v-container class="grey lighten-5">
-            <h4 class="mb-1">People and Culture</h4>
-            <v-row no-gutters>
-              <v-col
-                v-for="(member, n) in teamMembers.culture"
-                :key="n"
-                cols="12"
-                sm="3"
-              >
+              <v-col v-for="(member, n) in group" :key="n" cols="12" sm="3">
                 <div>
                   <div>{{ member }}</div>
                 </div>
