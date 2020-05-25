@@ -223,7 +223,7 @@
             v-for="(collab, i) in collaborator_projects"
             :key="i"
             :id="collab.id"
-            class="text-center collab-img-col mb-6"
+            class="text-center collab-img-col"
           >
             <a target="_blank" :href="collab.url">
               <v-img class="collab-img" :src="collab.src" contain />
