@@ -5,9 +5,11 @@ import json
 import os
 
 
-def valid_entry(entry):
+VIEW_NAME = "^^dont_change_team_name"
+OUTPUT_PATH = "../assets/data/teamlist.json"
 
-    for value in ["type", "url", "outlet_name", "title", "date"]:
+def valid_entry(entry):
+    for value in ["name", "team"]:
         if value not in entry:
             return False
 
@@ -18,7 +20,7 @@ def main():
     try:
         # these keys have been set up Github /websites repo secrets already
         airtable = Airtable(
-            os.environ["AIRTABLE_BASE_KEY"],
+            os.environ["AIRTABLE_TEAM_BASE_KEY"],
             "news",
             api_key=os.environ["AIRTABLE_API_KEY"],
         )
@@ -26,17 +28,21 @@ def main():
         print("Couldn't find airtable base key or api key")
         exit(1)
 
-    media_list = []
+    team_list = {}
 
-    for page in airtable.get_iter(view="^^dont_change_news_name"):
+    for page in airtable.get_iter(view=VIEW_NAME):
         for record in page:
             new_values = record["fields"]
 
             if valid_entry(new_values):
-                media_list.append(new_values)
+                if team_list.get(new_values.team) is not None:
+                    team_list[new_values.team].append(new_values.name)
+                else:
+                    team_list[new_values.team] = []
 
-    with open("../assets/data/medialist.json", "w") as f:
-        json.dump(media_list, f, indent=2, sort_keys=True)
+
+    with open(OUTPUT_PATH, "w") as f:
+        json.dump(team_list, f, indent=2, sort_keys=True)
 
 
 if __name__ == "__main__":
