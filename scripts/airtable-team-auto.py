@@ -6,6 +6,7 @@ import os
 
 
 VIEW_NAME = "^^dont_change_team_name"
+TABLE_NAME = "team"
 OUTPUT_PATH = "../assets/data/teamlist.json"
 
 def valid_entry(entry):
@@ -21,7 +22,7 @@ def main():
         # these keys have been set up Github /websites repo secrets already
         airtable = Airtable(
             os.environ["AIRTABLE_TEAM_BASE_KEY"],
-            "team",
+            TABLE_NAME,
             api_key=os.environ["AIRTABLE_API_KEY"],
         )
     except KeyError:

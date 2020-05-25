@@ -5,6 +5,7 @@ import json
 import os
 
 VIEW_NAME = "^^dont_change_news_name"
+TABLE_NAME = "news"
 OUTPUT_PATH = "../assets/data/medialist.json"
 
 def valid_entry(entry):
@@ -21,7 +22,7 @@ def main():
         # these keys have been set up Github /websites repo secrets already
         airtable = Airtable(
             os.environ["AIRTABLE_NEWS_BASE_KEY"],
-            "news",
+            TABLE_NAME,
             api_key=os.environ["AIRTABLE_API_KEY"],
         )
     except KeyError:
