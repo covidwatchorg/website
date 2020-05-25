@@ -3,8 +3,8 @@
 name: Airtable
 
 on:
-  schedule: 
-    - cron: '0 */12 * * *'
+  schedule:
+    - cron: "0 */12 * * *"
 
 jobs:
   build:
@@ -13,19 +13,29 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Run airtable script
+      - name: Run airtable script to fetch news
         env:
-          AIRTABLE_BASE_KEY: ${{ secrets.AIRTABLE_BASE_KEY }}
-          AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }} 
+          AIRTABLE_NEWS_BASE_KEY: ${{ secrets.AIRTABLE_NEWS_BASE_KEY }}
+          AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
         working-directory: scripts
         run: |
           pip3 install airtable-python-wrapper
-          chmod +x airtable-auto.py
-          ./airtable-auto.py
-          
+          chmod +x airtable-news-auto.py
+          ./airtable-news-auto.py
+
+      - name: Run airtable script to fetch team members
+        env:
+          AIRTABLE_NEWS_BASE_KEY: ${{ secrets.AIRTABLE_TEAM_BASE_KEY }}
+          AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
+        working-directory: scripts
+        run: |
+          pip3 install airtable-python-wrapper
+          chmod +x airtable-team-auto.py
+          ./airtable-team-auto.py
+
       - name: Create Pull Request
         uses: colbymorrison/create-pull-request@v2
         with:
-          commit-message: "auto-add new news"
-          title: "Airtable GitHub action -- Update News"
-          body: "New News from Airtable"
+          commit-message: "auto-add from Airtable"
+          title: "Airtable GitHub action -- Update News and Team"
+          body: "Updates to News and Team Members from Airtable"

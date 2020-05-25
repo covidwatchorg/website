@@ -153,12 +153,12 @@
       <v-row :class="pageSectionClass">
         <v-col cols="11">
           <div class="mb-5">
-            <h2>Advisers</h2>
+            <h3>Advisers</h3>
           </div>
         </v-col>
 
         <template>
-          <v-container class="grey lighten-5">
+          <v-container>
             <v-row no-gutters>
               <v-col v-for="(adviser, n) in advisers" :key="n" cols="12" sm="4">
                 <div class="adviser-card">
@@ -179,7 +179,7 @@
 
       <!-- academic partners row-->
       <v-row :class="pageSectionClass" id="academic-partners">
-        <v-col class="mb-10" :md="4" :sm="8">
+        <v-col class="mb-10" cols="12">
           <h3 class="pt-5">Academic Partners</h3>
         </v-col>
 
@@ -212,7 +212,7 @@
 
       <!-- colabs row-->
       <v-row :class="pageSectionClass" id="collaborator-projects">
-        <v-col class="mb-10" :md="4" :sm="8">
+        <v-col class="mb-10" cols="12">
           <h3 class="pt-6">Collaborator Partners</h3>
         </v-col>
 
@@ -223,7 +223,7 @@
             v-for="(collab, i) in collaborator_projects"
             :key="i"
             :id="collab.id"
-            class="text-center collab-img-col mb-6"
+            class="text-center collab-img-col"
           >
             <a target="_blank" :href="collab.url">
               <v-img class="collab-img" :src="collab.src" contain />
@@ -231,6 +231,25 @@
             </a>
           </v-col>
         </v-row>
+      </v-row>
+
+      <!-- team members row -->
+      <v-row :class="pageSectionClass" id="team-members">
+        <v-col class="mb-10" cols="12">
+          <h3 class="pt-5">Team Members</h3>
+        </v-col>
+
+        <template v-for="(group, key) in teamMembers">
+          <v-container :key="key" class="mx-3">
+            <h4 class="mb-1 text-capitalize title">{{ key }}</h4>
+            <img class="founder_img" src="../assets/about_us/top-accent.svg" />
+            <v-row no-gutters>
+              <v-col v-for="(member, n) in group" :key="n" cols="12" sm="3">
+                <div>{{ member }}</div>
+              </v-col>
+            </v-row>
+          </v-container>
+        </template>
       </v-row>
     </v-row>
   </v-container>
@@ -304,9 +323,11 @@
 <script>
 import Button from "../components/Button.vue";
 import CTA from "../components/CTA.vue";
+import json from "../assets/data/teamlist.json";
 
 export default {
   data: () => ({
+    teamMembers: json,
     callsToAction: [
       {
         button_text: "Volunteer",
