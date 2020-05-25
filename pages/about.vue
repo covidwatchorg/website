@@ -153,22 +153,19 @@
       <v-row :class="pageSectionClass">
         <v-col cols="11">
           <div class="mb-5">
-            <h2>Advisers</h2>
+            <h3>Advisers</h3>
           </div>
         </v-col>
 
         <template>
-          <v-container class="grey lighten-5">
+          <v-container>
             <v-row no-gutters>
               <v-col v-for="(adviser, n) in advisers" :key="n" cols="12" sm="4">
                 <div class="adviser-card">
                   <a :href="adviser.link" target="_blank">
                     <div class="title-link title">{{ adviser.name }}</div>
                   </a>
-                  <img
-                    class="founder_img"
-                    src="../assets/about_us/top-accent.svg"
-                  />
+                  <img class="founder_img" src="../assets/about_us/top-accent.svg" />
                   <div>{{ adviser.description }}</div>
                 </div>
               </v-col>
@@ -179,7 +176,7 @@
 
       <!-- academic partners row-->
       <v-row :class="pageSectionClass" id="academic-partners">
-        <v-col class="mb-10" :md="4" :sm="8">
+        <v-col class="mb-10" cols="12">
           <h3 class="pt-5">Academic Partners</h3>
         </v-col>
 
@@ -212,7 +209,7 @@
 
       <!-- colabs row-->
       <v-row :class="pageSectionClass" id="collaborator-projects">
-        <v-col class="mb-10" :md="4" :sm="8">
+        <v-col class="mb-10" cols="12">
           <h3 class="pt-6">Collaborator Partners</h3>
         </v-col>
 
@@ -233,19 +230,19 @@
         </v-row>
       </v-row>
 
+      <!-- team members row -->
       <v-row :class="pageSectionClass" id="team-members">
-        <v-col class="mb-10" :md="4" :sm="8">
+        <v-col class="mb-10" cols="12">
           <h3 class="pt-5">Team Members</h3>
         </v-col>
 
         <template v-for="(group, key) in teamMembers">
-          <v-container :key="key" class="grey lighten-5">
-            <h4 class="mb-1 text-capitalize">{{ key }}</h4>
+          <v-container :key="key" class="mx-3">
+            <h4 class="mb-1 text-capitalize title">{{ key }}</h4>
+            <img class="founder_img" src="../assets/about_us/top-accent.svg" />
             <v-row no-gutters>
               <v-col v-for="(member, n) in group" :key="n" cols="12" sm="3">
-                <div>
-                  <div>{{ member }}</div>
-                </div>
+                <div>{{ member }}</div>
               </v-col>
             </v-row>
           </v-container>
