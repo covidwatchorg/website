@@ -323,75 +323,11 @@
 <script>
 import Button from "../components/Button.vue";
 import CTA from "../components/CTA.vue";
+import json from "../assets/data/teamlist.json";
 
 export default {
   data: () => ({
-    teamMembers: {
-      administrative: [
-        "Aaron Theolet",
-        "Chuck Raby",
-        "Claire Liu",
-        "Denis Memiko",
-        "Eve Dill",
-        "Indrajit Shaw",
-        "Jeff Schwaber",
-        "Jessica Gross",
-        "Jolene Elizabeth",
-        "Kevin Philips",
-        "Oliver Nash",
-        "Rebecca Yu",
-      ],
-      communications: [
-        "Andreas Ink",
-        "Cherry Wu",
-        "Grant Slater",
-        "Mariati Messinger",
-        "Travis Marsh",
-        "Zack Astran",
-      ],
-      product: [
-        "Helen He",
-        "Jo Zeng",
-        "Michelle Xie",
-        "Rich Dandliker",
-        "Sameer Halai",
-        "Sebastien Le Tuan",
-        "Tessa Alexanian",
-        "Thi Nguyen",
-        "Victoria Nguyen",
-        "Victoria Skelly",
-      ],
-      engineering: [
-        "Colby Morrison",
-        "Dave Hunt",
-        "Henry de Valence",
-        "Ian Brown",
-        "Isaiah Becker-Mayer",
-        "Jesse Colligan",
-        "Joshua Liebow-Feeser",
-        "Kaushik Basnet",
-        "Kim de Rosa",
-        "Madhava Jay",
-        "Mark Ingle",
-        "Michael Shen",
-        "Nikhil Kumar",
-        "Nitin Kumar",
-        "Pavlo Apisov",
-        "Prabhu Inbarajan ",
-        "Racherl Quartararo",
-        "Scott Leibrand",
-        "Taylor Quartararo",
-        "Wenfei Zhou",
-      ],
-      culture: [
-        "Angie Kim",
-        "Erin LeBeau",
-        "Laure Merlin",
-        "Lawrence Kang",
-        "Louis Kang",
-        "Sydney Von Arx",
-      ],
-    },
+    teamMembers: json,
     callsToAction: [
       {
         button_text: "Volunteer",
