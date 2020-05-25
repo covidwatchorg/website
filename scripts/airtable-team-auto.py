@@ -35,11 +35,14 @@ def main():
         for record in page:
             new_values = record["fields"]
 
+
+            print(new_values)
+            # print(new_values.get("team"))
             if valid_entry(new_values):
-                if team_list.get(new_values.team) is not None:
-                    team_list[new_values.team].append(new_values.name)
+                if team_list.get(new_values.get("team")) is not None:
+                    team_list[new_values.get("team")].append(new_values.get("name"))
                 else:
-                    team_list[new_values.team] = []
+                    team_list[new_values.get("team")] = []
 
 
     with open(OUTPUT_PATH, "w") as f:
