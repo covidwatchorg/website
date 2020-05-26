@@ -124,22 +124,22 @@
 
         <template v-for="(founder, n) in founders">
           <v-col :key="n">
-            <a :href="founder.url" style="color:rgba(0,0,0,.87);">
+            <a :href="founder.url" style="color: rgba(0, 0, 0, 0.87);">
               <v-row>
-                  <v-col :md="5">
-                    <img class="mr-5" :src="founder.image" />
-                  </v-col>
-                  <v-col cols="12" :md="7">
-                    <div class="title">{{ founder.name }}</div>
-                    <div class="subtitle">
-                      <i>{{ founder.title }}</i>
-                    </div>
-                    <img
-                      class="founder_img"
-                      src="../assets/about_us/top-accent.svg"
-                    />
-                    <div>{{ founder.bio }}</div>
-                  </v-col>
+                <v-col :md="5">
+                  <img class="mr-5" :src="founder.image" />
+                </v-col>
+                <v-col cols="12" :md="7">
+                  <div class="title">{{ founder.name }}</div>
+                  <div class="subtitle">
+                    <i>{{ founder.title }}</i>
+                  </div>
+                  <img
+                    class="founder_img"
+                    src="../assets/about_us/top-accent.svg"
+                  />
+                  <div>{{ founder.bio }}</div>
+                </v-col>
               </v-row>
             </a>
           </v-col>
