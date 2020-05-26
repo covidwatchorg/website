@@ -1,17 +1,4 @@
 {
-  "Operations & Partnerships": [
-    "Chuck Raby",
-    "Claire Liu",
-    "Denis Memiko",
-    "Eve Dill",
-    "Indrajit Shaw",
-    "Jeff Schwaber",
-    "Jessica Gross",
-    "Jolene Elizabeth",
-    "Kevin Philips",
-    "Oliver Nash",
-    "Rebecca Yu"
-  ],
   "Communications": [
     "Cherry Wu",
     "Grant Slater",
@@ -46,6 +33,19 @@
     "Taylor Quartararo",
     "Wenfei Zhou"
   ],
+  "Operations & Parnterships": [
+    "Chuck Raby",
+    "Claire Liu",
+    "Denis Memiko",
+    "Eve Dill",
+    "Indrajit Shaw",
+    "Jeff Schwaber",
+    "Jessica Gross",
+    "Jolene Elizabeth",
+    "Kevin Philips",
+    "Oliver Nash",
+    "Rebecca Yu"
+  ],
   "Product": [
     "Jo Zeng",
     "Michelle Xie",
@@ -56,5 +56,15 @@
     "Thi Nguyen",
     "Victoria Nguyen",
     "Victoria Skelly"
+  ],
+  "Public Health & Research": [
+    "Eve Dill",
+    "Arlene Oetomo",
+    "Shahan Salim",
+    "Jaime Anstee",
+    "Asa Tapley",
+    "Ryan Sinclair",
+    "Chantelle Ramsundar",
+    "Robert M. Grant"
   ]
 }
