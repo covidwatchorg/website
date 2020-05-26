@@ -124,22 +124,24 @@
 
         <template v-for="(founder, n) in founders">
           <v-col :key="n">
-            <v-row>
-              <v-col :md="5">
-                <img class="mr-5" :src="founder.image" />
-              </v-col>
-              <v-col cols="12" :md="7">
-                <div class="title">{{ founder.name }}</div>
-                <div class="subtitle">
-                  <i>{{ founder.title }}</i>
-                </div>
-                <img
-                  class="founder_img"
-                  src="../assets/about_us/top-accent.svg"
-                />
-                <div>{{ founder.bio }}</div>
-              </v-col>
-            </v-row>
+            <a :href="founder.url" style="color:rgba(0,0,0,.87);">
+              <v-row>
+                  <v-col :md="5">
+                    <img class="mr-5" :src="founder.image" />
+                  </v-col>
+                  <v-col cols="12" :md="7">
+                    <div class="title">{{ founder.name }}</div>
+                    <div class="subtitle">
+                      <i>{{ founder.title }}</i>
+                    </div>
+                    <img
+                      class="founder_img"
+                      src="../assets/about_us/top-accent.svg"
+                    />
+                    <div>{{ founder.bio }}</div>
+                  </v-col>
+              </v-row>
+            </a>
           </v-col>
           <v-responsive
             v-if="n + 1 === 2"
@@ -456,6 +458,7 @@ export default {
         image: require("../assets/about_us/tina-photo.svg"),
         name: "Tina White",
         title: "Executive Director",
+        url: "https://www.tinarwhite.com/",
         bio:
           "Tina is a PhD candidate at Stanford University where she designs neural network architectures for scientific simulations. Covid Watch began with a post she made in the early days of the pandemic.",
       },
@@ -463,6 +466,7 @@ export default {
         image: require("../assets/about_us/james-photo.svg"),
         name: "James Petrie",
         title: "Head of Research",
+        url: "https://www.linkedin.com/in/james-petrie/",
         bio:
           "James is a PhD candidate in Applied Mathematics at the University of Waterloo where he focuses on numerical modelling, machine learning, and optimization.",
       },
@@ -470,6 +474,7 @@ export default {
         image: require("../assets/about_us/rhys-photo.svg"),
         name: "Rhys Fenwick",
         title: "Head of Communications",
+        url: "https://www.linkedin.com/in/rhys-fenwick-a8019819a/",
         bio:
           "Rhys is a science communicator from Australia with a background in biotechnology and software development. His main area of focus is communicating emerging technologies to broad audiences.",
       },
@@ -477,6 +482,7 @@ export default {
         image: require("../assets/about_us/zsombor-photo.svg"),
         name: "Zsombor Szabo",
         title: "Head of Engineering",
+        url: "https://www.linkedin.com/in/zsomborszabo/",
         bio:
           "Zsombor is a mobile app developer with more than ten years of experience building next-generation networks, notably including an app called Berkanan Messenger that runs on Bluetooth mesh networks.",
       },
