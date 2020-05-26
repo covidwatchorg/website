@@ -25,7 +25,7 @@ jobs:
 
       - name: Run airtable script to fetch team members
         env:
-          AIRTABLE_NEWS_BASE_KEY: ${{ secrets.AIRTABLE_TEAM_BASE_KEY }}
+          AIRTABLE_TEAM_BASE_KEY: ${{ secrets.AIRTABLE_TEAM_BASE_KEY }}
           AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
         working-directory: scripts
         run: |
