@@ -6,12 +6,6 @@
     "Travis Marsh",
     "Zack Astran"
   ],
-  "People & Culture": [
-    "Erin LeBeau",
-    "Laure Merlin",
-    "Lawrence Kang",
-    "Sydney Von Arx"
-  ],
   "Engineering": [
     "Dave Hunt",
     "Henry de Valence",
@@ -33,7 +27,7 @@
     "Taylor Quartararo",
     "Wenfei Zhou"
   ],
-  "Operations & Parnterships": [
+  "Operations & Partnerships": [
     "Chuck Raby",
     "Claire Liu",
     "Denis Memiko",
@@ -44,7 +38,13 @@
     "Jolene Elizabeth",
     "Kevin Philips",
     "Oliver Nash",
-    "Rebecca Yu"
+    "Rebecca Yu",
+    "Arlene Oetomo"
+  ],
+  "People & Culture": [
+    "Laure Merlin",
+    "Lawrence Kang",
+    "Sydney Von Arx"
   ],
   "Product": [
     "Jo Zeng",
@@ -58,13 +58,12 @@
     "Victoria Skelly"
   ],
   "Public Health & Research": [
-    "Eve Dill",
-    "Arlene Oetomo",
-    "Shahan Salim",
-    "Jaime Anstee",
-    "Asa Tapley",
-    "Ryan Sinclair",
     "Chantelle Ramsundar",
-    "Robert M. Grant"
+    "Eve Dill",
+    "Jaime Anstee",
+    "Jolene Elizabeth",
+    "Robert M. Grant",
+    "Ryan Sinclair",
+    "Shahan Salim"
   ]
 }
