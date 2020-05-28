@@ -522,23 +522,22 @@ export default {
     CTA,
   },
   computed: {
-    teamList: function() {
-       var teamList = {};
+    teamList: function () {
+      var teamList = {};
 
-       this.airtableTeamList.forEach(elt => {
-            if(elt.team){
-                if(teamList[elt.team]){
-                    teamList[elt.team].push(elt.name)
-                }
-                else{
-                    teamList[elt.team] = [elt.name]
-                }
-            }
-       });
+      this.airtableTeamList.forEach((elt) => {
+        if (elt.team) {
+          if (teamList[elt.team]) {
+            teamList[elt.team].push(elt.name);
+          } else {
+            teamList[elt.team] = [elt.name];
+          }
+        }
+      });
 
-       return teamList;
-       }
+      return teamList;
     },
+  },
   head() {
     return {
       title: "About Us | Covid Watch",
