@@ -115,15 +115,31 @@
           <div class="mb-5">
             <h2>Team</h2>
           </div>
-            <p class="subtitle">
-              Covid Watch is a group of more than 500 volunteers from around the world, including experts in privacy and public health, technologists, developers, writers, and designers.
+          <p class="subtitle">
+            Covid Watch is a group of more than 500 volunteers from around the
+            world, including experts in privacy and public health,
+            technologists, developers, writers, and designers.
+          </p>
 
-            <p class="subtitle">
-              Our team of Stanford and Waterloo researchers was the first in the world to publish a <a href="/covid_watch_whitepaper.pdf">white paper</a>, <a href="https://testflight.apple.com/join/gtAh2Xeu">develop</a>, and <a href="https://github.com/covid19risk/">open source</a> decentralized Bluetooth exposure alert technology in early March 2020. Our <a href="https://github.com/TCNCoalition/TCN">TCN protocol</a> led to the rapid development of very similar anonymous protocols worldwide, like DP3T, PACT, and Google/Apple exposure notifications. 
-            </p>
-            <p class="subtitle">
-              Our nonprofit continues to advocate for digital privacy rights and anonymous, decentralized COVID-19 exposure alerts. Our mission is to build mobile technology to fight the pandemic while defending digital privacy.
-            </p>
+          <p class="subtitle">
+            Our team of Stanford and Waterloo researchers was the first in the
+            world to publish a
+            <a href="/covid_watch_whitepaper.pdf">white paper</a>,
+            <a href="https://testflight.apple.com/join/gtAh2Xeu">develop</a>,
+            and
+            <a href="https://github.com/covid19risk/">open source</a>
+            decentralized Bluetooth exposure alert technology in early March
+            2020. Our
+            <a href="https://github.com/TCNCoalition/TCN">TCN protocol</a> led
+            to the rapid development of very similar anonymous protocols
+            worldwide, like DP3T, PACT, and Google/Apple exposure notifications.
+          </p>
+          <p class="subtitle">
+            Our nonprofit continues to advocate for digital privacy rights and
+            anonymous, decentralized COVID-19 exposure alerts. Our mission is to
+            build mobile technology to fight the pandemic while defending
+            digital privacy.
+          </p>
         </v-col>
 
         <template v-for="(founder, n) in founders">
@@ -526,23 +542,22 @@ export default {
     CTA,
   },
   computed: {
-    teamList: function() {
-       var teamList = {};
+    teamList: function () {
+      var teamList = {};
 
-       this.airtableTeamList.forEach(elt => {
-            if(elt.team){
-                if(teamList[elt.team]){
-                    teamList[elt.team].push(elt.name)
-                }
-                else{
-                    teamList[elt.team] = [elt.name]
-                }
-            }
-       });
+      this.airtableTeamList.forEach((elt) => {
+        if (elt.team) {
+          if (teamList[elt.team]) {
+            teamList[elt.team].push(elt.name);
+          } else {
+            teamList[elt.team] = [elt.name];
+          }
+        }
+      });
 
-       return teamList;
-       }
+      return teamList;
     },
+  },
   head() {
     return {
       title: "About Us | Covid Watch",
