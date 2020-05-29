@@ -241,7 +241,7 @@
           <h3 class="pt-5">Team Members</h3>
         </v-col>
 
-        <template v-for="(group, key) in teamMembers">
+        <template v-for="(group, key) in teamList">
           <v-container :key="key" class="mx-3">
             <h4 class="mb-1 text-capitalize title">{{ key }}</h4>
             <img class="founder_img" src="../assets/about_us/top-accent.svg" />
@@ -329,7 +329,7 @@ import json from "../assets/data/teamlist.json";
 
 export default {
   data: () => ({
-    teamMembers: json,
+    airtableTeamList: json,
     callsToAction: [
       {
         button_text: "Volunteer",
@@ -521,6 +521,24 @@ export default {
     Button,
     CTA,
   },
+  computed: {
+    teamList: function() {
+       var teamList = {};
+
+       this.airtableTeamList.forEach(elt => {
+            if(elt.team){
+                if(teamList[elt.team]){
+                    teamList[elt.team].push(elt.name)
+                }
+                else{
+                    teamList[elt.team] = [elt.name]
+                }
+            }
+       });
+
+       return teamList;
+       }
+    },
   head() {
     return {
       title: "About Us | Covid Watch",
