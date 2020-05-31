@@ -12,7 +12,7 @@
     <slot></slot>
   </v-btn>
 </template>
-            
+
 <style lang="scss" scoped>
 .v-btn-toggle > .btn-flat-underlined.v-btn,
 .btn-flat-underlined.v-btn {
@@ -54,7 +54,7 @@ export default {
     href: String,
     to: String,
     nuxt: Boolean,
-    value: [String, Number, Boolean]
-  }
+    value: [String, Number, Boolean],
+  },
 };
 </script>
