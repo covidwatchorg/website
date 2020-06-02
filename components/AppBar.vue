@@ -18,16 +18,13 @@
         <!--Desktop menu-->
         <v-col class="hidden-sm-and-down" sm="auto">
           <v-toolbar-items>
-            <v-btn
+            <MenuButton
               v-for="link in navLinks"
               :key="link.title"
               :title="link.title"
               :to="link.href"
               nuxt
-              text
-              :ripple="false"
-              class="py-4"
-              >{{ link.title }}</v-btn
+              >{{ link.title }}</MenuButton
             >
           </v-toolbar-items>
         </v-col>
@@ -42,9 +39,9 @@
               </template>
               <v-list class="d-md-none">
                 <v-list-item v-for="link in navLinks" :key="link.title">
-                  <nuxt-link class="link" :to="link.href">
-                    {{ link.title }}
-                  </nuxt-link>
+                  <nuxt-link class="link" :to="link.href">{{
+                    link.title
+                  }}</nuxt-link>
                 </v-list-item>
               </v-list>
             </v-menu>
@@ -57,57 +54,33 @@
 
 <style lang="scss" scoped>
 header.v-app-bar {
-  // Desktop menu links
-  .v-btn {
-    color: var(--v-primary-base);
-    font-weight: 600;
-    text-transform: none;
-    font-size: 20px;
-
+  // Mobile menu links
+  .v-list-item {
     &:before {
-      display: none;
+      @include pseudo-background;
+      border-radius: inherit;
+      color: inherit;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s cubic-bezier(0.4, 0, 0.6, 1);
+      background-color: currentColor;
     }
 
-    &:not(#mobile-menu-btn):hover:after {
-      @include pseudo-background(3px, rgb(67, 196, 217, 0.5));
-      width: calc(
-        100% - 32px
-      ); // by default, the buttons have 16px padding on either side
+    .nuxt-link-active {
+      font-weight: 600;
     }
-
-    &--active {
-      font-weight: 700;
-
-      &:after {
-        @include pseudo-background(3px, var(--v-primary-base));
-        width: calc(
-          100% - 32px
-        ); // by default, the buttons have 16px padding on either side
-      }
-    }
-  }
-}
-// Mobile menu links
-.v-list-item {
-  &:before {
-    @include pseudo-background;
-    border-radius: inherit;
-    color: inherit;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.6, 1);
-    background-color: currentColor;
-  }
-
-  .nuxt-link-active {
-    font-weight: 600;
   }
 }
 </style>
 
 <script>
+import MenuButton from "./MenuButton.vue";
+
 export default {
   name: "AppBar",
+  components: {
+    MenuButton,
+  },
   props: {
     navLinks: Array,
     title: String,

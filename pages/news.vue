@@ -9,29 +9,17 @@
               Want to reach our press team? Contact us at
               <a href="mailto:media@covid-watch.org">media@covid-watch.org</a>.
             </p>
-            <div id="filters" class="mt-10" style="max-width: 500px;">
-              <v-col :sm="8" :md="1">
-                <p class="title mb-0">Filter:</p>
-              </v-col>
-
-              <v-row id="filter-container">
-                <v-col :sm="8" :md="1">
-                  <Button secondary @click="toShow = 'all'" class="filter"
-                    >All News</Button
+            <div class="mt-10" style="max-width: 500px;">
+              <v-row id="filter-container" justify="space-evenly">
+                <v-btn-toggle v-model="toShow" mandatory id="filter-group">
+                  <MenuButton value="all" class="filter">All News</MenuButton>
+                  <MenuButton value="mentions" class="filter"
+                    >Mentions</MenuButton
                   >
-                </v-col>
-
-                <v-col :sm="8" :md="1">
-                  <Button secondary @click="toShow = 'mentions'" class="filter"
-                    >Mentions</Button
+                  <MenuButton value="releases" class="filter"
+                    >Press Releases</MenuButton
                   >
-                </v-col>
-
-                <v-col :sm="8" :md="1">
-                  <Button secondary @click="toShow = 'releases'" class="filter"
-                    >Press Releases</Button
-                  >
-                </v-col>
+                </v-btn-toggle>
               </v-row>
             </div>
           </v-col>
@@ -72,9 +60,12 @@
 }
 
 #news {
-  #filters {
-    display: flex;
-    justify-content: space-evenly;
+  @import "~vuetify/src/styles/settings/_variables";
+
+  #filter-group {
+    @media #{map-get($display-breakpoints, 'sm-and-down')} {
+      flex-direction: column;
+    }
   }
 
   #bench-dude {
@@ -97,8 +88,9 @@
 </style>
 
 <script>
-import NewsCard from "../components/NewsCard.vue";
 import Button from "../components/Button.vue";
+import MenuButton from "../components/MenuButton.vue";
+import NewsCard from "../components/NewsCard.vue";
 import json from "../assets/data/medialist.json";
 import gsap from "gsap"; //this is a javascript animation library, more info: https://www.vuemastery.com/courses/animating-vue/intro-to-GSAP-3
 
@@ -114,8 +106,9 @@ export default {
     });
   },
   components: {
-    NewsCard,
     Button,
+    MenuButton,
+    NewsCard,
   },
   updated: function () {
     gsap.from(".news-card", {
