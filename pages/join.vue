@@ -193,6 +193,10 @@ export default {
         role: "Marketing and Communications Managers",
         desc: "to lead aspects of marketing, media outreach, and fundraising",
       },
+      {
+        role: "CFOs & Finance Directors",
+        desc: "to help build & maintain our financial models, budgets etc",
+      },
     ],
     otherRoles: [
       {
