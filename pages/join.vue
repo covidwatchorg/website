@@ -108,16 +108,16 @@
                 Like and share us on
                 <a href="https://twitter.com/COVIDWatchApp">Twitter</a>,
                 <a href="https://www.facebook.com/CovidWatch2020">Facebook</a>,
-                and <a href="https://github.com/covid19risk">Github</a>
+                <a href="https://instagram.com/COVIDWatchApp">Instagram</a>,
+                and
+                <a href="https://github.com/covid19risk">Github</a>
               </li>
               <li>
                 Make a
-                <nuxt-link to="/support">tax-deductible donation</nuxt-link> to
+                <nuxt-link to="/support">tax-deductible donation</nuxt-link>to
                 support our work
               </li>
-              <li>
-                Subscribe to our newsletter below to stay up to date on our work
-              </li>
+              <li>Subscribe to our newsletter below to stay up to date on our work</li>
             </ul>
           </v-col>
         </v-row>
