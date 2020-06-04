@@ -9,8 +9,8 @@
             <div class="subtitle">
               <p>
                 Covid Watch works best when communities adopt it together. Each
-                new person that uses our anonymous exposure notification app makes
-                everyone else that much safer and reduces the burden on
+                new person that uses our anonymous exposure notification app
+                makes everyone else that much safer and reduces the burden on
                 overloaded public health systems.
               </p>
               <p>
