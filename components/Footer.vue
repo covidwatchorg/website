@@ -22,10 +22,10 @@
               <a href="https://www.facebook.com/CovidWatch2020" class="ma-1">
                 <v-icon large dark>mdi-facebook</v-icon>
               </a>
-              <a href="https://twitter.com/COVIDWatchApp" class="ma-1">
+              <a href="https://twitter.com/CovidWatchApp" class="ma-1">
                 <v-icon large dark>mdi-twitter</v-icon>
               </a>
-              <a href="https://instagram.com/COVIDWatchApp" class="ma-1">
+              <a href="https://instagram.com/CovidWatchApp" class="ma-1">
                 <v-icon large dark>mdi-instagram</v-icon>
               </a>
             </span>
