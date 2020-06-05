@@ -374,5 +374,13 @@
     "title": "University of Arizona testing app to trace COVID-19 cases on campus",
     "type": "press_mention",
     "url": "https://www.kold.com/2020/05/28/ua-testing-app-trace-covid-cases-campus/"
+  },
+  {
+    "date": "2020-05-28",
+    "id": 44,
+    "outlet_name": "Toronto Machine Learning Series",
+    "title": "Decentralized exposure alert protocols for protecting communities from COVID-19",
+    "type": "press_mention",
+    "url": "https://www.youtube.com/watch?v=uuHg5YivV2I&list=PLH-rpi_agJT2PdBV2DkqfA4uAX1pkVW44&index=9&t=0s"
   }
 ]
