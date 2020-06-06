@@ -94,7 +94,7 @@
             <!-- Step 8 -->
             <v-row
               align="center"
-              :class="[pageSectionClass, flexcenterRowClass]"
+              :class="[pageSectionClass, flexCenterRowClass]"
               class="step-8-row"
               id="step-2"
             >

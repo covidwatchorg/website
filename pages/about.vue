@@ -259,7 +259,7 @@
       </v-row>
 
       <!-- team members row -->
-      <v-row :class="pageSectionClass" id="team-members">
+      <v-row :class="[pageSectionClass, mobileMarginsClass]" id="team-members">
         <v-col class="mb-10" cols="12">
           <h3 class="pt-5">Team Members</h3>
         </v-col>
@@ -351,9 +351,6 @@ import CTA from "../components/CTA.vue";
 import json from "../assets/data/teamlist.json";
 
 export default {
-      mounted () {
-                console.log(this.$vuetify.breakpoint)
-              },
   data: () => ({
     airtableTeamList: json,
     callsToAction: [
