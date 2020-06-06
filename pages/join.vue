@@ -40,10 +40,15 @@
           <v-col>
             <h2>Volunteer</h2>
             <p class="mt-6">
-              If you'd like an invitation to the 400+ person Slack group that
-              we're using to coordinate, just send a message to
-              contact@covid-watch.org.
+              If you'd like an invitation to the 500+ person Slack group that
+              we're using to coordinate, fill out the form linked below.
             </p>
+
+            <v-col :md="4">
+              <Button href="https://covidapp.typeform.com/to/MnRmBN">
+                I want to volunteer!
+              </Button>
+            </v-col>
 
             <h4 class="mt-6 mb-4">Most Wanted Volunteers</h4>
             <ul>
@@ -166,10 +171,12 @@
 
 <script>
 import Newsletter from "../components/Newsletter";
+import Button from "../components/Button";
 
 export default {
   components: {
     Newsletter,
+    Button,
   },
   data: () => ({
     urgentRoles: [
@@ -185,6 +192,10 @@ export default {
       {
         role: "Marketing and Communications Managers",
         desc: "to lead aspects of marketing, media outreach, and fundraising",
+      },
+      {
+        role: "CFOs & Finance Directors",
+        desc: "to help build & maintain our financial models, budgets etc",
       },
     ],
     otherRoles: [

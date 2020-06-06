@@ -119,30 +119,52 @@
             <h2>Team</h2>
           </div>
           <p class="subtitle">
-            Covid Watch is a group of more than 400 volunteers from around the
-            world. Our team includes experts in privacy and public health,
-            technologists, developers, writers and designers.
+            Covid Watch is a group of more than 500 volunteers from around the
+            world, including experts in privacy and public health,
+            technologists, developers, writers, and designers.
+          </p>
+
+          <p class="subtitle">
+            Our team of Stanford and Waterloo researchers was the first in the
+            world to publish a
+            <a href="/covid_watch_whitepaper.pdf">white paper</a>,
+            <a href="https://testflight.apple.com/join/gtAh2Xeu">develop</a>,
+            and
+            <a href="https://github.com/covid19risk/">open source</a>
+            decentralized Bluetooth exposure alert technology in early March
+            2020. Our
+            <a href="https://github.com/TCNCoalition/TCN">TCN protocol</a> led
+            to the rapid development of very similar anonymous protocols
+            worldwide, like DP3T, PACT, and Google/Apple exposure notifications.
+          </p>
+          <p class="subtitle">
+            Our nonprofit continues to advocate for digital privacy rights and
+            anonymous, decentralized COVID-19 exposure alerts. Our mission is to
+            build mobile technology to fight the pandemic while defending
+            digital privacy.
           </p>
         </v-col>
 
         <template v-for="(founder, n) in founders">
           <v-col :key="n">
-            <v-row>
-              <v-col :md="5">
-                <img class="mr-5" :src="founder.image" />
-              </v-col>
-              <v-col cols="12" :md="7">
-                <div class="title">{{ founder.name }}</div>
-                <div class="subtitle">
-                  <i>{{ founder.title }}</i>
-                </div>
-                <img
-                  class="founder_img"
-                  src="../assets/about_us/top-accent.svg"
-                />
-                <div>{{ founder.bio }}</div>
-              </v-col>
-            </v-row>
+            <a :href="founder.url" style="color: rgba(0, 0, 0, 0.87);">
+              <v-row>
+                <v-col :md="5">
+                  <img class="mr-5" :src="founder.image" />
+                </v-col>
+                <v-col cols="12" :md="7">
+                  <div class="title">{{ founder.name }}</div>
+                  <div class="subtitle">
+                    <i>{{ founder.title }}</i>
+                  </div>
+                  <img
+                    class="founder_img"
+                    src="../assets/about_us/top-accent.svg"
+                  />
+                  <div>{{ founder.bio }}</div>
+                </v-col>
+              </v-row>
+            </a>
           </v-col>
           <v-responsive
             v-if="n + 1 === 2"
@@ -156,12 +178,12 @@
       <v-row :class="[pageSectionClass, mobileMarginsClass]">
         <v-col cols="11">
           <div class="mb-5">
-            <h2>Advisers</h2>
+            <h3>Advisers</h3>
           </div>
         </v-col>
 
         <template>
-          <v-container class="grey lighten-5">
+          <v-container>
             <v-row no-gutters>
               <v-col v-for="(adviser, n) in advisers" :key="n" cols="12" sm="4">
                 <div class="adviser-card">
@@ -182,7 +204,7 @@
 
       <!-- academic partners row-->
       <v-row :class="[pageSectionClass, mobileMarginsClass]" id="academic-partners">
-        <v-col class="mb-10" :md="4" :sm="8">
+        <v-col class="mb-10" cols="12">
           <h3 class="pt-5">Academic Partners</h3>
         </v-col>
 
@@ -215,7 +237,7 @@
 
       <!-- colabs row-->
       <v-row :class= "[pageSectionClass, mobileMarginsClass]" id="collaborator-projects">
-        <v-col class="mb-10" :md="4" :sm="8">
+        <v-col class="mb-10" cols="12">
           <h3 class="pt-6">Collaborator Partners</h3>
         </v-col>
 
@@ -226,7 +248,7 @@
             v-for="(collab, i) in collaborator_projects"
             :key="i"
             :id="collab.id"
-            class="text-center collab-img-col mb-6"
+            class="text-center collab-img-col"
           >
             <a target="_blank" :href="collab.url">
               <v-img class="collab-img" :src="collab.src" contain />
@@ -234,6 +256,25 @@
             </a>
           </v-col>
         </v-row>
+      </v-row>
+
+      <!-- team members row -->
+      <v-row :class="pageSectionClass" id="team-members">
+        <v-col class="mb-10" cols="12">
+          <h3 class="pt-5">Team Members</h3>
+        </v-col>
+
+        <template v-for="(group, key) in teamList">
+          <v-container :key="key" class="mx-3">
+            <h4 class="mb-1 text-capitalize title">{{ key }}</h4>
+            <img class="founder_img" src="../assets/about_us/top-accent.svg" />
+            <v-row no-gutters>
+              <v-col v-for="(member, n) in group" :key="n" cols="12" sm="3">
+                <div>{{ member }}</div>
+              </v-col>
+            </v-row>
+          </v-container>
+        </template>
       </v-row>
     </v-row>
   </v-container>
@@ -307,12 +348,14 @@
 <script>
 import Button from "../components/Button.vue";
 import CTA from "../components/CTA.vue";
+import json from "../assets/data/teamlist.json";
 
 export default {
       mounted () {
                 console.log(this.$vuetify.breakpoint)
               },
   data: () => ({
+    airtableTeamList: json,
     callsToAction: [
       {
         button_text: "Volunteer",
@@ -441,6 +484,7 @@ export default {
         image: require("../assets/about_us/tina-photo.svg"),
         name: "Tina White",
         title: "Executive Director",
+        url: "https://www.tinarwhite.com/",
         bio:
           "Tina is a PhD candidate at Stanford University where she designs neural network architectures for scientific simulations. Covid Watch began with a post she made in the early days of the pandemic.",
       },
@@ -448,6 +492,7 @@ export default {
         image: require("../assets/about_us/james-photo.svg"),
         name: "James Petrie",
         title: "Head of Research",
+        url: "https://www.linkedin.com/in/james-petrie/",
         bio:
           "James is a PhD candidate in Applied Mathematics at the University of Waterloo where he focuses on numerical modelling, machine learning, and optimization.",
       },
@@ -455,6 +500,7 @@ export default {
         image: require("../assets/about_us/rhys-photo.svg"),
         name: "Rhys Fenwick",
         title: "Head of Communications",
+        url: "https://www.linkedin.com/in/rhys-fenwick-a8019819a/",
         bio:
           "Rhys is a science communicator from Australia with a background in biotechnology and software development. His main area of focus is communicating emerging technologies to broad audiences.",
       },
@@ -462,6 +508,7 @@ export default {
         image: require("../assets/about_us/zsombor-photo.svg"),
         name: "Zsombor Szabo",
         title: "Head of Engineering",
+        url: "https://www.linkedin.com/in/zsomborszabo/",
         bio:
           "Zsombor is a mobile app developer with more than ten years of experience building next-generation networks, notably including an app called Berkanan Messenger that runs on Bluetooth mesh networks.",
       },
@@ -499,6 +546,23 @@ export default {
   components: {
     Button,
     CTA,
+  },
+  computed: {
+    teamList: function () {
+      var teamList = {};
+
+      this.airtableTeamList.forEach((elt) => {
+        if (elt.team) {
+          if (teamList[elt.team]) {
+            teamList[elt.team].push(elt.name);
+          } else {
+            teamList[elt.team] = [elt.name];
+          }
+        }
+      });
+
+      return teamList;
+    },
   },
   head() {
     return {

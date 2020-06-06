@@ -235,7 +235,7 @@ export default {
             answer:
               "<p>Bluetooth signals allow us to know who’s actually close to you and for how long. If you’re on the first floor of a tall building, and someone else is on the 15th, a Bluetooth signal would not log your interaction. That’s not true of other ways to view your location, like GPS.</p> " +
               "<p>Also, your Bluetooth signal belongs to you and your phone. This allows us to never store your data centrally. Instead, random numbers that list your interactions via Bluetooth are stored on your own device.</p>" +
-              "<p>You can learn more about the tech behind our contact tracing solution in our <a target='_blank' href='/covid_watch_whitepaper.pdf'>White Paper</a>.</p>",
+              "<p>You can learn more about the tech behind our exposure alert system in our <a target='_blank' href='/covid_watch_whitepaper.pdf'>White Paper</a>.</p>",
           },
           {
             question: "Will the alerts tell me where and when I was exposed?",

@@ -1,10 +1,8 @@
-# copied directly from Colby's previous work:  https://github.com/covid19risk/legacy_website/blob/12ebd1324c1c03bdab90c9522ecabbf6f9e53014/.github/workflows/airtable.yaml
-
 name: Airtable
 
 on:
-  schedule: 
-    - cron: '0 */12 * * *'
+  schedule:
+    - cron: "0 */12 * * *"
 
 jobs:
   build:
@@ -13,19 +11,20 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Run airtable script
+      - name: Run airtable script to fetch news and team members
         env:
-          AIRTABLE_BASE_KEY: ${{ secrets.AIRTABLE_BASE_KEY }}
-          AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }} 
+          AIRTABLE_NEWS_BASE_KEY: ${{ secrets.AIRTABLE_NEWS_BASE_KEY }}
+          AIRTABLE_TEAM_BASE_KEY: ${{ secrets.AIRTABLE_TEAM_BASE_KEY }}
+          AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
         working-directory: scripts
         run: |
-          pip3 install airtable-python-wrapper
+          pip3 install airtable-python-wrapper > /dev/null
           chmod +x airtable-auto.py
           ./airtable-auto.py
-          
+
       - name: Create Pull Request
-        uses: colbymorrison/create-pull-request@v2
+        uses: peter-evans/create-pull-request@v2
         with:
-          commit-message: "auto-add new news"
-          title: "Airtable GitHub action -- Update News"
-          body: "New News from Airtable"
+          commit-message: "auto-add from Airtable"
+          title: "Airtable GitHub action -- Update News and Team"
+          body: "Updates to News and Team Members from Airtable"
