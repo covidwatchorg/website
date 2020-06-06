@@ -2,7 +2,7 @@
   <v-container grid-list-xs>
     <v-row id="about">
       <!-- First row-->
-      <v-row id="header" class="first-row" :class="pageSectionClass">
+      <v-row id="header" class="first-row" :class="[pageSectionClass, mobileMarginsClass]">
         <v-col cols="12" :md="7">
           <div class="mb-12">
             <h1 class="mb-5">About Us</h1>
@@ -44,7 +44,7 @@
       </v-row>
 
       <!-- We value row -->
-      <v-row :class="pageSectionClass" id="we-value">
+      <v-row :class="[pageSectionClass, mobileMarginsClass]" id="we-value">
         <h2>We Value</h2>
 
         <v-row>
@@ -73,7 +73,7 @@
 
       <!-- join us row -->
       <div class="join-us">
-      <v-row :class="pageSectionClass" id="join-us">
+      <v-row :class="[[pageSectionClass, mobileMarginsClass]]" id="join-us">
         <v-row class="mb-3">
           <v-col cols="10" :md="2">
             <h2>Join Us</h2>
@@ -113,7 +113,7 @@
       </div>
 
       <!-- team row-->
-      <v-row :class="pageSectionClass" id="our-team">
+      <v-row :class="[pageSectionClass, mobileMarginsClass]" id="our-team">
         <v-col cols="11">
           <div class="mb-5">
             <h2>Team</h2>
@@ -153,7 +153,7 @@
       </v-row>
 
       <!-- Advisers row-->
-      <v-row :class="pageSectionClass">
+      <v-row :class="[pageSectionClass, mobileMarginsClass]">
         <v-col cols="11">
           <div class="mb-5">
             <h2>Advisers</h2>
@@ -181,7 +181,7 @@
       </v-row>
 
       <!-- academic partners row-->
-      <v-row :class="pageSectionClass" id="academic-partners">
+      <v-row :class="[pageSectionClass, mobileMarginsClass]" id="academic-partners">
         <v-col class="mb-10" :md="4" :sm="8">
           <h3 class="pt-5">Academic Partners</h3>
         </v-col>
@@ -214,7 +214,7 @@
       </v-row>
 
       <!-- colabs row-->
-      <v-row :class= "pageSectionClass" id="collaborator-projects">
+      <v-row :class= "[pageSectionClass, mobileMarginsClass]" id="collaborator-projects">
         <v-col class="mb-10" :md="4" :sm="8">
           <h3 class="pt-6">Collaborator Partners</h3>
         </v-col>
