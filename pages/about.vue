@@ -203,7 +203,7 @@
       </v-row>
 
       <!-- academic partners row-->
-      <v-row :class="[pageSectionClass, mobileMarginsClass]" id="academic-partners">
+      <v-row :class="pageSectionClass" id="academic-partners">
         <v-col class="mb-10" cols="12">
           <h3 class="pt-5">Academic Partners</h3>
         </v-col>
@@ -236,7 +236,7 @@
       </v-row>
 
       <!-- colabs row-->
-      <v-row :class= "[pageSectionClass, mobileMarginsClass]" id="collaborator-projects">
+      <v-row :class= "pageSectionClass" id="collaborator-projects">
         <v-col class="mb-10" cols="12">
           <h3 class="pt-6">Collaborator Partners</h3>
         </v-col>
