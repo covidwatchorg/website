@@ -5,10 +5,10 @@ export default {
     pageSectionClass: "pa-4 pa-sm-12",
   }),
   computed: {
-      mobileMarginsClass: function(){
-          return {
-              'mx-2': this.$vuetify.breakpoint.smAndDown
-          }
-      }
-  }
+    mobileMarginsClass: function () {
+      return {
+        "mx-2": this.$vuetify.breakpoint.smAndDown,
+      };
+    },
+  },
 };
