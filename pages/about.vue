@@ -2,7 +2,7 @@
   <v-container grid-list-xs>
     <v-row id="about">
       <!-- First row-->
-      <v-row id="header" class="first-row" :class="pageSectionClass">
+      <v-row id="header" class="first-row" :class="[pageSectionClass, mobileMarginsClass]">
         <v-col cols="12" :md="7">
           <div class="mb-12">
             <h1 class="mb-5">About Us</h1>
@@ -44,7 +44,7 @@
       </v-row>
 
       <!-- We value row -->
-      <v-row :class="pageSectionClass" id="we-value">
+      <v-row :class="[pageSectionClass, mobileMarginsClass]" id="we-value">
         <h2>We Value</h2>
 
         <v-row>
@@ -69,9 +69,11 @@
           ></CTA>
         </v-row>
       </v-row>
+      </div>
 
       <!-- join us row -->
-      <v-row class="join-us" :class="pageSectionClass" id="join-us">
+      <div class="join-us">
+      <v-row :class="[pageSectionClass, mobileMarginsClass]" id="join-us">
         <v-row class="mb-3">
           <v-col cols="10" :md="2">
             <h2>Join Us</h2>
@@ -108,9 +110,10 @@
           </v-col>
         </v-row>
       </v-row>
+      </div>
 
       <!-- team row-->
-      <v-row :class="pageSectionClass" id="our-team">
+      <v-row :class="[pageSectionClass, mobileMarginsClass]" id="our-team">
         <v-col cols="11">
           <div class="mb-5">
             <h2>Team</h2>
@@ -172,7 +175,7 @@
       </v-row>
 
       <!-- Advisers row-->
-      <v-row :class="pageSectionClass">
+      <v-row :class="[pageSectionClass, mobileMarginsClass]">
         <v-col cols="11">
           <div class="mb-5">
             <h3>Advisers</h3>
@@ -233,7 +236,7 @@
       </v-row>
 
       <!-- colabs row-->
-      <v-row :class="pageSectionClass" id="collaborator-projects">
+      <v-row :class= "pageSectionClass" id="collaborator-projects">
         <v-col class="mb-10" cols="12">
           <h3 class="pt-6">Collaborator Partners</h3>
         </v-col>
@@ -256,7 +259,7 @@
       </v-row>
 
       <!-- team members row -->
-      <v-row :class="pageSectionClass" id="team-members">
+      <v-row :class="[pageSectionClass, mobileMarginsClass]" id="team-members">
         <v-col class="mb-10" cols="12">
           <h3 class="pt-5">Team Members</h3>
         </v-col>
