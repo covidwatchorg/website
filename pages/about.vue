@@ -478,7 +478,7 @@ export default {
     ],
     founders: [
       {
-        image: require("../assets/about_us/tina-photo.svg"),
+        image: require("../assets/about_us/tina-new.svg"),
         name: "Tina White",
         title: "Executive Director",
         url: "https://www.tinarwhite.com/",
