@@ -470,6 +470,12 @@ export default {
         link: "https://publichealth.berkeley.edu/people/arthur-reingold/",
       },
       {
+        name: "George Rutherford, III, MD",
+        description:
+          "Professor, Epidemiology & Biostatistics; Director, Prevention and Public Health Group",
+        link: "https://profiles.ucsf.edu/george.rutherford",
+      },
+      {
         name: "Asa Tapley, MD, MSc",
         description:
           "Fellow, Allergy and Infectious Diseases, University of Washington",
