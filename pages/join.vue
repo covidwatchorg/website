@@ -27,7 +27,11 @@
           <v-spacer></v-spacer>
 
           <v-col :md="4" :sm="8">
-            <img class="donate-svg" src="../assets/support_page/people_globe.svg" alt="globe" />
+            <img
+              class="donate-svg"
+              src="../assets/support_page/people_globe.svg"
+              alt="globe"
+            />
           </v-col>
         </v-row>
 
@@ -41,7 +45,9 @@
             </p>
 
             <v-col :md="4">
-              <Button href="https://covidapp.typeform.com/to/MnRmBN">I want to volunteer!</Button>
+              <Button href="https://covidapp.typeform.com/to/MnRmBN"
+                >I want to volunteer!</Button
+              >
             </v-col>
 
             <h4 class="mt-6 mb-4">Most Wanted Volunteers</h4>
@@ -56,16 +62,16 @@
             <p>
               Developers who want to join our growing effort should feel free to
               jump in directly by looking at open issues in the
-              <a
-                :href="github.link"
-              >Covid Watch</a> and
+              <a :href="github.link">Covid Watch</a> and
               <a href="https://github.com/TCNCoalition">TCN Coalition</a> Github
               repos.
             </p>
             <p>Some of the skillsets we need:</p>
 
             <ul>
-              <li v-for="(item, i) in developerRoles" :key="i">{{ item.role }}</li>
+              <li v-for="(item, i) in developerRoles" :key="i">
+                {{ item.role }}
+              </li>
             </ul>
 
             <h4 class="mt-6">Healthcare Professionals</h4>
@@ -77,7 +83,9 @@
             <p>Some of the expertise we need:</p>
 
             <ul>
-              <li v-for="(item, i) in medicalRoles" :key="i">{{ item.role }}</li>
+              <li v-for="(item, i) in medicalRoles" :key="i">
+                {{ item.role }}
+              </li>
             </ul>
 
             <h4 class="mt-6">Other Roles</h4>
@@ -109,7 +117,9 @@
                 <nuxt-link to="/support">tax-deductible donation</nuxt-link>to
                 support our work
               </li>
-              <li>Subscribe to our newsletter below to stay up to date on our work</li>
+              <li>
+                Subscribe to our newsletter below to stay up to date on our work
+              </li>
             </ul>
           </v-col>
         </v-row>
@@ -126,7 +136,9 @@
               </li>
               <li>
                 General:
-                <a href="mailto: contact@covid-watch.org">contact@covid-watch.org</a>
+                <a href="mailto: contact@covid-watch.org"
+                  >contact@covid-watch.org</a
+                >
               </li>
             </ul>
           </v-col>
@@ -166,13 +178,13 @@ import {
   TWITTER,
   FACEBOOK,
   INSTAGRAM,
-  GITHUB
+  GITHUB,
 } from "@/assets/data/social_media.js";
 
 export default {
   components: {
     Newsletter,
-    Button
+    Button,
   },
   data: () => ({
     twitter: TWITTER,
@@ -183,96 +195,96 @@ export default {
       {
         role: "Web Developers",
         desc:
-          "to build an organization-facing web app (counties, businesses, health authorities, etc)"
+          "to build an organization-facing web app (counties, businesses, health authorities, etc)",
       },
       {
         role: "Executive Assistants",
-        desc: "with consistent full-time or part-time availability"
+        desc: "with consistent full-time or part-time availability",
       },
       {
         role: "Marketing and Communications Managers",
-        desc: "to lead aspects of marketing, media outreach, and fundraising"
+        desc: "to lead aspects of marketing, media outreach, and fundraising",
       },
       {
         role: "CFOs & Finance Directors",
-        desc: "to help build & maintain our financial models, budgets etc"
-      }
+        desc: "to help build & maintain our financial models, budgets etc",
+      },
     ],
     otherRoles: [
       {
-        role: "PR and Outreach"
+        role: "PR and Outreach",
       },
       {
-        role: "Social Media Manager"
-      },
-      {
-        role:
-          "Fundraising and grant applications for not-for-profit organisations"
-      },
-      {
-        role: "Blogging, particularly with a scientific background"
+        role: "Social Media Manager",
       },
       {
         role:
-          "Legal expertise around the handling of personal health information"
+          "Fundraising and grant applications for not-for-profit organisations",
       },
       {
-        role: "Data re-identification or privacy research and implementation"
+        role: "Blogging, particularly with a scientific background",
       },
       {
-        role: "Cryptography and information security"
+        role:
+          "Legal expertise around the handling of personal health information",
       },
       {
-        role: "Electrical engineering"
-      }
+        role: "Data re-identification or privacy research and implementation",
+      },
+      {
+        role: "Cryptography and information security",
+      },
+      {
+        role: "Electrical engineering",
+      },
     ],
     developerRoles: [
       {
-        role: "UI / UX Design"
+        role: "UI / UX Design",
       },
       {
-        role: "iOS and Android native app development"
+        role: "iOS and Android native app development",
       },
       {
-        role: "Animation Experience"
+        role: "Animation Experience",
       },
       {
-        role: "Software project management"
+        role: "Software project management",
       },
       {
-        role: "Experience with mobile Bluetooth APIs"
+        role: "Experience with mobile Bluetooth APIs",
       },
       {
-        role: "Experience with cryptography"
-      }
+        role: "Experience with cryptography",
+      },
     ],
     medicalRoles: [
       {
         role:
-          "Public health experience, especially with contact tracing or public health research with infectious diseases"
+          "Public health experience, especially with contact tracing or public health research with infectious diseases",
       },
       {
         role:
-          "Deep knowledge of health systems (at federal, state, province, or county level)"
+          "Deep knowledge of health systems (at federal, state, province, or county level)",
       },
       {
-        role: "Public health intervention research"
+        role: "Public health intervention research",
       },
       {
-        role: "Science of behavior change"
+        role: "Science of behavior change",
       },
       {
-        role: "Infectious disease"
+        role: "Infectious disease",
       },
       {
         role:
-          "Digital health and designing for public health and medical decision-making"
+          "Digital health and designing for public health and medical decision-making",
       },
       {
-        role: "Experience with labs and testing"
-      }
-    ]
+        role: "Experience with labs and testing",
+      },
+    ],
   }),
-  title: "Join Us | Covid Watch"
+  title: "Join Us | Covid Watch",
 };
 </script>
