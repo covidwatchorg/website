@@ -45,15 +45,16 @@
             </p>
 
             <v-col :md="4">
-              <Button href="https://covidapp.typeform.com/to/MnRmBN">
-                I want to volunteer!
-              </Button>
+              <Button href="https://covidapp.typeform.com/to/MnRmBN"
+                >I want to volunteer!</Button
+              >
             </v-col>
 
             <h4 class="mt-6 mb-4">Most Wanted Volunteers</h4>
             <ul>
               <li v-for="(item, i) in urgentRoles" :key="i">
-                <strong>{{ item.role }} </strong>{{ item.desc }}
+                <strong>{{ item.role }}</strong>
+                {{ item.desc }}
               </li>
             </ul>
 
@@ -61,7 +62,7 @@
             <p>
               Developers who want to join our growing effort should feel free to
               jump in directly by looking at open issues in the
-              <a href="https://github.com/covid19risk">Covid Watch</a> and
+              <a :href="github.link">Covid Watch</a> and
               <a href="https://github.com/TCNCoalition">TCN Coalition</a> Github
               repos.
             </p>
@@ -106,13 +107,14 @@
             <ul>
               <li>
                 Like and share us on
-                <a href="https://twitter.com/COVIDWatchApp">Twitter</a>,
-                <a href="https://www.facebook.com/CovidWatch2020">Facebook</a>,
-                and <a href="https://github.com/covid19risk">Github</a>
+                <a :href="twitter.link">Twitter</a>,
+                <a :href="facebook.link">Facebook</a>,
+                <a :href="instagram.link">Instagram</a>, and
+                <a :href="github.link">Github</a>
               </li>
               <li>
                 Make a
-                <nuxt-link to="/support">tax-deductible donation</nuxt-link> to
+                <nuxt-link to="/support">tax-deductible donation</nuxt-link>to
                 support our work
               </li>
               <li>
@@ -172,6 +174,12 @@
 <script>
 import Newsletter from "../components/Newsletter";
 import Button from "../components/Button";
+import {
+  TWITTER,
+  FACEBOOK,
+  INSTAGRAM,
+  GITHUB,
+} from "@/assets/data/social_media.js";
 
 export default {
   components: {
@@ -179,6 +187,10 @@ export default {
     Button,
   },
   data: () => ({
+    twitter: TWITTER,
+    instagram: INSTAGRAM,
+    facebook: FACEBOOK,
+    github: GITHUB,
     urgentRoles: [
       {
         role: "Web Developers",
