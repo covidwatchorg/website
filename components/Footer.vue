@@ -25,9 +25,7 @@
               <nuxt-link v-if="link.nuxt" class="link" :to="link.href">
                 {{ link.title }}
               </nuxt-link>
-              <a v-else :href="link.href">
-                {{ link.title }}
-              </a>
+              <a v-else :href="link.href">{{ link.title }}</a>
             </v-list-item>
           </v-list>
         </v-col>
@@ -38,14 +36,17 @@
           >
           <v-row justify="space-around" class="mb-2">
             <span class="group mt-8 pa-2">
-              <a href="https://github.com/covid19risk" class="ma-3">
+              <a :href="github.link" class="ma-1">
                 <v-icon large dark>mdi-github</v-icon>
               </a>
-              <a href="https://www.facebook.com/CovidWatch2020" class="ma-3">
+              <a :href="facebook.link" class="ma-1">
                 <v-icon large dark>mdi-facebook</v-icon>
               </a>
-              <a href="https://twitter.com/COVIDWatchApp" class="ma-3">
+              <a :href="twitter.link" class="ma-1">
                 <v-icon large dark>mdi-twitter</v-icon>
+              </a>
+              <a :href="instagram.link" class="ma-1">
+                <v-icon large dark>mdi-instagram</v-icon>
               </a>
             </span>
           </v-row>
@@ -81,12 +82,24 @@
 
 <script>
 import Button from "./Button.vue";
+import {
+  TWITTER,
+  FACEBOOK,
+  INSTAGRAM,
+  GITHUB,
+} from "@/assets/data/social_media.js";
 
 export default {
   name: "Footer",
   components: {
     Button,
   },
+  data: () => ({
+    twitter: TWITTER,
+    instagram: INSTAGRAM,
+    facebook: FACEBOOK,
+    github: GITHUB,
+  }),
   props: {
     sections: Array,
   },
