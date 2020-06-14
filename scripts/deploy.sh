@@ -4,10 +4,10 @@
 # It is only set when the action is triggered on a push
 if [[ ${GITHUB_REF##*/} == "prod" ]]; then
   BUCKETNAME=covidwatch
-  CLOUDFRONT_INVALIDATION_ID=E3DTRHAKABXKO3
+  CLOUDFRONT_INVALIDATION_IDS=('E3DTRHAKABXKO3' 'ENMW14NC03YRW')
 else
   BUCKETNAME=covidwatch-staging
-  CLOUDFRONT_INVALIDATION_ID=ERB7Y0Z7SNYIM
+  CLOUDFRONT_INVALIDATION_IDS=('ERB7Y0Z7SNYIM')
 fi
 
 echo
@@ -28,9 +28,11 @@ aws s3 mv "$S3_TARGET_URI" "$S3_DEPRECATE_URI" --recursive --only-show-errors
 aws s3 mv "$S3_BUILD_URI" "$S3_TARGET_URI" --recursive --only-show-errors
 aws s3 rm "$S3_DEPRECATE_URI" --recursive --only-show-errors
 
-aws cloudfront create-invalidation \
-    --distribution-id $CLOUDFRONT_INVALIDATION_ID \
-    --invalidation-batch "{\"Paths\": {\"Items\": [\"/*\"], \"Quantity\": 1}, \"CallerReference\":\"`date`\"}" > /dev/null
+for id in ${CLOUDFRONT_INVALIDATION_IDS[@]}; do
+    aws cloudfront create-invalidation \
+        --distribution-id $id \
+        --invalidation-batch "{\"Paths\": {\"Items\": [\"/*\"], \"Quantity\": 1}, \"CallerReference\":\"`date`\"}" > /dev/null
+done
 
 echo
 echo Done deploying
