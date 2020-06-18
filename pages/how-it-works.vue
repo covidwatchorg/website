@@ -8,8 +8,8 @@
           <h1 class="mt-6">Our Privacy-Preserving Protocol</h1>
           <div class="mt-10">
             <p>
-              Covid Watch invented a way to alert you if you might have been
-              exposed to the coronavirus without collecting any identifying
+              Covid Watch developed a way to alert you if you might have been
+              exposed to COVID-19 without collecting any identifying
               information. We use private, local Bluetooth signals to help you
               take action.
             </p>
@@ -69,8 +69,8 @@
           <Step
             :img_num="require('../assets/how_it_works/num-5.svg')"
             :img_step="require('../assets/how_it_works/num-5-img.svg')"
-            title="Voluntary Reports"
-            text="A few days later, Sam tests positive for COVID-19. He chooses to report the diagnosis using a verification code in the app. When he does, his list of random numbers is sent to other Covid Watch users."
+            title="Alert Others"
+            text="A few days later, Sam tests positive for COVID-19. He chooses to alert others using a verification code in the app. When he does, his list of random numbers is shared with other Covid Watch users."
           ></Step>
 
           <!-- Step 6 -->
@@ -79,8 +79,8 @@
               right
               :img_num="require('../assets/how_it_works/num-6.svg')"
               :img_step="require('../assets/how_it_works/num-6-img.svg')"
-              title="Exposure Alerts"
-              text="On Jane’s phone, the Covid Watch app compares her list against the numbers of those who have tested positive for COVID-19. When Sam shares his result, Jane receives an alert that she may have been exposed to the coronavirus."
+              title="Receive Alerts"
+              text="On Jane’s phone, the Covid Watch app compares her list against the numbers that others have shared. If a match is found, Jane's app alerts her that she may have been exposed to COVID-19."
             ></Step>
 
             <!-- Step7 -->

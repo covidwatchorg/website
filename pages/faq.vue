@@ -30,9 +30,9 @@
                 :key="i"
               >
                 <li class="section-text primary--text" :id="i">
-                  <a :href="`#${faq.sectionId}`" @click="expandSection(i)">{{
-                    faq.section
-                  }}</a>
+                  <a :href="`#${faq.sectionId}`" @click="expandSection(i)">
+                    {{ faq.section }}
+                  </a>
                 </li>
               </div>
             </ul>
@@ -216,7 +216,7 @@ export default {
             question: "How do exposure alerts help to stop the spread?",
             answer:
               "<p>The coronavirus will be with us for a long time. Realistically, we can’t stay under lockdown without wreaking immense economic havoc and threatening our way of life. </p> " +
-              "<p>Covid Watch’s mission is to use technology to make it safer for us all to be together again. As testing becomes more prevalent and communities take steps to come back together, we need a system that reflects our real-world social contacts accurately and offers steps to take as soon as the coronavirus is detected.</p>" +
+              "<p>Covid Watch’s mission is to use technology to make it safer for us all to be together again. As testing becomes more prevalent and communities take steps to come back together, we need a system that reflects our real-world social contacts accurately and offers steps to take as soon as COVID-19 is detected.</p>" +
               "<p>Exposure alerts, like those provided by Covid Watch, will empower individuals and communities with the information they need to respond to potential infection. Actionable information allows people to quarantine earlier, get tested more quickly, and stop the spread. Public health officials and <a target='_blank' href='https://www.cdc.gov/coronavirus/2019-ncov/php/open-america/contact-tracing.html'>manual contact tracers</a> can't be everywhere. We augment their work by anonymously alerting people if they are at higher risk.</p>",
           },
           {
@@ -253,7 +253,7 @@ export default {
             question:
               "How can you be sure that the diagnosis reports are genuine?",
             answer:
-              "<p>Wherever you live, local public health officials are monitoring testing for COVID-19 closely. This testing is key to slowing the spread. It’s important that users of the app not be able to send out false positives. We are coordinating with public health officials to create a system that allows you to quickly and easily verify that you have tested positive for the coronavirus before sharing it anonymously with those you’ve spent time near in the previous weeks.</p> ",
+              "<p>Wherever you live, local public health officials are monitoring testing for COVID-19 closely. This testing is key to slowing the spread. It’s important that users of the app not be able to send out false positives. We are coordinating with public health officials to create a system that allows you to quickly and easily verify that you have tested positive for COVID-19 before sharing it anonymously with those you’ve spent time near in the previous weeks.</p> ",
           },
         ],
       },
@@ -275,7 +275,7 @@ export default {
               "<p>Some contact tracing apps store identifying, personal information in a centralized database. With these apps, there is always a risk that the data will be leaked or hacked. This could expose individuals to scams, identity theft, public shaming, and other negative consequences. It also presents a potential liability for health authorities.</p>" +
               "<p>How much trust do we want to demand of people before they’re willing to install an app to stop the spread? With a privacy-preserving approach, so little data is stored that people can sign up without needing to worry about what might happen to their information.</p>" +
               "<p>It’s also important to be careful about what systems we put in place during times of crisis, since these systems historically persist long after. How confident are we that our personal data would only be used for COVID-19 contact tracing? What kind of privacy norms do we want going forward?</p>" +
-              "<p>The ACLU favors our decentralized and anonymous approach to using technology to slow the spread of the coronavirus. You can <a target='_blank' href='https://www.aclu.org/report/aclu-white-paper-principles-technology-assisted-contact-tracing'>read more here</a>.</p>",
+              "<p>The ACLU favors our decentralized and anonymous approach to using technology to slow the spread of COVID-19. You can <a target='_blank' href='https://www.aclu.org/report/aclu-white-paper-principles-technology-assisted-contact-tracing'>read more here</a>.</p>",
           },
           {
             question: "Why does the Android app ask for location permission?",
@@ -305,7 +305,7 @@ export default {
           {
             question: "What makes Covid Watch different?",
             answer:
-              "<p>Covid Watch is voluntary, decentralized, anonymous and Bluetooth-based. The response to the coronavirus is a global patchwork of local efforts, and it’s no different with app-based solutions to slow the spread of COVID-19.</p> " +
+              "<p>Covid Watch is voluntary, decentralized, anonymous and Bluetooth-based. The response to COVID-19 is a global patchwork of local efforts, and it’s no different with app-based solutions to slow the spread of COVID-19.</p> " +
               "<p>Some countries and companies are releasing apps that are not based on the same privacy-protecting principles at the center of our mission. A tracing solution that monitors you via Bluetooth and stores every interaction you have in a centralized database that is accessible by the government is the least private solution to the problem we face. This would represent a once-in-a-lifetime erosion of civil liberties.</p>" +
               "<p>We are aligned with <a target='_blank' href='https://tcn-coalition.org/'>a global group of privacy-minded technologists</a> that have coalesced around solutions that protect your privacy and public health at the same time.</p>" +
               "<p>Read more about the <a target='_blank' href='https://tcn-coalition.org/'>TCN Coalition</a> and our <a target='_blank' href='https://github.com/TCNCoalition/TCN'>shared commitment</a> to protecting your privacy. </p>",
@@ -315,7 +315,7 @@ export default {
             answer:
               "<p>No. They will not be building apps themselves. </p>" +
               "<p>Apple and Google made a rare joint announcement in April: these two competitors would be working together on creating systems to allow for anonymous exposure alerts. More specifically, they would be building a set of programming tools, called an API, that would allow apps like Covid Watch to more easily use the Bluetooth systems built into billions of smartphones around the world. </p>" +
-              "<p>Apple and Google responded to challenges Covid Watch and others faced in building a privacy-protecting app to notify communities and individuals of potential exposure to the coronavirus. The Covid Watch app will use these new APIs to offer private solutions to public health problems.</p>" +
+              "<p>Apple and Google responded to challenges Covid Watch and others faced in building a privacy-protecting app to notify communities and individuals of potential exposure to COVID-19. The Covid Watch app will use these new APIs to offer private solutions to public health problems.</p>" +
               "<p>Read more about Apple and Google’s commitment to privacy <a target='blank' href='https://www.apple.com/covid19/contacttracing'>here</a>.</p>",
           },
           {
