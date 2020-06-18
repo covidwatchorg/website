@@ -29,9 +29,8 @@
                 href="https://covidapp.typeform.com/to/rN6LaK"
                 primary
                 hero
+                >Start a Pilot</Button
               >
-                Use Our Solution
-              </Button>
             </v-col>
           </v-row>
         </v-col>
@@ -160,9 +159,8 @@
               target="_blank"
               href="https://covidapp.typeform.com/to/rN6LaK"
               primary
+              >Start a Pilot</Button
             >
-              Use Our Solution
-            </Button>
           </v-col>
         </v-row>
       </v-row>
@@ -248,7 +246,7 @@ export default {
       {
         title: "Verified Results",
         body:
-          "Public health officials will be able to verify positive test results if users have the coronavirus. This prevents false positives and allows those infected to anonymously notify others of their potential exposure.",
+          "Public health officials will be able to verify positive test results if users have COVID-19. This prevents false positives and allows those infected to anonymously notify others of their potential exposure.",
         img: require("../assets/pilot_page/man_doctor.svg"),
       },
       {

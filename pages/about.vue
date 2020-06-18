@@ -26,7 +26,7 @@
 
           <v-row no-gutters class="mr-10 mt-10">
             <v-col cols="10" class="mt-12 mb-10 mb-md-0" :sm="8" :md="5">
-              <Button primary hero nuxt to="/pilot">Use Our Solutions</Button>
+              <Button primary hero nuxt to="/pilot">Start a Pilot</Button>
             </v-col>
             <v-spacer />
 
@@ -100,7 +100,7 @@
                 cta.button_text
               }}</Button>
               <Button v-if="!cta.link" secondary>
-                <a href="mailto:partnerships@covid-watch.org">
+                <a href="mailto:partnerships@covidwatch.org">
                   {{ cta.button_text }}
                 </a>
               </Button>

@@ -258,21 +258,21 @@ export default {
         img: require("../assets/home_page/how_it_works_1.svg"),
       },
       {
-        title: "Diagnosis Reports",
+        title: "Alert Others",
         body:
-          "A few days later, Sam tests positive for COVID-19. He enters the verified results into the Covid Watch app.",
+          "A few days later, Sam tests positive for COVID-19. He chooses to send a verified alert to others using the app.",
         img: require("../assets/home_page/how_it_works_2.svg"),
       },
       {
-        title: "Exposure Alerts",
+        title: "Receive Alerts",
         body:
-          "Jane’s phone gets an alert that someone she’s seen has now tested positive. The app tells her how to take action.",
+          "Jane’s phone gets an alert that she may have been exposed to COVID-19. The app tells her how to take action.",
         img: require("../assets/home_page/how_it_works_3.svg"),
       },
       {
         title: "Safe Communities",
         body:
-          "Jane and Sam help keep their communities safe. They share the app so that others can, too.",
+          "Jane and Sam have helped protect their communities. They share the app so that others can, too.",
         img: require("../assets/home_page/how_it_works_4.svg"),
       },
     ],
@@ -298,6 +298,16 @@ export default {
     ],
     newsCards: [
       {
+        type: "press_mention",
+        date: "May 28, 2020",
+        title:
+          "University of Arizona testing app to trace COVID-19 cases on campus",
+        url:
+          "https://www.kold.com/2020/05/28/ua-testing-app-trace-covid-cases-campus/",
+        author_name: "",
+        outlet_name: "Arizona KOLD 13",
+      },
+      {
         type: "press_release",
         date: "May 7, 2020",
         title:
@@ -306,15 +316,6 @@ export default {
           "https://drive.google.com/file/d/1uVVPVzwUnBhqeOQU4Vw9O-Sng77uNzmt/view",
         author_name: "",
         outlet_name: "Press Release, Covid Watch",
-      },
-      {
-        type: "press_mention",
-        date: "May 6, 2020",
-        title: "This App Protects Privacy While Tracing Covid-19 Infections",
-        url:
-          "https://reason.com/podcast/this-app-protects-privacy-while-tracing-covid-19-infections/",
-        author_name: "",
-        outlet_name: "Reason Magazine",
       },
       {
         type: "press_mention",

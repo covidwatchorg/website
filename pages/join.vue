@@ -132,12 +132,12 @@
             <ul>
               <li>
                 Media:
-                <a href="mailto:media@covid-watch.org">media@covid-watch.org</a>
+                <a href="mailto:media@covidwatch.org">media@covidwatch.org</a>
               </li>
               <li>
                 General:
-                <a href="mailto: contact@covid-watch.org"
-                  >contact@covid-watch.org</a
+                <a href="mailto: contact@covidwatch.org"
+                  >contact@covidwatch.org</a
                 >
               </li>
             </ul>
