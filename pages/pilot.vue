@@ -29,14 +29,18 @@
                 href="https://covidapp.typeform.com/to/rN6LaK"
                 primary
                 hero
-              >Start a Pilot</Button>
+                >Start a Pilot</Button
+              >
             </v-col>
           </v-row>
         </v-col>
 
         <v-spacer />
         <v-col cols="3">
-          <img class="shrink-on-small-screen" src="../assets/pilot_page/woman_globe.svg" />
+          <img
+            class="shrink-on-small-screen"
+            src="../assets/pilot_page/woman_globe.svg"
+          />
         </v-col>
       </v-row>
 
@@ -134,8 +138,18 @@
         </div>
 
         <v-row>
-          <v-col :md="4" :sm="8" v-for="(card, i) in whyCards" :key="i" class="px-6">
-            <WhyCard :img="card.img" :title="card.title" :body="card.body"></WhyCard>
+          <v-col
+            :md="4"
+            :sm="8"
+            v-for="(card, i) in whyCards"
+            :key="i"
+            class="px-6"
+          >
+            <WhyCard
+              :img="card.img"
+              :title="card.title"
+              :body="card.body"
+            ></WhyCard>
           </v-col>
         </v-row>
 
@@ -145,7 +159,8 @@
               target="_blank"
               href="https://covidapp.typeform.com/to/rN6LaK"
               primary
-            >Start a Pilot</Button>
+              >Start a Pilot</Button
+            >
           </v-col>
         </v-row>
       </v-row>
@@ -219,11 +234,11 @@ export default {
   components: {
     Button,
     CTA,
-    WhyCard
+    WhyCard,
   },
   head() {
     return {
-      title: "Pilot | Covid Watch"
+      title: "Pilot | Covid Watch",
     };
   },
   data: () => ({
@@ -232,21 +247,21 @@ export default {
         title: "Verified Results",
         body:
           "Public health officials will be able to verify positive test results if users have COVID-19. This prevents false positives and allows those infected to anonymously notify others of their potential exposure.",
-        img: require("../assets/pilot_page/man_doctor.svg")
+        img: require("../assets/pilot_page/man_doctor.svg"),
       },
       {
         title: "Your Face Forward",
         body:
           "Covid Watch builds anonymous, effective tools. Our app augments the work of manual contact tracers. When local communities use our app, they can see the name of your public health department and learn how to contact you.",
-        img: require("../assets/pilot_page/medical_branding.svg")
+        img: require("../assets/pilot_page/medical_branding.svg"),
       },
       {
         title: "Smart Support",
         body:
           "Covid Watch is learning alongside you as we both work to protect your community. Expect our researchers to be extremely attentive to the app’s effect in your community and provide responsive feedback in a fast-moving world.",
-        img: require("../assets/pilot_page/woman_helpdesk.svg")
-      }
-    ]
-  })
+        img: require("../assets/pilot_page/woman_helpdesk.svg"),
+      },
+    ],
+  }),
 };
 </script>
