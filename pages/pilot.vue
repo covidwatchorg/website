@@ -142,6 +142,32 @@
         </v-row>
       </v-row>
 
+      <v-row id="arizona-video" :class="pageSectionClass">
+        <h2 class="section-title">Covid Watch in Action</h2>
+        <p>
+          Joyce Schroeder, PhD, from the University of Arizona discusses why they chose to work with Covid Watch to test exposure notifications.
+        </p>
+
+        <!-- alternate time stamp when the discussion focuses on WHY covid watch compared w other apps -->
+        <!-- https://youtu.be/vtCdJPYrm24?t=1650 -->
+
+        <!-- <v-row> -->
+          <v-col class="d-flex justify-center">
+              <iframe width="1000" height="577" src="https://www.youtube.com/embed/vtCdJPYrm24?start=1447" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </v-col>
+        <!-- </v-row> -->
+
+        <v-row >
+            <v-col class="d-flex justify-center" :md="6">
+              <img src="../assets/pilot_page/uofa_and_covid_watch_-_splash_screen.jpg" alt="arizona-render">
+            </v-col>
+            <v-col class="d-flex justify-center" :md="6">
+              <img src="../assets/pilot_page/uofa_and_covid_watch_-_welcome_screen.jpg" alt="arizona-render">
+            </v-col>
+        </v-row>
+      </v-row>
+
+
       <!-- help for public health section -->
       <v-row id="public-health" :class="pageSectionClass">
         <div style="display: block;">
