@@ -44,6 +44,13 @@
         </v-col>
       </v-row>
 
+      <v-row id="video-demo" :class="pageSectionClass">
+        <h2 class="section-title">Video Demo</h2>
+        <iframe width="1425" height="567" src="https://www.youtube.com/embed/vgT0Cysh7m4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      </v-row>
+
+
       <!-- Why Covid Watch? section -->
       <v-row id="why-covid-watch" :class="pageSectionClass">
         <h2 class="section-title">Why Covid Watch?</h2>
