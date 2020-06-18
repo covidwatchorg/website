@@ -126,7 +126,7 @@ export default {
           title: "Get Involved",
           links: [
             {
-              title: "Use Our Solution",
+              title: "Start a Pilot",
               href: "/pilot",
               nuxt: true,
             },
@@ -137,7 +137,7 @@ export default {
             },
             {
               title: "Contact Us",
-              href: "mailto:contact@covid-watch.org",
+              href: "mailto:contact@covidwatch.org",
               nuxt: false,
             },
           ],

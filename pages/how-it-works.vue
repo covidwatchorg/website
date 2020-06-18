@@ -8,10 +8,9 @@
           <h1 class="mt-6">Our Privacy-Preserving Protocol</h1>
           <div class="mt-10">
             <p>
-              Covid Watch developed a way to alert you if you might have been
-              exposed to COVID-19 without collecting any identifying
-              information. We use private, local Bluetooth signals to help you
-              take action.
+              Covid Watch developed a way for people to send each other alerts
+              if they might have been exposed to COVID-19. We use anonymous,
+              local Bluetooth signals to help you take action.
             </p>
             <p>
               Let’s find out more about how it works for Sam and Jane, two users

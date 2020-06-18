@@ -298,6 +298,16 @@ export default {
     ],
     newsCards: [
       {
+        type: "press_mention",
+        date: "May 28, 2020",
+        title:
+          "University of Arizona testing app to trace COVID-19 cases on campus",
+        url:
+          "https://www.kold.com/2020/05/28/ua-testing-app-trace-covid-cases-campus/",
+        author_name: "",
+        outlet_name: "Arizona KOLD 13",
+      },
+      {
         type: "press_release",
         date: "May 7, 2020",
         title:
@@ -306,15 +316,6 @@ export default {
           "https://drive.google.com/file/d/1uVVPVzwUnBhqeOQU4Vw9O-Sng77uNzmt/view",
         author_name: "",
         outlet_name: "Press Release, Covid Watch",
-      },
-      {
-        type: "press_mention",
-        date: "May 6, 2020",
-        title: "This App Protects Privacy While Tracing Covid-19 Infections",
-        url:
-          "https://reason.com/podcast/this-app-protects-privacy-while-tracing-covid-19-infections/",
-        author_name: "",
-        outlet_name: "Reason Magazine",
       },
       {
         type: "press_mention",

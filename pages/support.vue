@@ -85,7 +85,7 @@
               <a
                 class="primary--text font-weight-medium"
                 style="text-decoration: none;"
-                href="mailto: contact@covid-watch.org"
+                href="mailto: contact@covidwatch.org"
                 >Contact us</a
               >
               for more information.

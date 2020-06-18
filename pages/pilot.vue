@@ -29,9 +29,8 @@
                 href="https://covidapp.typeform.com/to/rN6LaK"
                 primary
                 hero
+                >Start a Pilot</Button
               >
-                Use Our Solution
-              </Button>
             </v-col>
           </v-row>
         </v-col>
@@ -160,9 +159,8 @@
               target="_blank"
               href="https://covidapp.typeform.com/to/rN6LaK"
               primary
+              >Start a Pilot</Button
             >
-              Use Our Solution
-            </Button>
           </v-col>
         </v-row>
       </v-row>

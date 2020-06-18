@@ -1,33 +1,28 @@
 <template>
-  <v-card :card="card" class="news-card">
+  <v-card :card="card" class="news-card d-flex flex-column">
     <v-img
       :src="card.type === 'press_release' ? press.stripe : news.stripe"
-      min-width="100%"
       :gradient="card.type === 'press_release' ? press.gradient : news.gradient"
+      min-width="100%"
+      class="flex-grow-0"
     />
-    <div class="d-flex py-6 px-6 justify-space-between">
+    <div class="news-header d-flex justify-space-between">
       <img :src="card.type === 'press_release' ? press.icon : news.icon" />
       <div class="news-date">{{ card.date }}</div>
     </div>
-    <div class="px-6 mt-4">
-      <div class="card_title mb-5">
-        <a
-          target="_blank"
-          :href="card.url"
-          class="primary--text"
-          style="text-decoration: none; font-weight: bold;"
-        >
-          {{ card.title }}&nbsp;
-          <img
-            style="height: 10px;"
-            src="../assets/home_page/arrow_icon.svg"
-            alt="arrow"
-          />
-        </a>
-      </div>
-      <div class="primary--text body-2 grow float-right mb-2">
-        <span style="font-style: italic;">- {{ card.outlet_name }}</span>
-      </div>
+    <div class="news-title flex-sm-grow-1">
+      <a target="_blank" :href="card.url" class="primary--text">
+        {{ card.title }}&nbsp;
+        <img
+          style="height: 10px;"
+          src="../assets/home_page/arrow_icon.svg"
+          alt="arrow"
+        />
+      </a>
+    </div>
+    <v-spacer></v-spacer>
+    <div class="news-credit primary--text body-2">
+      <span>- {{ card.outlet_name }}</span>
     </div>
     <slot></slot>
   </v-card>
@@ -39,8 +34,26 @@
   max-width: 100%;
 }
 
-.card_title {
+.news-header {
+  padding: 24px;
+}
+
+.news-title {
+  padding: 0px 24px;
   min-height: 80px;
+  margin: 16px 0px;
+
+  a {
+    text-decoration: none;
+    font-weight: bold;
+  }
+}
+
+.news-credit {
+  padding: 0px 24px;
+  margin-bottom: 12px;
+  font-style: italic;
+  text-align: right;
 }
 </style>
 
