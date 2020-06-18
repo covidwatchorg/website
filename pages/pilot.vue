@@ -248,7 +248,7 @@ export default {
       {
         title: "Verified Results",
         body:
-          "Public health officials will be able to verify positive test results if users have the coronavirus. This prevents false positives and allows those infected to anonymously notify others of their potential exposure.",
+          "Public health officials will be able to verify positive test results if users have COVID-19. This prevents false positives and allows those infected to anonymously notify others of their potential exposure.",
         img: require("../assets/pilot_page/man_doctor.svg"),
       },
       {

@@ -9,9 +9,8 @@
           <div class="mt-10">
             <p>
               Covid Watch invented a way to alert you if you might have been
-              exposed to the coronavirus without collecting any identifying
-              information. We use private, local Bluetooth signals to help you
-              take action.
+              exposed to COVID-19 without collecting any identifying information.
+              We use private, local Bluetooth signals to help you take action.
             </p>
             <p>
               Let’s find out more about how it works for Sam and Jane, two users
@@ -80,7 +79,7 @@
               :img_num="require('../assets/how_it_works/num-6.svg')"
               :img_step="require('../assets/how_it_works/num-6-img.svg')"
               title="Exposure Alerts"
-              text="On Jane’s phone, the Covid Watch app compares her list against the numbers of those who have tested positive for COVID-19. When Sam shares his result, Jane receives an alert that she may have been exposed to the coronavirus."
+              text="On Jane’s phone, the Covid Watch app compares her list against the numbers of those who have tested positive for COVID-19. When Sam shares his result, Jane receives an alert that she may have been exposed to COVID-19."
             ></Step>
 
             <!-- Step7 -->
