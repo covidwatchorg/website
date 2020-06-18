@@ -54,7 +54,7 @@ export default {
         { path: "/whitepaper", redirect: { name: "article" } },
         { path: "/collaborate", redirect: { name: "join" } }
       );
-    }
+    },
   },
   /*
    ** vuetify module configuration
