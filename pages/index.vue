@@ -255,48 +255,58 @@ export default {
         title: "Always Anonymous",
         body:
           "While Sam and Jane chat, their phones note each others’ anonymous signals and list them securely.",
-        img: require("../assets/home_page/how_it_works_1.svg"),
+        img: require("../assets/home_page/how_it_works_1.svg")
       },
       {
         title: "Alert Others",
         body:
           "A few days later, Sam tests positive for COVID-19. He chooses to send a verified alert to others using the app.",
-        img: require("../assets/home_page/how_it_works_2.svg"),
+        img: require("../assets/home_page/how_it_works_2.svg")
       },
       {
         title: "Receive Alerts",
         body:
           "Jane’s phone gets an alert that she may have been exposed to COVID-19. The app tells her how to take action.",
-        img: require("../assets/home_page/how_it_works_3.svg"),
+        img: require("../assets/home_page/how_it_works_3.svg")
       },
       {
         title: "Safe Communities",
         body:
           "Jane and Sam have helped protect their communities. They share the app so that others can, too.",
-        img: require("../assets/home_page/how_it_works_4.svg"),
-      },
+        img: require("../assets/home_page/how_it_works_4.svg")
+      }
     ],
     whyCards: [
       {
         title: "No tracking, ever",
         body:
           "No personal information is shared. No GPS locations are stored. Bluetooth signals send out random numbers that are later used to send exposure alerts, anonymously.",
-        img: require("../assets/home_page/why_covid_watch_1.svg"),
+        img: require("../assets/home_page/why_covid_watch_1.svg")
       },
       {
         title: "Back to life, safely",
         body:
           "Even if you leave your home, you can help keep yourself and your community safe by using Covid Watch. You don't even need to open the app again for it to protect you.",
-        img: require("../assets/home_page/why_covid_watch_2.svg"),
+        img: require("../assets/home_page/why_covid_watch_2.svg")
       },
       {
         title: "Peace of mind, together",
         body:
           "Trust comes when we work together. Covid Watch is a nonprofit on a mission to protect your health and privacy, not big tech or government.",
-        img: require("../assets/home_page/why_covid_watch_3.svg"),
-      },
+        img: require("../assets/home_page/why_covid_watch_3.svg")
+      }
     ],
     newsCards: [
+      {
+        type: "press_mention",
+        date: "May 5, 2020",
+        title:
+          "University of Arizona testing app to trace COVID-19 cases on campus",
+        url:
+          "https://www.kold.com/2020/05/28/ua-testing-app-trace-covid-cases-campus/",
+        author_name: "",
+        outlet_name: "Arizona KOLD 13"
+      },
       {
         type: "press_release",
         date: "May 7, 2020",
@@ -305,16 +315,7 @@ export default {
         url:
           "https://drive.google.com/file/d/1uVVPVzwUnBhqeOQU4Vw9O-Sng77uNzmt/view",
         author_name: "",
-        outlet_name: "Press Release, Covid Watch",
-      },
-      {
-        type: "press_mention",
-        date: "May 6, 2020",
-        title: "This App Protects Privacy While Tracing Covid-19 Infections",
-        url:
-          "https://reason.com/podcast/this-app-protects-privacy-while-tracing-covid-19-infections/",
-        author_name: "",
-        outlet_name: "Reason Magazine",
+        outlet_name: "Press Release, Covid Watch"
       },
       {
         type: "press_mention",
