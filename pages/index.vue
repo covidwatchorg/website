@@ -299,7 +299,7 @@ export default {
     newsCards: [
       {
         type: "press_mention",
-        date: "May 5, 2020",
+        date: "May 28, 2020",
         title:
           "University of Arizona testing app to trace COVID-19 cases on campus",
         url:
