@@ -59,27 +59,27 @@ import Footer from "../components/Footer.vue";
 export default {
   components: {
     AppBar,
-    Footer,
+    Footer
   },
   data() {
     return {
       navLinks: [
         {
           title: "How it Works",
-          href: "/how-it-works",
+          href: "/how-it-works"
         },
         {
           title: "FAQ",
-          href: "/faq",
+          href: "/faq"
         },
         {
           title: "About",
-          href: "/about",
+          href: "/about"
         },
         {
           title: "News",
-          href: "/news",
-        },
+          href: "/news"
+        }
       ],
       footerSections: [
         {
@@ -88,14 +88,14 @@ export default {
             {
               title: "How It Works",
               href: "/how-it-works",
-              nuxt: true,
+              nuxt: true
             },
             {
               title: "FAQ",
               href: "/faq",
-              nuxt: true,
-            },
-          ],
+              nuxt: true
+            }
+          ]
         },
         {
           title: "Organization",
@@ -103,14 +103,14 @@ export default {
             {
               title: "About Us",
               href: "/about",
-              nuxt: true,
+              nuxt: true
             },
             {
               title: "News",
               href: "/news",
-              nuxt: true,
-            },
-          ],
+              nuxt: true
+            }
+          ]
         },
         {
           title: "Resources",
@@ -118,33 +118,33 @@ export default {
             {
               title: "Privacy Policy",
               href: "/covid_watch_privacy_policy.pdf",
-              nuxt: false,
-            },
-          ],
+              nuxt: false
+            }
+          ]
         },
         {
           title: "Get Involved",
           links: [
             {
-              title: "Use Our Solution",
+              title: "Start a Pilot",
               href: "/pilot",
-              nuxt: true,
+              nuxt: true
             },
             {
               title: "Join Us",
               href: "/join",
-              nuxt: true,
+              nuxt: true
             },
             {
               title: "Contact Us",
               href: "mailto:contact@covid-watch.org",
-              nuxt: false,
-            },
-          ],
-        },
+              nuxt: false
+            }
+          ]
+        }
       ],
-      title: "Covid Watch",
+      title: "Covid Watch"
     };
-  },
+  }
 };
 </script>

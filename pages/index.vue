@@ -13,9 +13,7 @@
 
             <v-row no-gutters class="ctas mb-4 mt-10 d-flex flex-wrap">
               <v-col class="mr-6" cols="12" :sm="8" :md="3">
-                <Button primary hero nuxt to="/pilot" class="mt-4"
-                  >Start a Pilot</Button
-                >
+                <Button primary hero nuxt to="/pilot" class="mt-4">Start a Pilot</Button>
               </v-col>
             </v-row>
           </v-col>
@@ -33,12 +31,7 @@
               :key="i"
               class="d-flex flex-column align-left"
             >
-              <WhyCard
-                :img="card.img"
-                :title="card.title"
-                :body="card.body"
-                aspect-ratio="1"
-              ></WhyCard>
+              <WhyCard :img="card.img" :title="card.title" :body="card.body" aspect-ratio="1"></WhyCard>
             </v-col>
           </v-row>
 
@@ -50,37 +43,18 @@
           <h2 class="plum--text">Why Covid Watch</h2>
 
           <v-row class="justify-center">
-            <v-col
-              :md="4"
-              :sm="8"
-              cols="10"
-              v-for="(card, i) in whyCards"
-              :key="i"
-            >
-              <WhyCard
-                :img="card.img"
-                :title="card.title"
-                :body="card.body"
-                max-height="200px"
-              ></WhyCard>
+            <v-col :md="4" :sm="8" cols="10" v-for="(card, i) in whyCards" :key="i">
+              <WhyCard :img="card.img" :title="card.title" :body="card.body" max-height="200px"></WhyCard>
             </v-col>
           </v-row>
 
-          <CTA
-            pdf
-            content="Read the Whitepaper"
-            href="/covid_watch_whitepaper.pdf"
-          ></CTA>
+          <CTA pdf content="Read the Whitepaper" href="/covid_watch_whitepaper.pdf"></CTA>
         </v-row>
 
         <!-- Latest News -->
         <v-row id="latest-news" :class="[pageSectionClass, flexCenterRowClass]">
           <h2 class="pewter--text">Featured News</h2>
-          <nuxt-link
-            to="/news"
-            class="font-weight-bold"
-            style="text-decoration: none;"
-          >
+          <nuxt-link to="/news" class="font-weight-bold" style="text-decoration: none;">
             More News &nbsp;
             <img
               style="height: 10px;"
@@ -90,13 +64,7 @@
           </nuxt-link>
 
           <v-row>
-            <v-col
-              :md="4"
-              :sm="6"
-              cols="12"
-              v-for="(card, i) in newsCards"
-              :key="i"
-            >
+            <v-col :md="4" :sm="6" cols="12" v-for="(card, i) in newsCards" :key="i">
               <NewsCard :card="card"></NewsCard>
             </v-col>
           </v-row>
@@ -235,19 +203,19 @@ export default {
     Button,
     CTA,
     NewsCard,
-    WhyCard,
+    WhyCard
   },
   methods: {
     hideBackground(e) {
       // debugger
-    },
+    }
   },
   computed: {
     mobileImagesToShow() {
       return this.$vuetify.breakpoint.xsOnly
         ? [this.mobileImages[0]]
         : this.mobileImages;
-    },
+    }
   },
   data: () => ({
     howItWorksCards: [
@@ -325,14 +293,14 @@ export default {
         url:
           "https://www.wired.com/story/covid-19-contact-tracing-apps-cryptography/",
         author_name: "",
-        outlet_name: "Wired",
-      },
+        outlet_name: "Wired"
+      }
     ],
     mobileImages: [
       require("../assets/home_page/mobile_1.svg"),
       require("../assets/home_page/mobile_2.svg"),
-      require("../assets/home_page/mobile_3.svg"),
-    ],
-  }),
+      require("../assets/home_page/mobile_3.svg")
+    ]
+  })
 };
 </script>
