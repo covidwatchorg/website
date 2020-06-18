@@ -258,21 +258,21 @@ export default {
         img: require("../assets/home_page/how_it_works_1.svg"),
       },
       {
-        title: "Diagnosis Reports",
+        title: "Alert Others",
         body:
-          "A few days later, Sam tests positive for COVID-19. He enters the verified results into the Covid Watch app.",
+          "A few days later, Sam tests positive for COVID-19. He chooses to send a verified alert to others using the app.",
         img: require("../assets/home_page/how_it_works_2.svg"),
       },
       {
-        title: "Exposure Alerts",
+        title: "Receive Alerts",
         body:
-          "Jane’s phone gets an alert that someone she’s seen has now tested positive. The app tells her how to take action.",
+          "Jane’s phone gets an alert that she may have been exposed to COVID-19. The app tells her how to take action.",
         img: require("../assets/home_page/how_it_works_3.svg"),
       },
       {
         title: "Safe Communities",
         body:
-          "Jane and Sam help keep their communities safe. They share the app so that others can, too.",
+          "Jane and Sam have helped protect their communities. They share the app so that others can, too.",
         img: require("../assets/home_page/how_it_works_4.svg"),
       },
     ],
