@@ -9,8 +9,9 @@
           <div class="mt-10">
             <p>
               Covid Watch developed a way to alert you if you might have been
-              exposed to COVID-19 without collecting any identifying information.
-              We use private, local Bluetooth signals to help you take action.
+              exposed to COVID-19 without collecting any identifying
+              information. We use private, local Bluetooth signals to help you
+              take action.
             </p>
             <p>
               Let’s find out more about how it works for Sam and Jane, two users
