@@ -50,10 +50,11 @@ export default {
   router: {
     extendRoutes(routes, resolve) {
       routes.push(
-        { path: "/articles", redirect: { name: "index" } },
+        { path: "/articles", redirect: { name: "article" } },
+        { path: "/whitepaper", redirect: { name: "article" } },
         { path: "/collaborate", redirect: { name: "join" } }
       );
-    },
+    }
   },
   /*
    ** vuetify module configuration
