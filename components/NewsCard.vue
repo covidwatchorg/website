@@ -29,21 +29,17 @@
 </template>
 
 <style lang="scss" scoped>
-@mixin pad-text($x, $y) {
-  padding: $y $x;
-}
-
 .news-card {
   height: 100%;
   max-width: 100%;
 }
 
 .news-header {
-  @include pad-text(24px, 24px);
+  padding: 24px;
 }
 
 .news-title {
-  @include pad-text(24px, 0px);
+  padding: 0px 24px;
   min-height: 80px;
   margin: 16px 0px;
 
@@ -54,7 +50,7 @@
 }
 
 .news-credit {
-  @include pad-text(24px, 0px);
+  padding: 0px 24px;
   margin-bottom: 12px;
   font-style: italic;
   text-align: right;
