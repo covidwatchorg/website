@@ -7,7 +7,7 @@
             <h1 class="mb-5">News and Media</h1>
             <p>
               Want to reach our press team? Contact us at
-              <a href="mailto:media@covid-watch.org">media@covid-watch.org</a>.
+              <a href="mailto:media@covidwatch.org">media@covidwatch.org</a>.
             </p>
             <div class="mt-10" style="max-width: 500px;">
               <v-row id="filter-container" justify="space-evenly">

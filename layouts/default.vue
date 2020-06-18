@@ -137,7 +137,7 @@ export default {
             },
             {
               title: "Contact Us",
-              href: "mailto:contact@covid-watch.org",
+              href: "mailto:contact@covidwatch.org",
               nuxt: false,
             },
           ],

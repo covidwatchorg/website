@@ -100,7 +100,7 @@
                 cta.button_text
               }}</Button>
               <Button v-if="!cta.link" secondary>
-                <a href="mailto:partnerships@covid-watch.org">
+                <a href="mailto:partnerships@covidwatch.org">
                   {{ cta.button_text }}
                 </a>
               </Button>
