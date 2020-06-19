@@ -414,5 +414,29 @@
     "title": "Universities and high schools are readying high-tech ways to curb the spread of Covid-19",
     "type": "press_mention",
     "url": "https://www.erienewsnow.com/story/42253970/universities-and-high-schools-are-readying-high-tech-ways-to-curb-the-spread-of-covid-19"
+  },
+  {
+    "date": "2020-06-18",
+    "id": 49,
+    "outlet_name": "12 NEWS (KPNX-TV)",
+    "title": "Coronavirus in Arizona: Record-high 2,519 new cases reported on Thursday",
+    "type": "press_mention",
+    "url": "https://www.12news.com/article/news/health/coronavirus/here-is-everything-you-need-to-know-about-coronavirus-in-arizona-on-june-18/75-127e543b-89c1-41a4-8f32-6ef928732bfb"
+  },
+  {
+    "date": "2020-06-18",
+    "id": 50,
+    "outlet_name": "University of Arizona",
+    "title": "UArizona Testing App to Alert Students, Employees Exposed to COVID-19",
+    "type": "press_release",
+    "url": "https://uanews.arizona.edu/story/uarizona-testing-app-alert-students-employees-exposed-covid19"
+  },
+  {
+    "date": "2020-06-18",
+    "id": 51,
+    "outlet_name": "The Daily Wildcat",
+    "title": "Campus reentry update: University of Arizona begins testing phase for new contact tracing app",
+    "type": "press_mention",
+    "url": "https://www.wildcat.arizona.edu/article/2020/06/sc-tracing-app"
   }
 ]
