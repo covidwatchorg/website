@@ -107,7 +107,7 @@
           </v-col>
 
           <v-col :md="9">
-            <div class="copy ml-4">
+            <div class="copy ml-6">
               <h3>Focus Resources Where They're Needed</h3>
               <p>
                 Manual contact tracing is labor-intensive. Local public health
@@ -130,7 +130,7 @@
             />
           </v-col>
           <v-col :md="9">
-            <div class="copy">
+            <div class="copy ml-6">
               <h3>The Highest Standard of Privacy</h3>
               <p>
                 Covid Watch is anonymous and effective. Our app logs
@@ -162,7 +162,7 @@
           </v-col>
 
           <v-col :md="9">
-            <div class="copy">
+            <div class="copy ml-6">
               <h3>Tech That Works Together</h3>
               <p>
                 We helped set the standard for protecting users’ personal
@@ -254,7 +254,7 @@
   .show-on-small-screen {
     display: none;
   }
-
+  
   @media (max-width: 600px) {
     .show-on-small-screen {
       display: flex;
@@ -268,6 +268,10 @@
       max-width: 240px;
     }
   }
+
+  
+
+  
 
   #public-health {
     .shrink-on-small-screen {
