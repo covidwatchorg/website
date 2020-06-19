@@ -44,17 +44,55 @@
         </v-col>
       </v-row>
 
-      <v-row id="video-demo" :class="pageSectionClass">
-        <h2 class="section-title">Video Demo</h2>
-        <iframe
-          width="1425"
-          height="567"
-          src="https://www.youtube.com/embed/vgT0Cysh7m4"
-          frameborder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
+      <v-row id="arizona-video" :class="pageSectionClass">
+        <h2 class="section-title">Covid Watch in Action</h2>
+        <p>
+          Joyce Schroeder, PhD, from the University of Arizona on why they chose
+          to work with Covid Watch to test exposure notifications.
+        </p>
+
+        <v-col class="d-flex justify-center">
+          <iframe
+            width="1000"
+            height="577"
+            src="https://www.youtube.com/embed/zIhxpO_qmfw"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </v-col>
+
+        <v-row>
+          <v-col class="d-flex flex-column justify-center align-center" :md="4">
+            <h3>Whitelabel Branding</h3>
+            <img
+              style="max-width: 300px;"
+              src="../assets/pilot_page/uofa-1.svg"
+              alt="arizona-render"
+            />
+          </v-col>
+          <v-col class="d-flex flex-column justify-center align-center" :md="4">
+            <h3>Customized Greetings</h3>
+            <img
+              style="border: solid 1px gray; max-width: 300px;"
+              src="../assets/pilot_page/uofa-2.svg"
+              alt="arizona-render"
+            />
+          </v-col>
+          <v-col class="d-flex flex-column justify-center align-center" :md="4">
+            <h3>Confidence to Reopen</h3>
+            <img
+              style="border: solid 1px gray; max-width: 300px;"
+              src="../assets/pilot_page/uofa-3.svg"
+              alt="arizona-render"
+            />
+          </v-col>
+        </v-row>
       </v-row>
+      <CTA
+        content="Start a Pilot"
+        href="https://covidapp.typeform.com/to/rN6LaK"
+      ></CTA>
 
       <!-- Why Covid Watch? section -->
       <v-row id="why-covid-watch" :class="pageSectionClass">
@@ -69,7 +107,7 @@
           </v-col>
 
           <v-col :md="9">
-            <div class="copy ml-4">
+            <div class="copy ml-6">
               <h3>Focus Resources Where They're Needed</h3>
               <p>
                 Manual contact tracing is labor-intensive. Local public health
@@ -92,7 +130,7 @@
             />
           </v-col>
           <v-col :md="9">
-            <div class="copy">
+            <div class="copy ml-6">
               <h3>The Highest Standard of Privacy</h3>
               <p>
                 Covid Watch is anonymous and effective. Our app logs
@@ -124,7 +162,7 @@
           </v-col>
 
           <v-col :md="9">
-            <div class="copy">
+            <div class="copy ml-6">
               <h3>Tech That Works Together</h3>
               <p>
                 We helped set the standard for protecting users’ personal
@@ -138,54 +176,6 @@
                 COVID-19.
               </p>
             </div>
-          </v-col>
-        </v-row>
-      </v-row>
-
-      <v-row id="arizona-video" :class="pageSectionClass">
-        <h2 class="section-title">Covid Watch in Action</h2>
-        <p>
-          Joyce Schroeder, PhD, from the University of Arizona discusses why
-          they chose to work with Covid Watch to test exposure notifications.
-        </p>
-
-        <!-- alternate time stamp when the discussion focuses on WHY covid watch compared w other apps -->
-        <!-- https://youtu.be/vtCdJPYrm24?t=1650 -->
-
-        <!-- <v-row> -->
-        <v-col class="d-flex justify-center">
-          <iframe
-            width="1000"
-            height="577"
-            src="https://youtu.be/zIhxpO_qmfw"
-            frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </v-col>
-        <!-- </v-row> -->
-
-        <v-row>
-          <v-col class="d-flex justify-center" :md="4">
-            <img
-              style="border: solid 1px gray; max-width: 300px;"
-              src="../assets/pilot_page/uofa-1.svg"
-              alt="arizona-render"
-            />
-          </v-col>
-          <v-col class="d-flex justify-center" :md="4">
-            <img
-              style="border: solid 1px gray; max-width: 300px;"
-              src="../assets/pilot_page/uofa-2.svg"
-              alt="arizona-render"
-            />
-          </v-col>
-          <v-col class="d-flex justify-center" :md="4">
-            <img
-              style="border: solid 1px gray; max-width: 300px;"
-              src="../assets/pilot_page/uofa-3.svg"
-              alt="arizona-render"
-            />
           </v-col>
         </v-row>
       </v-row>
@@ -287,16 +277,22 @@
     background: linear-gradient(
       0deg,
       rgba(67, 197, 217, 0.2),
-      rgba(255, 255, 255, 0) 40%
+      rgba(255, 255, 255, 0) 20%
     );
   }
 
   #why-covid-watch {
     background: linear-gradient(
       0deg,
-      rgba(67, 197, 217, 0.2),
-      rgba(255, 255, 255, 0) 60%
+      rgba(255, 255, 255, 0) 60%,
+      rgba(67, 197, 217, 0.2)
     );
+  }
+
+  #arizona-video {
+    h3 {
+      margin-bottom: 10px;
+    }
   }
 }
 </style>
