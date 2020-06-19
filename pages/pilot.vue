@@ -47,7 +47,7 @@
       <v-row id="arizona-video" :class="pageSectionClass">
         <h2 class="section-title">Covid Watch in Action</h2>
         <p>
-          Joyce Schroeder, PhD, from the University of Arizona discusses why
+          Joyce Schroeder, PhD, from the University of Arizona on why
           they chose to work with Covid Watch to test exposure notifications.
         </p>
 
@@ -89,6 +89,10 @@
           </v-col>
         </v-row>
       </v-row>
+          <CTA
+              content="Start a Pilot"
+              href="https://covidapp.typeform.com/to/rN6LaK"
+            ></CTA>
 
       <!-- Why Covid Watch? section -->
       <v-row id="why-covid-watch" :class="pageSectionClass">
@@ -272,11 +276,11 @@
   }
 
   #hero {
-    background: linear-gradient(
-      0deg,
-      rgba(67, 197, 217, 0.2),
-      rgba(255, 255, 255, 0) 60%
-    );
+  background: linear-gradient(
+    0deg,
+    rgba(67, 197, 217, 0.2),
+    rgba(255, 255, 255, 0) 20%
+  );
   }
 
   #why-covid-watch {

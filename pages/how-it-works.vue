@@ -12,10 +12,6 @@
               if they might have been exposed to COVID-19. We use anonymous,
               local Bluetooth signals to help you take action.
             </p>
-            <p>
-              Let’s find out more about how it works for Sam and Jane, two users
-              of the app:
-            </p>
           </div>
         </v-col>
 
@@ -153,6 +149,8 @@
         </v-col>
       </v-row>
 
+  
+
       <v-row>
         <v-spacer></v-spacer>
         <v-col cols="8" :md="4" :sm="8" class="mb-n1 pa-0 d-flex">
@@ -239,6 +237,14 @@
    position: absolute;
    top: 0;
    width: 100%;
+}
+
+#header {
+      background: linear-gradient(
+      0deg,
+      rgba(67, 197, 217, 0.2),
+      rgba(255, 255, 255, 0) 60%
+    );
 }
 }
 </style>
