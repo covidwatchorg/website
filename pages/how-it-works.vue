@@ -27,6 +27,17 @@
         </v-col>
       </v-row>
 
+      <!-- Video Demo: -->
+      <v-row id="video-demo" :class="pageSectionClass" class="d-flex justify-center">
+        <v-row class="iframe-container">
+          <iframe
+            src="https://www.youtube.com/embed/vgT0Cysh7m4"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </v-row>
+      </v-row>
+
       <!-- Step 1 -->
       <div class="triangle_right_1">
         <Step
@@ -213,6 +224,22 @@
       width: 260px;
     }
   }
+
+  .iframe-container {
+  overflow: hidden;
+  // Calculated from the aspect ration of the content (in case of 16:9 it is 9/16= 0.5625)
+  padding-top: 56.25%;
+  position: relative;
+}
+ 
+.iframe-container iframe {
+   border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
+}
 }
 </style>
 
