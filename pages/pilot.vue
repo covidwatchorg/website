@@ -63,21 +63,24 @@
         </v-col>
 
         <v-row>
-          <v-col class="d-flex justify-center" :md="4">
+          <v-col class="d-flex flex-column justify-center align-center" :md="4">
+            <h3>Whitelabel Branding</h3>
             <img
-              style="border: solid 1px gray; max-width: 300px;"
+              style="max-width: 300px;"
               src="../assets/pilot_page/uofa-1.svg"
               alt="arizona-render"
             />
           </v-col>
-          <v-col class="d-flex justify-center" :md="4">
+          <v-col class="d-flex flex-column justify-center align-center" :md="4">
+            <h3>Customized Greetings</h3>
             <img
               style="border: solid 1px gray; max-width: 300px;"
               src="../assets/pilot_page/uofa-2.svg"
               alt="arizona-render"
             />
           </v-col>
-          <v-col class="d-flex justify-center" :md="4">
+          <v-col class="d-flex flex-column justify-center align-center" :md="4">
+            <h3>Confidence to Reopen</h3>
             <img
               style="border: solid 1px gray; max-width: 300px;"
               src="../assets/pilot_page/uofa-3.svg"
@@ -278,6 +281,12 @@
 
   #why-covid-watch {
     background: linear-gradient(0deg, rgba(255, 255, 255, 0) 60%, rgba(67, 197, 217, 0.2));
+  }
+
+  #arizona-video {
+    h3 {
+      margin-bottom: 10px;
+    }
   }
 }
 </style>
