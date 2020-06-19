@@ -158,11 +158,14 @@
         <!-- </v-row> -->
 
         <v-row >
-            <v-col class="d-flex justify-center" :md="6">
-              <img src="../assets/pilot_page/uofa_and_covid_watch_-_splash_screen.jpg" alt="arizona-render">
+            <v-col class="d-flex justify-center" :md="4">
+              <img style="border:solid 1px gray; max-width: 300px;" src="../assets/pilot_page/uofa-1.svg" alt="arizona-render">
             </v-col>
-            <v-col class="d-flex justify-center" :md="6">
-              <img src="../assets/pilot_page/uofa_and_covid_watch_-_welcome_screen.jpg" alt="arizona-render">
+            <v-col  class="d-flex justify-center" :md="4">
+              <img style="border:solid 1px gray; max-width: 300px;" src="../assets/pilot_page/uofa-2.svg" alt="arizona-render">
+            </v-col>
+            <v-col class="d-flex justify-center" :md="4">
+              <img style="border:solid 1px gray; max-width: 300px;" src="../assets/pilot_page/uofa-3.svg" alt="arizona-render">
             </v-col>
         </v-row>
       </v-row>
@@ -259,6 +262,22 @@
     .shrink-on-small-screen {
       max-height: 240px;
     }
+  }
+
+  #hero {
+    background: linear-gradient(
+      0deg,
+      rgba(67, 197, 217, 0.2),
+      rgba(255, 255, 255, 0) 40%
+    );
+  }
+  
+  #why-covid-watch {
+    background: linear-gradient(
+      0deg,
+      rgba(67, 197, 217, 0.2),
+      rgba(255, 255, 255, 0) 60%
+    );
   }
 }
 </style>
