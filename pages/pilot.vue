@@ -47,8 +47,8 @@
       <v-row id="arizona-video" :class="pageSectionClass">
         <h2 class="section-title">Covid Watch in Action</h2>
         <p>
-          Joyce Schroeder, PhD, from the University of Arizona on why
-          they chose to work with Covid Watch to test exposure notifications.
+          Joyce Schroeder, PhD, from the University of Arizona on why they chose
+          to work with Covid Watch to test exposure notifications.
         </p>
 
         <v-col class="d-flex justify-center">
@@ -89,10 +89,10 @@
           </v-col>
         </v-row>
       </v-row>
-          <CTA
-              content="Start a Pilot"
-              href="https://covidapp.typeform.com/to/rN6LaK"
-            ></CTA>
+      <CTA
+        content="Start a Pilot"
+        href="https://covidapp.typeform.com/to/rN6LaK"
+      ></CTA>
 
       <!-- Why Covid Watch? section -->
       <v-row id="why-covid-watch" :class="pageSectionClass">
@@ -180,8 +180,6 @@
         </v-row>
       </v-row>
 
-      
-
       <!-- help for public health section -->
       <v-row id="public-health" :class="pageSectionClass">
         <div style="display: block;">
@@ -254,7 +252,7 @@
   .show-on-small-screen {
     display: none;
   }
-  
+
   @media (max-width: 600px) {
     .show-on-small-screen {
       display: flex;
@@ -269,10 +267,6 @@
     }
   }
 
-  
-
-  
-
   #public-health {
     .shrink-on-small-screen {
       max-height: 240px;
@@ -280,15 +274,19 @@
   }
 
   #hero {
-  background: linear-gradient(
-    0deg,
-    rgba(67, 197, 217, 0.2),
-    rgba(255, 255, 255, 0) 20%
-  );
+    background: linear-gradient(
+      0deg,
+      rgba(67, 197, 217, 0.2),
+      rgba(255, 255, 255, 0) 20%
+    );
   }
 
   #why-covid-watch {
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 60%, rgba(67, 197, 217, 0.2));
+    background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0) 60%,
+      rgba(67, 197, 217, 0.2)
+    );
   }
 
   #arizona-video {
