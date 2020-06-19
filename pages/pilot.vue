@@ -145,31 +145,50 @@
       <v-row id="arizona-video" :class="pageSectionClass">
         <h2 class="section-title">Covid Watch in Action</h2>
         <p>
-          Joyce Schroeder, PhD, from the University of Arizona discusses why they chose to work with Covid Watch to test exposure notifications.
+          Joyce Schroeder, PhD, from the University of Arizona discusses why
+          they chose to work with Covid Watch to test exposure notifications.
         </p>
 
         <!-- alternate time stamp when the discussion focuses on WHY covid watch compared w other apps -->
         <!-- https://youtu.be/vtCdJPYrm24?t=1650 -->
 
         <!-- <v-row> -->
-          <v-col class="d-flex justify-center">
-              <iframe width="1000" height="577" src="https://www.youtube.com/embed/vtCdJPYrm24?start=1447" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </v-col>
+        <v-col class="d-flex justify-center">
+          <iframe
+            width="1000"
+            height="577"
+            src="https://www.youtube.com/embed/vtCdJPYrm24?start=1447"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </v-col>
         <!-- </v-row> -->
 
-        <v-row >
-            <v-col class="d-flex justify-center" :md="4">
-              <img style="border:solid 1px gray; max-width: 300px;" src="../assets/pilot_page/uofa-1.svg" alt="arizona-render">
-            </v-col>
-            <v-col  class="d-flex justify-center" :md="4">
-              <img style="border:solid 1px gray; max-width: 300px;" src="../assets/pilot_page/uofa-2.svg" alt="arizona-render">
-            </v-col>
-            <v-col class="d-flex justify-center" :md="4">
-              <img style="border:solid 1px gray; max-width: 300px;" src="../assets/pilot_page/uofa-3.svg" alt="arizona-render">
-            </v-col>
+        <v-row>
+          <v-col class="d-flex justify-center" :md="4">
+            <img
+              style="border: solid 1px gray; max-width: 300px;"
+              src="../assets/pilot_page/uofa-1.svg"
+              alt="arizona-render"
+            />
+          </v-col>
+          <v-col class="d-flex justify-center" :md="4">
+            <img
+              style="border: solid 1px gray; max-width: 300px;"
+              src="../assets/pilot_page/uofa-2.svg"
+              alt="arizona-render"
+            />
+          </v-col>
+          <v-col class="d-flex justify-center" :md="4">
+            <img
+              style="border: solid 1px gray; max-width: 300px;"
+              src="../assets/pilot_page/uofa-3.svg"
+              alt="arizona-render"
+            />
+          </v-col>
         </v-row>
       </v-row>
-
 
       <!-- help for public health section -->
       <v-row id="public-health" :class="pageSectionClass">
@@ -271,7 +290,7 @@
       rgba(255, 255, 255, 0) 40%
     );
   }
-  
+
   #why-covid-watch {
     background: linear-gradient(
       0deg,
