@@ -40,6 +40,8 @@
 
       <!-- Step 1 -->
       <div class="triangle_right_1">
+        <p class="px-12 title-caps">HOW IT WORKS</p>
+
         <Step
           :img_num="require('../assets/how_it_works/num-1.svg')"
           :img_step="require('../assets/how_it_works/step-1.svg')"
