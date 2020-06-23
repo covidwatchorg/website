@@ -43,6 +43,25 @@
         </v-col>
       </v-row>
 
+      <!-- <v-row class="d-flex justify-center iframe-container">
+        <iframe src="https://www.youtube.com/embed/B7F8Lw-C9c4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </v-row> -->
+
+      <!-- Video Demo: -->
+      <v-row
+        id="video-intro"
+        :class="pageSectionClass"
+        class="d-flex justify-center"
+      >
+        <v-row class="iframe-container">
+          <iframe
+            src="https://www.youtube.com/embed/B7F8Lw-C9c4"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </v-row>
+      </v-row>
+
       <!-- We value row -->
       <v-row :class="[pageSectionClass, mobileMarginsClass]" id="we-value">
         <h2>We Value</h2>
@@ -343,6 +362,26 @@
   margin: 0px 35px 35px 0px;
   padding: 10px;
 }
+
+  .iframe-container {
+    overflow: hidden;
+    // Calculated from the aspect ration of the content (in case of 16:9 it is 9/16= 0.5625)
+    padding-top: 45%;
+    position: relative;
+    max-width: 1000px;
+  }
+
+  .iframe-container iframe {
+    border: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    max-height: 500px;
+  }
+
+
 </style>
 
 <script>
