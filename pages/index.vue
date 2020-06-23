@@ -272,7 +272,7 @@ export default {
       {
         title: "Safe Communities",
         body:
-          "Jane and Sam have helped protect their communities. They share the app so that others can, too.",
+          "Jane and Sam have helped protect their communities. They share the app so that others can too.",
         img: require("../assets/home_page/how_it_works_4.svg"),
       },
     ],
