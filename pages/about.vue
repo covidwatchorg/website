@@ -43,11 +43,7 @@
         </v-col>
       </v-row>
 
-      <!-- <v-row class="d-flex justify-center iframe-container">
-        <iframe src="https://www.youtube.com/embed/B7F8Lw-C9c4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </v-row> -->
-
-      <!-- Video Demo: -->
+      <!-- Video Intro: -->
       <v-row
         id="video-intro"
         :class="pageSectionClass"
@@ -55,7 +51,7 @@
       >
         <v-row class="iframe-container">
           <iframe
-            src="https://www.youtube.com/embed/B7F8Lw-C9c4"
+            src="https://www.youtube.com/embed/6Tk3xycdvnQ"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
