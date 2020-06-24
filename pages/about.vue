@@ -506,7 +506,7 @@ export default {
       {
         name: "George Rutherford, III, MD",
         description:
-          "Professor, Epidemiology & Biostatistics; Director, Prevention and Public Health Group",
+          "Professor, Epidemiology & Biostatistics and Director, Prevention and Public Health Group, UCSF",
         link: "https://profiles.ucsf.edu/george.rutherford",
       },
       {
