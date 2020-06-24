@@ -4,11 +4,10 @@
       <v-col>
         <v-row id="hero">
           <v-col :md="7" :sm="8" cols="12">
-            <h1>Together, we have the power to stop COVID-19.</h1>
+            <h1>The power to stop COVID-19 in the palm of your hand.</h1>
 
             <p class="subtitle">
-              Protect yourself, your family and your community with anonymous
-              mobile alerts.
+              Use your smartphone to protect yourself, your family and your community with anonymous exposure alerts.
             </p>
 
             <v-row no-gutters class="ctas mb-4 mt-10 d-flex flex-wrap">
@@ -171,9 +170,12 @@
 
   @media (min-width: 760px) {
     #hero {
-      background-image: url("../assets/home_page/hero_main.svg");
+      background-image: url("../assets/home_page/new-hero.svg");
       background-position-x: right;
-      background-size: contain;
+      background-position-y: bottom;
+      margin-bottom: 80px;
+      background-size: cover;
+
 
       .subtitle {
         margin-top: 2vw;
