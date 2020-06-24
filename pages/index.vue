@@ -7,7 +7,8 @@
             <h1>The power to stop COVID-19 in the palm of your hand.</h1>
 
             <p class="subtitle">
-              Use your smartphone to protect yourself, your family and your community with anonymous exposure alerts.
+              Use your smartphone to protect yourself, your family and your
+              community with anonymous exposure alerts.
             </p>
 
             <v-row no-gutters class="ctas mb-4 mt-10 d-flex flex-wrap">
@@ -175,7 +176,6 @@
       background-position-y: bottom;
       margin-bottom: 80px;
       background-size: cover;
-
 
       .subtitle {
         margin-top: 2vw;
