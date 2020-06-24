@@ -173,9 +173,9 @@
       background-image: url("../assets/home_page/new-hero.svg");
       background-position-x: right;
       background-position-y: bottom;
-      margin-bottom: 80px;
       background-size: cover;
-
+      margin-bottom: 80px;
+      height: 46vw;
 
       .subtitle {
         margin-top: 2vw;
@@ -186,19 +186,19 @@
       }
     }
 
-    @media (min-width: 1760px) {
-      #hero {
-        height: 570px;
-      }
-    }
-
     @media (max-width: 1760px) {
       #hero {
-        height: 44vw;
+        height: 40vw;
       }
 
       #how-it-works {
         margin-top: -4vw;
+      }
+    }
+
+    @media (max-width: 1400px) {
+      #hero {
+        height: 46vw;
       }
     }
   }
