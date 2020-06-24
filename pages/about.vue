@@ -43,20 +43,24 @@
         </v-col>
       </v-row>
 
-      <!-- Video Intro: -->
-      <v-row
-        id="video-intro"
-        :class="pageSectionClass"
-        class="d-flex justify-center"
-      >
-        <v-row class="iframe-container">
-          <iframe
-            src="https://www.youtube.com/embed/6Tk3xycdvnQ"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+      <!-- Video Intro -->
+      <transition name="fade">
+        <v-row
+          id="video-intro"
+          :class="pageSectionClass"
+          class="d-flex justify-center"
+          v-show="videoLoaded"
+        >
+          <v-row class="iframe-container">
+            <iframe
+              src="https://www.youtube.com/embed/6Tk3xycdvnQ"
+              @load="videoLoaded = true"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </v-row>
         </v-row>
-      </v-row>
+      </transition>
 
       <!-- We value row -->
       <v-row :class="[pageSectionClass, mobileMarginsClass]" id="we-value">
@@ -387,6 +391,7 @@ import json from "../assets/data/teamlist.json";
 export default {
   data: () => ({
     airtableTeamList: json,
+    videoLoaded: false,
     callsToAction: [
       {
         button_text: "Volunteer",
