@@ -43,6 +43,23 @@
         </v-col>
       </v-row>
 
+      <!-- Video Intro -->
+      <transition name="fade">
+        <v-row
+          id="video-intro"
+          :class="pageSectionClass"
+          class="d-flex justify-center"
+        >
+          <v-row class="iframe-container">
+            <iframe
+              src="https://www.youtube.com/embed/6Tk3xycdvnQ"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </v-row>
+        </v-row>
+      </transition>
+
       <!-- We value row -->
       <v-row :class="[pageSectionClass, mobileMarginsClass]" id="we-value">
         <h2>We Value</h2>
@@ -343,6 +360,25 @@
   margin: 0px 35px 35px 0px;
   padding: 10px;
 }
+
+  .iframe-container {
+    overflow: hidden;
+    padding-top: 45%;
+    position: relative;
+    max-width: 1000px;
+  }
+
+  .iframe-container iframe {
+    border: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    max-height: 500px;
+  }
+
+
 </style>
 
 <script>
@@ -353,6 +389,7 @@ import json from "../assets/data/teamlist.json";
 export default {
   data: () => ({
     airtableTeamList: json,
+    videoLoaded: false,
     callsToAction: [
       {
         button_text: "Volunteer",
@@ -472,7 +509,7 @@ export default {
       {
         name: "George Rutherford, III, MD",
         description:
-          "Professor, Epidemiology & Biostatistics; Director, Prevention and Public Health Group",
+          "Professor, Epidemiology & Biostatistics and Director, Prevention and Public Health Group, UCSF",
         link: "https://profiles.ucsf.edu/george.rutherford",
       },
       {
