@@ -49,12 +49,10 @@
           id="video-intro"
           :class="pageSectionClass"
           class="d-flex justify-center"
-          v-show="videoLoaded"
         >
           <v-row class="iframe-container">
             <iframe
               src="https://www.youtube.com/embed/6Tk3xycdvnQ"
-              @load="videoLoaded = true"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
             ></iframe>
