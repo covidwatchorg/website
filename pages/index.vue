@@ -4,7 +4,7 @@
       <v-col>
         <v-row id="hero">
           <v-col :md="7" :sm="8" cols="12">
-            <h1>The power to stop COVID-19 in the palm of your hand.</h1>
+            <h1 style="font-size:46px;">The power to stop COVID-19 in the palm of your hand.</h1>
 
             <p class="subtitle">
               Use your smartphone to protect yourself, your family and your
