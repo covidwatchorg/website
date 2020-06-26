@@ -14,7 +14,7 @@
             </p>
 
             <v-row no-gutters class="ctas mb-4 mt-10 d-flex flex-wrap">
-              <v-col class="mr-6" cols="12" :sm="8" :md="3">
+              <v-col class="mr-6" cols="12" :sm="8" :md="5">
                 <Button primary hero nuxt to="/pilot" class="mt-4"
                   >Start a Pilot</Button
                 >
