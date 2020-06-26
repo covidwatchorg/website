@@ -302,7 +302,6 @@ export default {
     Step,
   },
   data: () => {
-<<<<<<< HEAD
       return {
         dialog: false,
         // a few different approaches -- 
@@ -317,17 +316,6 @@ export default {
         //pauseVideo() is from Youtube API: https://developers.google.com/youtube/iframe_api_reference#pauseVideo 
         // 3) pauseVideo: () => document.getElementById("player").pauseVideo()
       }
-=======
-    return {
-      dialog: false,
-      // pauseVideo: document.getElementById("player") ? document.getElementById("player").children[0].className.replace("playing-mode","paused-mode") : undefined
-
-      // stopVideo: () => document.getElementById("player").children[0].className.replace("playing-mode","paused-mode")
-
-      //pauseVideo() is from Youtube API: https://developers.google.com/youtube/iframe_api_reference#pauseVideo
-      // pauseVideo: () => document.getElementById("player").pauseVideo()
-    };
->>>>>>> 7e71a5f4e8bdaa0628963be007476d07a931043f
   },
   head() {
     return {
