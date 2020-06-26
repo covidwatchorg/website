@@ -3,8 +3,8 @@
     <v-row id="home">
       <v-col>
         <v-row id="hero">
-          <v-col :md="7" :sm="8" cols="12">
-            <h1 style="font-size: 46px;">
+          <v-col :md="8" :sm="8" cols="12" :class="[pageSectionClass, mobileMarginsClass]">
+            <h1>
               Together, we have the power to stop COVID-19.
             </h1>
 
