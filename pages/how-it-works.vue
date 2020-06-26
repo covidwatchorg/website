@@ -15,18 +15,12 @@
           </div>
         </v-col>
 
-        
-      <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
 
         <v-col id="video-preview" :md="4" class="mr-12">
-          <v-dialog
-            v-model="dialog"
-            width="1200"
-            height="600"
-            lazy="true"
-          >
+          <v-dialog v-model="dialog" width="1200" height="600" lazy="true">
             <template v-slot:activator="{ on }">
-              <img v-on="on" src="../assets/how_it_works/video.svg" alt="">
+              <img v-on="on" src="../assets/how_it_works/video.svg" alt="" />
             </template>
 
             <v-card>
@@ -36,7 +30,7 @@
               >
                 <!-- in-line CSS here overwrites the default for <p> that shouldn't apply in a modal context -->
                 <p style="margin: 0px; padding: 0px;">Video Demo</p>
-                
+
                 <v-card-actions>
                   <!-- line 45 needs some love to pause the video 
                   
@@ -49,11 +43,18 @@
                   <v-btn
                     color="primary"
                     flat
+<<<<<<< HEAD
                     @click="dialog = false"
+=======
+                    @click="
+                      dialog = false;
+                      stopVideo();
+                    "
+>>>>>>> 7e71a5f4e8bdaa0628963be007476d07a931043f
                   >
                     X
                   </v-btn>
-              </v-card-actions>
+                </v-card-actions>
               </v-card-title>
 
               <v-row
@@ -70,8 +71,6 @@
                   ></iframe>
                 </v-row>
               </v-row>
-
-              
             </v-card>
           </v-dialog>
         </v-col>
@@ -303,6 +302,7 @@ export default {
     Step,
   },
   data: () => {
+<<<<<<< HEAD
       return {
         dialog: false,
         // a few different approaches -- 
@@ -317,6 +317,17 @@ export default {
         //pauseVideo() is from Youtube API: https://developers.google.com/youtube/iframe_api_reference#pauseVideo 
         // 3) pauseVideo: () => document.getElementById("player").pauseVideo()
       }
+=======
+    return {
+      dialog: false,
+      // pauseVideo: document.getElementById("player") ? document.getElementById("player").children[0].className.replace("playing-mode","paused-mode") : undefined
+
+      // stopVideo: () => document.getElementById("player").children[0].className.replace("playing-mode","paused-mode")
+
+      //pauseVideo() is from Youtube API: https://developers.google.com/youtube/iframe_api_reference#pauseVideo
+      // pauseVideo: () => document.getElementById("player").pauseVideo()
+    };
+>>>>>>> 7e71a5f4e8bdaa0628963be007476d07a931043f
   },
   head() {
     return {
