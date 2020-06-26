@@ -38,11 +38,18 @@
                 <p style="margin: 0px; padding: 0px;">Video Demo</p>
                 
                 <v-card-actions>
-                  <!-- line 45 needs some love to pause the video -->
+                  <!-- line 45 needs some love to pause the video 
+                  
+                  was previosly:
+
+                  @click="dialog = false; stopVideo()"
+
+                  among many other little tweaks I tried out.  The above causes an error
+                  -->
                   <v-btn
                     color="primary"
                     flat
-                    @click="dialog = false; stopVideo()"
+                    @click="dialog = false"
                   >
                     X
                   </v-btn>
@@ -298,12 +305,17 @@ export default {
   data: () => {
       return {
         dialog: false,
-        // pauseVideo: document.getElementById("player") ? document.getElementById("player").children[0].className.replace("playing-mode","paused-mode") : undefined 
+        // a few different approaches -- 
+        // 1) modifying the DOM, modifying the element classes based on what I observed when user clicks play/pause
+        // 2) removing the player element entirely (nuclear option)
+        // 3) a function using the youtube API
 
-        // stopVideo: () => document.getElementById("player").children[0].className.replace("playing-mode","paused-mode")
+        // 1) pauseVideo: document.getElementById("player") ? document.getElementById("player").children[0].className.replace("playing-mode","paused-mode") : undefined 
+
+        // 2) stopVideo: () => document.getElementById("player").remove
         
         //pauseVideo() is from Youtube API: https://developers.google.com/youtube/iframe_api_reference#pauseVideo 
-        // pauseVideo: () => document.getElementById("player").pauseVideo()
+        // 3) pauseVideo: () => document.getElementById("player").pauseVideo()
       }
   },
   head() {
