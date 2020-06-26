@@ -4,7 +4,13 @@
       <v-col cols="12">
         <!-- hero section -->
         <v-row id="hero">
-          <v-col cols="12" :sm="8" :xs="12" :class="[pageSectionClass, mobileMarginsClass]" class="pl-0 pl-sm-0">
+          <v-col
+            cols="12"
+            :sm="8"
+            :xs="12"
+            :class="[pageSectionClass, mobileMarginsClass]"
+            class="pl-0 pl-sm-0"
+          >
             <h1>Frequently Asked Questions</h1>
           </v-col>
 
