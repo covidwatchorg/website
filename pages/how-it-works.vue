@@ -23,6 +23,7 @@
             v-model="dialog"
             width="1200"
             height="600"
+            lazy="true"
           >
             <template v-slot:activator="{ on }">
               <img v-on="on" src="../assets/how_it_works/video.svg" alt="">
@@ -37,6 +38,7 @@
                 <p style="margin: 0px; padding: 0px;">Video Demo</p>
                 
                 <v-card-actions>
+                  <!-- line 45 needs some love to pause the video -->
                   <v-btn
                     color="primary"
                     flat
@@ -297,10 +299,11 @@ export default {
       return {
         dialog: false,
         // pauseVideo: document.getElementById("player") ? document.getElementById("player").children[0].className.replace("playing-mode","paused-mode") : undefined 
-        // stopVideo: () => $('.yt_player_iframe').each(function(){
-        //       this.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
-        //     })
-        stopVideo: () => document.getElementById("player").children[0].className.replace("playing-mode","paused-mode")
+
+        // stopVideo: () => document.getElementById("player").children[0].className.replace("playing-mode","paused-mode")
+        
+        //pauseVideo() is from Youtube API: https://developers.google.com/youtube/iframe_api_reference#pauseVideo 
+        // pauseVideo: () => document.getElementById("player").pauseVideo()
       }
   },
   head() {
