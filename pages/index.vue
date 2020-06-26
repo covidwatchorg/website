@@ -23,6 +23,8 @@
           </v-col>
         </v-row>
 
+        
+
         <!-- How It Works section -->
         <v-row :class="pageSectionClass" id="how-it-works">
           <h2>How it Works</h2>
