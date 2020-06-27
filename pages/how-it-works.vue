@@ -102,73 +102,77 @@
             text="Jane’s phone keeps a list of these numbers for two to four weeks. Covid Watch doesn’t ask for information that can be used to identify Jane."
           ></Step>
         </div>
+        <!-- triangle_left_1 -->
+      </div>
+      <!-- triangle_right_1 -->
 
-        <!-- Step 5 -->
-        <div class="triangle_right_2">
+      <!-- Step 5 -->
+      <div class="triangle_right_2">
+        <Step
+          :img_num="require('../assets/how_it_works/num-5.svg')"
+          :img_step="require('../assets/how_it_works/num-5-img.svg')"
+          title="Alert Others"
+          text="A few days later, Sam tests positive for COVID-19. He chooses to alert others using a verification code in the app. When he does, his list of random numbers is shared with other Covid Watch users."
+        ></Step>
+
+        <!-- Step 6 -->
+        <div class="triangle_left_2">
           <Step
-            :img_num="require('../assets/how_it_works/num-5.svg')"
-            :img_step="require('../assets/how_it_works/num-5-img.svg')"
-            title="Alert Others"
-            text="A few days later, Sam tests positive for COVID-19. He chooses to alert others using a verification code in the app. When he does, his list of random numbers is shared with other Covid Watch users."
+            right
+            :img_num="require('../assets/how_it_works/num-6.svg')"
+            :img_step="require('../assets/how_it_works/num-6-img.svg')"
+            title="Receive Alerts"
+            text="On Jane’s phone, the Covid Watch app compares her list against the numbers that others have shared. If a match is found, Jane's app alerts her that she may have been exposed to COVID-19."
           ></Step>
 
-          <!-- Step 6 -->
-          <div class="triangle_left_2">
-            <Step
-              right
-              :img_num="require('../assets/how_it_works/num-6.svg')"
-              :img_step="require('../assets/how_it_works/num-6-img.svg')"
-              title="Receive Alerts"
-              text="On Jane’s phone, the Covid Watch app compares her list against the numbers that others have shared. If a match is found, Jane's app alerts her that she may have been exposed to COVID-19."
-            ></Step>
+          <!-- Step7 -->
+          <Step
+            :img_num="require('../assets/how_it_works/num-7.svg')"
+            :img_step="require('../assets/how_it_works/num-7-img.svg')"
+            title="A Call to Action"
+            text="The alert tells Jane what day she was exposed and what she should do to protect people in her community. With the app, she is empowered to act quickly."
+          ></Step>
 
-            <!-- Step7 -->
-            <Step
-              :img_num="require('../assets/how_it_works/num-7.svg')"
-              :img_step="require('../assets/how_it_works/num-7-img.svg')"
-              title="A Call to Action"
-              text="The alert tells Jane what day she was exposed and what she should do to protect people in her community. With the app, she is empowered to act quickly."
-            ></Step>
-
-            <!-- Step 8 -->
-            <v-row
-              align="center"
-              :class="[pageSectionClass, flexCenterRowClass]"
-              class="step-8-row"
-              id="step-2"
-            >
-              <v-spacer></v-spacer>
-              <v-col cols="12" :md="4" :sm="12">
-                <img
-                  class="step_img"
-                  src="../assets/how_it_works/family-dancing-2.svg"
-                />
-              </v-col>
-              <v-spacer></v-spacer>
-              <v-col cols="12" :md="3" :sm="12">
-                <img class="mb-4" src="../assets/how_it_works/num-8.svg" />
-                <h3 class="mb-5">Community Safety</h3>
-                <p>
-                  Sam might not have remembered meeting Jane. But because they
-                  both used Covid Watch, Jane is able to follow local healthcare
-                  guidelines and reduce the spread of COVID-19.
-                </p>
-              </v-col>
-              <v-col cols="12" :md="3" :sm="12">
-                <img
-                  class="step_img"
-                  src="../assets/how_it_works/family-dancing-1.svg"
-                />
-              </v-col>
-            </v-row>
-          </div>
+          <!-- Step 8 -->
+          <v-row
+            align="center"
+            :class="[pageSectionClass, flexCenterRowClass]"
+            class="step-8-row"
+            id="step-2"
+          >
+            <v-spacer></v-spacer>
+            <v-col cols="12" :md="4" :sm="12">
+              <img
+                class="step_img"
+                src="../assets/how_it_works/family-dancing-2.svg"
+              />
+            </v-col>
+            <v-spacer></v-spacer>
+            <v-col cols="12" :md="3" :sm="12">
+              <img class="mb-4" src="../assets/how_it_works/num-8.svg" />
+              <h3 class="mb-5">Community Safety</h3>
+              <p>
+                Sam might not have remembered meeting Jane. But because they
+                both used Covid Watch, Jane is able to follow local healthcare
+                guidelines and reduce the spread of COVID-19.
+              </p>
+            </v-col>
+            <v-col cols="12" :md="3" :sm="12">
+              <img
+                class="step_img"
+                src="../assets/how_it_works/family-dancing-1.svg"
+              />
+            </v-col>
+          </v-row>
         </div>
+        <!-- triangle_left_2 -->
       </div>
+      <!-- triangle_right_2 -->
 
-      <v-row class="d-block" :class="pageSectionClass" justify="center">
+      <v-row justify="center">
         <v-col cols="12">
           <h2 class="text-center">
-            &nbsp;&nbsp;&nbsp;&nbsp;Want to Know More?
+            Want to Know More?
             <nuxt-link to="/faq">
               visit our FAQ
               <img
@@ -177,20 +181,14 @@
                 alt="arrow"
               />
             </nuxt-link>
-            &nbsp;&nbsp; &nbsp;&nbsp;
           </h2>
         </v-col>
-      </v-row>
-
-      <v-row>
-        <v-spacer></v-spacer>
-        <v-col cols="8" :md="4" :sm="8" class="mb-n1 pa-0 d-flex">
+        <v-col offset="1" cols="8" md="4" class="mb-n1 pa-0 d-flex">
           <img
             class="woman-triangle"
             src="../assets/how_it_works/woman-triangle.svg"
           />
         </v-col>
-        <v-spacer></v-spacer>
       </v-row>
     </v-row>
   </v-container>
