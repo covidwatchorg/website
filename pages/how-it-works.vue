@@ -50,7 +50,7 @@
                 style="margin: 0px; padding: 0px;"
               >
                 <v-row class="iframe-container" id="youtube_player">
-                  <youtube :video-id="videoId" ref="youtube"></youtube>
+                  <youtube :video-id="videoId" :player-vars="playerVars" ref="youtube"></youtube>
                 </v-row>
               </v-row>
             </v-card>
@@ -292,6 +292,9 @@ export default {
     return {
       dialog: false,
       videoId: "vgT0Cysh7m4",
+      playerVars: {
+        autoplay: 1
+      }
     };
   },
   methods: {
