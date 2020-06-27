@@ -53,7 +53,7 @@
                 class="d-flex justify-center"
                 style="margin: 0px; padding: 0px;"
               >
-                <v-row class="iframe-container" >
+                <v-row class="iframe-container">
                   <youtube
                     id="youtube-player"
                     :video-id="videoId"
