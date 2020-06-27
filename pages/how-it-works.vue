@@ -18,7 +18,13 @@
         <v-spacer></v-spacer>
 
         <v-col id="video-preview" :md="4" class="mr-12">
-            <v-dialog v-model="dialog" width="1200" height="600" lazy="true" @click:outside="e => closeDialog()">
+          <v-dialog
+            v-model="dialog"
+            width="1200"
+            height="600"
+            lazy="true"
+            @click:outside="(e) => closeDialog()"
+          >
             <template v-slot:activator="{ on }">
               <img v-on="on" src="../assets/how_it_works/video.svg" alt="" />
             </template>
@@ -32,11 +38,7 @@
                 <p style="margin: 0px; padding: 0px;">Video Demo</p>
 
                 <v-card-actions>
-                  <v-btn
-                    color="primary"
-                    flat
-                    @click="closeDialog()"
-                  >
+                  <v-btn color="primary" flat @click="closeDialog()">
                     X
                   </v-btn>
                 </v-card-actions>
@@ -48,7 +50,7 @@
                 style="margin: 0px; padding: 0px;"
               >
                 <v-row class="iframe-container" id="youtube_player">
-                    <youtube :video-id="videoId" ref="youtube"></youtube>
+                  <youtube :video-id="videoId" ref="youtube"></youtube>
                 </v-row>
               </v-row>
             </v-card>
@@ -277,32 +279,32 @@
 
 <script>
 import Step from "../components/Step.vue";
-import Vue from 'vue'
-import VueYoutube from 'vue-youtube'
+import Vue from "vue";
+import VueYoutube from "vue-youtube";
 
-Vue.use(VueYoutube)
+Vue.use(VueYoutube);
 
 export default {
   components: {
     Step,
   },
   data: () => {
-      return {
-        dialog: false,
-        videoId: 'vgT0Cysh7m4'
-      }
+    return {
+      dialog: false,
+      videoId: "vgT0Cysh7m4",
+    };
   },
-    methods: {
-        closeDialog(){
-            this.dialog = false
-            this.player.pauseVideo()
-        }
+  methods: {
+    closeDialog() {
+      this.dialog = false;
+      this.player.pauseVideo();
     },
-     computed: {
-             player() {
-                       return this.$refs.youtube.player
-                     }
-           },
+  },
+  computed: {
+    player() {
+      return this.$refs.youtube.player;
+    },
+  },
   head() {
     return {
       title: "How It Works | Covid Watch",
