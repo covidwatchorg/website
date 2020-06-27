@@ -15,33 +15,60 @@
           </div>
         </v-col>
 
-        <v-col :md="4">
-          <img
-            class="connected_img"
-            src="../assets/how_it_works/connected_group_final.svg"
-          />
-        </v-col>
-      </v-row>
+        <v-spacer></v-spacer>
 
-      <!-- Video Demo: -->
-      <v-row
-        id="video-demo"
-        :class="pageSectionClass"
-        class="d-flex justify-center"
-      >
-        <v-row class="iframe-container">
-          <iframe
-            src="https://www.youtube.com/embed/vgT0Cysh7m4"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </v-row>
+        <v-col id="video-preview" :md="4" class="mr-12">
+          <v-dialog
+            v-model="dialog"
+            width="1200"
+            height="600"
+            lazy="true"
+            @click:outside="(e) => closeDialog()"
+          >
+            <template v-slot:activator="{ on }">
+              <img
+                v-on="on"
+                style="max-width: 425px;"
+                src="../assets/how_it_works/video-preview.svg"
+                alt=""
+              />
+            </template>
+
+            <v-card>
+              <v-card-title
+                class="headline grey lighten-2 d-flex justify-space-between mb-10"
+                primary-title
+              >
+                <p style="margin: 0px; padding: 0px;">Video Demo</p>
+
+                <v-card-actions>
+                  <v-btn color="primary" flat @click="closeDialog()">
+                    X
+                  </v-btn>
+                </v-card-actions>
+              </v-card-title>
+
+              <v-row
+                id="video-demo"
+                class="d-flex justify-center"
+                style="margin: 0px; padding: 0px;"
+              >
+                <v-row class="iframe-container">
+                  <youtube
+                    id="youtube-player"
+                    :video-id="videoId"
+                    :player-vars="playerVars"
+                    ref="youtube"
+                  ></youtube>
+                </v-row>
+              </v-row>
+            </v-card>
+          </v-dialog>
+        </v-col>
       </v-row>
 
       <!-- Step 1 -->
       <div class="triangle_right_1">
-        <p class="px-12 title-caps">HOW IT WORKS</p>
-
         <Step
           :img_num="require('../assets/how_it_works/num-1.svg')"
           :img_step="require('../assets/how_it_works/step-1.svg')"
@@ -225,16 +252,26 @@
     .woman-triangle {
       width: 260px;
     }
+
+    #video-preview {
+      display: none;
+    }
   }
 
+  #video-preview {
+    img:hover {
+      cursor: pointer;
+    }
+  }
+
+  // the below makes the iframe responsive
   .iframe-container {
     overflow: hidden;
-    // Calculated from the aspect ration of the content (in case of 16:9 it is 9/16= 0.5625)
     padding-top: 56.25%;
     position: relative;
   }
 
-  .iframe-container iframe {
+  .iframe-container #youtube-player {
     border: 0;
     height: 100%;
     left: 0;
@@ -255,9 +292,34 @@
 
 <script>
 import Step from "../components/Step.vue";
+import Vue from "vue";
+import VueYoutube from "vue-youtube";
+
+Vue.use(VueYoutube);
+
 export default {
   components: {
     Step,
+  },
+  data: () => {
+    return {
+      dialog: false,
+      videoId: "vgT0Cysh7m4",
+      playerVars: {
+        autoplay: 1,
+      },
+    };
+  },
+  methods: {
+    closeDialog() {
+      this.dialog = false;
+      this.player.pauseVideo();
+    },
+  },
+  computed: {
+    player() {
+      return this.$refs.youtube.player;
+    },
   },
   head() {
     return {

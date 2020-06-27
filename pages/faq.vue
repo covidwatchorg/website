@@ -4,7 +4,13 @@
       <v-col cols="12">
         <!-- hero section -->
         <v-row id="hero">
-          <v-col cols="12" :sm="8" :xs="12" class="hero-copy">
+          <v-col
+            cols="12"
+            :sm="8"
+            :xs="12"
+            :class="[pageSectionClass, mobileMarginsClass]"
+            class="pl-0 pl-sm-0"
+          >
             <h1>Frequently Asked Questions</h1>
           </v-col>
 
@@ -79,10 +85,6 @@
 <style lang="scss">
 #faq {
   min-height: 1000px;
-
-  .hero-copy {
-    margin-top: 50px;
-  }
 
   #arrow-man {
     max-height: 370px;

@@ -3,9 +3,14 @@
     <v-row id="home">
       <v-col>
         <v-row id="hero">
-          <v-col :md="7" :sm="8" cols="12">
-            <h1 style="font-size: 46px;">
-              The power to stop COVID-19 in the palm of your hand.
+          <v-col
+            :md="8"
+            :sm="8"
+            cols="12"
+            :class="[pageSectionClass, mobileMarginsClass]"
+          >
+            <h1>
+              Together, we have the power to stop COVID-19.
             </h1>
 
             <p class="subtitle">
@@ -14,7 +19,7 @@
             </p>
 
             <v-row no-gutters class="ctas mb-4 mt-10 d-flex flex-wrap">
-              <v-col class="mr-6" cols="12" :sm="8" :md="3">
+              <v-col class="mr-6" cols="12" :sm="8" :md="5">
                 <Button primary hero nuxt to="/pilot" class="mt-4"
                   >Start a Pilot</Button
                 >
