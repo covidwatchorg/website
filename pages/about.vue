@@ -2,7 +2,11 @@
   <v-container grid-list-xs>
     <v-row id="about">
       <!-- First row-->
-      <v-row id="header" class="first-row" :class="[pageSectionClass, mobileMarginsClass]">
+      <v-row
+        id="header"
+        class="first-row"
+        :class="[pageSectionClass, mobileMarginsClass]"
+      >
         <v-col cols="12" :md="7">
           <div class="mb-12">
             <h1 class="mb-5">About Us</h1>
@@ -89,43 +93,43 @@
 
       <!-- join us row -->
       <div class="join-us">
-      <v-row :class="[pageSectionClass, mobileMarginsClass]" id="join-us">
-        <v-row class="mb-3">
-          <v-col cols="10" :md="2">
-            <h2>Join Us</h2>
-          </v-col>
+        <v-row :class="[pageSectionClass, mobileMarginsClass]" id="join-us">
+          <v-row class="mb-3">
+            <v-col cols="10" :md="2">
+              <h2>Join Us</h2>
+            </v-col>
 
-          <v-spacer></v-spacer>
+            <v-spacer></v-spacer>
 
-          <v-col cols="8">
-            <img class="biking" src="../assets/about_us/cyclists.svg" />
-          </v-col>
+            <v-col cols="8">
+              <img class="biking" src="../assets/about_us/cyclists.svg" />
+            </v-col>
+          </v-row>
+
+          <v-row>
+            <v-col
+              class="align-center justify-center"
+              cols="12"
+              :md="3"
+              :sm="6"
+              v-for="(cta, i) in callsToAction"
+              :key="i"
+            >
+              <div class="mb-4">
+                <Button v-if="cta.link" secondary nuxt :to="cta.link">{{
+                  cta.button_text
+                }}</Button>
+                <Button v-if="!cta.link" secondary>
+                  <a href="mailto:partnerships@covidwatch.org">
+                    {{ cta.button_text }}
+                  </a>
+                </Button>
+              </div>
+
+              <div>{{ cta.cta_text }}</div>
+            </v-col>
+          </v-row>
         </v-row>
-
-        <v-row>
-          <v-col
-            class="align-center justify-center"
-            cols="12"
-            :md="3"
-            :sm="6"
-            v-for="(cta, i) in callsToAction"
-            :key="i"
-          >
-            <div class="mb-4">
-              <Button v-if="cta.link" secondary nuxt :to="cta.link">{{
-                cta.button_text
-              }}</Button>
-              <Button v-if="!cta.link" secondary>
-                <a href="mailto:partnerships@covidwatch.org">
-                  {{ cta.button_text }}
-                </a>
-              </Button>
-            </div>
-
-            <div>{{ cta.cta_text }}</div>
-          </v-col>
-        </v-row>
-      </v-row>
       </div>
 
       <!-- team row-->
@@ -252,7 +256,7 @@
       </v-row>
 
       <!-- colabs row-->
-      <v-row :class= "pageSectionClass" id="collaborator-projects">
+      <v-row :class="pageSectionClass" id="collaborator-projects">
         <v-col class="mb-10" cols="12">
           <h3 class="pt-6">Collaborator Partners</h3>
         </v-col>
@@ -360,24 +364,22 @@
   padding: 10px;
 }
 
-  .iframe-container {
-    overflow: hidden;
-    padding-top: 45%;
-    position: relative;
-    max-width: 1000px;
-  }
+.iframe-container {
+  overflow: hidden;
+  padding-top: 45%;
+  position: relative;
+  max-width: 1000px;
+}
 
-  .iframe-container iframe {
-    border: 0;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    max-height: 500px;
-  }
-
-
+.iframe-container iframe {
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  max-height: 500px;
+}
 </style>
 
 <script>
