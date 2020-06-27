@@ -34,7 +34,6 @@
                 class="headline grey lighten-2 d-flex justify-space-between mb-10"
                 primary-title
               >
-                <!-- in-line CSS here overwrites the default for <p> that shouldn't apply in a modal context -->
                 <p style="margin: 0px; padding: 0px;">Video Demo</p>
 
                 <v-card-actions>
@@ -49,8 +48,9 @@
                 class="d-flex justify-center"
                 style="margin: 0px; padding: 0px;"
               >
-                <v-row class="iframe-container" id="youtube_player">
+                <v-row class="iframe-container" >
                   <youtube
+                    id="youtube-player"
                     :video-id="videoId"
                     :player-vars="playerVars"
                     ref="youtube"
@@ -247,6 +247,10 @@
     .woman-triangle {
       width: 260px;
     }
+
+    #video-preview {
+      display: none;
+    }
   }
 
   #video-preview {
@@ -262,7 +266,7 @@
     position: relative;
   }
 
-  .iframe-container iframe {
+  .iframe-container #youtube-player {
     border: 0;
     height: 100%;
     left: 0;
