@@ -18,7 +18,7 @@
         <v-spacer></v-spacer>
 
         <v-col id="video-preview" :md="4" class="mr-12">
-          <v-dialog v-model="dialog" width="1200" height="600" lazy="true">
+            <v-dialog v-model="dialog" width="1200" height="600" lazy="true" @click:outside="e => closeDialog()">
             <template v-slot:activator="{ on }">
               <img v-on="on" src="../assets/how_it_works/video.svg" alt="" />
             </template>
@@ -32,25 +32,10 @@
                 <p style="margin: 0px; padding: 0px;">Video Demo</p>
 
                 <v-card-actions>
-                  <!-- line 45 needs some love to pause the video 
-                  
-                  was previosly:
-
-                  @click="dialog = false; stopVideo()"
-
-                  among many other little tweaks I tried out.  The above causes an error
-                  -->
                   <v-btn
                     color="primary"
                     flat
-<<<<<<< HEAD
-                    @click="dialog = false"
-=======
-                    @click="
-                      dialog = false;
-                      stopVideo();
-                    "
->>>>>>> 7e71a5f4e8bdaa0628963be007476d07a931043f
+                    @click="closeDialog()"
                   >
                     X
                   </v-btn>
@@ -63,12 +48,7 @@
                 style="margin: 0px; padding: 0px;"
               >
                 <v-row class="iframe-container" id="youtube_player">
-                  <iframe
-                    id="iframe"
-                    src="https://www.youtube.com/embed/vgT0Cysh7m4?autoplay=1"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                  ></iframe>
+                    <youtube :video-id="videoId" ref="youtube"></youtube>
                 </v-row>
               </v-row>
             </v-card>
@@ -297,6 +277,11 @@
 
 <script>
 import Step from "../components/Step.vue";
+import Vue from 'vue'
+import VueYoutube from 'vue-youtube'
+
+Vue.use(VueYoutube)
+
 export default {
   components: {
     Step,
@@ -304,19 +289,20 @@ export default {
   data: () => {
       return {
         dialog: false,
-        // a few different approaches -- 
-        // 1) modifying the DOM, modifying the element classes based on what I observed when user clicks play/pause
-        // 2) removing the player element entirely (nuclear option)
-        // 3) a function using the youtube API
-
-        // 1) pauseVideo: document.getElementById("player") ? document.getElementById("player").children[0].className.replace("playing-mode","paused-mode") : undefined 
-
-        // 2) stopVideo: () => document.getElementById("player").remove
-        
-        //pauseVideo() is from Youtube API: https://developers.google.com/youtube/iframe_api_reference#pauseVideo 
-        // 3) pauseVideo: () => document.getElementById("player").pauseVideo()
+        videoId: 'vgT0Cysh7m4'
       }
   },
+    methods: {
+        closeDialog(){
+            this.dialog = false
+            this.player.pauseVideo()
+        }
+    },
+     computed: {
+             player() {
+                       return this.$refs.youtube.player
+                     }
+           },
   head() {
     return {
       title: "How It Works | Covid Watch",
