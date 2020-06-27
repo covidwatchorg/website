@@ -26,7 +26,12 @@
             @click:outside="(e) => closeDialog()"
           >
             <template v-slot:activator="{ on }">
-              <img v-on="on" style="max-width:425px;" src="../assets/how_it_works/video-preview.svg" alt="" />
+              <img
+                v-on="on"
+                style="max-width: 425px;"
+                src="../assets/how_it_works/video-preview.svg"
+                alt=""
+              />
             </template>
 
             <v-card>
