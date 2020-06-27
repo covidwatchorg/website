@@ -233,10 +233,6 @@
       background-image: none;
     }
 
-    .step-container {
-      margin-bottom: 80px;
-    }
-
     .connected_img {
       display: none;
     }
