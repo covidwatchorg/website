@@ -474,8 +474,8 @@ export default {
       {
         name: "Robert M. Grant, MD, MPH",
         description:
-          "MPH Professor of Medicine, University of California San Francisco",
-        link: "https://profiles.ucsf.edu/robert.grant",
+          "Professor of Medicine, University of California San Francisco",
+        link: "https://profiles.ucsf.edu/robert.grant"
       },
       {
         name: "Jeffrey Ladish",
