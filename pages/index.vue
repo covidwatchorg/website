@@ -178,7 +178,7 @@
 
   @media (min-width: 760px) {
     #hero {
-      background-image: url("../assets/home_page/new-hero.svg");
+      background-image: url("../assets/home_page/new-hero-2.svg");
       background-position-x: right;
       background-position-y: bottom;
       background-size: cover;
