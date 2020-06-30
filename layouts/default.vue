@@ -110,6 +110,11 @@ export default {
               href: "/news",
               nuxt: true,
             },
+            {
+              title: "Blog",
+              href: "https://medium.com/covid-watch",
+              nuxt: false,
+            },
           ],
         },
         {
