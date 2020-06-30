@@ -120,6 +120,11 @@ export default {
               href: "/covid_watch_privacy_policy.pdf",
               nuxt: false,
             },
+            {
+              title: "Blog",
+              href: "https://medium.com/covid-watch",
+              nuxt: false,
+            },
           ],
         },
         {
