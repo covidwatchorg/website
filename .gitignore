@@ -4,6 +4,9 @@
 
 
 ### Node template
+# Static list of packages
+package-lock.json
+
 # Logs
 /logs
 *.log
