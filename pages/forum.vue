@@ -8,10 +8,16 @@
             <h1 class="mb-5">Covid Watch Forum</h1>
             <div class="subtitle">
               <p>
-                Covid Watch is working with a range of organizations around the world to bring our privacy-preserving exposure notification technology to a global audience. This is uncharted territory, and every day we and our partners discover new tools to aid us in the fight against COVID-19.
+                Covid Watch is working with a range of organizations around the
+                world to bring our privacy-preserving exposure notification
+                technology to a global audience. This is uncharted territory,
+                and every day we and our partners discover new tools to aid us
+                in the fight against COVID-19.
               </p>
               <p>
-                To harness the full potential of these collaborations, we've founded the Covid Watch Forum: a digital space for our partners to learn from each other.
+                To harness the full potential of these collaborations, we've
+                founded the Covid Watch Forum: a digital space for our partners
+                to learn from each other.
               </p>
             </div>
           </div>
@@ -31,7 +37,7 @@
 
         <v-spacer />
         <v-col cols="3">
-            <p style="color:red;">note: images not final</p>
+          <p style="color: red;">note: images not final</p>
           <img
             class="shrink-on-small-screen"
             src="../assets/pilot_page/woman_globe.svg"
@@ -53,9 +59,14 @@
           </v-col>
           <v-col :md="9">
             <div class="copy ml-6">
-              <h3>Digital Collaboration </h3>
+              <h3>Digital Collaboration</h3>
               <p>
-                Regular meetings allow Forum members to present the latest developments in their work and write the rulebook for the field's best practices. High-level networking and facilitation means that this support doesn't stop there: day or night at any time, Forum members seeking advice or guidance know that it's always at their fingertips.
+                Regular meetings allow Forum members to present the latest
+                developments in their work and write the rulebook for the
+                field's best practices. High-level networking and facilitation
+                means that this support doesn't stop there: day or night at any
+                time, Forum members seeking advice or guidance know that it's
+                always at their fingertips.
               </p>
             </div>
           </v-col>
@@ -81,9 +92,12 @@
             <div class="copy ml-6">
               <h3>A Team Of Billions</h3>
               <p>
-                The ultimate vision of Covid Watch is a global network of users watching out for each other and their communities. To help make this happen, the Forum has gathered like-minded leaders from across the world: X, Y, and Z to name just a few.
+                The ultimate vision of Covid Watch is a global network of users
+                watching out for each other and their communities. To help make
+                this happen, the Forum has gathered like-minded leaders from
+                across the world: X, Y, and Z to name just a few.
               </p>
-              <p style="color:red;">Jesse Note: who are X, Y, and Z?</p>
+              <p style="color: red;">Jesse Note: who are X, Y, and Z?</p>
             </div>
           </v-col>
         </v-row>
@@ -98,9 +112,14 @@
           </v-col>
           <v-col :md="9">
             <div class="copy ml-6">
-              <h3>Smarter Together </h3>
+              <h3>Smarter Together</h3>
               <p>
-                In the face of the COVID-19 pandemic, we can't afford to hold knowledge hostage. The lessons learned in one region, shared clearly and quickly, could make a life or death difference elsewhere. By pooling our experience the Covid Watch Forum allows all of our members to move forwards with confidence, knowing that their actions are informed by world-leading data.
+                In the face of the COVID-19 pandemic, we can't afford to hold
+                knowledge hostage. The lessons learned in one region, shared
+                clearly and quickly, could make a life or death difference
+                elsewhere. By pooling our experience the Covid Watch Forum
+                allows all of our members to move forwards with confidence,
+                knowing that their actions are informed by world-leading data.
               </p>
             </div>
           </v-col>
@@ -118,19 +137,29 @@
       <v-row id="how-to-join" :class="pageSectionClass">
         <div style="display: block;">
           <h2 class="section-title">How to Join</h2>
-          <p>Covid Watch Forum is open to select organizations partnered with Covid Watch.</p>
+          <p>
+            Covid Watch Forum is open to select organizations partnered with
+            Covid Watch.
+          </p>
         </div>
 
         <v-row>
-            <v-col>
-                <p>
-                    Current and anticipated forum members include universities, public health departments, and government. If you represent such an organization, you can get in touch with us <a style="color:blue;" href="https://covidapp.typeform.com/to/rN6LaK">here</a>.
-                </p>
-            </v-col>
+          <v-col>
+            <p>
+              Current and anticipated forum members include universities, public
+              health departments, and government. If you represent such an
+              organization, you can get in touch with us
+              <a
+                style="color: blue;"
+                href="https://covidapp.typeform.com/to/rN6LaK"
+                >here</a
+              >.
+            </p>
+          </v-col>
         </v-row>
 
         <!-- COMMENTED OUT PREVIOUS CARDS from ABOUT page -- could be used for -->
-          <!-- <v-col
+        <!-- <v-col
             :md="4"
             :sm="8"
             v-for="(card, i) in whyCards"
@@ -144,15 +173,13 @@
             ></WhyCard>
           </v-col> -->
 
-        <p style="color:red;">Jesse suggestion: three images/columns of universities, public health departments, and government like on bottom of 
-            <nuxt-link
-            to="/about"
-            style="text-decoration: none; color:blue;"
-          >
+        <p style="color: red;">
+          Jesse suggestion: three images/columns of universities, public health
+          departments, and government like on bottom of
+          <nuxt-link to="/about" style="text-decoration: none; color: blue;">
             /about page
-            </nuxt-link>
+          </nuxt-link>
         </p>
-        
 
         <v-row class="mr-10 mb-4 mt-10 pb-12 d-flex justify-center">
           <v-col :sm="4">
@@ -239,7 +266,6 @@
       rgba(67, 197, 217, 0.2)
     );
   }
-
 }
 </style>
 
@@ -259,27 +285,27 @@ export default {
       title: "Forum | Covid Watch",
     };
   }, //THIS CAN BE DELETED IF WE DONT USE THIS SIMILAR LAYOUT
-//   data: () => ({
-//     whyCards: [
-//       {
-//         title: "Verified Results",
-//         body:
-//           "Public health officials will be able to verify positive test results if users have COVID-19. This prevents false positives and allows those infected to anonymously notify others of their potential exposure.",
-//         img: require("../assets/pilot_page/man_doctor.svg"),
-//       },
-//       {
-//         title: "Your Face Forward",
-//         body:
-//           "Covid Watch builds anonymous, effective tools. Our app augments the work of manual contact tracers. When local communities use our app, they can see the name of your public health department and learn how to contact you.",
-//         img: require("../assets/pilot_page/medical_branding.svg"),
-//       },
-//       {
-//         title: "Smart Support",
-//         body:
-//           "Covid Watch is learning alongside you as we both work to protect your community. Expect our researchers to be extremely attentive to the app’s effect in your community and provide responsive feedback in a fast-moving world.",
-//         img: require("../assets/pilot_page/woman_helpdesk.svg"),
-//       },
-//     ],
-//   }),
+  //   data: () => ({
+  //     whyCards: [
+  //       {
+  //         title: "Verified Results",
+  //         body:
+  //           "Public health officials will be able to verify positive test results if users have COVID-19. This prevents false positives and allows those infected to anonymously notify others of their potential exposure.",
+  //         img: require("../assets/pilot_page/man_doctor.svg"),
+  //       },
+  //       {
+  //         title: "Your Face Forward",
+  //         body:
+  //           "Covid Watch builds anonymous, effective tools. Our app augments the work of manual contact tracers. When local communities use our app, they can see the name of your public health department and learn how to contact you.",
+  //         img: require("../assets/pilot_page/medical_branding.svg"),
+  //       },
+  //       {
+  //         title: "Smart Support",
+  //         body:
+  //           "Covid Watch is learning alongside you as we both work to protect your community. Expect our researchers to be extremely attentive to the app’s effect in your community and provide responsive feedback in a fast-moving world.",
+  //         img: require("../assets/pilot_page/woman_helpdesk.svg"),
+  //       },
+  //     ],
+  //   }),
 };
 </script>
