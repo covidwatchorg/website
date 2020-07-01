@@ -31,7 +31,7 @@
 
         <v-spacer />
         <v-col cols="3">
-            <p style="color:red;">FYI images not final, all images placeholders</p>
+            <p style="color:red;">note: images not final</p>
           <img
             class="shrink-on-small-screen"
             src="../assets/pilot_page/woman_globe.svg"
@@ -240,11 +240,6 @@
     );
   }
 
-  #arizona-video {
-    h3 {
-      margin-bottom: 10px;
-    }
-  }
 }
 </style>
 
