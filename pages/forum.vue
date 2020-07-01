@@ -176,8 +176,8 @@
         <p style="color: red;">
           Jesse suggestion: three images/columns of universities, public health
           departments, and government like on bottom of
-          <nuxt-link to="/about" style="text-decoration: none; color: blue;">
-            /about page
+          <nuxt-link to="/pilot" style="text-decoration: none; color: blue;">
+            /pilot page
           </nuxt-link>
         </p>
 
