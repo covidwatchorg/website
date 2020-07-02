@@ -147,7 +147,7 @@
             <a href="/covid_watch_whitepaper.pdf">white paper</a>,
             <a href="https://testflight.apple.com/join/gtAh2Xeu">develop</a>,
             and
-            <a href="https://github.com/covid19risk/">open source</a>
+            <a href="https://github.com/covidwatchorg/">open source</a>
             decentralized Bluetooth exposure alert technology in early March
             2020. Our
             <a href="https://github.com/TCNCoalition/TCN">TCN protocol</a> led
