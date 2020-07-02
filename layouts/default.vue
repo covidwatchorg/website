@@ -116,13 +116,18 @@ export default {
           title: "Resources",
           links: [
             {
-              title: "Privacy Policy",
-              href: "/covid_watch_privacy_policy.pdf",
+              title: "Blog",
+              href: "https://medium.com/covid-watch",
               nuxt: false,
             },
             {
-              title: "Blog",
-              href: "https://medium.com/covid-watch",
+              title: "Covid Watch Forum",
+              href: "/forum",
+              nuxt: true,
+            },
+            {
+              title: "Privacy Policy",
+              href: "/covid_watch_privacy_policy.pdf",
               nuxt: false,
             },
           ],

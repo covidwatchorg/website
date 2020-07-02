@@ -105,7 +105,7 @@
           <v-col :md="3" class="hide-on-small-screen">
             <img
               class="shrink-on-small-screen"
-              src="../assets/pilot_page/woman_medical_device.svg"
+              src="../assets/how_it_works/num-3-img.svg"
               alt="target"
             />
           </v-col>
