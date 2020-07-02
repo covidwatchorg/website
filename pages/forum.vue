@@ -25,8 +25,8 @@
           <v-row no-gutters class="mr-10 mb-4 mt-10">
             <v-col :sm="5">
               <Button
-                target="_blank"
-                href="https://covidapp.typeform.com/to/rN6LaK"
+                nuxt
+                to="/pilot"
                 primary
                 hero
                 >Start a Pilot</Button
@@ -160,10 +160,10 @@
         <v-row class="mr-10 mb-4 mt-10 pb-12 d-flex justify-center">
           <v-col :sm="4">
             <Button
-              target="_blank"
-              href="https://covidapp.typeform.com/to/rN6LaK"
+              nuxt
+              to="/pilot"
               secondary
-              >Join the Forum</Button
+              >Start a Pilot</Button
             >
           </v-col>
         </v-row>
