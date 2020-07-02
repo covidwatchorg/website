@@ -72,7 +72,7 @@
             />
           </v-col>
           <v-col class="d-flex flex-column justify-center align-center" :md="4">
-            <h3>Customized Greetings</h3>
+            <h3>Customized Messaging</h3>
             <img
               style="border: solid 1px gray; max-width: 300px;"
               src="../assets/pilot_page/uofa-2.svg"
