@@ -62,9 +62,8 @@
             <p>
               Developers who want to join our growing effort should feel free to
               jump in directly by looking at open issues in the
-              <a :href="github.link">Covid Watch</a> and
-              <a href="https://github.com/TCNCoalition">TCN Coalition</a> Github
-              repos.
+              <a :href="github.link">Covid Watch</a>
+              repo.
             </p>
             <p>Some of the skillsets we need:</p>
 
@@ -109,7 +108,8 @@
                 Like and share us on
                 <a :href="twitter.link">Twitter</a>,
                 <a :href="facebook.link">Facebook</a>,
-                <a :href="instagram.link">Instagram</a>, and
+                <a :href="instagram.link">Instagram</a>,
+                <a :href="medium.link">Medium</a>, and
                 <a :href="github.link">Github</a>
               </li>
               <li>
@@ -178,6 +178,7 @@ import {
   TWITTER,
   FACEBOOK,
   INSTAGRAM,
+  MEDIUM,
   GITHUB,
 } from "@/assets/data/social_media.js";
 
@@ -190,6 +191,7 @@ export default {
     twitter: TWITTER,
     instagram: INSTAGRAM,
     facebook: FACEBOOK,
+    medium: MEDIUM,
     github: GITHUB,
     urgentRoles: [
       {
