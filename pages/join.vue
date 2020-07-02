@@ -62,9 +62,8 @@
             <p>
               Developers who want to join our growing effort should feel free to
               jump in directly by looking at open issues in the
-              <a :href="github.link">Covid Watch</a> and
-              <a href="https://github.com/TCNCoalition">TCN Coalition</a> Github
-              repos.
+              <a :href="github.link">Covid Watch</a>
+              repo.
             </p>
             <p>Some of the skillsets we need:</p>
 
@@ -99,7 +98,17 @@
         <v-row class="my-12">
           <v-col>
             <h2>Other Ways to Get Involved</h2>
-            <p class="mt-8">
+
+            <h3>Covid Watch Forum</h3>
+            <p class="mt-4">
+              This is a space for our pilot partners and advisory council of
+              subject matter experts to collaborate, share best practices and
+              learn from each other. Learn more
+              <nuxt-link to="/forum">here</nuxt-link>.
+            </p>
+
+            <h3>Follow Us or Donate</h3>
+            <p class="mt-4">
               You don't need to join our team to help Covid Watch! It would also
               help us out if you'd consider other options:
             </p>
@@ -109,16 +118,18 @@
                 Like and share us on
                 <a :href="twitter.link">Twitter</a>,
                 <a :href="facebook.link">Facebook</a>,
-                <a :href="instagram.link">Instagram</a>, and
+                <a :href="instagram.link">Instagram</a>,
+                <a :href="medium.link">Medium</a>, and
                 <a :href="github.link">Github</a>
               </li>
               <li>
                 Make a
-                <nuxt-link to="/support">tax-deductible donation</nuxt-link>to
-                support our work
+                <nuxt-link to="/support">donation</nuxt-link> to support our
+                work
               </li>
               <li>
-                Subscribe to our newsletter below to stay up to date on our work
+                Subscribe to our newsletter (at the bottom of this page) below
+                to stay up to date on our work
               </li>
             </ul>
           </v-col>
@@ -178,6 +189,7 @@ import {
   TWITTER,
   FACEBOOK,
   INSTAGRAM,
+  MEDIUM,
   GITHUB,
 } from "@/assets/data/social_media.js";
 
@@ -190,6 +202,7 @@ export default {
     twitter: TWITTER,
     instagram: INSTAGRAM,
     facebook: FACEBOOK,
+    medium: MEDIUM,
     github: GITHUB,
     urgentRoles: [
       {
