@@ -82,7 +82,6 @@
               alt="target"
             />
           </v-col>
-
           <v-col :md="9">
             <div class="copy ml-6">
               <h3>Global Collaboration</h3>
@@ -97,7 +96,7 @@
           <v-col :md="3" class="show-on-small-screen">
             <img
               class="shrink-on-small-screen"
-              src="../assets/pilot_page/woman_medical_device.svg"
+              src="../assets/support_page/people_globe.svg"
               alt="target"
             />
           </v-col>
@@ -111,8 +110,9 @@
           </v-col>
           <v-col :md="3" class="hide-on-small-screen">
             <img
+              style="max-width:268px;"
               class="shrink-on-small-screen"
-              src="../assets/how_it_works/num-3-img.svg"
+              src="../assets/support_page/people_globe.svg"
               alt="target"
             />
           </v-col>

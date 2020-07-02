@@ -98,7 +98,14 @@
         <v-row class="my-12">
           <v-col>
             <h2>Other Ways to Get Involved</h2>
-            <p class="mt-8">
+
+            <h3>Covid Watch Forum</h3>
+            <p class="mt-4">
+              This is a space for our pilot partners and advisory council of subject matter experts to collaborate, share best practices and learn from each other.  Learn more <nuxt-link to="/forum">here</nuxt-link>.
+            </p>
+
+            <h3>Follow Us or Donate</h3>
+            <p class="mt-4">
               You don't need to join our team to help Covid Watch! It would also
               help us out if you'd consider other options:
             </p>
@@ -114,11 +121,11 @@
               </li>
               <li>
                 Make a
-                <nuxt-link to="/support">tax-deductible donation</nuxt-link>to
+                <nuxt-link to="/support">donation</nuxt-link> to
                 support our work
               </li>
               <li>
-                Subscribe to our newsletter below to stay up to date on our work
+                Subscribe to our newsletter (at the bottom of this page) below to stay up to date on our work
               </li>
             </ul>
           </v-col>
