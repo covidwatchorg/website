@@ -101,7 +101,10 @@
 
             <h3>Covid Watch Forum</h3>
             <p class="mt-4">
-              This is a space for our pilot partners and advisory council of subject matter experts to collaborate, share best practices and learn from each other.  Learn more <nuxt-link to="/forum">here</nuxt-link>.
+              This is a space for our pilot partners and advisory council of
+              subject matter experts to collaborate, share best practices and
+              learn from each other. Learn more
+              <nuxt-link to="/forum">here</nuxt-link>.
             </p>
 
             <h3>Follow Us or Donate</h3>
@@ -121,11 +124,12 @@
               </li>
               <li>
                 Make a
-                <nuxt-link to="/support">donation</nuxt-link> to
-                support our work
+                <nuxt-link to="/support">donation</nuxt-link> to support our
+                work
               </li>
               <li>
-                Subscribe to our newsletter (at the bottom of this page) below to stay up to date on our work
+                Subscribe to our newsletter (at the bottom of this page) below
+                to stay up to date on our work
               </li>
             </ul>
           </v-col>
