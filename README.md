@@ -1,7 +1,7 @@
 # Website
 
-![Build](https://github.com/covid19risk/website/workflows/Build/badge.svg)
-![Deploy](https://github.com/covid19risk/website/workflows/Deploy/badge.svg)
+![Build](https://github.com/covidwatchorg/website/workflows/Build/badge.svg)
+![Deploy](https://github.com/covidwatchorg/website/workflows/Deploy/badge.svg)
 
 The Covid-Watch website: https://covid-watch.org/
 
