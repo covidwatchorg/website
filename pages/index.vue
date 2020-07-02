@@ -107,6 +107,33 @@
               <NewsCard :card="card"></NewsCard>
             </v-col>
           </v-row>
+
+          <v-row class="mt-12 d-flex justify-center">
+            <!-- <v-row> -->
+            <v-col
+              v-for="(logo, i) in mediaLogosFirst"
+              :key="i"
+              class="news-logo"
+              :cols="logo.cols"
+              :md="logo.md"
+            >
+              <a :href="logo.link">
+                <img :src="logo.logo" :alt="logo.alt" />
+              </a>
+            </v-col>
+
+            <v-col
+              v-for="(logo, i) in mediaLogosSecond"
+              :key="i"
+              class="news-logo"
+              :cols="logo.cols"
+              :md="logo.md"
+            >
+              <a :style="logo.style" :href="logo.link">
+                <img :src="logo.logo" :alt="logo.alt" />
+              </a>
+            </v-col>
+          </v-row>
         </v-row>
 
         <!-- Download the App -->
@@ -147,6 +174,22 @@
 
 <style lang="scss">
 #home {
+  .news-logo {
+    filter: grayscale(100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      filter: grayscale(0%);
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 120px;
+    }
+  }
+
   @media (min-width: 960px) {
     .mobile_imgs {
       background-image: url("../assets/home_page/mobile_background.svg");
@@ -342,6 +385,74 @@ export default {
       require("../assets/home_page/mobile_1.svg"),
       require("../assets/home_page/mobile_2.svg"),
       require("../assets/home_page/mobile_3.svg"),
+    ],
+    mediaLogosFirst: [
+      {
+        cols: "6",
+        md: "3",
+        link:
+          "https://www.wired.com/story/covid-19-contact-tracing-apps-cryptography/",
+        logo: require("../assets/home_page/wired-logo.svg"),
+        alt: "Wired",
+      },
+      {
+        cols: "6",
+        md: "3",
+        link: "https://apnews.com/15c028c48502db395681ebca0099de5a",
+        logo: require("../assets/home_page/ap-logo.svg"),
+        alt: "Associated Press",
+      },
+      {
+        cols: "4",
+        md: "2",
+        link:
+          "https://www.nbcnews.com/tech/tech-news/behind-global-efforts-make-privacy-first-coronavirus-tracking-app-n1177871",
+        logo: require("../assets/home_page/nbc-logo.svg"),
+        alt: "NBC",
+      },
+      {
+        cols: "8",
+        md: "2",
+        link:
+          "https://www.thelancet.com/journals/landig/article/PIIS2589-7500(20)30103-5/fulltext",
+        logo: require("../assets/home_page/lancet-logo.png"),
+        alt: "Lancet",
+      },
+      {
+        cols: "4",
+        md: "2",
+        link:
+          "https://drive.google.com/file/d/1VH9uwJJliheVy5unCXtAHQbEdsuJdYD7/view",
+        logo: require("../assets/home_page/ft-logo.svg"),
+        alt: "Financial Times",
+      },
+    ],
+    mediaLogosSecond: [
+      {
+        cols: "8",
+        md: "4",
+        link:
+          "https://www.wsj.com/articles/coronavirus-contact-tracing-apps-face-another-challenge-designing-a-great-user-experience-11589985001",
+        logo: require("../assets/home_page/wsj-logo.svg"),
+        alt: "Wall Street Journal",
+      },
+      {
+        cols: "10",
+        md: "3",
+        link:
+          "https://www.centerforhealthsecurity.org/resources/COVID-19/COVID-19-fact-sheets/200408-contact-tracing-factsheet.pdf",
+        logo: require("../assets/home_page/jhu-logo.png"),
+        alt: "Bloomberg School of Public Health",
+      },
+      {
+        style: "padding-left:24px;",
+        cols: "10",
+        md: "4",
+        link:
+          "https://www.sfchronicle.com/business/article/Latest-weapon-in-tracing-and-tracking-coronavirus-15219887.php",
+        logo: require("../assets/home_page/sf-chronicle-logo.svg"),
+        alt: "SF Chronicle",
+      },
     ],
   }),
 };
