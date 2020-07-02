@@ -17,7 +17,7 @@
                 Covid Watch is working with a wide range of organizations–including public health authorities, universities and governments–to bring our privacy-preserving exposure notification solution to everyone in the world. This is uncharted territory, and every day we and our partners discover new ways to aid in the fight against COVID-19.
               </p>
               <p>
-                To harness the full potential of these collaborations, we launched the Covid Watch Forum – a space for our pilot partners and advisory council of subject matter experts to collaborate, share best practices and learn from each other.
+                To harness the full potential of these collaborations, we launched the Covid Watch Forum – <span>a space for our pilot partners and advisory council of subject matter experts to collaborate, share best practices and learn from each other</span>.
               </p>
             </div>
           </div>
@@ -133,7 +133,6 @@
             <p>
                If you are interested in joining the Forum, the first step is to get in touch with Covid Watch about
               <a
-                style="color: blue;"
                 href="https://covidapp.typeform.com/to/rN6LaK"
                 >starting a pilot</a
               >.
@@ -175,12 +174,10 @@
 
 <style lang="scss">
 #forum {
-  a {
-    color: white;
-    text-transform: none;
-    font-style: normal;
-    // font-weight: bold;
-  }
+  // if it's desirable to edit just that part of the subtitle
+  // .subtitle p span {
+  //   font-style: italic;
+  // }
 
   .section-title {
     font-size: 36px;
