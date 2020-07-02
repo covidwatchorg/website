@@ -3,9 +3,15 @@
     <v-col cols="12" class="py-0">
       <!-- Hero -->
       <v-row id="hero" :class="pageSectionClass">
-        <v-col cols="12" :md="8" :sm="12">
+        <v-col cols="12" :md="7" :sm="12">
           <div class="mb-12">
             <h1 class="mb-5">Covid Watch Forum</h1>
+
+          <!-- possibly put logo image instead of text? -->
+            <!-- <img
+            class="shrink-on-small-screen"
+            src="../assets/forum_page/forum_logo.svg"
+          /> -->
             <div class="subtitle">
               <p>
                 Covid Watch is working with a wide range of organizations–including public health authorities, universities and governments–to bring our privacy-preserving exposure notification solution to everyone in the world. This is uncharted territory, and every day we and our partners discover new ways to aid in the fight against COVID-19.
@@ -29,11 +35,12 @@
           </v-row>
         </v-col>
 
-        <v-spacer />
-        <v-col cols="3">
+        <!-- <v-spacer /> -->
+        <v-col cols="12" :md="5" class="d-flex align-baseline justify-center mt-12 pt-12">
           <img
-            class="shrink-on-small-screen"
-            src="../assets/pilot_page/woman_globe.svg"
+            class="hide-on-small-screen"
+            style="width:100%;"
+            src="../assets/forum_page/forum_logo.svg"
           />
         </v-col>
       </v-row>
