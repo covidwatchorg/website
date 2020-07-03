@@ -1,5 +1,5 @@
 <template>
-  <v-card :card="card" class="news-card d-flex flex-column">
+  <v-card style="border-radius:0px;" :card="card" class="news-card d-flex flex-column">
     <v-img
       :src="card.type === 'press_release' ? press.stripe : news.stripe"
       :gradient="card.type === 'press_release' ? press.gradient : news.gradient"
