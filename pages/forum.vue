@@ -126,12 +126,7 @@
             <div class="copy ml-6">
               <h3>A Community of Leaders</h3>
               <p>
-                The Covid Watch Forum meets regularly to discuss the latest
-                developments and to collaborate on best practices. The Forum
-                facilitates networking between organizations who wouldn’t
-                typically work together, but who are united by their urgent need
-                to augment manual contact tracing with exposure notification
-                technology to reopen schools and businesses safely.
+                The ultimate vision of Covid Watch is a global network of people watching out for each other and their communities. To help make this happen, the Forum connects our pilot partners with academics in public health, privacy, cryptography, and other key fields. We will periodically publish and share our progress publicly so that we can all move with confidence and accelerate innovation. 
               </p>
             </div>
           </v-col>
