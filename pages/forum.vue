@@ -17,7 +17,7 @@
                 Covid Watch is working with a wide range of
                 organizations–including public health authorities, universities
                 and governments–to bring our privacy-preserving exposure
-                notification solution to everyone in the world. This is
+                notification solution to anyone in the world. This is
                 uncharted territory, and every day we and our partners discover
                 new ways to aid in the fight against COVID-19.
               </p>
