@@ -45,7 +45,7 @@
 
   a {
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
   }
 }
 
