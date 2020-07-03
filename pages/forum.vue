@@ -6,12 +6,6 @@
         <v-col cols="12" :md="7" :sm="12">
           <div class="mb-12">
             <h1 class="mb-5">Covid Watch Forum</h1>
-
-            <!-- possibly put logo image instead of text? -->
-            <!-- <img
-            class="shrink-on-small-screen"
-            src="../assets/forum_page/forum_logo.svg"
-          /> -->
             <div class="subtitle">
               <p>
                 Covid Watch is working with a wide range of
@@ -40,7 +34,6 @@
           </v-row>
         </v-col>
 
-        <!-- <v-spacer /> -->
         <v-col
           cols="12"
           :md="5"
@@ -165,7 +158,6 @@
           </v-col>
         </v-row>
 
-        <!-- COMMENTED OUT PREVIOUS CARDS from ABOUT page -- could be used for -->
         <v-row>
           <v-col
             :md="4"
@@ -194,11 +186,6 @@
 
 <style lang="scss">
 #forum {
-  // if it's desirable to edit just that part of the subtitle
-  // .subtitle p span {
-  //   font-style: italic;
-  // }
-
   .section-title {
     font-size: 36px;
     margin-bottom: 16px;
