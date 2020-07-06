@@ -3,24 +3,37 @@
     <v-col cols="12" class="py-0">
       <!-- Hero -->
       <v-row id="hero" :class="pageSectionClass">
-        <v-col cols="12" :md="8" :sm="12">
+        <v-col cols="12" :md="10" :sm="12">
           <div class="mb-12">
-            <h1 class="mb-5">Bring Covid Watch to Your Community</h1>
+            <h1 class="mb-5">Pilot With Us</h1>
             <div class="subtitle">
               <p>
-                Covid Watch works best when communities adopt it together. Each
-                new person that uses our anonymous exposure notification app
-                makes everyone else that much safer and reduces the burden on
-                overloaded public health systems.
+                Amplify your COVID-19 response strategy with anonymous exposure alerts. 
               </p>
               <p>
-                As the world reopens, we will encourage adoption of the Covid
-                Watch app in geographically limited areas and with certain
-                at-risk communities, like essential workers and first
-                responders. We call these initial efforts Pilot Programs.
+                The Covid Watch pilot program  offers universities, governments, and public health departments an opportunity to whitelabel our exposure alert app, access to our unique COVID-19 positive case  verification portal, and  full service implementation support from our team.. 
               </p>
             </div>
           </div>
+
+          <v-row>
+              <v-col cols="4">
+                <h3 class="mb-4">For Universities</h3>
+                <p>Universities are on the frontlines of the pandemic, contributing valuable research while also navigating the challenge of welcoming students and staff back to campus safely.</p>
+              </v-col>
+
+              <v-col cols="4">
+                <h3 class="mb-4">For Government</h3>
+                <p>Governments at all levels play a crucial role in facilitating conversations while enacting and enforcing policy in a fluid environment.</p>
+              </v-col>
+
+              <v-col cols="4">
+                <h3 class="mb-4">For Public Health</h3>
+                <p>This is the greatest public health crisis in decades. Public health officials are leading the charge to develop and implement broad and effective responses to the pandemic.</p>
+              </v-col>
+          </v-row>
+
+
 
           <v-row no-gutters class="mr-10 mb-4 mt-10">
             <v-col :sm="5">
@@ -29,19 +42,20 @@
                 href="https://covidapp.typeform.com/to/rN6LaK"
                 primary
                 hero
-                >Start a Pilot</Button
+                >Talk With Us</Button
               >
             </v-col>
           </v-row>
         </v-col>
 
-        <v-spacer />
+        <!-- OLD IMAGE -->
+        <!-- <v-spacer />
         <v-col cols="3">
           <img
             class="shrink-on-small-screen"
             src="../assets/pilot_page/woman_globe.svg"
           />
-        </v-col>
+        </v-col> -->
       </v-row>
 
       <v-row id="arizona-video" :class="pageSectionClass">
