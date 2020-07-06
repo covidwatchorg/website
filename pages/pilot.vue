@@ -16,7 +16,7 @@
                 and public health departments an opportunity to whitelabel our
                 exposure alert app, access to our unique COVID-19 positive case
                 verification portal, and full service implementation support
-                from our team..
+                from our team.
               </p>
             </div>
           </div>
