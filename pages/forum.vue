@@ -11,9 +11,9 @@
                 Covid Watch is working with a wide range of
                 organizations–including public health authorities, universities
                 and governments–to bring our privacy-preserving exposure
-                notification solution to anyone in the world. This is
-                uncharted territory, and every day we and our partners discover
-                new ways to aid in the fight against COVID-19.
+                notification solution to anyone in the world. This is uncharted
+                territory, and every day we and our partners discover new ways
+                to aid in the fight against COVID-19.
               </p>
               <p>
                 To harness the full potential of these collaborations, we
@@ -119,7 +119,13 @@
             <div class="copy ml-6">
               <h3>A Community of Leaders</h3>
               <p>
-                The ultimate vision of Covid Watch is a global network of people watching out for each other and their communities. To help make this happen, the Forum connects our pilot partners with academics in public health, privacy, cryptography, and other key fields. We will periodically publish and share our progress publicly so that we can all move with confidence and accelerate innovation. 
+                The ultimate vision of Covid Watch is a global network of people
+                watching out for each other and their communities. To help make
+                this happen, the Forum connects our pilot partners with
+                academics in public health, privacy, cryptography, and other key
+                fields. We will periodically publish and share our progress
+                publicly so that we can all move with confidence and accelerate
+                innovation.
               </p>
             </div>
           </v-col>
