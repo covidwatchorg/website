@@ -298,85 +298,87 @@
 </template>
 
 <style lang="scss">
-.collab-img-col {
-  filter: grayscale(100%);
-
-  &:hover {
-    filter: grayscale(0%);
+#about {
+  .collab-img-col {
+    filter: grayscale(100%);
+  
+    &:hover {
+      filter: grayscale(0%);
+    }
   }
-}
-.collab-img {
-  max-width: 260px;
-  max-height: 70px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (max-width: 400px) {
-  .we_value_img {
+  .collab-img {
     max-width: 260px;
+    max-height: 70px;
+    margin-left: auto;
+    margin-right: auto;
   }
-}
-
-@media (max-width: 950px) {
-  .earth_img {
-    display: none;
+  
+  @media (max-width: 400px) {
+    .we_value_img {
+      max-width: 260px;
+    }
   }
-
-  .biking {
-    display: none;
+  
+  @media (max-width: 950px) {
+    .earth_img {
+      display: none;
+    }
+  
+    .biking {
+      display: none;
+    }
   }
-}
-
-.founder_img {
-  max-width: 100%;
-}
-
-.we_value_img {
-  min-height: 263px;
-}
-
-.first-row {
-  background: linear-gradient(
-    0deg,
-    rgba(67, 197, 217, 0.2),
-    rgba(255, 255, 255, 0) 20%
-  );
-}
-.about-us-copy {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 34px;
-
-  color: #585858;
-}
-.join-us {
-  background: rgba(245, 229, 230, 0.6);
-}
-
-.adviser-card {
-  margin: 0px 35px 35px 0px;
-  padding: 10px;
-}
-
-  .iframe-container {
-    overflow: hidden;
-    padding-top: 45%;
-    position: relative;
-    max-width: 1000px;
+  
+  .founder_img {
+    max-width: 100%;
   }
-
-  .iframe-container iframe {
-    border: 0;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    max-height: 500px;
+  
+  .we_value_img {
+    min-height: 263px;
   }
+  
+  .first-row {
+    background: linear-gradient(
+      0deg,
+      rgba(67, 197, 217, 0.2),
+      rgba(255, 255, 255, 0) 20%
+    );
+  }
+  .about-us-copy {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 34px;
+  
+    color: #585858;
+  }
+  .join-us {
+    background: rgba(245, 229, 230, 0.6);
+  }
+  
+  .adviser-card {
+    margin: 0px 35px 35px 0px;
+    padding: 10px;
+  }
+  
+    .iframe-container {
+      overflow: hidden;
+      padding-top: 45%;
+      position: relative;
+      max-width: 1000px;
+    }
+  
+    .iframe-container iframe {
+      border: 0;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      max-height: 500px;
+    }
+}
 
 
 </style>

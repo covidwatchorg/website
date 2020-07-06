@@ -173,7 +173,7 @@
 </template>
 
 <style lang="scss">
-#home {
+#home {  
   .news-logo {
     filter: grayscale(100%);
     display: flex;

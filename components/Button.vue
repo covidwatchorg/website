@@ -24,6 +24,7 @@
 .v-btn >>> a:hover {
   color: inherit;
 }
+
 </style>
 
 <script>
