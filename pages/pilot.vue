@@ -19,23 +19,27 @@
           <v-row>
               <v-col cols="4">
                 <h3 class="mb-4">For Universities</h3>
-                <p>Universities are on the frontlines of the pandemic, contributing valuable research while also navigating the challenge of welcoming students and staff back to campus safely.</p>
+                <p style="font-size:16px; line-height:20px;">Universities are on the frontlines of the pandemic, contributing valuable research while also navigating the challenge of welcoming students and staff back to campus safely.</p>
               </v-col>
 
               <v-col cols="4">
                 <h3 class="mb-4">For Government</h3>
-                <p>Governments at all levels play a crucial role in facilitating conversations while enacting and enforcing policy in a fluid environment.</p>
+                <p style="font-size:16px; line-height:20px;">Governments at all levels play a crucial role in facilitating conversations while enacting and enforcing policy in a fluid environment.</p>
               </v-col>
 
               <v-col cols="4">
                 <h3 class="mb-4">For Public Health</h3>
-                <p>This is the greatest public health crisis in decades. Public health officials are leading the charge to develop and implement broad and effective responses to the pandemic.</p>
+                <p style="font-size:16px; line-height:20px;">This is the greatest public health crisis in decades. Public health officials are leading the charge to develop and implement broad and effective responses to the pandemic.</p>
               </v-col>
           </v-row>
 
+          <v-row class="mt-8">
+            <v-col>
+              <p>Let's talk about what a successful pilot looks like for you.</p>
+            </v-col>
+          </v-row>
 
-
-          <v-row no-gutters class="mr-10 mb-4 mt-10">
+          <v-row>
             <v-col :sm="5">
               <Button
                 target="_blank"
@@ -47,15 +51,6 @@
             </v-col>
           </v-row>
         </v-col>
-
-        <!-- OLD IMAGE -->
-        <!-- <v-spacer />
-        <v-col cols="3">
-          <img
-            class="shrink-on-small-screen"
-            src="../assets/pilot_page/woman_globe.svg"
-          />
-        </v-col> -->
       </v-row>
 
       <v-row id="arizona-video" :class="pageSectionClass">
@@ -291,8 +286,13 @@
     background: linear-gradient(
       0deg,
       rgba(67, 197, 217, 0.2),
-      rgba(255, 255, 255, 0) 20%
+      rgba(255, 255, 255, 0) 80%
     );
+
+    // figma basis does not show expected result, needs some fiddling:
+    // background: linear-gradient(0deg, #43C4D9 0%, rgba(255, 255, 255, 0) 100%);
+    // opacity: 0.6;
+// transform: matrix(1, 0, 0, -1, 0, 0);
   }
 
   #why-covid-watch {
