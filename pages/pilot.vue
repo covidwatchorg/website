@@ -3,43 +3,111 @@
     <v-col cols="12" class="py-0">
       <!-- Hero -->
       <v-row id="hero" :class="pageSectionClass">
-        <v-col cols="12" :md="8" :sm="12">
+        <v-col cols="12">
           <div class="mb-12">
-            <h1 class="mb-5">Bring Covid Watch to Your Community</h1>
+            <h1 class="mb-5">Pilot With Us</h1>
             <div class="subtitle">
               <p>
-                Covid Watch works best when communities adopt it together. Each
-                new person that uses our anonymous exposure notification app
-                makes everyone else that much safer and reduces the burden on
-                overloaded public health systems.
+                Amplify your COVID-19 response strategy with anonymous exposure
+                alerts.
               </p>
               <p>
-                As the world reopens, we will encourage adoption of the Covid
-                Watch app in geographically limited areas and with certain
-                at-risk communities, like essential workers and first
-                responders. We call these initial efforts Pilot Programs.
+                The Covid Watch pilot program offers universities, governments,
+                and public health departments an opportunity to whitelabel our
+                exposure alert app, access to our unique COVID-19 positive case
+                verification portal, and full service implementation support
+                from our team..
               </p>
             </div>
           </div>
 
-          <v-row no-gutters class="mr-10 mb-4 mt-10">
+          <v-row>
+            <v-col
+              cols="10"
+              :md="4"
+              v-for="(audience, i) in audienceBlocks"
+              :key="i"
+            >
+              <h3 class="mb-4">{{ audience.title }}</h3>
+              <p style="font-size: 16px; line-height: 20px;">
+                {{ audience.body }}
+              </p>
+            </v-col>
+          </v-row>
+
+          <v-row class="mt-8">
+            <v-col>
+              <p>
+                Let's talk about what a successful pilot looks like for you.
+              </p>
+            </v-col>
+          </v-row>
+
+          <v-row>
             <v-col :sm="5">
               <Button
                 target="_blank"
                 href="https://covidapp.typeform.com/to/rN6LaK"
                 primary
                 hero
-                >Start a Pilot</Button
+                >Talk With Us</Button
               >
             </v-col>
           </v-row>
         </v-col>
+      </v-row>
 
-        <v-spacer />
-        <v-col cols="3">
+      <!-- Our Solution section -->
+      <v-row id="our-solution" :class="pageSectionClass">
+        <h2 class="section-title">Our Solution</h2>
+        <p>
+          We help scale your contact tracing efforts, working alongside your
+          team to help identify additional cases that might be missed,
+          maximizing your response. Our technology helps you identify positive
+          cases sooner, protecting your community faster. Here’s how our
+          solution is unique:
+        </p>
+
+        <v-row class="d-flex justify-center">
+          <v-col
+            v-for="(block, i) in solutionBlocks"
+            :key="i"
+            cols="10"
+            :sm="8"
+            :md="4"
+          >
+            <div class="d-flex justify-center">
+              <img
+                :style="block.width"
+                class="mb-6"
+                :src="block.img"
+                :alt="block.title"
+              />
+            </div>
+            <h3 class="mb-4">{{ block.title }}</h3>
+            <p>{{ block.body }}</p>
+          </v-col>
+        </v-row>
+      </v-row>
+
+      <v-row id="join-community" :class="pageSectionClass">
+        <v-col cols="10" :md="8">
+          <h3>Join Our Community of Leaders</h3>
+          <p class="subtitle mt-5">
+            Participation in our pilot program also includes access to the Covid
+            Watch Forum, an invite-only collaborative space for our partners and
+            advisory council of subject matter experts to share best practices
+            and learn from each other.
+            <nuxt-link style="color: #2c58b1;" to="/forum"
+              >Learn more here</nuxt-link
+            >.
+          </p>
+        </v-col>
+        <v-col cols="0" :md="4">
           <img
-            class="shrink-on-small-screen"
-            src="../assets/pilot_page/woman_globe.svg"
+            class="mt-5 hide-on-small-screen"
+            style="width: 100%;"
+            src="../assets/forum_page/forum_logo.svg"
           />
         </v-col>
       </v-row>
@@ -61,158 +129,22 @@
             allowfullscreen
           ></iframe>
         </v-col>
-
-        <v-row>
-          <v-col class="d-flex flex-column justify-center align-center" :md="4">
-            <h3>Whitelabel Branding</h3>
-            <img
-              style="max-width: 300px;"
-              src="../assets/pilot_page/uofa-1.svg"
-              alt="arizona-render"
-            />
-          </v-col>
-          <v-col class="d-flex flex-column justify-center align-center" :md="4">
-            <h3>Customized Messaging</h3>
-            <img
-              style="border: solid 1px gray; max-width: 300px;"
-              src="../assets/pilot_page/uofa-2.svg"
-              alt="arizona-render"
-            />
-          </v-col>
-          <v-col class="d-flex flex-column justify-center align-center" :md="4">
-            <h3>Confidence to Reopen</h3>
-            <img
-              style="border: solid 1px gray; max-width: 300px;"
-              src="../assets/pilot_page/uofa-3.svg"
-              alt="arizona-render"
-            />
-          </v-col>
-        </v-row>
-      </v-row>
-      <CTA
-        content="Start a Pilot"
-        href="https://covidapp.typeform.com/to/rN6LaK"
-      ></CTA>
-
-      <!-- Why Covid Watch? section -->
-      <v-row id="why-covid-watch" :class="pageSectionClass">
-        <h2 class="section-title">Why Covid Watch?</h2>
-        <v-row>
-          <v-col :md="3">
-            <img
-              class="shrink-on-small-screen"
-              src="../assets/pilot_page/woman_target.svg"
-              alt="target"
-            />
-          </v-col>
-
-          <v-col :md="9">
-            <div class="copy ml-6">
-              <h3>Focus Resources Where They're Needed</h3>
-              <p>
-                Manual contact tracing is labor-intensive. Local public health
-                officials need a way to focus and prioritize their efforts. With
-                the Covid Watch app, those who have been possibly exposed to the
-                coronavirus will receive an anonymous alert. That will be
-                followed by instructions on how to protect themselves and their
-                community as well as how to call local public health officials.
-              </p>
-            </div>
-          </v-col>
-        </v-row>
-
-        <v-row>
-          <v-col :md="3" class="show-on-small-screen">
-            <img
-              class="shrink-on-small-screen"
-              src="../assets/pilot_page/woman_medical_device.svg"
-              alt="target"
-            />
-          </v-col>
-          <v-col :md="9">
-            <div class="copy ml-6">
-              <h3>The Highest Standard of Privacy</h3>
-              <p>
-                Covid Watch is anonymous and effective. Our app logs
-                interactions via Bluetooth in a decentralized system.
-                Privacy-focused solutions ease fears of surveillance and lead to
-                higher adoption rates among community members. There’s no need
-                to upend long-standing expectations around privacy during a
-                pandemic when technology exists to safely and securely stop the
-                coronavirus.
-              </p>
-            </div>
-          </v-col>
-          <v-col :md="3" class="hide-on-small-screen">
-            <img
-              class="shrink-on-small-screen"
-              src="../assets/pilot_page/woman_medical_device.svg"
-              alt="target"
-            />
-          </v-col>
-        </v-row>
-
-        <v-row>
-          <v-col :md="3">
-            <img
-              class="shrink-on-small-screen"
-              src="../assets/pilot_page/phone_god.svg"
-              alt="target"
-            />
-          </v-col>
-
-          <v-col :md="9">
-            <div class="copy ml-6">
-              <h3>Tech That Works Together</h3>
-              <p>
-                We helped set the standard for protecting users’ personal
-                information, and we are committed to bringing this standard to
-                communities around the world. Interoperability of different apps
-                and systems is key to slowing the spread. Our work influenced
-                many other research teams and later the world's largest tech
-                companies to adopt an anonymous approach to coronavirus exposure
-                alerts. We are aligned with the open source community working
-                all over the world to bring forward a cooperative solution to
-                COVID-19.
-              </p>
-            </div>
-          </v-col>
-        </v-row>
       </v-row>
 
-      <!-- help for public health section -->
-      <v-row id="public-health" :class="pageSectionClass">
-        <div style="display: block;">
-          <h2 class="section-title">Help for Public Health</h2>
-          <p>We have a targeted set of solutions for communities.</p>
-        </div>
+      <v-row class="d-flex justify-center mb-4 mt-10 pb-12">
+        <v-col class="d-flex justify-center px-6" cols="12">
+          <p>Let’s talk about what a successful pilot looks like for you.</p>
+        </v-col>
 
-        <v-row>
-          <v-col
-            :md="4"
-            :sm="8"
-            v-for="(card, i) in whyCards"
-            :key="i"
-            class="px-6"
+        <v-col class="d-flex justify-center" cols="12" :sm="8" :md="5">
+          <Button
+            target="_blank"
+            hero
+            href="https://covidapp.typeform.com/to/rN6LaK"
+            primary
+            >Talk With Us</Button
           >
-            <WhyCard
-              :img="card.img"
-              :title="card.title"
-              :body="card.body"
-            ></WhyCard>
-          </v-col>
-        </v-row>
-
-        <v-row class="mr-10 mb-4 mt-10 pb-12 d-flex justify-center">
-          <v-col :sm="4">
-            <Button
-              target="_blank"
-              href="https://covidapp.typeform.com/to/rN6LaK"
-              primary
-              >Start a Pilot</Button
-            >
-          </v-col>
-        </v-row>
+        </v-col>
       </v-row>
     </v-col>
   </v-row>
@@ -220,11 +152,14 @@
 
 <style lang="scss">
 #pilot {
+  #join-community {
+    background: rgba(245, 229, 230, 0.6);
+  }
+
   a {
     color: white;
     text-transform: none;
     font-style: normal;
-    // font-weight: bold;
   }
 
   .section-title {
@@ -277,11 +212,11 @@
     background: linear-gradient(
       0deg,
       rgba(67, 197, 217, 0.2),
-      rgba(255, 255, 255, 0) 20%
+      rgba(255, 255, 255, 0) 80%
     );
   }
 
-  #why-covid-watch {
+  #our-solution {
     background: linear-gradient(
       0deg,
       rgba(255, 255, 255, 0) 60%,
@@ -290,6 +225,7 @@
   }
 
   #arizona-video {
+    background-color: rgba(67, 197, 217, 0.2);
     h3 {
       margin-bottom: 10px;
     }
@@ -300,13 +236,11 @@
 <script>
 import Button from "../components/Button";
 import CTA from "../components/CTA";
-import WhyCard from "../components/WhyCard.vue";
 
 export default {
   components: {
     Button,
     CTA,
-    WhyCard,
   },
   head() {
     return {
@@ -314,24 +248,65 @@ export default {
     };
   },
   data: () => ({
-    whyCards: [
+    audienceBlocks: [
+      {
+        title: "For Universities",
+        body:
+          "Universities are on the frontlines of the pandemic, contributing valuable research while also navigating the challenge of welcoming students and staff back to campus safely.",
+      },
+      {
+        title: "For Government",
+        body:
+          "Governments at all levels play a crucial role in facilitating conversations while enacting and enforcing policy in a fluid environment.",
+      },
+      {
+        title: "For Public Health",
+        body:
+          "This is the greatest public health crisis in decades. Public health officials are leading the charge to develop and implement broad and effective responses to the pandemic.",
+      },
+    ],
+    solutionBlocks: [
+      {
+        title: "Open Source",
+        body:
+          "Our open source code is transparent and easily audited.  We are aligned with the open source community working all over the world to bring forward a cooperative solution to COVID-19.",
+        img: require("../assets/support_page/people_globe.svg"),
+        width: "width:60%;",
+      },
+      {
+        title: "Protect Privacy",
+        body:
+          "We use Google/Apple’s (GAEN) Bluetooth protocol, which is decentralized by design and  never collects any information about the identity or location of the end user. It’s that simple.",
+        img: require("../assets/pilot_page/woman_medical_device.svg"),
+        width: "width:60%",
+      },
+      {
+        title: "Scale Quickly",
+        body:
+          "Our technology is designed to meet the challenge of pandemic scale with ease. Augment other efforts like manual contact tracing without disruption.",
+        img: require("../assets/pilot_page/phone_god.svg"),
+        width: "width:49%",
+      },
       {
         title: "Verified Results",
         body:
-          "Public health officials will be able to verify positive test results if users have COVID-19. This prevents false positives and allows those infected to anonymously notify others of their potential exposure.",
+          "Public health officials will be able to confirm positive COVID-19 test results via our verification portal. This prevents false positives and allows those infected to anonymously notify others of their potential exposure.",
         img: require("../assets/pilot_page/man_doctor.svg"),
+        width: "width:53%",
       },
       {
-        title: "Your Face Forward",
+        title: "Your Messaging",
         body:
-          "Covid Watch builds anonymous, effective tools. Our app augments the work of manual contact tracers. When local communities use our app, they can see the name of your public health department and learn how to contact you.",
+          "Tailor the alerts and resources that your users receive. White label the mobile app so that your users will see the trusted brand of your public health department, and learn how to get help.",
         img: require("../assets/pilot_page/medical_branding.svg"),
+        width: "width:60%",
       },
       {
-        title: "Smart Support",
+        title: "We Work Together",
         body:
-          "Covid Watch is learning alongside you as we both work to protect your community. Expect our researchers to be extremely attentive to the app’s effect in your community and provide responsive feedback in a fast-moving world.",
+          "Covid Watch is learning alongside you as we work side by side. Expect our team to listen to feedback and adapt our solution to changing needs in a fluid landscape.",
         img: require("../assets/pilot_page/woman_helpdesk.svg"),
+        width: "width:60%",
       },
     ],
   }),
