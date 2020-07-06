@@ -53,7 +53,7 @@
         </v-col>
       </v-row>
 
-      <v-row id="arizona-video" :class="pageSectionClass">
+      <!-- <v-row id="arizona-video" :class="pageSectionClass">
         <h2 class="section-title">Covid Watch in Action</h2>
         <p>
           Joyce Schroeder, PhD, from the University of Arizona on why they chose
@@ -101,92 +101,68 @@
       <CTA
         content="Start a Pilot"
         href="https://covidapp.typeform.com/to/rN6LaK"
-      ></CTA>
+      ></CTA> -->
 
-      <!-- Why Covid Watch? section -->
-      <v-row id="why-covid-watch" :class="pageSectionClass">
-        <h2 class="section-title">Why Covid Watch?</h2>
+      <!-- Our Solution? section -->
+      <v-row id="our-solution" :class="pageSectionClass">
+        <h2 class="section-title">Our Solution</h2>
+        <p>We help scale your contact tracing efforts, working alongside your team to help identify additional cases that might be missed, maximizing your response.   Our technology helps you identify positive cases sooner, protecting your community faster. Here’s how our solution is unique</p>
+
+        <!-- Open Source block -->
         <v-row>
-          <v-col :md="3">
+          <v-col cols="4">
             <img
               class="shrink-on-small-screen"
               src="../assets/pilot_page/woman_target.svg"
               alt="target"
             />
+            <h3>Open Source</h3>
+            <p>
+              Our open source code is transparent and easily audited.  We are aligned with the open source community working all over the world to bring forward a cooperative solution to COVID-19.
+            </p>
           </v-col>
 
-          <v-col :md="9">
-            <div class="copy ml-6">
-              <h3>Focus Resources Where They're Needed</h3>
-              <p>
-                Manual contact tracing is labor-intensive. Local public health
-                officials need a way to focus and prioritize their efforts. With
-                the Covid Watch app, those who have been possibly exposed to the
-                coronavirus will receive an anonymous alert. That will be
-                followed by instructions on how to protect themselves and their
-                community as well as how to call local public health officials.
-              </p>
-            </div>
-          </v-col>
-        </v-row>
 
-        <v-row>
-          <v-col :md="3" class="show-on-small-screen">
+          <v-col cols="4">
             <img
               class="shrink-on-small-screen"
               src="../assets/pilot_page/woman_medical_device.svg"
               alt="target"
             />
+            <h3>Protect Privacy</h3>
+            <p>
+              We use Google/Apple’s (GAEN) Bluetooth protocol, which is decentralized by design and  never collects any information about the identity or location of the end user. It’s that simple. 
+            </p>
           </v-col>
-          <v-col :md="9">
-            <div class="copy ml-6">
-              <h3>The Highest Standard of Privacy</h3>
-              <p>
-                Covid Watch is anonymous and effective. Our app logs
-                interactions via Bluetooth in a decentralized system.
-                Privacy-focused solutions ease fears of surveillance and lead to
-                higher adoption rates among community members. There’s no need
-                to upend long-standing expectations around privacy during a
-                pandemic when technology exists to safely and securely stop the
-                coronavirus.
-              </p>
-            </div>
-          </v-col>
-          <v-col :md="3" class="hide-on-small-screen">
-            <img
-              class="shrink-on-small-screen"
-              src="../assets/pilot_page/woman_medical_device.svg"
-              alt="target"
-            />
-          </v-col>
-        </v-row>
 
-        <v-row>
-          <v-col :md="3">
+          <v-col cols="4">
             <img
               class="shrink-on-small-screen"
               src="../assets/pilot_page/phone_god.svg"
               alt="target"
             />
-          </v-col>
-
-          <v-col :md="9">
-            <div class="copy ml-6">
-              <h3>Tech That Works Together</h3>
-              <p>
-                We helped set the standard for protecting users’ personal
-                information, and we are committed to bringing this standard to
-                communities around the world. Interoperability of different apps
-                and systems is key to slowing the spread. Our work influenced
-                many other research teams and later the world's largest tech
-                companies to adopt an anonymous approach to coronavirus exposure
-                alerts. We are aligned with the open source community working
-                all over the world to bring forward a cooperative solution to
-                COVID-19.
-              </p>
-            </div>
+            <h3>Scale Quickly</h3>
+            <p>
+              Our technology is designed to meet the challenge of pandemic scale with ease. Augment other efforts like manual contact tracing without disruption.  
+            </p>
           </v-col>
         </v-row>
+
+        <v-row>
+          <v-col
+            cols="4"
+            v-for="(card, i) in whyCards"
+            :key="i"
+            class="px-6"
+          >
+            <WhyCard
+              :img="card.img"
+              :title="card.title"
+              :body="card.body"
+            ></WhyCard>
+          </v-col>
+        </v-row>
+
       </v-row>
 
       <!-- help for public health section -->
@@ -295,7 +271,7 @@
 // transform: matrix(1, 0, 0, -1, 0, 0);
   }
 
-  #why-covid-watch {
+  #our-solution {
     background: linear-gradient(
       0deg,
       rgba(255, 255, 255, 0) 60%,
