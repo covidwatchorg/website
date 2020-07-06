@@ -268,9 +268,10 @@ export default {
     solutionBlocks: [
       {
         title: "Open Source",
-        body: "Our open source code is transparent and easily audited.  We are aligned with the open source community working all over the world to bring forward a cooperative solution to COVID-19.",
+        body:
+          "Our open source code is transparent and easily audited.  We are aligned with the open source community working all over the world to bring forward a cooperative solution to COVID-19.",
         img: require("../assets/support_page/people_globe.svg"),
-        width: "width:60%;"
+        width: "width:60%;",
       },
       {
         title: "Protect Privacy",
