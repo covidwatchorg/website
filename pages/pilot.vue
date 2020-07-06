@@ -258,21 +258,21 @@ export default {
             {
         title: "Verified Results",
         body:
-          "Public health officials will be able to verify positive test results if users have COVID-19. This prevents false positives and allows those infected to anonymously notify others of their potential exposure.",
+          "Public health officials will be able to confirm positive COVID-19 test results via our verification portal. This prevents false positives and allows those infected to anonymously notify others of their potential exposure.",
         img: require("../assets/pilot_page/man_doctor.svg"),
         width: "width:53%"
       },
       {
-        title: "Your Face Forward",
+        title: "Your Messaging",
         body:
-          "Covid Watch builds anonymous, effective tools. Our app augments the work of manual contact tracers. When local communities use our app, they can see the name of your public health department and learn how to contact you.",
+          "Tailor the alerts and resources that your users receive. White label the mobile app so that your users will see the trusted brand of your public health department, and learn how to get help.",
         img: require("../assets/pilot_page/medical_branding.svg"),
         width: "width:60%"
       },
       {
-        title: "Smart Support",
+        title: "We Work Together",
         body:
-          "Covid Watch is learning alongside you as we both work to protect your community. Expect our researchers to be extremely attentive to the app’s effect in your community and provide responsive feedback in a fast-moving world.",
+          "Covid Watch is learning alongside you as we work side by side. Expect our team to listen to feedback and adapt our solution to changing needs in a fluid landscape.",
         img: require("../assets/pilot_page/woman_helpdesk.svg"),
         width: "width:60%"
       },
