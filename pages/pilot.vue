@@ -281,7 +281,7 @@ export default {
       {
         title: "Verified Results",
         body:
-          "Public health officials will be able to confirm positive COVID-19 test results via our verification portal. . This prevents false positives and allows those infected to anonymously notify others of their potential exposure.",
+          "Public health officials will be able to confirm positive COVID-19 test results via our verification portal. This prevents false positives and allows those infected to anonymously notify others of their potential exposure.",
         img: require("../assets/pilot_page/man_doctor.svg"),
         width: "width:53%",
       },
