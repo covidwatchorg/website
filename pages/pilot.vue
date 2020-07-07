@@ -46,7 +46,7 @@ The Covid Watch pilot program offers universities, governments, and public healt
                 href="https://covidapp.typeform.com/to/rN6LaK"
                 primary
                 hero
-                >Request a Meeting</Button
+                >Schedule a Demo</Button
               >
             </v-col>
           </v-row>
@@ -134,7 +134,7 @@ The Covid Watch pilot program offers universities, governments, and public healt
             hero
             href="https://covidapp.typeform.com/to/rN6LaK"
             primary
-            >Talk With Us</Button
+            >Schedule a Demo</Button
           >
         </v-col>
       </v-row>
