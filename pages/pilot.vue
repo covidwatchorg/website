@@ -274,7 +274,7 @@ export default {
       {
         title: "Scale Quickly",
         body:
-          "Our technology is designed to meet the challenge of pandemic scale with ease. Augment other efforts like manual contact tracing without disruption.",
+          "Our technology is designed to meet the challenge of pandemic scale with ease and augment other efforts like manual contact tracing without disruption.",
         img: require("../assets/pilot_page/phone_god.svg"),
         width: "width:49%",
       },
