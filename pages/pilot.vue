@@ -77,7 +77,7 @@ The Covid Watch pilot program offers universities, governments, and public healt
               />
             </div>
             <h3 class="mb-4">{{ block.title }}</h3>
-            <p>{{ block.body }}</p>
+            <p v-html="block.body"></p>
           </v-col>
         </v-row>
       </v-row>
@@ -261,9 +261,9 @@ export default {
       {
         title: "Open Source",
         body:
-          "Our <a href="https://github.com/covidwatchorg">open source code</a> is transparent and easily audited. We are aligned with the open source community working all over the world to bring forward a cooperative solution to COVID-19.",
+          "<p>Our <a style='color:#2C58B1;' href='https://github.com/covidwatchorg'>open source code</a> is transparent and easily audited. We are aligned with the open source community working all over the world to bring forward a cooperative solution to COVID-19.</p>",
         img: require("../assets/support_page/people_globe.svg"),
-        width: "width:60%;",
+        width: "width:56%;",
       },
       {
         title: "Protect Privacy",
