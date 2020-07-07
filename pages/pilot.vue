@@ -261,7 +261,7 @@ export default {
       {
         title: "Open Source",
         body:
-          "Our <a href="https://github.com/covidwatchorg">open source code</a> is transparent and easily audited.  We are aligned with the open source community working all over the world to bring forward a cooperative solution to COVID-19.",
+          "Our <a href="https://github.com/covidwatchorg">open source code</a> is transparent and easily audited. We are aligned with the open source community working all over the world to bring forward a cooperative solution to COVID-19.",
         img: require("../assets/support_page/people_globe.svg"),
         width: "width:60%;",
       },
