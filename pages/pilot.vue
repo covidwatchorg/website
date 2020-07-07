@@ -217,7 +217,6 @@ The Covid Watch pilot program offers universities, governments, and public healt
   }
 
   #arizona-video {
-    background-color: rgba(67, 197, 217, 0.2);
     h3 {
       margin-bottom: 10px;
     }
