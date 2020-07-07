@@ -12,11 +12,7 @@
                 alerts.
               </p>
               <p>
-                The Covid Watch pilot program offers universities, governments,
-                and public health departments an opportunity to whitelabel our
-                exposure alert app, access to our unique COVID-19 positive case
-                verification portal, and full service implementation support
-                from our team.
+The Covid Watch pilot program offers universities, governments, and public health departments an opportunity to rebrand our exposure alert app, access to our customizable COVID-19 positive case verification portal, and full service implementation support from our team.
               </p>
             </div>
           </div>
@@ -38,7 +34,7 @@
           <v-row class="mt-8">
             <v-col>
               <p>
-                Let's talk about what a successful pilot looks like for you.
+                If you'd like more information about running a pilot program for your organization, let's talk.
               </p>
             </v-col>
           </v-row>
@@ -50,7 +46,7 @@
                 href="https://covidapp.typeform.com/to/rN6LaK"
                 primary
                 hero
-                >Talk With Us</Button
+                >Request a Meeting</Button
               >
             </v-col>
           </v-row>
@@ -61,11 +57,7 @@
       <v-row id="our-solution" :class="pageSectionClass">
         <h2 class="section-title">Our Solution</h2>
         <p>
-          We help scale your contact tracing efforts, working alongside your
-          team to help identify additional cases that might be missed,
-          maximizing your response. Our technology helps you identify positive
-          cases sooner, protecting your community faster. Here’s how our
-          solution is unique:
+          We help scale your contact tracing efforts, working alongside your team to help identify additional cases that might be missed, maximizing your response.   Our technology helps you identify positive cases sooner, protecting your community faster. Here’s how our solution is unique:
         </p>
 
         <v-row class="d-flex justify-center">
@@ -257,7 +249,7 @@ export default {
       {
         title: "For Government",
         body:
-          "Governments at all levels play a crucial role in facilitating conversations while enacting and enforcing policy in a fluid environment.",
+          "Governments at all levels play a crucial role in facilitating conversations while enacting and enforcing policy in a dynamic environment.",
       },
       {
         title: "For Public Health",
@@ -269,14 +261,14 @@ export default {
       {
         title: "Open Source",
         body:
-          "Our open source code is transparent and easily audited.  We are aligned with the open source community working all over the world to bring forward a cooperative solution to COVID-19.",
+          "Our <a href="https://github.com/covidwatchorg">open source code</a> is transparent and easily audited.  We are aligned with the open source community working all over the world to bring forward a cooperative solution to COVID-19.",
         img: require("../assets/support_page/people_globe.svg"),
         width: "width:60%;",
       },
       {
         title: "Protect Privacy",
         body:
-          "We use Google/Apple’s (GAEN) Bluetooth protocol, which is decentralized by design and  never collects any information about the identity or location of the end user. It’s that simple.",
+          "We use Google/Apple’s (GAEN) Bluetooth protocol. Our team developed the decentralized anonymization algorithm now used by GAEN, which by design never collects any information about the identity or location of the end user.",
         img: require("../assets/pilot_page/woman_medical_device.svg"),
         width: "width:60%",
       },
@@ -290,7 +282,7 @@ export default {
       {
         title: "Verified Results",
         body:
-          "Public health officials will be able to confirm positive COVID-19 test results via our verification portal. This prevents false positives and allows those infected to anonymously notify others of their potential exposure.",
+          "Public health officials will be able to confirm positive COVID-19 test results via our verification portal. . This prevents false positives and allows those infected to anonymously notify others of their potential exposure.",
         img: require("../assets/pilot_page/man_doctor.svg"),
         width: "width:53%",
       },
