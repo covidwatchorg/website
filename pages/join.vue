@@ -49,12 +49,14 @@
                 >I want to volunteer!</Button
               >
             </v-col>
+            <p>
+              <b>We also have some open positions!</b> Check them out <nuxt-link to="/helpout">here</nuxt-link>
+            </p>
 
             <h4 class="mt-6 mb-4">Most Wanted Volunteers</h4>
             <ul>
               <li v-for="(item, i) in urgentRoles" :key="i">
-                <strong>{{ item.role }}</strong>
-                {{ item.desc }}
+                {{ item.role }} {{ item.desc }}
               </li>
             </ul>
 
@@ -178,6 +180,9 @@
       margin-top: 6px;
       width: 180px;
     }
+  }
+  ul {
+    list-style-type: none;
   }
 }
 </style>
