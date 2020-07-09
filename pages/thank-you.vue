@@ -244,11 +244,6 @@ Thank you for being part of the solution. Together we’ve created a diverse com
     margin-bottom: 16px;
   }
 
-  #public-health {
-    // note: this is #71cddf with 15% opacity
-    background-color: rgba(113, 205, 223, 0.15);
-  }
-
   .copy {
     display: flex;
     flex-direction: column;
@@ -303,7 +298,7 @@ export default {
   },
   head() {
     return {
-      title: "Pilot | Covid Watch",
+      title: "Thank You | Covid Watch",
     };
   },
   data: () => ({
