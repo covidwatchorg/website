@@ -50,7 +50,8 @@
               >
             </v-col>
             <p>
-              <strong>We also have some open positions!</strong> Check them out <nuxt-link to="/helpout">here</nuxt-link>
+              <strong>We also have some open positions!</strong> Check them out
+              <nuxt-link to="/helpout">here</nuxt-link>
             </p>
 
             <h4 class="mt-6 mb-4">Most Wanted Volunteers</h4>
