@@ -127,7 +127,7 @@ Thank you for being part of the solution. Together we’ve created a diverse com
       <v-row id="connect-with-us" :class="pageSectionClass">
         <v-col cols="12">
           <div class="mb-12">
-            <h2 class="mb-8">Companies</h2>
+            <h2 class="mb-8">Connect With Us</h2>
             <div class="subtitle">
               <p>
                 Do you want to help us tell our story? Does your organization want to work with us to help stop the spread of COVID-19? Get in touch:
