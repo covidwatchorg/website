@@ -1,141 +1,172 @@
 <template>
-  <v-row id="pilot">
+  <v-row id="thank-you">
     <v-col cols="12" class="py-0">
-      <!-- Hero -->
-      <v-row id="hero" :class="pageSectionClass">
-        <v-col cols="12">
+      <!-- Header -->
+      <v-row id="header" :class="pageSectionClass">
+        <v-col cols="12" :md="7" :sm="12">
           <div class="mb-12">
-            <h1 class="mb-5">Pilot With Us</h1>
+            <h1 class="mb-5">Thank you! We couldn't do this without you.</h1>
             <div class="subtitle">
               <p>
-                Amplify your COVID-19 response strategy with anonymous exposure
-                alerts.
-              </p>
-              <p>
-The Covid Watch pilot program offers universities, governments, and public health departments an opportunity to rebrand our exposure alert app, access to our customizable COVID-19 positive case verification portal, and full service implementation support from our team.
+Thank you for being part of the solution. Together we’ve created a diverse community of researchers, developers, public health professionals, security experts and more. Your contribution has a tremendous impact, and we couldn’t thank you enough.
               </p>
             </div>
           </div>
-
-          <v-row>
-            <v-col
-              cols="10"
-              :md="4"
-              v-for="(audience, i) in audienceBlocks"
-              :key="i"
-            >
-              <h3 class="mb-4">{{ audience.title }}</h3>
-              <p style="font-size: 16px; line-height: 20px;">
-                {{ audience.body }}
-              </p>
-            </v-col>
+          <v-row class="d-flex justify-center">
+            <h3 class="mb4">Let's connect</h3>
           </v-row>
-
-          <v-row class="mt-8">
-            <v-col>
-              <p>
-                If you'd like more information about running a pilot program for your organization, let's talk.
-              </p>
-            </v-col>
-          </v-row>
-
-          <v-row>
-            <v-col :sm="5">
-              <Button
-                target="_blank"
-                href="https://covidapp.typeform.com/to/rN6LaK"
-                primary
-                hero
-                >Schedule a Demo</Button
-              >
-            </v-col>
+          <v-row class="d-flex justify-center">
+            <span class="group pa-2">
+              <a :href="github.link" class="ma-1">
+                <v-icon large class="blue-icon">mdi-github</v-icon>
+              </a>
+              <a :href="facebook.link" class="ma-1">
+                <v-icon large class="blue-icon">mdi-facebook</v-icon>
+              </a>
+              <a :href="twitter.link" class="ma-1">
+                <v-icon large class="blue-icon">mdi-twitter</v-icon>
+              </a>
+            </span>
           </v-row>
         </v-col>
-      </v-row>
-
-      <!-- Our Solution section -->
-      <v-row id="our-solution" :class="pageSectionClass">
-        <h2 class="section-title">Our Solution</h2>
-        <p>
-          We help scale your contact tracing efforts, working alongside your team to help identify additional cases that might be missed, maximizing your response.   Our technology helps you identify positive cases sooner, protecting your community faster. Here’s how our solution is unique:
-        </p>
-
-        <v-row class="d-flex justify-center">
-          <v-col
-            v-for="(block, i) in solutionBlocks"
-            :key="i"
-            cols="10"
-            :sm="8"
-            :md="4"
-          >
-            <div class="d-flex justify-center">
-              <img
-                :style="block.width"
-                class="mb-6"
-                :src="block.img"
-                :alt="block.title"
-              />
-            </div>
-            <h3 class="mb-4">{{ block.title }}</h3>
-            <p v-html="block.body"></p>
-          </v-col>
+        <v-spacer></v-spacer>
+        <v-row>
+          <div id="animal-img" class="placeholder">
+          </div>
         </v-row>
       </v-row>
 
-      <v-row id="join-community" :class="pageSectionClass">
-        <v-col cols="10" :md="8">
-          <h3>Join Our Community of Leaders</h3>
-          <p class="subtitle mt-5">
-            Participation in our pilot program also includes access to the Covid
-            Watch Forum, an invite-only collaborative space for our partners and
-            advisory council of subject matter experts to share best practices
-            and learn from each other.
-            <nuxt-link style="color: #2c58b1;" to="/forum"
-              >Learn more here</nuxt-link
-            >.
-          </p>
-        </v-col>
-        <v-col cols="0" :md="4">
-          <img
-            class="mt-5 hide-on-small-screen"
-            style="width: 100%;"
-            src="../assets/forum_page/forum_logo.svg"
-          />
-        </v-col>
-      </v-row>
 
-      <v-row id="arizona-video" :class="pageSectionClass">
-        <h2 class="section-title">Covid Watch in Action</h2>
-        <p>
-          Joyce Schroeder, PhD, from the University of Arizona on why they chose
-          to work with Covid Watch to test exposure notifications.
-        </p>
-
-        <v-col class="d-flex justify-center">
-          <iframe
-            width="1000"
-            height="577"
-            src="https://www.youtube.com/embed/zIhxpO_qmfw"
-            frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+      <!-- Volunteers section -->
+      <v-row id="volunteers" :class="pageSectionClass">
+        <v-col cols="12">
+          <div class="mb-12">
+            <h1 class="mb-5">Volunteers</h1>
+            <div class="subtitle">
+              <p>
+                Protecting our communities is a team effoert. Join us and become part of the solution.
+              </p>
+            </div>
+          </div>
+          <v-row class="d-flex align-center justify-center">
+            <v-icon large>mdi-chevron-left</v-icon>
+            <div id="animal-img-2" class="placeholder">
+            </div>
+            <v-icon large>mdi-chevron-right</v-icon>
+            <v-col cols="10" class="mt-12 mb-10 mb-md-0" :sm="8" :md="3">
+              <Button primary hero nuxt to="/join">Join Us</Button>
+            </v-col>
+          </v-row>
         </v-col>
       </v-row>
 
-      <v-row class="d-flex justify-center mb-4 mt-10 pb-12">
-        <v-col class="d-flex justify-center px-6" cols="12">
-          <p>Let’s talk about what a successful pilot looks like for you.</p>
+       <!-- Research participants section -->
+      <v-row id="research-participants" :class="pageSectionClass">
+        <v-col cols="12">
+          <div class="mb-12">
+            <h1 class="mb-5">Research Participants</h1>
+            <div class="subtitle">
+              <p>
+                Want to shape the future of the app? Sign up below and become a research participant.
+              </p>
+            </div>
+          </div>
+          <v-row class="d-flex align-center justify-center">
+            <div id="animal-img-3" class="placeholder">
+            </div>
+            <v-col cols="10" class="mt-12 mb-10 mb-md-0" :sm="8" :md="3">
+              <Button primary hero nuxt to="/pilot">Sign up</Button>
+            </v-col>
+          </v-row>
         </v-col>
+      </v-row>
 
-        <v-col class="d-flex justify-center" cols="12" :sm="8" :md="5">
-          <Button
-            target="_blank"
-            hero
-            href="https://covidapp.typeform.com/to/rN6LaK"
-            primary
-            >Schedule a Demo</Button
-          >
+      <!-- Pilot partners section -->
+      <v-row id="pilot-partners" :class="pageSectionClass">
+        <v-col cols="12">
+          <div class="mb-12">
+            <h1 class="mb-5">Pilot Partners</h1>
+            <div class="subtitle">
+              <p>
+                Want to bring Covid Watch to your community? Learn how to start a pilot.
+              </p>
+            </div>
+          </div>
+          <div id="partner-img" class="placeholder">
+          </div>
+          <v-row class="d-flex align-center justify-center">
+            <v-col cols="10" class="mt-12 mb-10 mb-md-0" :sm="8" :md="3">
+              <Button primary hero nuxt to="/pilot">Start a pilot</Button>
+            </v-col>
+          </v-row>
+        </v-col>
+      </v-row>
+
+      <!-- Companies section -->
+      <v-row id="companies" :class="pageSectionClass">
+        <v-col cols="12">
+          <div class="mb-12">
+            <h1 class="mb-5">Companies</h1>
+            <div class="subtitle">
+              <p>
+                Does your organization want to work with us to help stop the spread of COVID-19? Get in touch.__
+              </p>
+            </div>
+          </div>
+          <div id="companies-img" class="placeholder">
+          </div>
+          <v-row class="d-flex align-center justify-center">
+            <v-col cols="10" class="mt-12 mb-10 mb-md-0" :sm="8" :md="3">
+              <Button primary hero nuxt to="/forum">Collaborate</Button>
+            </v-col>
+          </v-row>
+        </v-col>
+      </v-row>
+
+      <!-- Connect with us section -->
+      <v-row id="connect-with-us" :class="pageSectionClass">
+        <v-col cols="12">
+          <div class="mb-12">
+            <h2 class="mb-8">Companies</h2>
+            <div class="subtitle">
+              <p>
+                Do you want to help us tell our story? Does your organization want to work with us to help stop the spread of COVID-19? Get in touch:
+              </p>
+            </div>
+          </div>
+          <ul class="bullet-point-list">
+            <li>
+              Media inquiries: media@covidwatch.org
+            </li>
+            <li>
+              Partnerships: partnerships@covidwatch.org
+            </li>
+            <li>
+              All other inquiries: contact@covidwatch.org
+            </li>
+          </ul>
+        </v-col>
+      </v-row>
+
+      <!-- Newsletter section -->
+      <v-row id="newsletter" :class="pageSectionClass">
+        <v-col cols="12">
+          <div class="mb-12">
+            <h2 class="mb-8">Newsletter</h2>
+            <div class="subtitle">
+              <p class="bold">
+                To receive periodic updates, subscribe to our newsletter by entering your email below. 
+              </p>
+            </div>
+          </div>
+          <v-row class="d-flex">
+            <v-col cols="10" class="mb-10 mb-md-0" :sm="8" :md="6">
+              <v-text-field :outlined="true" placeholder="Email address" class="email-input"></v-text-field>
+            </v-col>
+            <v-col cols="10" class="mb-10 mb-md-0" :sm="8" :md="3">
+              <Button primary hero nuxt to="/news">Subscribe</Button>
+            </v-col>
+          </v-row>
         </v-col>
       </v-row>
     </v-col>
@@ -143,15 +174,69 @@ The Covid Watch pilot program offers universities, governments, and public healt
 </template>
 
 <style lang="scss">
-#pilot {
+#thank-you {
   #join-community {
     background: rgba(245, 229, 230, 0.6);
+  }
+
+  #header {
+    background: linear-gradient(0deg, rgba(67, 197, 217, 0.2), rgba(255, 255, 255, 0) 60%);
+  }
+
+  #newsletter {
+    background: rgba(69, 197, 217, 0.1);
+  }
+
+  #animal-img {
+    width: 412px;
+    height: 475px;
+  }
+
+  #animal-img-2 {
+    width: 1090px;
+    height: 404px;
+  }
+
+  #animal-img-3 {
+    width: 1090px;
+    height: 135px;
+  }
+
+  #partner-img {
+    width: 353px;
+    height: 108px;
+  }
+
+  #companies-img {
+    width: 921px;
+    height: 117px;
+  }
+
+  .placeholder {
+    background: grey;
+  }
+
+  .email-input .v-input__slot {
+    min-height: 52.5px;
+    background: #fff;
   }
 
   a {
     color: white;
     text-transform: none;
     font-style: normal;
+  }
+  
+  p {
+    font-size: 22px;
+  }
+
+  .bullet-point-list {
+    list-style: disc;
+  }
+
+  .bold {
+    font-weight: 600;
   }
 
   .section-title {
@@ -194,32 +279,9 @@ The Covid Watch pilot program offers universities, governments, and public healt
     }
   }
 
-  #public-health {
-    .shrink-on-small-screen {
-      max-height: 240px;
-    }
-  }
-
-  #hero {
-    background: linear-gradient(
-      0deg,
-      rgba(67, 197, 217, 0.2),
-      rgba(255, 255, 255, 0) 80%
-    );
-  }
-
-  #our-solution {
-    background: linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0) 60%,
-      rgba(67, 197, 217, 0.2)
-    );
-  }
-
-  #arizona-video {
-    h3 {
-      margin-bottom: 10px;
-    }
+  .blue-icon {
+    font-size: 55px !important;
+    color: #2C58B1;
   }
 }
 </style>
@@ -227,6 +289,12 @@ The Covid Watch pilot program offers universities, governments, and public healt
 <script>
 import Button from "../components/Button";
 import CTA from "../components/CTA";
+import {
+  TWITTER,
+  FACEBOOK,
+  INSTAGRAM,
+  GITHUB,
+} from "@/assets/data/social_media.js";
 
 export default {
   components: {
@@ -239,67 +307,10 @@ export default {
     };
   },
   data: () => ({
-    audienceBlocks: [
-      {
-        title: "For Universities",
-        body:
-          "Universities are on the frontlines of the pandemic, contributing valuable research while also navigating the challenge of welcoming students and staff back to campus safely.",
-      },
-      {
-        title: "For Government",
-        body:
-          "Governments at all levels play a crucial role in facilitating conversations while enacting and enforcing policy in a dynamic environment.",
-      },
-      {
-        title: "For Public Health",
-        body:
-          "This is the greatest public health crisis in decades. Public health officials are leading the charge to develop and implement broad and effective responses to the pandemic.",
-      },
-    ],
-    solutionBlocks: [
-      {
-        title: "Open Source",
-        body:
-          "<p>Our <a style='color:#2C58B1;' href='https://github.com/covidwatchorg'>open source code</a> is transparent and easily audited. We are aligned with the open source community working all over the world to bring forward a cooperative solution to COVID-19.</p>",
-        img: require("../assets/support_page/people_globe.svg"),
-        width: "width:56%;",
-      },
-      {
-        title: "Protect Privacy",
-        body:
-          "We use Google/Apple’s (GAEN) Bluetooth protocol. Our team developed the decentralized anonymization algorithm now used by GAEN, which by design never collects any information about the identity or location of the end user.",
-        img: require("../assets/pilot_page/woman_medical_device.svg"),
-        width: "width:60%",
-      },
-      {
-        title: "Scale Quickly",
-        body:
-          "Our technology is designed to meet the challenge of pandemic scale with ease and augment other efforts like manual contact tracing without disruption.",
-        img: require("../assets/pilot_page/phone_god.svg"),
-        width: "width:49%",
-      },
-      {
-        title: "Verified Results",
-        body:
-          "Public health officials will be able to confirm positive COVID-19 test results via our verification portal. This prevents false positives and allows those infected to anonymously notify others of their potential exposure.",
-        img: require("../assets/pilot_page/man_doctor.svg"),
-        width: "width:53%",
-      },
-      {
-        title: "Your Messaging",
-        body:
-          "Tailor the alerts and resources that your users receive. White label the mobile app so that your users will see the trusted brand of your public health department, and learn how to get help.",
-        img: require("../assets/pilot_page/medical_branding.svg"),
-        width: "width:60%",
-      },
-      {
-        title: "We Work Together",
-        body:
-          "Covid Watch is learning alongside you as we work side by side. Expect our team to listen to feedback and adapt our solution to changing needs in a fluid landscape.",
-        img: require("../assets/pilot_page/woman_helpdesk.svg"),
-        width: "width:60%",
-      },
-    ],
+    twitter: TWITTER,
+    instagram: INSTAGRAM,
+    facebook: FACEBOOK,
+    github: GITHUB,
   }),
 };
 </script>
