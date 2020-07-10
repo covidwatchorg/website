@@ -8,7 +8,10 @@
             <h1 class="mb-5">Thank you! We couldn't do this without you.</h1>
             <div class="subtitle">
               <p>
-Thank you for being part of the solution. Together we’ve created a diverse community of researchers, developers, public health professionals, security experts and more. Your contribution has a tremendous impact, and we couldn’t thank you enough.
+                Thank you for being part of the solution. Together we’ve created
+                a diverse community of researchers, developers, public health
+                professionals, security experts and more. Your contribution has
+                a tremendous impact, and we couldn’t thank you enough.
               </p>
             </div>
           </div>
@@ -31,11 +34,9 @@ Thank you for being part of the solution. Together we’ve created a diverse com
         </v-col>
         <v-spacer></v-spacer>
         <v-row>
-          <div id="animal-img" class="placeholder">
-          </div>
+          <div id="animal-img" class="placeholder"></div>
         </v-row>
       </v-row>
-
 
       <!-- Volunteers section -->
       <v-row id="volunteers" :class="pageSectionClass">
@@ -44,14 +45,14 @@ Thank you for being part of the solution. Together we’ve created a diverse com
             <h1 class="mb-5">Volunteers</h1>
             <div class="subtitle">
               <p>
-                Protecting our communities is a team effoert. Join us and become part of the solution.
+                Protecting our communities is a team effoert. Join us and become
+                part of the solution.
               </p>
             </div>
           </div>
           <v-row class="d-flex align-center justify-center">
             <v-icon large>mdi-chevron-left</v-icon>
-            <div id="animal-img-2" class="placeholder">
-            </div>
+            <div id="animal-img-2" class="placeholder"></div>
             <v-icon large>mdi-chevron-right</v-icon>
             <v-col cols="10" class="mt-12 mb-10 mb-md-0" :sm="8" :md="3">
               <Button primary hero nuxt to="/join">Join Us</Button>
@@ -60,20 +61,20 @@ Thank you for being part of the solution. Together we’ve created a diverse com
         </v-col>
       </v-row>
 
-       <!-- Research participants section -->
+      <!-- Research participants section -->
       <v-row id="research-participants" :class="pageSectionClass">
         <v-col cols="12">
           <div class="mb-12">
             <h1 class="mb-5">Research Participants</h1>
             <div class="subtitle">
               <p>
-                Want to shape the future of the app? Sign up below and become a research participant.
+                Want to shape the future of the app? Sign up below and become a
+                research participant.
               </p>
             </div>
           </div>
           <v-row class="d-flex align-center justify-center">
-            <div id="animal-img-3" class="placeholder">
-            </div>
+            <div id="animal-img-3" class="placeholder"></div>
             <v-col cols="10" class="mt-12 mb-10 mb-md-0" :sm="8" :md="3">
               <Button primary hero nuxt to="/pilot">Sign up</Button>
             </v-col>
@@ -88,12 +89,12 @@ Thank you for being part of the solution. Together we’ve created a diverse com
             <h1 class="mb-5">Pilot Partners</h1>
             <div class="subtitle">
               <p>
-                Want to bring Covid Watch to your community? Learn how to start a pilot.
+                Want to bring Covid Watch to your community? Learn how to start
+                a pilot.
               </p>
             </div>
           </div>
-          <div id="partner-img" class="placeholder">
-          </div>
+          <div id="partner-img" class="placeholder"></div>
           <v-row class="d-flex align-center justify-center">
             <v-col cols="10" class="mt-12 mb-10 mb-md-0" :sm="8" :md="3">
               <Button primary hero nuxt to="/pilot">Start a pilot</Button>
@@ -109,12 +110,12 @@ Thank you for being part of the solution. Together we’ve created a diverse com
             <h1 class="mb-5">Companies</h1>
             <div class="subtitle">
               <p>
-                Does your organization want to work with us to help stop the spread of COVID-19? Get in touch.__
+                Does your organization want to work with us to help stop the
+                spread of COVID-19? Get in touch.__
               </p>
             </div>
           </div>
-          <div id="companies-img" class="placeholder">
-          </div>
+          <div id="companies-img" class="placeholder"></div>
           <v-row class="d-flex align-center justify-center">
             <v-col cols="10" class="mt-12 mb-10 mb-md-0" :sm="8" :md="3">
               <Button primary hero nuxt to="/forum">Collaborate</Button>
@@ -130,7 +131,9 @@ Thank you for being part of the solution. Together we’ve created a diverse com
             <h2 class="mb-8">Connect With Us</h2>
             <div class="subtitle">
               <p>
-                Do you want to help us tell our story? Does your organization want to work with us to help stop the spread of COVID-19? Get in touch:
+                Do you want to help us tell our story? Does your organization
+                want to work with us to help stop the spread of COVID-19? Get in
+                touch:
               </p>
             </div>
           </div>
@@ -155,13 +158,18 @@ Thank you for being part of the solution. Together we’ve created a diverse com
             <h2 class="mb-8">Newsletter</h2>
             <div class="subtitle">
               <p class="bold">
-                To receive periodic updates, subscribe to our newsletter by entering your email below. 
+                To receive periodic updates, subscribe to our newsletter by
+                entering your email below.
               </p>
             </div>
           </div>
           <v-row class="d-flex">
             <v-col cols="10" class="mb-10 mb-md-0" :sm="8" :md="6">
-              <v-text-field :outlined="true" placeholder="Email address" class="email-input"></v-text-field>
+              <v-text-field
+                :outlined="true"
+                placeholder="Email address"
+                class="email-input"
+              ></v-text-field>
             </v-col>
             <v-col cols="10" class="mb-10 mb-md-0" :sm="8" :md="3">
               <Button primary hero nuxt to="/news">Subscribe</Button>
@@ -176,7 +184,11 @@ Thank you for being part of the solution. Together we’ve created a diverse com
 <style lang="scss">
 #thank-you {
   #header {
-    background: linear-gradient(0deg, rgba(67, 197, 217, 0.2), rgba(255, 255, 255, 0) 60%);
+    background: linear-gradient(
+      0deg,
+      rgba(67, 197, 217, 0.2),
+      rgba(255, 255, 255, 0) 60%
+    );
   }
 
   #newsletter {
@@ -222,7 +234,7 @@ Thank you for being part of the solution. Together we’ve created a diverse com
     text-transform: none;
     font-style: normal;
   }
-  
+
   p {
     font-size: 22px;
   }
@@ -272,7 +284,7 @@ Thank you for being part of the solution. Together we’ve created a diverse com
 
   .blue-icon {
     font-size: 55px !important;
-    color: #2C58B1;
+    color: #2c58b1;
   }
 }
 </style>

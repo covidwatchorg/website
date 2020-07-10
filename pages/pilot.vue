@@ -12,7 +12,11 @@
                 alerts.
               </p>
               <p>
-The Covid Watch pilot program offers universities, governments, and public health departments an opportunity to rebrand our exposure alert app, access to our customizable COVID-19 positive case verification portal, and full service implementation support from our team.
+                The Covid Watch pilot program offers universities, governments,
+                and public health departments an opportunity to rebrand our
+                exposure alert app, access to our customizable COVID-19 positive
+                case verification portal, and full service implementation
+                support from our team.
               </p>
             </div>
           </div>
@@ -34,7 +38,8 @@ The Covid Watch pilot program offers universities, governments, and public healt
           <v-row class="mt-8">
             <v-col>
               <p>
-                If you'd like more information about running a pilot program for your organization, let's talk.
+                If you'd like more information about running a pilot program for
+                your organization, let's talk.
               </p>
             </v-col>
           </v-row>
@@ -57,7 +62,11 @@ The Covid Watch pilot program offers universities, governments, and public healt
       <v-row id="our-solution" :class="pageSectionClass">
         <h2 class="section-title">Our Solution</h2>
         <p>
-          We help scale your contact tracing efforts, working alongside your team to help identify additional cases that might be missed, maximizing your response.   Our technology helps you identify positive cases sooner, protecting your community faster. Here’s how our solution is unique:
+          We help scale your contact tracing efforts, working alongside your
+          team to help identify additional cases that might be missed,
+          maximizing your response. Our technology helps you identify positive
+          cases sooner, protecting your community faster. Here’s how our
+          solution is unique:
         </p>
 
         <v-row class="d-flex justify-center">
