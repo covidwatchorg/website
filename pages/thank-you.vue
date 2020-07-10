@@ -33,9 +33,13 @@
             </span>
           </v-row>
         </v-col>
-        <v-spacer class="col-1"></v-spacer>
-        <v-col cols="12" class="mt-12 mb-12" :sm="12" :md="4">
-          <div id="animal-img" class="placeholder"></div>
+        <v-spacer></v-spacer>
+        <v-col cols="4" class="d-flex justify-center align-center" :sm="12" :md="4">
+          <img
+              class="header-svg"
+              src="../assets/thank_you_page/header_img.svg"
+              alt="header-img"
+            />
         </v-col>
       </v-row>
 
@@ -46,15 +50,19 @@
             <h1 class="mb-5">Volunteers</h1>
             <div class="subtitle">
               <p>
-                Protecting our communities is a team effoert. Join us and become
+                Protecting our communities is a team effort. Join us and become
                 part of the solution.
               </p>
             </div>
           </div>
           <v-row class="align-center justify-space-between">
             <v-icon large>mdi-chevron-left</v-icon>
-              <v-col cols="8" :sm="8" :md="11">
-                <div id="animal-img-2" class="placeholder"></div>
+              <v-col cols="8" :sm="10" :md="11">
+                <img
+                  class="volunteers-svg"
+                  src="../assets/thank_you_page/volunteers_img.svg"
+                  alt="volunteers-img"
+                />
               </v-col>
             <v-icon large>mdi-chevron-right</v-icon>
           </v-row>
@@ -80,7 +88,11 @@
           </div>
           <v-row class="justify-center">
             <v-col cols="12" :sm="10" :md="12">
-              <div id="animal-img-3" class="placeholder"></div>
+              <img
+                  class="research-participants-svg"
+                  src="../assets/thank_you_page/research_participants_img.svg"
+                  alt="research-participants-img"
+                />
             </v-col>
           </v-row>
           <v-row class="d-flex align-center justify-center">
@@ -105,7 +117,11 @@
           </div>
           <v-row class="justify-start">
             <v-col cols="4" :sm="6" :md="4">
-              <div id="partner-img" class="placeholder"></div>
+              <img
+                  class="pilot-partner-logo-svg"
+                  src="../assets/thank_you_page/pilot_partner_logo.svg"
+                  alt="pilot-partner-logo"
+                />
             </v-col>
           </v-row>
           <v-row class="d-flex align-center justify-center">
@@ -130,7 +146,11 @@
           </div>
           <v-row class="justify-start">
             <v-col cols='10' :sm="12" :md="10">
-              <div id="companies-img" class="placeholder"></div>
+              <img
+                  class="company-logos-svg"
+                  src="../assets/thank_you_page/company_logos.svg"
+                  alt="company-logos"
+                />
             </v-col>
           </v-row>
           <v-row class="d-flex align-center justify-center">
@@ -192,33 +212,13 @@
     background: rgba(69, 197, 217, 0.1);
   }
 
-  #animal-img {
-    min-height: 400px;
-  }
-
-  #animal-img-2 {
-    min-height: 400px;
-  }
-
-  #animal-img-3 {
-    min-height: 135px;
-  }
-
-  #partner-img {
-    min-height: 135px;
-  }
-
-  #companies-img {
-    min-height: 135px;
-  }
-
-  .placeholder {
-    background: grey;
-  }
-
   .email-input .v-input__slot {
     min-height: 52.5px;
     background: #fff;
+  }
+
+  img {
+    width: 100%;
   }
 
   a {
