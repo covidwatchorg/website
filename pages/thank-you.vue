@@ -1,4 +1,5 @@
 <template>
+  <v-container>
   <v-row id="thank-you">
     <v-col cols="12" class="py-0">
       <!-- Header -->
@@ -32,10 +33,10 @@
             </span>
           </v-row>
         </v-col>
-        <v-spacer></v-spacer>
-        <v-row>
+        <v-spacer class="col-1"></v-spacer>
+        <v-col cols="12" class="mt-12 mb-12" :sm="12" :md="4">
           <div id="animal-img" class="placeholder"></div>
-        </v-row>
+        </v-col>
       </v-row>
 
       <!-- Volunteers section -->
@@ -50,14 +51,18 @@
               </p>
             </div>
           </div>
-          <v-row class="d-flex align-center justify-center">
+          <v-row class="align-center justify-space-between">
             <v-icon large>mdi-chevron-left</v-icon>
-            <div id="animal-img-2" class="placeholder"></div>
+              <v-col cols="8" :sm="8" :md="11">
+                <div id="animal-img-2" class="placeholder"></div>
+              </v-col>
             <v-icon large>mdi-chevron-right</v-icon>
-            <v-col cols="10" class="mt-12 mb-10 mb-md-0" :sm="8" :md="3">
-              <Button primary hero nuxt to="/join">Join Us</Button>
-            </v-col>
           </v-row>
+           <v-row class="justify-center">
+              <v-col cols="10" class="mt-12 mb-10 mb-md-0" :sm="8" :md="3">
+                <Button primary hero nuxt to="/join">Join Us</Button>
+              </v-col>
+            </v-row>
         </v-col>
       </v-row>
 
@@ -73,10 +78,14 @@
               </p>
             </div>
           </div>
+          <v-row class="justify-center">
+            <v-col cols="12" :sm="10" :md="12">
+              <div id="animal-img-3" class="placeholder"></div>
+            </v-col>
+          </v-row>
           <v-row class="d-flex align-center justify-center">
-            <div id="animal-img-3" class="placeholder"></div>
             <v-col cols="10" class="mt-12 mb-10 mb-md-0" :sm="8" :md="3">
-              <Button primary hero nuxt to="/pilot">Sign up</Button>
+              <Button primary hero nuxt to="/join">Sign up</Button>
             </v-col>
           </v-row>
         </v-col>
@@ -94,7 +103,11 @@
               </p>
             </div>
           </div>
-          <div id="partner-img" class="placeholder"></div>
+          <v-row class="justify-start">
+            <v-col cols="4" :sm="6" :md="4">
+              <div id="partner-img" class="placeholder"></div>
+            </v-col>
+          </v-row>
           <v-row class="d-flex align-center justify-center">
             <v-col cols="10" class="mt-12 mb-10 mb-md-0" :sm="8" :md="3">
               <Button primary hero nuxt to="/pilot">Start a pilot</Button>
@@ -115,10 +128,14 @@
               </p>
             </div>
           </div>
-          <div id="companies-img" class="placeholder"></div>
+          <v-row class="justify-start">
+            <v-col cols='10' :sm="12" :md="10">
+              <div id="companies-img" class="placeholder"></div>
+            </v-col>
+          </v-row>
           <v-row class="d-flex align-center justify-center">
             <v-col cols="10" class="mt-12 mb-10 mb-md-0" :sm="8" :md="3">
-              <Button primary hero nuxt to="/forum">Collaborate</Button>
+              <Button primary hero nuxt to="/join">Collaborate</Button>
             </v-col>
           </v-row>
         </v-col>
@@ -137,48 +154,28 @@
               </p>
             </div>
           </div>
-          <ul class="bullet-point-list">
+          <ul class="contact-list">
             <li>
-              Media inquiries: media@covidwatch.org
+              Media inquiries:
+              <a href="mailto: media@covidwatch.org">media@covidwatch.org</a>
             </li>
             <li>
-              Partnerships: partnerships@covidwatch.org
+              Partnerships:
+              <a href="mailto: contact@covidwatch.org">partnerships@covidwatch.org</a>
             </li>
             <li>
-              All other inquiries: contact@covidwatch.org
+              All other inquiries:
+              <a href="mailto: contact@covidwatch.org">contact@covidwatch.org</a>
             </li>
           </ul>
         </v-col>
       </v-row>
 
-      <!-- Newsletter section -->
-      <v-row id="newsletter" :class="pageSectionClass">
-        <v-col cols="12">
-          <div class="mb-12">
-            <h2 class="mb-8">Newsletter</h2>
-            <div class="subtitle">
-              <p class="bold">
-                To receive periodic updates, subscribe to our newsletter by
-                entering your email below.
-              </p>
-            </div>
-          </div>
-          <v-row class="d-flex">
-            <v-col cols="10" class="mb-10 mb-md-0" :sm="8" :md="6">
-              <v-text-field
-                :outlined="true"
-                placeholder="Email address"
-                class="email-input"
-              ></v-text-field>
-            </v-col>
-            <v-col cols="10" class="mb-10 mb-md-0" :sm="8" :md="3">
-              <Button primary hero nuxt to="/news">Subscribe</Button>
-            </v-col>
-          </v-row>
-        </v-col>
-      </v-row>
+      <!-- Newsletter -->
+      <Newsletter></Newsletter>
     </v-col>
   </v-row>
+  </v-container>
 </template>
 
 <style lang="scss">
@@ -196,28 +193,23 @@
   }
 
   #animal-img {
-    width: 412px;
-    height: 475px;
+    min-height: 400px;
   }
 
   #animal-img-2 {
-    width: 1090px;
-    height: 404px;
+    min-height: 400px;
   }
 
   #animal-img-3 {
-    width: 1090px;
-    height: 135px;
+    min-height: 135px;
   }
 
   #partner-img {
-    width: 353px;
-    height: 108px;
+    min-height: 135px;
   }
 
   #companies-img {
-    width: 921px;
-    height: 117px;
+    min-height: 135px;
   }
 
   .placeholder {
@@ -230,7 +222,7 @@
   }
 
   a {
-    color: white;
+    color: #fff;
     text-transform: none;
     font-style: normal;
   }
@@ -239,8 +231,12 @@
     font-size: 22px;
   }
 
-  .bullet-point-list {
+  .contact-list {
     list-style: disc;
+  }
+
+  .contact-list a {
+    color: #2C58B1;
   }
 
   .bold {
@@ -292,6 +288,7 @@
 <script>
 import Button from "../components/Button";
 import CTA from "../components/CTA";
+import Newsletter from '../components/Newsletter';
 import {
   TWITTER,
   FACEBOOK,
@@ -303,6 +300,7 @@ export default {
   components: {
     Button,
     CTA,
+    Newsletter
   },
   head() {
     return {
