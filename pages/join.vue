@@ -50,7 +50,7 @@
               >
             </v-col>
 
-            <p>
+            <p class="mt-10 mb-10">
               <strong>We also have some open positions!</strong>
               Check them out
               <a
