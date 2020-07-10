@@ -54,7 +54,7 @@
               <strong>We also have some open positions!</strong>
               Check them out
               <a
-                href="https://docs.google.com/document/d/1OsxqgCZYk48jblVZCYSblm06A1IqPbjTHPBk0lvFo1s/edit"
+                target="_blank" href="https://docs.google.com/document/d/1OsxqgCZYk48jblVZCYSblm06A1IqPbjTHPBk0lvFo1s/edit"
                 >here</a
               >.
             </p>
