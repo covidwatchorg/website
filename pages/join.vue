@@ -52,9 +52,12 @@
 
             <p>
               <strong>We also have some open positions!</strong>
-              Check them out <a href="https://docs.google.com/document/d/1OsxqgCZYk48jblVZCYSblm06A1IqPbjTHPBk0lvFo1s/edit">here</a>.
+              Check them out
+              <a
+                href="https://docs.google.com/document/d/1OsxqgCZYk48jblVZCYSblm06A1IqPbjTHPBk0lvFo1s/edit"
+                >here</a
+              >.
             </p>
-            
 
             <h4 class="mt-6 mb-4">Most Wanted Volunteers</h4>
             <ul>
