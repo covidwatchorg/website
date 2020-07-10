@@ -1,19 +1,21 @@
 <template>
   <v-container>
-  <v-row id="thank-you">
-    <v-col cols="12" class="py-0">
-      <!-- Header -->
-      <v-row id="header" :class="pageSectionClass">
-        <v-col cols="12" :md="7" :sm="12">
-          <div class="mb-12">
-            <h1 class="mb-5">Thank you! We couldn't do this without you.</h1>
-            <div class="subtitle">
-              <p>
-                Thank you for being part of the solution. Together we’ve created
-                a diverse community of researchers, developers, public health
-                professionals, security experts and more. Your contribution has
-                a tremendous impact, and we couldn’t thank you enough.
-              </p>
+    <v-row id="thank-you">
+      <v-col cols="12" class="py-0">
+        <!-- Header -->
+        <v-row id="header" :class="pageSectionClass">
+          <v-col cols="12" :md="7" :sm="12">
+            <div class="mb-12">
+              <h1 class="mb-5">Thank you! We couldn't do this without you.</h1>
+              <div class="subtitle">
+                <p>
+                  Thank you for being part of the solution. Together we’ve
+                  created a diverse community of researchers, developers, public
+                  health professionals, security experts and more. Your
+                  contribution has a tremendous impact, and we couldn’t thank
+                  you enough.
+                </p>
+              </div>
             </div>
           </div>
           <v-row class="d-flex justify-center">
@@ -64,26 +66,27 @@
                   alt="volunteers-img"
                 />
               </v-col>
-            <v-icon large>mdi-chevron-right</v-icon>
-          </v-row>
-           <v-row class="justify-center">
+              <v-icon large>mdi-chevron-right</v-icon>
+            </v-row>
+            <v-row class="justify-center">
               <v-col cols="10" class="mt-12 mb-10 mb-md-0" :sm="8" :md="3">
                 <Button primary hero nuxt to="/join">Join Us</Button>
               </v-col>
             </v-row>
-        </v-col>
-      </v-row>
+          </v-col>
+        </v-row>
 
-      <!-- Research participants section -->
-      <v-row id="research-participants" :class="pageSectionClass">
-        <v-col cols="12">
-          <div class="mb-12">
-            <h1 class="mb-5">Research Participants</h1>
-            <div class="subtitle">
-              <p>
-                Want to shape the future of the app? Sign up below and become a
-                research participant.
-              </p>
+        <!-- Research participants section -->
+        <v-row id="research-participants" :class="pageSectionClass">
+          <v-col cols="12">
+            <div class="mb-12">
+              <h1 class="mb-5">Research Participants</h1>
+              <div class="subtitle">
+                <p>
+                  Want to shape the future of the app? Sign up below and become
+                  a research participant.
+                </p>
+              </div>
             </div>
           </div>
           <v-row class="justify-center">
@@ -103,16 +106,17 @@
         </v-col>
       </v-row>
 
-      <!-- Pilot partners section -->
-      <v-row id="pilot-partners" :class="pageSectionClass">
-        <v-col cols="12">
-          <div class="mb-12">
-            <h1 class="mb-5">Pilot Partners</h1>
-            <div class="subtitle">
-              <p>
-                Want to bring Covid Watch to your community? Learn how to start
-                a pilot.
-              </p>
+        <!-- Pilot partners section -->
+        <v-row id="pilot-partners" :class="pageSectionClass">
+          <v-col cols="12">
+            <div class="mb-12">
+              <h1 class="mb-5">Pilot Partners</h1>
+              <div class="subtitle">
+                <p>
+                  Want to bring Covid Watch to your community? Learn how to
+                  start a pilot.
+                </p>
+              </div>
             </div>
           </div>
           <v-row class="justify-start">
@@ -132,16 +136,17 @@
         </v-col>
       </v-row>
 
-      <!-- Companies section -->
-      <v-row id="companies" :class="pageSectionClass">
-        <v-col cols="12">
-          <div class="mb-12">
-            <h1 class="mb-5">Companies</h1>
-            <div class="subtitle">
-              <p>
-                Does your organization want to work with us to help stop the
-                spread of COVID-19? Get in touch.__
-              </p>
+        <!-- Companies section -->
+        <v-row id="companies" :class="pageSectionClass">
+          <v-col cols="12">
+            <div class="mb-12">
+              <h1 class="mb-5">Companies</h1>
+              <div class="subtitle">
+                <p>
+                  Does your organization want to work with us to help stop the
+                  spread of COVID-19? Get in touch.__
+                </p>
+              </div>
             </div>
           </div>
           <v-row class="justify-start">
@@ -161,40 +166,44 @@
         </v-col>
       </v-row>
 
-      <!-- Connect with us section -->
-      <v-row id="connect-with-us" :class="pageSectionClass">
-        <v-col cols="12">
-          <div class="mb-12">
-            <h2 class="mb-8">Connect With Us</h2>
-            <div class="subtitle">
-              <p>
-                Do you want to help us tell our story? Does your organization
-                want to work with us to help stop the spread of COVID-19? Get in
-                touch:
-              </p>
+        <!-- Connect with us section -->
+        <v-row id="connect-with-us" :class="pageSectionClass">
+          <v-col cols="12">
+            <div class="mb-12">
+              <h2 class="mb-8">Connect With Us</h2>
+              <div class="subtitle">
+                <p>
+                  Do you want to help us tell our story? Does your organization
+                  want to work with us to help stop the spread of COVID-19? Get
+                  in touch:
+                </p>
+              </div>
             </div>
-          </div>
-          <ul class="contact-list">
-            <li>
-              Media inquiries:
-              <a href="mailto: media@covidwatch.org">media@covidwatch.org</a>
-            </li>
-            <li>
-              Partnerships:
-              <a href="mailto: contact@covidwatch.org">partnerships@covidwatch.org</a>
-            </li>
-            <li>
-              All other inquiries:
-              <a href="mailto: contact@covidwatch.org">contact@covidwatch.org</a>
-            </li>
-          </ul>
-        </v-col>
-      </v-row>
+            <ul class="contact-list">
+              <li>
+                Media inquiries:
+                <a href="mailto: media@covidwatch.org">media@covidwatch.org</a>
+              </li>
+              <li>
+                Partnerships:
+                <a href="mailto: contact@covidwatch.org"
+                  >partnerships@covidwatch.org</a
+                >
+              </li>
+              <li>
+                All other inquiries:
+                <a href="mailto: contact@covidwatch.org"
+                  >contact@covidwatch.org</a
+                >
+              </li>
+            </ul>
+          </v-col>
+        </v-row>
 
-      <!-- Newsletter -->
-      <Newsletter></Newsletter>
-    </v-col>
-  </v-row>
+        <!-- Newsletter -->
+        <Newsletter></Newsletter>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
@@ -236,7 +245,7 @@
   }
 
   .contact-list a {
-    color: #2C58B1;
+    color: #2c58b1;
   }
 
   .bold {
@@ -288,7 +297,7 @@
 <script>
 import Button from "../components/Button";
 import CTA from "../components/CTA";
-import Newsletter from '../components/Newsletter';
+import Newsletter from "../components/Newsletter";
 import {
   TWITTER,
   FACEBOOK,
@@ -300,7 +309,7 @@ export default {
   components: {
     Button,
     CTA,
-    Newsletter
+    Newsletter,
   },
   head() {
     return {
