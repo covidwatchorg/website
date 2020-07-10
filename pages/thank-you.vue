@@ -175,10 +175,6 @@ Thank you for being part of the solution. Together we’ve created a diverse com
 
 <style lang="scss">
 #thank-you {
-  #join-community {
-    background: rgba(245, 229, 230, 0.6);
-  }
-
   #header {
     background: linear-gradient(0deg, rgba(67, 197, 217, 0.2), rgba(255, 255, 255, 0) 60%);
   }
