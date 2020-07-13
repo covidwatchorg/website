@@ -107,7 +107,7 @@ export default {
     instagram: INSTAGRAM,
     facebook: FACEBOOK,
     github: GITHUB,
-    youtube: YOUTUBE
+    youtube: YOUTUBE,
   }),
   props: {
     sections: Array,
