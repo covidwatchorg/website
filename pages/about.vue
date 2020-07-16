@@ -86,7 +86,6 @@
           ></CTA>
         </v-row>
       </v-row>
-      </div>
 
       <!-- join us row -->
       <div class="join-us">
