@@ -484,6 +484,11 @@ export default {
         link: "https://jeffreyladish.com/",
       },
       {
+        name: "Joanna Masel, PhD",
+        description: "Professor, Ecology and Evolutionary Biology and Member, BIO5 Institute, University of Arizona",
+        link: "http://www.eebweb.arizona.edu/faculty/masel/people/joanna/",
+      },
+      {
         name: "Plinio Pelegrini Morita, PhD",
         description:
           "J.W. Graham Information Technology Emerging Leader Chair in Applied Health Informatics, University of Waterloo",
