@@ -2,7 +2,11 @@
   <v-container grid-list-xs>
     <v-row id="about">
       <!-- First row-->
-      <v-row id="header" class="first-row" :class="[pageSectionClass, mobileMarginsClass]">
+      <v-row
+        id="header"
+        class="first-row"
+        :class="[pageSectionClass, mobileMarginsClass]"
+      >
         <v-col cols="12" :md="7">
           <div class="mb-12">
             <h1 class="mb-5">About Us</h1>
@@ -86,47 +90,46 @@
           ></CTA>
         </v-row>
       </v-row>
-      </div>
 
       <!-- join us row -->
       <div class="join-us">
-      <v-row :class="[pageSectionClass, mobileMarginsClass]" id="join-us">
-        <v-row class="mb-3">
-          <v-col cols="10" :md="2">
-            <h2>Join Us</h2>
-          </v-col>
+        <v-row :class="[pageSectionClass, mobileMarginsClass]" id="join-us">
+          <v-row class="mb-3">
+            <v-col cols="10" :md="2">
+              <h2>Join Us</h2>
+            </v-col>
 
-          <v-spacer></v-spacer>
+            <v-spacer></v-spacer>
 
-          <v-col cols="8">
-            <img class="biking" src="../assets/about_us/cyclists.svg" />
-          </v-col>
+            <v-col cols="8">
+              <img class="biking" src="../assets/about_us/cyclists.svg" />
+            </v-col>
+          </v-row>
+
+          <v-row>
+            <v-col
+              class="align-center justify-center"
+              cols="12"
+              :md="3"
+              :sm="6"
+              v-for="(cta, i) in callsToAction"
+              :key="i"
+            >
+              <div class="mb-4">
+                <Button v-if="cta.link" secondary nuxt :to="cta.link">{{
+                  cta.button_text
+                }}</Button>
+                <Button v-if="!cta.link" secondary>
+                  <a href="mailto:partnerships@covidwatch.org">
+                    {{ cta.button_text }}
+                  </a>
+                </Button>
+              </div>
+
+              <div>{{ cta.cta_text }}</div>
+            </v-col>
+          </v-row>
         </v-row>
-
-        <v-row>
-          <v-col
-            class="align-center justify-center"
-            cols="12"
-            :md="3"
-            :sm="6"
-            v-for="(cta, i) in callsToAction"
-            :key="i"
-          >
-            <div class="mb-4">
-              <Button v-if="cta.link" secondary nuxt :to="cta.link">{{
-                cta.button_text
-              }}</Button>
-              <Button v-if="!cta.link" secondary>
-                <a href="mailto:partnerships@covidwatch.org">
-                  {{ cta.button_text }}
-                </a>
-              </Button>
-            </div>
-
-            <div>{{ cta.cta_text }}</div>
-          </v-col>
-        </v-row>
-      </v-row>
       </div>
 
       <!-- team row-->
@@ -253,7 +256,7 @@
       </v-row>
 
       <!-- colabs row-->
-      <v-row :class= "pageSectionClass" id="collaborator-projects">
+      <v-row :class="pageSectionClass" id="collaborator-projects">
         <v-col class="mb-10" cols="12">
           <h3 class="pt-6">Collaborator Partners</h3>
         </v-col>
@@ -301,7 +304,7 @@
 #about {
   .collab-img-col {
     filter: grayscale(100%);
-  
+
     &:hover {
       filter: grayscale(0%);
     }
@@ -312,31 +315,31 @@
     margin-left: auto;
     margin-right: auto;
   }
-  
+
   @media (max-width: 400px) {
     .we_value_img {
       max-width: 260px;
     }
   }
-  
+
   @media (max-width: 950px) {
     .earth_img {
       display: none;
     }
-  
+
     .biking {
       display: none;
     }
   }
-  
+
   .founder_img {
     max-width: 100%;
   }
-  
+
   .we_value_img {
     min-height: 263px;
   }
-  
+
   .first-row {
     background: linear-gradient(
       0deg,
@@ -350,37 +353,35 @@
     font-weight: normal;
     font-size: 20px;
     line-height: 34px;
-  
+
     color: #585858;
   }
   .join-us {
     background: rgba(245, 229, 230, 0.6);
   }
-  
+
   .adviser-card {
     margin: 0px 35px 35px 0px;
     padding: 10px;
   }
-  
-    .iframe-container {
-      overflow: hidden;
-      padding-top: 45%;
-      position: relative;
-      max-width: 1000px;
-    }
-  
-    .iframe-container iframe {
-      border: 0;
-      height: 100%;
-      left: 0;
-      position: absolute;
-      top: 0;
-      width: 100%;
-      max-height: 500px;
-    }
+
+  .iframe-container {
+    overflow: hidden;
+    padding-top: 45%;
+    position: relative;
+    max-width: 1000px;
+  }
+
+  .iframe-container iframe {
+    border: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    max-height: 500px;
+  }
 }
-
-
 </style>
 
 <script>
@@ -483,6 +484,12 @@ export default {
         name: "Jeffrey Ladish",
         description: "Security Consultant, Gordian Research",
         link: "https://jeffreyladish.com/",
+      },
+      {
+        name: "Joanna Masel, PhD",
+        description:
+          "Professor, Ecology and Evolutionary Biology and Member, BIO5 Institute, University of Arizona",
+        link: "http://www.eebweb.arizona.edu/faculty/masel/people/joanna/",
       },
       {
         name: "Plinio Pelegrini Morita, PhD",
