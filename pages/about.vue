@@ -264,11 +264,11 @@
         <v-row justify="center" align="center">
           <v-col
             cols="12"
-            :md="4"
+            :md="6"
             v-for="(collab, i) in collaborator_projects"
             :key="i"
             :id="collab.id"
-            class="text-center collab-img-col"
+            class="text-center collab-img-col mb-12"
           >
             <a target="_blank" :href="collab.url">
               <v-img class="collab-img" :src="collab.src" contain />
@@ -571,6 +571,12 @@ export default {
       href: "https://uwaterloo.ca/",
     },
     collaborator_projects: [
+      {
+        id: "linux-foundation",
+        url: "https://www.lfph.io/",
+        src: require("../assets/about_us/lfph-stacked-color.svg"),
+        name: "Linux Foundation Public Health",
+      },
       {
         id: "tcn-coalition",
         url: "https://tcn-coalition.org/",
