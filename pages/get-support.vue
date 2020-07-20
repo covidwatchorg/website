@@ -12,7 +12,11 @@
                 solution? You've come to the right place.
               </p>
               <p>
-                Email us at <a href="mailto:support@covidwatch.org">support@covidwatch.org</a> with your issue and we will get back to you.
+                Email us at
+                <a href="mailto:support@covidwatch.org"
+                  >support@covidwatch.org</a
+                >
+                with your issue and we will get back to you.
               </p>
             </div>
           </div>
