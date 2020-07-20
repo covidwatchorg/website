@@ -575,7 +575,7 @@ export default {
         id: "linux-foundation",
         url: "https://www.lfph.io/",
         src: require("../assets/about_us/lfph-stacked-color.svg"),
-        name: "Linux Foundation Public Health"
+        name: "Linux Foundation Public Health",
       },
       {
         id: "tcn-coalition",
