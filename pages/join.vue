@@ -12,12 +12,11 @@
               <p>
                 We've grown from a pair of researchers from Stanford University
                 and the University of Waterloo into an interdisciplinary team of
-                more than 400 researchers, software engineers, public health
-                professionals. and security experts.
+                hundreds of researchers, software engineers, public health
+                professionals, and security experts.
               </p>
               <p>
-                In addition to our founders, a number of our volunteers are
-                working full-time on the project. However, there is plenty of
+                There is plenty of
                 room to contribute as a volunteer or advisor even if you can
                 only put in a few hours a week.
               </p>
