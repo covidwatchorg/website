@@ -12,7 +12,7 @@
                 solution? You've come to the right place.
               </p>
               <p>
-                <a href="https://covidwatch.zendesk.com/hc/en-us/requests/new">Report your issue</a> and we will get back to you.
+                <a href="https://covidwatch.zendesk.com/hc/en-us/requests/new">Click here to report your issue</a> and we will get back to you.
               </p>
             </div>
           </div>
