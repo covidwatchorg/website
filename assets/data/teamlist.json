@@ -190,11 +190,6 @@
     "team": "Engineering"
   },
   {
-    "id": 1,
-    "name": "Aaron Theolet",
-    "team": "Operations & Partnerships"
-  },
-  {
     "id": 2,
     "name": "Chuck Raby",
     "team": "Operations & Partnerships"
@@ -315,11 +310,6 @@
     "team": "People & Culture"
   },
   {
-    "id": 51,
-    "name": "Laure Merlin",
-    "team": "People & Culture"
-  },
-  {
     "id": 52,
     "name": "Lawrence Kang",
     "team": "People & Culture"
@@ -327,11 +317,6 @@
   {
     "id": 70,
     "name": "Oraya Srimokla",
-    "team": "People & Culture"
-  },
-  {
-    "id": 71,
-    "name": "Pedro Lazcano",
     "team": "People & Culture"
   },
   {
