@@ -256,7 +256,7 @@
       </v-row>
 
       <!-- colabs row-->
-      <v-row :class="pageSectionClass"  id="collaborator-projects">
+      <v-row :class="pageSectionClass" id="collaborator-projects">
         <v-col class="mb-10" cols="12">
           <h3 class="pt-6">Collaborator Partners</h3>
         </v-col>
@@ -575,7 +575,7 @@ export default {
         id: "linux-foundation",
         url: "https://www.linuxfoundation.org/",
         src: require("../assets/about_us/lfph-stacked-color.svg"),
-        name: "Linux Foundation Public Health"
+        name: "Linux Foundation Public Health",
       },
       {
         id: "tcn-coalition",
