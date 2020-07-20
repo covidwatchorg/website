@@ -573,7 +573,7 @@ export default {
     collaborator_projects: [
       {
         id: "linux-foundation",
-        url: "https://www.lfph.io/",
+        url: "https://www.linuxfoundation.org/",
         src: require("../assets/about_us/lfph-stacked-color.svg"),
         name: "Linux Foundation Public Health",
       },
