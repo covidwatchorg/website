@@ -14,6 +14,7 @@
     "gsap": "^3.2.6",
     "nuxt": "^2.0.0",
     "nuxt-webfontloader": "^1.1.0",
+    "vue-select": "^3.10.5",
     "vue-youtube": "^1.4.0"
   },
   "devDependencies": {
