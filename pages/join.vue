@@ -129,7 +129,8 @@
                 <a :href="twitter.link">Twitter</a>,
                 <a :href="facebook.link">Facebook</a>,
                 <a :href="instagram.link">Instagram</a>,
-                <a :href="medium.link">Medium</a>, and
+                <a :href="medium.link">Medium</a>
+                <a :href="youtube.link">Youtube</a>, and
                 <a :href="github.link">Github</a>
               </li>
               <li>
@@ -201,6 +202,7 @@ import {
   INSTAGRAM,
   MEDIUM,
   GITHUB,
+  YOUTUBE,
 } from "@/assets/data/social_media.js";
 
 export default {
@@ -214,6 +216,7 @@ export default {
     facebook: FACEBOOK,
     medium: MEDIUM,
     github: GITHUB,
+    youtube: YOUTUBE,
     urgentRoles: [
       {
         role: "Web Developers",

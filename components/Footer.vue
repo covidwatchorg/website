@@ -30,12 +30,16 @@
           </v-list>
         </v-col>
         <v-spacer />
-        <v-col :md="2">
-          <Button class="primary--text" nuxt to="/support" color="white"
-            >Donate</Button
-          >
+        <v-col :md="3">
+          <v-row class="justify-center">
+            <v-col :md="8" class="pt-0">
+              <Button class="primary--text" nuxt to="/support" color="white"
+                >Donate</Button
+              >
+            </v-col>
+          </v-row>
           <v-row justify="space-around" class="mb-2">
-            <span class="group mt-8 pa-2">
+            <span class="group mt-4 pa-2 social-media">
               <a :href="github.link" class="ma-1">
                 <v-icon large dark>mdi-github</v-icon>
               </a>
@@ -47,6 +51,9 @@
               </a>
               <a :href="instagram.link" class="ma-1">
                 <v-icon large dark>mdi-instagram</v-icon>
+              </a>
+              <a :href="youtube.link" class="ma-1">
+                <v-icon large dark>mdi-youtube</v-icon>
               </a>
             </span>
           </v-row>
@@ -87,6 +94,7 @@ import {
   FACEBOOK,
   INSTAGRAM,
   GITHUB,
+  YOUTUBE,
 } from "@/assets/data/social_media.js";
 
 export default {
@@ -99,6 +107,7 @@ export default {
     instagram: INSTAGRAM,
     facebook: FACEBOOK,
     github: GITHUB,
+    youtube: YOUTUBE,
   }),
   props: {
     sections: Array,

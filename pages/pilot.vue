@@ -13,10 +13,10 @@
               </p>
               <p>
                 The Covid Watch pilot program offers universities, governments,
-                and public health departments an opportunity to rebrand our
-                exposure alert app, access to our customizable COVID-19 positive
-                case verification portal, and full service implementation
-                support from our team.
+                and public health departments a comprehensive exposure alert
+                solution. We provide a customizable exposure alert app paired
+                with a COVID-19 case verification portal, along with full
+                service implementation support from our team.
               </p>
             </div>
           </div>
