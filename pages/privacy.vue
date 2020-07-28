@@ -52,12 +52,6 @@ newsletters by following the “unsubscribe” link on the bottom of the email.
             </ul>
             <ul>
                 <li>
-                    <strong>Make a Donation</strong>: If you donate, thank you, and we will collect your name, contact
-information, and transaction data from your donation.
-                </li>
-            </ul>
-            <ul>
-                <li>
                     <strong>When you Contact Us</strong>: If you email us, we may collect your name, email address,
 and information related to your request, question, or other inquiry.
                 </li>

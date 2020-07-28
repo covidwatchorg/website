@@ -31,13 +31,6 @@
         </v-col>
         <v-spacer />
         <v-col :md="3">
-          <v-row class="justify-center">
-            <v-col :md="8" class="pt-0">
-              <Button class="primary--text" nuxt to="/support" color="white"
-                >Donate</Button
-              >
-            </v-col>
-          </v-row>
           <v-row justify="space-around" class="mb-2">
             <span class="group mt-4 pa-2 social-media">
               <a :href="github.link" class="ma-1">
