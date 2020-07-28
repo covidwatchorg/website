@@ -32,12 +32,6 @@
             <v-col cols="10" class="mt-12 mb-10 mb-md-0" :sm="8" :md="5">
               <Button primary hero nuxt to="/pilot">Start a Pilot</Button>
             </v-col>
-            <v-spacer />
-
-            <v-col class="mt-md-12" cols="10" :sm="8" :md="5">
-              <Button secondary hero nuxt to="/support">Donate</Button>
-            </v-col>
-            <v-spacer />
           </v-row>
         </v-col>
 
@@ -399,12 +393,6 @@ export default {
         cta_text:
           "Covid Watch is a volunteer-led effort to fight COVID-19. Are you a developer? A public health expert? A writer? We want your help.",
         link: "/join",
-      },
-      {
-        button_text: "Donate",
-        cta_text:
-          "Our organization is here to make a difference, not a profit. We need your support to slow the spread. ",
-        link: "/support",
       },
       {
         button_text: "Start a Pilot",

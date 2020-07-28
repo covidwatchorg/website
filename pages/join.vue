@@ -117,7 +117,7 @@
               <nuxt-link to="/forum">here</nuxt-link>.
             </p>
 
-            <h3>Follow Us or Donate</h3>
+            <h3>Follow Us</h3>
             <p class="mt-4">
               You don't need to join our team to help Covid Watch! It would also
               help us out if you'd consider other options:
@@ -132,11 +132,6 @@
                 <a :href="medium.link">Medium</a>
                 <a :href="youtube.link">Youtube</a>, and
                 <a :href="github.link">Github</a>
-              </li>
-              <li>
-                Make a
-                <nuxt-link to="/support">donation</nuxt-link> to support our
-                work
               </li>
               <li>
                 Subscribe to our newsletter (at the bottom of this page) below
