@@ -12,10 +12,18 @@
                 solution? You've come to the right place.
               </p>
               <p>
-                You can simply email <a to="mailto:support@covidwatch.org">support@covidwatch.org</a> or user our issue report form for us to investigate further. Either way, we will respond shortly.
+                You can simply email
+                <a to="mailto:support@covidwatch.org">support@covidwatch.org</a>
+                or user our issue report form for us to investigate further.
+                Either way, we will respond shortly.
               </p>
               <v-col cols="10" :sm="6" :md="4" class="mb-4">
-                <Button primary href to="https://covidwatch.zendesk.com/hc/en-us/requests/new">Report Issue</Button>
+                <Button
+                  primary
+                  href
+                  to="https://covidwatch.zendesk.com/hc/en-us/requests/new"
+                  >Report Issue</Button
+                >
               </v-col>
             </div>
           </div>
@@ -30,8 +38,7 @@ import Button from "../components/Button.vue";
 
 export default {
   components: {
-    Button
-  }
-  
-}
+    Button,
+  },
+};
 </script>
