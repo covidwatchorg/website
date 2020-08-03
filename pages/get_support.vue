@@ -8,12 +8,20 @@
             <h1 class="mb-5">Get Support</h1>
             <div class="subtitle">
               <p>
-                You can simply email <a to="mailto:support@covidwatch.org">support@covidwatch.org</a> or use our issue report form for us to investigate further - see button below. 
+                You can simply email
+                <a to="mailto:support@covidwatch.org">support@covidwatch.org</a>
+                or use our issue report form for us to investigate further - see
+                button below.
               </p>
               <p>Either way, we will respond shortly.</p>
               <v-row>
                 <v-col cols="10" :sm="6" :md="4" class="my-4">
-                  <Button primary href to="https://covidwatch.zendesk.com/hc/en-us/requests/new">Report Issue</Button>
+                  <Button
+                    primary
+                    href
+                    to="https://covidwatch.zendesk.com/hc/en-us/requests/new"
+                    >Report Issue</Button
+                  >
                 </v-col>
               </v-row>
             </div>
