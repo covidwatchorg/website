@@ -553,5 +553,37 @@
     "title": "University Of Arizona Alum Develops Confidential Contract Tracing App",
     "type": "press_mention",
     "url": "https://kjzz.org/content/1603085/university-arizona-alum-develops-confidential-contract-tracing-app"
+  },
+  {
+    "author_name": "Priscilla Casper",
+    "author_url": "https://kvoa.com/author/pcasper/",
+    "date": "2020-07-24",
+    "id": 65,
+    "outlet_name": "KVOA",
+    "outlet_url": "https://kvoa.com/",
+    "title": "Getting Answers: Contact tracing apps coming to Arizona?",
+    "type": "press_mention",
+    "url": "https://kvoa.com/news/2020/07/23/getting-answers-contact-tracing-apps-coming-to-arizona/"
+  },
+  {
+    "author_name": "Emma Lockhart",
+    "author_url": "https://www.azfamily.com/users/profile/emma%20lockhart/",
+    "date": "2020-07-24",
+    "id": 66,
+    "outlet_name": "AZ Family",
+    "outlet_url": "https://www.azfamily.com/",
+    "title": "UArizona testing anonymous app that notifies people exposed to COVID-19",
+    "type": "press_mention",
+    "url": "https://www.azfamily.com/news/continuing_coverage/coronavirus_coverage/uarizona-testing-anonymous-app-that-notifies-people-exposed-to-covid-19/article_eef67d58-cd4e-11ea-9c07-43fb42577743.html"
+  },
+  {
+    "author_name": "Kay Ewbank   ",
+    "date": "2020-07-29",
+    "id": 67,
+    "outlet_name": "i-programmer",
+    "outlet_url": "https://www.i-programmer.info/",
+    "title": "Linux Foundation Launches Open Source COVID Group",
+    "type": "press_mention",
+    "url": "https://www.i-programmer.info/news/136-open-source/13882-linux-foundation-launches-open-source-covid-group-.html"
   }
 ]
