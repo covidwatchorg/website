@@ -8,15 +8,22 @@
             <h1 class="mb-5">Get Support</h1>
             <div class="subtitle">
               <p>
-                Running into some technical questions with Covid Watch's
-                solution? You've come to the right place.
+                You can simply email
+                <a to="mailto:support@covidwatch.org">support@covidwatch.org</a>
+                or use our issue report form for us to investigate further - see
+                button below.
               </p>
-              <p>
-                <a href="https://covidwatch.zendesk.com/hc/en-us/requests/new"
-                  >Click here to report your issue</a
-                >
-                and we will get back to you.
-              </p>
+              <p>Either way, we will respond shortly.</p>
+              <v-row>
+                <v-col cols="10" :sm="6" :md="4" class="my-4">
+                  <Button
+                    primary
+                    href
+                    to="https://covidwatch.zendesk.com/hc/en-us/requests/new"
+                    >Report Issue</Button
+                  >
+                </v-col>
+              </v-row>
             </div>
           </div>
         </v-col>
@@ -24,3 +31,13 @@
     </v-col>
   </v-row>
 </template>
+
+<script>
+import Button from "../components/Button.vue";
+
+export default {
+  components: {
+    Button,
+  },
+};
+</script>
