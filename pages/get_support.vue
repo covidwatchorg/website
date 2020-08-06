@@ -18,8 +18,7 @@
                 <v-col cols="10" :sm="6" :md="4" class="my-4">
                   <Button
                     primary
-                    href
-                    to="https://covidwatch.zendesk.com/hc/en-us/requests/new"
+                    href="https://covidwatch.zendesk.com/hc/en-us/requests/new"
                     >Report Issue</Button
                   >
                 </v-col>
