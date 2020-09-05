@@ -1,9 +1,11 @@
 # Website
 
+## THIS REPO IS DEPREECATED AND NO LONGER ACTIVE
+
 ![Build](https://github.com/covidwatchorg/website/workflows/Build/badge.svg)
 ![Deploy](https://github.com/covidwatchorg/website/workflows/Deploy/badge.svg)
 
-The Covid-Watch website: https://covid-watch.org/
+The Covid-Watch website: https://covidwatch.org/
 
 ## Build Setup
 
