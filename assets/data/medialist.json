@@ -605,5 +605,27 @@
     "title": "Arizona Illustrated Episode 635",
     "type": "press_mention",
     "url": "https://tv.azpm.org/p/originals-azill-eps/2020/7/31/177591-arizona-illustrated-episode-635/"
+  },
+  {
+    "author_name": "David Morris",
+    "author_url": "https://fortune.com/author/david-z-morris/",
+    "date": "2020-08-09",
+    "id": 74,
+    "outlet_name": "Fortune",
+    "outlet_url": "https://fortune.com/",
+    "title": "Why you can trust the new coronavirus contact-tracing apps to safeguard your privacy",
+    "type": "press_mention",
+    "url": "https://fortune.com/2020/08/09/contact-tracing-apps-security-covidwise-virgina-coronavirus-covid-privacy/"
+  },
+  {
+    "author_name": "Steve Jess",
+    "author_url": "https://about.azpm.org/people/person/sjess/",
+    "date": "2020-08-13",
+    "id": 75,
+    "outlet_name": "AZPM",
+    "outlet_url": "https://www.azpm.org/",
+    "title": "Covid Watch app part of UA reentry plan",
+    "type": "press_mention",
+    "url": "https://news.azpm.org/p/news-articles/2020/8/13/178458-covid-watch-app-part-of-ua-reentry-plan/"
   }
 ]
