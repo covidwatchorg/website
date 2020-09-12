@@ -9,7 +9,9 @@
             <div class="subtitle">
               <p>
                 You can simply email
-                <a href="mailto:support@covidwatch.org">support@covidwatch.org</a>
+                <a href="mailto:support@covidwatch.org"
+                  >support@covidwatch.org</a
+                >
                 or use our issue report form for us to investigate further - see
                 button below.
               </p>

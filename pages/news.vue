@@ -9,7 +9,7 @@
               Want to reach our press team? Contact us at
               <a href="mailto:media@covidwatch.org">media@covidwatch.org</a>.
             </p>
-            <div class="mt-10" style="max-width: 500px;">
+            <div class="mt-10" style="max-width: 500px">
               <v-row id="filter-container" justify="space-evenly">
                 <v-btn-toggle v-model="toShow" mandatory id="filter-group">
                   <MenuButton value="all" class="filter">All News</MenuButton>

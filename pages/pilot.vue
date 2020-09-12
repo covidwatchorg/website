@@ -29,7 +29,7 @@
               :key="i"
             >
               <h3 class="mb-4">{{ audience.title }}</h3>
-              <p style="font-size: 16px; line-height: 20px;">
+              <p style="font-size: 16px; line-height: 20px">
                 {{ audience.body }}
               </p>
             </v-col>
@@ -99,7 +99,7 @@
             Watch Forum, an invite-only collaborative space for our partners and
             advisory council of subject matter experts to share best practices
             and learn from each other.
-            <nuxt-link style="color: #2c58b1;" to="/forum"
+            <nuxt-link style="color: #2c58b1" to="/forum"
               >Learn more here</nuxt-link
             >.
           </p>
@@ -107,7 +107,7 @@
         <v-col cols="0" :md="4">
           <img
             class="mt-5 hide-on-small-screen"
-            style="width: 100%;"
+            style="width: 100%"
             src="../assets/forum_page/forum_logo.svg"
           />
         </v-col>

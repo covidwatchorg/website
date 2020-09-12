@@ -28,7 +28,7 @@
             <template v-slot:activator="{ on }">
               <img
                 v-on="on"
-                style="max-width: 425px;"
+                style="max-width: 425px"
                 src="../assets/how_it_works/video-preview.svg"
                 alt=""
               />
@@ -39,19 +39,17 @@
                 class="headline grey lighten-2 d-flex justify-space-between mb-10"
                 primary-title
               >
-                <p style="margin: 0px; padding: 0px;">Video Demo</p>
+                <p style="margin: 0px; padding: 0px">Video Demo</p>
 
                 <v-card-actions>
-                  <v-btn color="primary" flat @click="closeDialog()">
-                    X
-                  </v-btn>
+                  <v-btn color="primary" flat @click="closeDialog()"> X </v-btn>
                 </v-card-actions>
               </v-card-title>
 
               <v-row
                 id="video-demo"
                 class="d-flex justify-center"
-                style="margin: 0px; padding: 0px;"
+                style="margin: 0px; padding: 0px"
               >
                 <v-row class="iframe-container pb-10 d-flex justify-center">
                   <youtube
@@ -172,7 +170,7 @@
             <nuxt-link to="/faq">
               visit our FAQ
               <img
-                style="height: 16px;"
+                style="height: 16px"
                 src="../assets/home_page/arrow_icon.svg"
                 alt="arrow"
               />
