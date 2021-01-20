@@ -11,7 +11,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "gsap": "^3.2.6",
+    "gsap": "^3.6.0",
     "nuxt": "^2.0.0",
     "nuxt-webfontloader": "^1.1.0",
     "vue-youtube": "^1.4.0"
