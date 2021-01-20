@@ -41,7 +41,7 @@
         >
           <img
             class="hide-on-small-screen"
-            style="width: 100%;"
+            style="width: 100%"
             src="../assets/forum_page/forum_logo.svg"
           />
         </v-col>
@@ -131,7 +131,7 @@
           </v-col>
           <v-col :md="3" class="hide-on-small-screen">
             <img
-              style="max-width: 268px;"
+              style="max-width: 268px"
               class="shrink-on-small-screen"
               src="../assets/support_page/people_globe.svg"
               alt="target"
@@ -142,7 +142,7 @@
 
       <!-- how-to-join section -->
       <v-row id="how-to-join" :class="pageSectionClass">
-        <div style="display: block;">
+        <div style="display: block">
           <h2 class="section-title">How to Join</h2>
           <p>
             The Covid Watch Forum is open to our pilot partners and advisory

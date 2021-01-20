@@ -1,6 +1,6 @@
 <template>
   <v-card
-    style="border-radius: 0px;"
+    style="border-radius: 0px"
     :card="card"
     class="news-card d-flex flex-column"
   >
@@ -18,7 +18,7 @@
       <a target="_blank" :href="card.url" class="primary--text">
         {{ card.title }}&nbsp;
         <img
-          style="height: 10px;"
+          style="height: 10px"
           src="../assets/home_page/arrow_icon.svg"
           alt="arrow"
         />

@@ -33,10 +33,7 @@
                 />
               </v-col>
               <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-              <div
-                style="position: absolute; left: -5000px;"
-                aria-hidden="true"
-              >
+              <div style="position: absolute; left: -5000px" aria-hidden="true">
                 <input
                   type="text"
                   name="b_6a3a62b4b32f5a4329abff0d0_353a151b02"
