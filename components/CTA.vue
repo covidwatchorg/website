@@ -11,7 +11,7 @@
         <img
           v-if="pdf"
           class="mr-3"
-          style="height: 20px;"
+          style="height: 20px"
           src="../assets/home_page/pdf_logo.svg"
           alt="pdf"
         />
@@ -20,7 +20,7 @@
           target="_blank"
           :href="href"
           v-if="pdf"
-          style="text-transform: none;"
+          style="text-transform: none"
           >{{ content }}</a
         >
         <!-- else just display name of button normally -->

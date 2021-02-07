@@ -9,9 +9,7 @@
             cols="12"
             :class="[pageSectionClass, mobileMarginsClass]"
           >
-            <h1>
-              Together, we have the power to stop COVID-19.
-            </h1>
+            <h1>Together, we have the power to stop COVID-19.</h1>
 
             <p class="subtitle">
               Use your smartphone to protect yourself, your family and your
@@ -86,11 +84,11 @@
           <nuxt-link
             to="/news"
             class="font-weight-bold"
-            style="text-decoration: none;"
+            style="text-decoration: none"
           >
             More News &nbsp;
             <img
-              style="height: 10px;"
+              style="height: 10px"
               src="../assets/home_page/arrow_icon.svg"
               alt="arrow"
             />

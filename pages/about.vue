@@ -161,7 +161,7 @@
 
         <template v-for="(founder, n) in founders">
           <v-col :key="n">
-            <a :href="founder.url" style="color: rgba(0, 0, 0, 0.87);">
+            <a :href="founder.url" style="color: rgba(0, 0, 0, 0.87)">
               <v-row>
                 <v-col :md="5">
                   <img class="mr-5" :src="founder.image" />
